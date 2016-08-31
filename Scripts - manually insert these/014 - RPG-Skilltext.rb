@@ -1030,7 +1030,7 @@ module RPG
 =end
         avoid = ""
       when 149   #プロヴォーク
-          action = premess + "相手の狙いを向けさせた！"
+          action = premess + " provokes the eneｍy into attacking her!"
         
         
   #------------------------------------------------------------------------#        
