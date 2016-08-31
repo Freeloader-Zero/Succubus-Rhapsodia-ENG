@@ -31,6 +31,9 @@ http://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_098909/
 
 Changelogs:
 
+
+v1.01: skilltext for Provoke
+
 v1.00: initial base
 - Adopted Strange's "Translation Toolbox", "Skills English", 
 	- replaced ~all "skill.name" instances with "skill.UK_name"
@@ -38,7 +41,7 @@ v1.00: initial base
 - Adopted Strange's "RPG::Ability（素質・設定用）"
 	- replaced ~all "ability.name" instance with "ability.UK_name"
 	- translates Trait names (SFrame unofficially calls SR's abilities "Traits", because these are all passive)
-~ Other stuff it generally translates:
+- Other stuff it generally translates:
 	- enemy names (Class.rxdata, Enemies.rxdata, RPG::SDB, etc.)
 	- State names
 	- UI (~95% complete)
