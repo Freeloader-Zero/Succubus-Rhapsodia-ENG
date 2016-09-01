@@ -338,8 +338,8 @@ class Scene_Box
           @now_actor.level = @now_actor.level + 1
           # テキストを整形する
           text = @now_actor.level_up_log
-          text.gsub!("\w","")
-          text.gsub!("\q","\n")
+          text.gsub!("\065","")
+          text.gsub!("\067","\n")
           @now_actor.level_up_log = ""
           $game_temp.message_text = text
           @now_actor.promise -= @bonus[0]

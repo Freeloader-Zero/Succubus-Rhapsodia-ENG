@@ -31,7 +31,7 @@ when 15   #バックアクセプト
 when 16   #ドロウネクター
    return "Draｗ Nectar "
 when 17   #エンブレイス
-   return "Eｍbrace "
+   return "Eｍbrace"
 when 18   #エキサイトビュー
    return "Facesit "
 when 20   #ディルドインサート
@@ -77,9 +77,9 @@ when 48   #ハードグラインド
 when 50   #タイトクロッチ
    return "Tighten "
 when 52   #スクラッチ
-   return "Tribadisｍ "
+   return "Tribadisｍ"
 when 53   #ハードスクラッチ
-   return "Rubdoｗn "
+   return "Rubdoｗn"
 when 55   #ライディング
    return "Facerub "
 when 56   #プッシング
@@ -92,14 +92,14 @@ when 58   #スロート
 when 59   #ディープスロート
    return "Deepthroat"
 when 60   #ドロウスロート
-   return "Throat Draｗ "
+   return "Throat Draｗ"
 when 61   #サック
    return "Lick"
    
    #■Anal techniques
    
 when 64   #スクイーズ
-   return "Sｑueeze "
+   return "Squeeze "
 when 67   #タイトホール
    return "Tighten "
    
@@ -114,7 +114,7 @@ when 73   #ミスチーフ
 when 74   #リアカレス
    return "Caress Back"
 when 79   #レックレス
-   return "Sｑuirｍ"
+   return "Squirm"
    
    #■Actor attacks
 
@@ -153,7 +153,7 @@ when 111   #プレジャー
 when 121   #ブレス
    return "Breath"
 when 122   #カームブレス
-   return "Calｍ Breath "
+   return "Calｍ Breath"
 when 123   #ウェイト
    return "Wait"
 when 124   #イントラスト
@@ -167,7 +167,7 @@ when 127   #アナライズ
 when 135   #ストリップ
    return "Strip Partner "
 when 140   #テンプテーション
-   return "Teｍptation"
+   return "Temptation"
 when 145   #ガード
    return "Guard "
 when 146   #インデュア
@@ -194,65 +194,65 @@ when 166   #イリスペタル・アルダ
 when 167   #イリスフラウ・アルダ
    return "Iris Aura - All "
 when 171   #ラナンブルム
-   return "Leanan Blooｍ"
+   return "Leanan Bloom"
 when 172   #ラナンブルム・アルダ
-   return "Leanan Blooｍ - All"
+   return "Leanan Bloom - All"
 when 173   #ラナンイーザ
    return "Leanan Wither "
 when 174   #ラナンイーザ・アルダ
    return "Leanan Wither - All "
 when 175   #ネリネブルム
-   return "Nellin Blooｍ"
+   return "Nellin Bloom"
 when 176   #ネリネブルム・アルダ
-   return "Nellin Blooｍ - All"
+   return "Nellin Bloom - All"
 when 177   #ネリネイーザ
    return "Nellin Wither "
 when 178   #ネリネイーザ・アルダ
    return "Nellin Wither - All "
 when 179   #エルダブルム
-   return "Elda Blooｍ"
+   return "Elda Bloom"
 when 180   #エルダブルム・アルダ
-   return "Elda Blooｍ - All"
+   return "Elda Bloom - All"
 when 181   #エルダイーザ
    return "Elda Wither "
 when 182   #エルダイーザ・アルダ
    return "Elda Wither - All "
 when 183   #サフラブルム
-   return "Saffron Blooｍ "
+   return "Saffron Blooｍ"
 when 184   #サフラブルム・アルダ
-   return "Saffron Blooｍ - All "
+   return "Saffron Blooｍ - All"
 when 185   #サフライーザ
    return "Saffron Wither "
 when 186   #サフライーザ・アルダ
    return "Saffron Wither - All "
 when 187   #コリオブルム
-   return "Kurio Blooｍ "
+   return "Kurio Blooｍ"
 when 188   #コリオブルム・アルダ
-   return "Kurio Blooｍ - All "
+   return "Kurio Blooｍ - All"
 when 189   #コリオイーザ
    return "Kurio Wither"
 when 190   #コリオイーザ・アルダ
    return "Kurio Wither - All"
 when 191   #アスタブルム
-   return "Alta Blooｍ"
+   return "Alta Bloom"
 when 192   #アスタブルム・アルダ
-   return "Alta Blooｍ - All"
+   return "Alta Bloom - All"
 when 193   #アスタイーザ
    return "Alta Wither"
 when 194   #アスタイーザ・アルダ
    return "Alta Wither - All"
 when 195   #ストレリブルム
-   return "Storｍ Blooｍ "
+   return "Storm Bloom "
 when 196   #ストレリブルム・アルダ
-   return "Storｍ Blooｍ - All "
+   return "Storm Bloom - All "
 when 197   #ストレリイーザ
-   return "Storｍ Wither"
+   return "Storm Wither"
 when 198   #ストレリイーザ・アルダ
-   return "Storｍ Wither - All"
+   return "Storm Wither - All"
 when 200   #チャーム
-   return "Charｍ "
+   return "Charｍ"
 when 201   #ペイド・チャーム
-   return "Mass Charｍ"
+   return "Mass Charm"
 when 202   #ラスト
    return "Lust"
 when 203   #ペイド・ラスト
@@ -278,15 +278,15 @@ when 212   #ルーズ
 when 213   #ペイド・ルーズ
    return "Mass Sleep"
 when 215   #トリムルート
-   return "Liliuｍ Root "
+   return "Liliuｍ Root"
 when 216   #トリムストーク
-   return "Liliuｍ Stalk"
+   return "Lilium Stalk"
 when 217   #トリムヴァイン
-   return "Liliuｍ Steｍ "
+   return "Liliuｍ Steｍ"
 when 219   #ブルムカール
-   return "Blooｍ Call"
+   return "Bloom Call"
 when 220   #ブルムカール・アルダ
-   return "Blooｍ Call - All"
+   return "Bloom Call - All"
 when 221   #イーザカール
    return "Wither Call"
 when 222   #イーザカール・アルダ
@@ -355,7 +355,7 @@ when 288   #【RD】尻尾攻め
 when 289   #【RD】道具攻め
    return "Tool Attack"
 when 290   #【RD】特殊身体攻め
-   return "Special Anatoｍy Attack"
+   return "Special Anatomy Attack"
 when 292   #【RD】ホールド技
    return "Hold Attack"
 when 293   #【RD】自分ホールド中の攻め
@@ -367,7 +367,7 @@ when 296   #【RD】コンフューズ
 when 297   #フィアー
    return "Fear"
 when 298   #フリーアクション
-   return "Free action"
+   return "Free Action "
 when 299   #エモーション
    return "Eｍotion"
 
@@ -413,7 +413,7 @@ when 421   #懺悔なさい
 when 586   #レストレーション
    return "Restoration"
 when 587   #スライミーリキッド
-   return "Sliｍy Fluids"
+   return "Slimy Fluids"
 when 588   #激励
    return "Cheer"
 when 589   #バッドスポア
@@ -423,13 +423,13 @@ when 590   #スポアクラウド
 when 591   #アイヴィクローズ
    return "Entangle"
 when 592   #デモンズクローズ
-   return "Deｍon Wrap"
+   return "Demon Wrap"
 when 599   #焦燥
    return "Ｈaste "
 when 600   #専心
    return "Concentration"
 when 601   #本能の呼び覚まし
-   return "Priｍal Instincts"
+   return "Primal Instincts"
 when 602   #自信過剰
    return "Overconfidence"
    
@@ -438,11 +438,11 @@ when 602   #自信過剰
 when 611   #リラックスタイム
    return "Relaxation Tiｍe"
 when 612   #スイートアロマ
-   return "Sｗeet Aroｍa"
+   return "Sweet Aroｍa"
 when 613   #パッションビート
    return "Passion Beats"
 when 614   #マイルドパフューム
-   return "Mild Prefuｍe"
+   return "Mild Perfume"
 when 615   #レッドカーペット
    return "Red Carpet"
 when 618   #ストレンジスポア
@@ -450,7 +450,7 @@ when 618   #ストレンジスポア
 when 619   #ウィークスポア
    return "Weakening Spores"
 when 620   #威迫
-   return "Intiｍidate"
+   return "Intimidate"
 when 621   #心掴み
    return "Heart Grasp"
 when 622   #全ては現
@@ -484,9 +484,9 @@ when 691   #バックアクセプト
 when 692   #インモラルビュー
    return "Dark Side "
 when 695   #エンブレイス
-   return "Eｍbrace "
+   return "Eｍbrace"
 when 696   #エキシビジョン / hold legs in place
-   return "Spread 'eｍ" #"Exhibition"
+   return "Spread 'em" #"Exhibition"
 when 697   #ペリスコープ / Paizuri bearhold
    return "Paizuri Lock"#"Periscope"
 when 698   #ヘブンリーフィール / Puff-puff headhold
@@ -512,7 +512,7 @@ when 712   #ディルドインバック
 when 715   #アイヴィクローズ
    return "Entangle"
 when 716   #デモンズクローズ
-   return "Deｍon Wrap"
+   return "Demon Wrap"
 when 717   #デモンズアブソーブ
    return "Feeler Suck-in"
 when 718   #デモンズドロウ

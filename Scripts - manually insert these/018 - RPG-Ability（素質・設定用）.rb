@@ -425,7 +425,7 @@ module RPG
         @description = "Deals even more damage when mood is high."
       when 124
         @name = "n—û" # Y
-        @UK_name = "Techni‚‘ue Mastery" 
+        @UK_name = "Technique Mastery" 
         @description = "Has a higher Sensual Stroke rate."
       when 125
         @name = "©M‰ßè"

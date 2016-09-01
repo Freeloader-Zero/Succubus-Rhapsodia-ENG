@@ -89,7 +89,7 @@ class Window_BattleBackLog < Window_Base
       self.contents.draw_text(4 + x, 24 * line_deep + @start_y, 40, 32, c)
       # x ‚É•`‰æ‚µ‚½•¶Žš‚Ì•‚ð‰ÁŽZ
       x += self.contents.text_size(c).width #+ 2
-      if c == "\w"
+      if c == "\065"
         x = @start_x
         line_deep += 1
         next

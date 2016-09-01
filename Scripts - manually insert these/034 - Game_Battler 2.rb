@@ -42,7 +42,7 @@ class Game_Battler
     case $data_SDB[self.class_id].name
     when "Little Witch","Witch ","Caster","Slave "
       return true
-    when "Priestess ","Cursed Magus","Raｍile ","Huｍan"
+    when "Priestess ","Cursed Magus","Ramile","Huｍan"
       return true
     else
       return false
@@ -64,7 +64,7 @@ class Game_Battler
   end
   #●ファミリア属(同種に対して口調が変わる)
   def tribe_familiar?
-    return true if $data_SDB[self.class_id].name == "Faｍiliar "
+    return true if $data_SDB[self.class_id].name == "Familiar"
     return false
   end
   #●子鬼属(コマンダー指揮範囲となる。インプも例外的に含まれる)

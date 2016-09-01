@@ -233,13 +233,13 @@ class Scene_Battle
     # クライシス報告メッセージ表示
     for actor in $game_party.battle_actors
       if actor.exist? and actor.state?(6)
-        text += $data_states[6].message($data_states[6], "report", actor, nil) + "\w\q"
+        text += $data_states[6].message($data_states[6], "report", actor, nil) + "\065\067"
         txc += 1
       end
     end
     for enemy in $game_troop.enemies
       if enemy.exist? and enemy.state?(6)
-        text += $data_states[6].message($data_states[6], "report", enemy, nil) + "\w\q"
+        text += $data_states[6].message($data_states[6], "report", enemy, nil) + "\065\067"
         txc += 1
       end
     end
@@ -257,7 +257,7 @@ class Scene_Battle
       end
       if $game_system.system_read_mode != 0
         text += "CLEAR"
-        text.sub!("\w\qCLEAR","")
+        text.sub!("\065\067CLEAR","")
       end
       $game_temp.battle_log_text += text if text != ""
     end
@@ -280,7 +280,7 @@ class Scene_Battle
       if actor.exist? and not actor.dead?
 #        actor.remove_states_auto
         ms = actor.bms_states_report
-        text1 = (text1 + ms + "\w\q") if ms != ""
+        text1 = (text1 + ms + "\065\067") if ms != ""
         txc += 1 if ms != ""
       end
     end
@@ -289,11 +289,11 @@ class Scene_Battle
       if enemy.exist?
 #        enemy.remove_states_auto
         ms = enemy.bms_states_report
-        text2 = (text2 + ms + "\w\q") if ms != ""
+        text2 = (text2 + ms + "\065\067") if ms != ""
         txc += 1 if ms != ""
       end
     end
-#    text2.sub!("\w\q\w\n\w\n\w\n\w\n","\w\n") if text2.include?("\w\n\w\n\w\n\w\n\w\n")
+#    text2.sub!("\065\067\065\n\065\n\065\n\065\n","\065\n") if text2.include?("\065\n\065\n\065\n\065\n\065\n")
     text = text1 + text2
     if text != ""
 =begin
@@ -312,7 +312,7 @@ class Scene_Battle
 =end
       if $game_system.system_read_mode != 0
         text += "CLEAR"
-        text.sub!("\w\qCLEAR","")
+        text.sub!("\065\067CLEAR","")
       end
       $game_temp.battle_log_text += text
       #▼システムウェイト
@@ -355,7 +355,7 @@ class Scene_Battle
         
 #        actor.remove_states_auto
         ms = actor.bms_states_update
-        text1 = (text1 + ms + "\w\q") if ms != ""
+        text1 = (text1 + ms + "\065\067") if ms != ""
         txc += 1 if ms != ""
       end
     end
@@ -366,7 +366,7 @@ class Scene_Battle
         #enemy.persona_break if enemy.state?(106) #破面併発
 #        enemy.remove_states_auto
         ms = enemy.bms_states_update
-        text2 = (text2 + ms + "\w\q") if ms != ""
+        text2 = (text2 + ms + "\065\067") if ms != ""
         txc += 1 if ms != ""
       end
     end
@@ -386,7 +386,7 @@ class Scene_Battle
       end
       if $game_system.system_read_mode != 0
         text += "CLEAR"
-        text.sub!("\w\qCLEAR","")
+        text.sub!("\065\067CLEAR","")
       end
       $game_temp.battle_log_text += text
     end
@@ -491,7 +491,7 @@ class Scene_Battle
         if actor.exist? and not actor.dead?
           actor.remove_states_auto
           ms = actor.bms_states_update
-          text1 = (text1 + ms + "\w\q") if ms != ""
+          text1 = (text1 + ms + "\065\067") if ms != ""
           txc += 1
         end
       end
@@ -500,7 +500,7 @@ class Scene_Battle
         if enemy.exist?
           enemy.remove_states_auto
           ms = enemy.bms_states_update
-          text2 = (text2 + ms + "\w\q") if ms != ""
+          text2 = (text2 + ms + "\065\067") if ms != ""
           txc += 1
         end
       end
@@ -521,7 +521,7 @@ class Scene_Battle
         end
         if $game_system.system_read_mode != 0
           text += "CLEAR"
-          text.sub!("\w\qCLEAR","")
+          text.sub!("\065\067CLEAR","")
         end
         $game_temp.battle_log_text += text
         before_text_flag = true # テキスト有りのフラグを立てる
@@ -556,7 +556,7 @@ class Scene_Battle
             if enemy.ecstasy_turn == 0 and enemy.weaken?
               enemy.remove_state(2) if enemy.states.include?(2) #衰弱
               enemy.remove_state(3) if enemy.states.include?(3) #絶頂
-              text += enemy.bms_states_update + "\w\q"
+              text += enemy.bms_states_update + "\065\067"
               enemy.animation_id = 12
               enemy.animation_hit = true
               txc += 1
@@ -582,7 +582,7 @@ class Scene_Battle
             if actor.ecstasy_turn == 0 and actor.weaken?
               actor.remove_state(2) if actor.states.include?(2) #衰弱
               actor.remove_state(3) if actor.states.include?(3) #絶頂
-              text += actor.bms_states_update + "\w\q"
+              text += actor.bms_states_update + "\065\067"
               actor.animation_id = 12
               actor.animation_hit = true
               txc += 1
@@ -607,10 +607,10 @@ class Scene_Battle
       if text != ""
         if $game_system.system_read_mode != 0
           text += "CLEAR"
-          text.sub!("\w\qCLEAR","")
+          text.sub!("\065\067CLEAR","")
         end
         # 事前にテキストがあった場合は改行を挿す
-        text = "\w\q" + text if before_text_flag 
+        text = "\065\067" + text if before_text_flag 
         $game_temp.battle_log_text += text
         #▼システムウェイト
         case $game_system.ms_skip_mode
@@ -685,7 +685,7 @@ class Scene_Battle
       $msg.tag = ""
       
       # バックログに改行指定を追加
-#      $game_temp.battle_back_log += "\q"
+#      $game_temp.battle_back_log += "\067"
 
       # ステータスウィンドウをリフレッシュ
       @status_window.refresh
@@ -882,7 +882,7 @@ class Scene_Battle
             hold_effect(@skill, @active_battler, target)
           # その他
           else
-            $game_temp.battle_log_text += "Resist Successful\w\q" 
+            $game_temp.battle_log_text += "Resist Successful\065\067" 
           end
         # 失敗時
         else
@@ -892,11 +892,11 @@ class Scene_Battle
           $msg.talk_step = 3
           #受け入れた場合はSEを鳴らさず、レジストカウントを上げない
           if $game_switches[89]
-            $game_temp.battle_log_text += @active_battler.name + " gave up!\w\q"
+            $game_temp.battle_log_text += @active_battler.name + " gave up!\065\067"
           else
           # 避けるSEを鳴らし、対象のレジストカウントを＋１する
             Audio.se_play("Audio/SE/063-Swing02", 80, 100)
-            $game_temp.battle_log_text += target.name + " resisted it!\w\q"
+            $game_temp.battle_log_text += target.name + " resisted it!\065\067"
             target.resist_count += 1
           end
           if @skill.element_set.include?(6)
@@ -925,7 +925,7 @@ class Scene_Battle
           $msg.talk_step = 2
           # 避けるSEを鳴らし、対象のレジストカウントを＋１する
           Audio.se_play("Audio/SE/063-Swing02", 80, 100)
-          $game_temp.battle_log_text += target.name + " resisted it!\w\q"
+          $game_temp.battle_log_text += target.name + " resisted it!\065\067"
           target.resist_count += 1
           if @skill.element_set.include?(6)
             @hold_shake = false
@@ -965,7 +965,7 @@ class Scene_Battle
             hold_effect(@skill, @active_battler, target)
           # その他
           else
-            $game_temp.battle_log_text += "Failed to resist.\w\q" 
+            $game_temp.battle_log_text += "Failed to resist.\065\067" 
           end
         end
       end
@@ -1067,11 +1067,11 @@ class Scene_Battle
             #▽スキルテキストがあるなら挿入
             text1 += skill_result if skill_result != ""
             #▽対象のステートテキストがあるなら挿入
-            text1 += "\w\q" + state_result if state_result != ""
+            text1 += "\065\067" + state_result if state_result != ""
             #▽自身のステートテキストがあるなら挿入
-            text1 += "\w\q" + state_result2 if state_result2 != ""
+            text1 += "\065\067" + state_result2 if state_result2 != ""
             #▽テキストが存在するなら、最後に改行を挿入
-            text1 += "\w\q" if text1 != ""
+            text1 += "\065\067" if text1 != ""
             #------------------------------------------------------
             # ●贈り物アイテムの場合、友好度に応じてアニメーションを指示
             #------------------------------------------------------
@@ -1091,12 +1091,12 @@ class Scene_Battle
               # 実際にEPを減算
               @active_battler.hp -= rebound
               # バトルログを表示(リバウンドが発生しない場合は表示しない）
-              text3 += "\w" + @active_battler.name + " took " + rebound.to_s + " rebound pleasure!\q" if rebound > 0
+              text3 += "\065" + @active_battler.name + " took " + rebound.to_s + " rebound pleasure!\067" if rebound > 0
               if @active_battler.hp > 0 and not @active_battler.state?(6)
                 if @active_battler.hpp <= $mood.crisis_point(@active_battler) + rand(5)
                   @active_rebound_flag = true
                   @active_battler.add_state(6)
-                  text3 += @active_battler.bms_states_update + "\w\q"
+                  text3 += @active_battler.bms_states_update + "\065\067"
                 end
               end
               # 画像変更
@@ -1111,7 +1111,7 @@ class Scene_Battle
               if vp_drain > 0
                 target.sp -= vp_drain
                 @active_battler.sp += vp_drain
-                text3 += "\w" + @active_battler.name + " had " + vp_drain.to_s + " energy absorbed!\w\q"
+                text3 += "\065" + @active_battler.name + " had " + vp_drain.to_s + " energy absorbed!\065\067"
                 if target.sp <= 0
                   target.sp_down_flag = true
                 end
@@ -1126,7 +1126,7 @@ class Scene_Battle
             if @command.element_set.include?(202)
               if target.level > 1
                 target.level -= 1
-                text3 += "\w" + "#{target.name} became Lv.#{target.level.to_s}!"
+                text3 += "\065" + "#{target.name} became Lv.#{target.level.to_s}!"
                 # 使用者にストレリブルムの強化項目を通す
                 level_drain_text = ""
 #                @active_battler.capacity_alteration_effect($data_skills[195])
@@ -1135,7 +1135,7 @@ class Scene_Battle
 #               
                 # テキストがあるならそこを通す
 #                if level_drain_text != "" and level_drain_text != "しかし#{@active_battler.name}には効果が無かった！"
-                  text3 += level_drain_text + "\w\q"
+                  text3 += level_drain_text + "\065\067"
 #                end
                 # 吸収したならアニメを付ける
                 @active_battler.animation_id = 168
@@ -1147,13 +1147,13 @@ class Scene_Battle
             #------------------------------------------------------
             if $game_switches[82] == true
               brk = ""
-              brk = "、\n\m" if SR_Util.names_over?(@active_battler.name,$game_temp.battle_target_battler[0].name)
+              brk = "、\n\066" if SR_Util.names_over?(@active_battler.name,$game_temp.battle_target_battler[0].name)
               #ティーズの場合、スイッチを即時解除する
               if @active_battler.is_a?(Game_Actor) and @command.id == 101
-                text3 += "\w" + @active_battler.name + "は#{brk}#{$game_temp.battle_target_battler[0].name}を焦らしている！\w\q"
+                text3 += "\065" + @active_battler.name + "は#{brk}#{$game_temp.battle_target_battler[0].name}を焦らしている！\065\067"
               #夢魔からの焦らし攻撃を食らった場合、スイッチを即時解除する
               elsif @active_battler.is_a?(Game_Enemy)
-                text3 += "\w" + @active_battler.name + "は#{brk}#{$game_temp.battle_target_battler[0].name}を焦らしている！\w\q"
+                text3 += "\065" + @active_battler.name + "は#{brk}#{$game_temp.battle_target_battler[0].name}を焦らしている！\065\067"
               end
               $game_switches[82] = false
             end
@@ -1162,11 +1162,11 @@ class Scene_Battle
             #------------------------------------------------------
             if @active_battler.is_a?(Game_Actor) and @active_battler.have_ability?("洞察力")
               brk = ""
-              brk = "、\n\m" if SR_Util.names_over?(@active_battler.name, $game_temp.battle_target_battler[0].name, 16)
+              brk = "、\n\066" if SR_Util.names_over?(@active_battler.name, $game_temp.battle_target_battler[0].name, 16)
               # 対象が敵で、チェックフラグが１未満の時、１にしてナレートを出す
               if target.is_a?(Game_Enemy) and target.checking < 1
                 target.checking = 1
-                text3 += "\w" + @active_battler.name + " examined #{brk}#{$game_temp.battle_target_battler[0].name}!\w\q"
+                text3 += "\065" + @active_battler.name + " examined #{brk}#{$game_temp.battle_target_battler[0].name}!\065\067"
               end
             end
             #------------------------------------------------------
@@ -1188,11 +1188,11 @@ class Scene_Battle
             #対象のステートからステートリザルトを呼び出す
             state_result = target.bms_states_update
             if state_result != "" #付与ステートがある場合
-              text1 += state_result + "\w\q"
+              text1 += state_result + "\065\067"
             elsif state_result == "" #付与ステートが無い場合
               text1 += ""
             else
-              text1 += state_result + "\w\q"
+              text1 += state_result + "\065\067"
             end
             # 強化・低下魔法関連処理
             for i in 80..87
@@ -1216,21 +1216,21 @@ class Scene_Battle
             bs = 0
             for i in SR_Util.checking_states
               if $data_skills[@skill.id].plus_state_set.include?(i) and target.states.include?(i)
-                text1 += "Ｈoｗever " + target.name + " cannot be effected ｍore than this!\w\q"
+                text1 += "Ｈoｗever " + target.name + " cannot be effected ｍore than this!\065\067"
                 bs = 1
                 break
               end
             end
             if bs == 0
               skill_result = target.bms_skill_effect(@skill)
-              text1 += skill_result + "\w\q"
+              text1 += skill_result + "\065\067"
             end
           #************************************************************************
           # ▼「贈り物アイテム」の場合、贈り物アイテムの失敗を表示
           #************************************************************************
           elsif target.is_a?(Game_Enemy) and @command.element_set.include?(199) and
             skill_result = target.bms_item_effect(@item)
-            text1 += skill_result + "\w\q"
+            text1 += skill_result + "\065\067"
           #************************************************************************
           # ▼「ダメージ無しスキル」ではない場合
           #************************************************************************
@@ -1238,7 +1238,7 @@ class Scene_Battle
 #          else
 #            # ミスした場合は避けるSEを鳴らす
 #            Audio.se_play("Audio/SE/063-Swing02", 80, 100)
-            $game_temp.battle_log_text += "\w" + target.name + " was not effected!\q"
+            $game_temp.battle_log_text += "\065" + target.name + " was not effected!\067"
           end
         end
         #======================================================================================
@@ -1259,7 +1259,7 @@ class Scene_Battle
             $msg.callsign = 17 if $game_switches[85] == true
             target.undress
             #対象のステート状況をテキストに格納
-            text1 += target.bms_states_update + "\w\q"
+            text1 += target.bms_states_update + "\065\067"
           #●アクター側の挙動
           else
             #主人公
@@ -1288,7 +1288,7 @@ class Scene_Battle
             target.animation_id = 104
             target.animation_hit = true
             target.undress
-            text1 += target.bms_states_update + "\w\q"
+            text1 += target.bms_states_update + "\065\067"
           end
         end
         #************************************************************************
@@ -1304,14 +1304,14 @@ class Scene_Battle
           target.animation_id = 90
           target.animation_hit = true
           @active_battler.undress
-          text1 += @active_battler.bms_states_update + "\w\q"
+          text1 += @active_battler.bms_states_update + "\065\067"
           @active_battler.graphic_change = true
         end
         #************************************************************************
         # ▼イニシアチブ変更系
         #************************************************************************
         if @command.element_set.include?(207)
-          text1 += "#{@active_battler.name}は主導権を取り戻した！\w\q"
+          text1 += "#{@active_battler.name}は主導権を取り戻した！\065\067"
         end
         #************************************************************************
         # ▼インセンス全て削除
@@ -1319,9 +1319,9 @@ class Scene_Battle
         if @command.element_set.include?(213)
           delete_flag = $incense.delete_incense_all
           if delete_flag
-            text1 += "場に掛かっている効果がすべて無くなった！\w\q"
+            text1 += "場に掛かっている効果がすべて無くなった！\065\067"
           else
-            text1 += "しかし効果は無かった！\w\q"
+            text1 += "しかし効果は無かった！\065\067"
           end
         end
         #************************************************************************
@@ -1350,7 +1350,7 @@ class Scene_Battle
           target.used_sadism = 0
           battler_stan(target)
           enemies_display(target)
-          text1 += "#{target.name}が現れた！\w\q"
+          text1 += "#{target.name}が現れた！\065\067"
         end
         
      #elsif target.damage == nil ダメージが無い場合の処理は現状では特に無いため封印
@@ -1386,10 +1386,10 @@ class Scene_Battle
     if @command.name == "アンラッキーロア"
       # 不幸でない場合、不幸状態にする。
       unless $game_party.unlucky?
-        text1 += "#{$game_actors[101].name}は不幸になってしまった！\w\q"
+        text1 += "#{$game_actors[101].name}は不幸になってしまった！\065\067"
         $game_variables[61] = 50 
       else
-        text1 += "しかし効果は無かった！\w\q"
+        text1 += "しかし効果は無かった！\065\067"
       end
     end
     #************************************************************************
@@ -1401,7 +1401,7 @@ class Scene_Battle
         # 発生時処理
         text1 = incense_start_effect
       else
-        text1 = "しかし効果は無かった！\w\q"
+        text1 = "しかし効果は無かった！\065\067"
       end
     end
     #本能の呼び覚ましで自己暴走した場合、そのターンの追加アクションをキャンセルする
@@ -1425,14 +1425,14 @@ class Scene_Battle
       a = text1 + text2 + text3
       if $game_system.system_read_mode != 0
         a += "CLEAR"
-        a.sub!("\w\qCLEAR","")
+        a.sub!("\065\067CLEAR","")
         a.sub!("CLEAR","") if a[/(CLEAR)/] != nil
       end
       $game_temp.battle_log_text += a
     else
       # マニュアル操作の場合、効果がない場合でもポーズを付ける
 #      if $game_system.system_read_mode == 0
-#        $game_temp.battle_log_text += "　\w\q"
+#        $game_temp.battle_log_text += "　\065\067"
 #      end
     end
     
@@ -2212,7 +2212,7 @@ class Scene_Battle
           end
           $game_party.battle_actor_refresh
           # バトルログを表示
-          $game_temp.battle_log_text += b_actor.name + " has entered battle!\w\q"
+          $game_temp.battle_log_text += b_actor.name + " has entered battle!\065\067"
           # ステータス画面をリフレッシュ
           @status_window.refresh
           #●バトルトーク関連をリセット

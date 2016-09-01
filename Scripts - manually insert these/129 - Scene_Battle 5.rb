@@ -63,7 +63,7 @@ class Scene_Battle
       # ヘルプウィンドウに "防御" を表示
       @help_window.set_text($data_system.words.guard, 1)
       #  ★バトルログを表示
-      $game_temp.battle_log_text += @active_battler.name + "は防御している……\q"
+      $game_temp.battle_log_text += @active_battler.name + "は防御している……\067"
       @phase4_step = 6
       return
     end
@@ -76,7 +76,7 @@ class Scene_Battle
       @help_window.set_text("逃げる", 1)
       # ★バトルログを表示
       # 逃げるメッセージは別の場所に書かないとダメみたい。(調査中)
-      $game_temp.battle_log_text += @active_battler.name + "は逃げ出した！\q"
+      $game_temp.battle_log_text += @active_battler.name + "は逃げ出した！\067"
       # 逃げる
       @active_battler.escape
       @phase4_step = 6
@@ -90,7 +90,7 @@ class Scene_Battle
       if @active_battler.hidden == false and @active_battler.another_action == false
         if @active_battler.is_a?(Game_Enemy) and not $game_temp.first_attack_flag == 1
           # ★バトルログを表示
-          $game_temp.battle_log_text += @active_battler.name + " is observing...\q"
+          $game_temp.battle_log_text += @active_battler.name + " is observing...\067"
         else
           @wait_count = 0
         end
@@ -111,7 +111,7 @@ class Scene_Battle
         $game_temp.forcing_battler = nil
         @active_battler.white_flash = true
         # ★バトルログを表示
-        $game_temp.battle_log_text += @active_battler.name + " ran aｗay!\w\q"
+        $game_temp.battle_log_text += @active_battler.name + " ran aｗay!\065\067"
         # ウェイトを再設定
         #▼システムウェイト
         case $game_system.ms_skip_mode
@@ -181,7 +181,7 @@ class Scene_Battle
           actor_2.checking = 0
         end
         # バトルログを表示
-        $game_temp.battle_log_text += actor_1.name + " and " + actor_2.name + "\w\n sｗitched places!\w\q"
+        $game_temp.battle_log_text += actor_1.name + " and " + actor_2.name + "\065\n sｗitched places!\065\067"
         # ステータス画面をリフレッシュ
         @status_window.refresh
         # アクション強制対象のバトラーをクリア
@@ -242,7 +242,7 @@ class Scene_Battle
     # 逃走失敗の場合
     else
       # ★バトルログを表示
-      $game_temp.battle_log_text += "しかし回りこまれてしまった！\q"
+      $game_temp.battle_log_text += "しかし回りこまれてしまった！\067"
       # ウェイトを再設定
       #▼システムウェイト
       case $game_system.ms_skip_mode

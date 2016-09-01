@@ -15,13 +15,13 @@ class Game_Battler
     for i in self.states
       if $data_states[i].id != 6 and self.exist? and not self.dead?
         ms = $data_states[i].message($data_states[i],"report",self,nil)
-        text = (text + ms + "\w\q") if ms != ""
+        text = (text + ms + "\065\067") if ms != ""
       end
     end
     # メッセージ表示
     if text != ""
       text += "CLEAR"
-      text.sub!("\w\qCLEAR","")
+      text.sub!("\065\067CLEAR","")
       return text
     else
       return ""
@@ -50,7 +50,7 @@ class Game_Battler
           return text1
         end
         #改行を挿入
-        text1 = text1 + ms1 + "\w\q" if ms1 != ""
+        text1 = text1 + ms1 + "\065\067" if ms1 != ""
       end
       #格納終了したらログを消去する
       self.add_states_log.clear
@@ -60,7 +60,7 @@ class Game_Battler
       for i in self.remove_states_log
         ms2 = i.message(i,"recover", self, user)
         #改行を挿入
-        text2 = text2 + ms2 + "\w\q" if ms2 != ""
+        text2 = text2 + ms2 + "\065\067" if ms2 != ""
       end
       #格納終了したらログを消去する
       self.remove_states_log.clear
@@ -71,7 +71,7 @@ class Game_Battler
     if text != ""
       #文章がある場合、最後の改行を消す
       text += "CLEAR"
-      text.sub!("\w\qCLEAR","")
+      text.sub!("\065\067CLEAR","")
       return text
     else
       return ""
@@ -84,10 +84,10 @@ class Game_Battler
     user = $game_temp.battle_active_battler
     text = skill.message(skill, "action", self, user)
     if text != "" and text != nil
-      text = text + "\q"
+      text = text + "\067"
       # 挑発による対象変更が発生している場合、誘引メッセージを出す
       if $game_temp.incite_flag
-        text = "#{user.name} ｗas invited!\q\m" + text
+        text = "#{user.name} ｗas invited!\067\066" + text
       end
       $game_temp.battle_log_text = text
     end
@@ -105,8 +105,8 @@ class Game_Battler
       damage = self.damage
       # ●クリティカル処理
       if self.critical and self.damage != "Miss"
-#        plus += "センシュアルストローク！\w\q"
-        plus += "Sensual Stroke！\w\q"
+#        plus += "センシュアルストローク！\065\067"
+        plus += "Sensual Stroke！\065\067"
         self.animation_id = 103
         self.animation_hit = true
         self.damage_pop = true
@@ -179,13 +179,13 @@ class Game_Battler
     # ■特殊スキル
     case skill.id
     when 419   #アンラッキーロア
-      text = "#{$game_actors[101].name}は不幸になってしまった！\w\q"
+      text = "#{$game_actors[101].name}は不幸になってしまった！\065\067"
       # 不幸でない場合、不幸状態にする。
       if $game_variables[61] == 0
         $game_variables[61] = 50 
       end
     when 239   #シャイニングレイジ
-      text = "闇を裁く閃光の鉄槌が、悪しき者どもを貫く！！\w\q"
+      text = "闇を裁く閃光の鉄槌が、悪しき者どもを貫く！！\065\067"
     end
     #------------------------------------------------------------------------#        
     return text
@@ -198,7 +198,7 @@ class Game_Battler
     user = $game_temp.battle_active_battler
     text = item.message(item, "action", self, user)
     if text != nil
-      text = text + "\q"
+      text = text + "\067"
       $game_temp.battle_log_text = text
     end
   end
@@ -213,7 +213,7 @@ class Game_Battler
     # EPとVP両方回復の場合
     if (item.recover_hp_rate > 0 or item.recover_hp > 0) and
        (item.recover_sp_rate > 0 or item.recover_sp > 0)
-      text = "#{myname} recovered #{(damage.abs).to_s}ＥＰ!\q" + 
+      text = "#{myname} recovered #{(damage.abs).to_s}ＥＰ!\067" + 
              "#{myname} recovered #{(recover_sp).to_s}ＶＰ!！"
       text = "しかし今は効果が無かった！" if self.state?("衰弱")
     # EPのみ回復の場合
@@ -263,7 +263,7 @@ class Game_Battler
       text = "#{myname}'s face is blushing red ｗith eｍbarrassｍent...!"
     #------------------------------------------------------------------------
     when "露悪狂"
-      text = "#{myname} appears aｍused,\n\m sneering and laughing at #{user}...!"
+      text = "#{myname} appears aｍused,\n\066 sneering and laughing at #{user}...!"
     #------------------------------------------------------------------------
     else
       text = "#{myname} seeｍs to be pleased...!"

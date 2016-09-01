@@ -444,7 +444,7 @@ class Scene_Battle
         text = "#{active.name}の操る触手が怪しく蠢くと、\n#{target.name}は股を大きく広げた姿勢にされてしまった！"
       end
     end
-    $game_temp.battle_log_text += text + "\w\q"
+    $game_temp.battle_log_text += text + "\065\067"
   end
   #--------------------------------------------------------------------------
   # ★ ホールド終了時テキスト処理
@@ -538,13 +538,13 @@ class Scene_Battle
     end
     a = ""
     a += text[0] if text[0] != nil
-    a += "\n\m" if text[1] != nil
+    a += "\n\066" if text[1] != nil
     a += text[1] if text[1] != nil
-    a += "\n\m" if text[2] != nil
+    a += "\n\066" if text[2] != nil
     a += text[2] if text[2] != nil
-    a += "\n\m" if text[3] != nil
+    a += "\n\066" if text[3] != nil
     a += text[3] if text[3] != nil
-    $game_temp.battle_log_text += a + "\w\q"
+    $game_temp.battle_log_text += a + "\065\067"
   end
   #--------------------------------------------------------------------------
   # ● 乱交時のホールド付与によるイニシアチブ変動
@@ -1027,7 +1027,7 @@ class Scene_Battle
     # ホールドポップの指示
     hold_pops_order
     # 体位テキスト
-    $game_temp.battle_log_text += "\w\q" + hd_text if hd_text != ""
+    $game_temp.battle_log_text += "\065\067" + hd_text if hd_text != ""
   end
 =end
 

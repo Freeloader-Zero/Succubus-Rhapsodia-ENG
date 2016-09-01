@@ -67,7 +67,7 @@ class Window_NameEdit < Window_Base
       "Angie",
       "Feｍibelle",
       "Hayonehayona",
-      "Eｑuipｍe",
+      "Equipｍe",
       "Neｗ",
       "Holy",
       "Marika",
@@ -261,7 +261,7 @@ class Window_NameEdit < Window_Base
     when "Nightｍare"
       special_name_list = [
       "Hypnox",
-      "Mesｍeriｑue",
+      "Mesｍerique",
       "Isles",
       "Kasuｍe",
       "Mabelle",
@@ -296,7 +296,7 @@ class Window_NameEdit < Window_Base
       "Aiyu",
       "Rochuon",
       "Midasa",
-      "Paｑua",
+      "Paqua",
       "Hanaki",
       "Leidei",
       "Yelloｗ",
@@ -307,7 +307,7 @@ class Window_NameEdit < Window_Base
     #------------------------------------------------------------------------
     # ■■ファミリア種
     #------------------------------------------------------------------------
-    when "Faｍiliar "
+    when "Familiar"
       special_name_list = [
       "Lotta",
       "Challis",
@@ -322,7 +322,7 @@ class Window_NameEdit < Window_Base
     #------------------------------------------------------------------------
     # ■■ワーウルフ種
     #------------------------------------------------------------------------
-    when "Wereｗolf "
+    when "Werewolf"
       special_name_list = [
       "Kerube",
       "Orotoro",

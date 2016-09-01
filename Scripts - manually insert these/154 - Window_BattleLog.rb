@@ -66,9 +66,9 @@ class Window_BattleLog < Window_Base
     
 =begin
       # ログ矯正
-      if ["\q\q","\q\w\q","\q\m\q","\q\y\q"].include?($game_temp.battle_back_log)
+      if ["\067\067","\067\065\067","\067\066\067","\067\y\067"].include?($game_temp.battle_back_log)
         $game_temp.battle_back_log += "CLEAR"
-        $game_temp.battle_back_log.gsub!("\qCLEAR","")
+        $game_temp.battle_back_log.gsub!("\067CLEAR","")
       elsif $game_temp.battle_back_log == "\n"
         $game_temp.battle_back_log = ""
       end
@@ -76,20 +76,20 @@ class Window_BattleLog < Window_Base
     
     
 =begin
-    # マニュアルモードは末尾に\qをつける
+    # マニュアルモードは末尾に\067をつける
     if $game_system.system_read_mode == 0
       text += "CHECK"
-      if text.match("\w\qCHECK")
+      if text.match("\065\067CHECK")
         text.gsub!("CHECK","")
       else
-        text.gsub!("CHECK","\w\q")
+        text.gsub!("CHECK","\065\067")
       end
     end
 =end
 
 =begin    
     # ログ矯正
-    if ["\n","\q"].include?(text)
+    if ["\n","\067"].include?(text)
       $game_temp.battle_log_text = ""
       return
     end
@@ -145,7 +145,7 @@ class Window_BattleLog < Window_Base
         next
       end
       # ウェイト文字(長時間)の場合
-      if c == "\w"
+      if c == "\065"
         # ウェイトを入れる
         case $game_system.ms_skip_mode
         when 3 #手動送りモード
@@ -165,7 +165,7 @@ class Window_BattleLog < Window_Base
         return
       end
       # ウェイト文字(短時間)の場合
-      if c == "\m"
+      if c == "\066"
         # ウェイトを入れる
         case $game_system.ms_skip_mode
         when 3 #手動送りモード
@@ -241,7 +241,7 @@ class Window_BattleLog < Window_Base
         next
       end
       # 手動改行文字の場合
-      if c == "\q"
+      if c == "\067"
         # y に 1 を加算
         y += 1
         x = 0
@@ -371,15 +371,15 @@ class Window_BattleLog < Window_Base
   def log_correction
 
     # ウェイトの順序を直す
-    $game_temp.battle_log_text.gsub!("\n\w","\w\n")
-    $game_temp.battle_log_text.gsub!("\q\w","\w\q")
+    $game_temp.battle_log_text.gsub!("\n\065","\065\n")
+    $game_temp.battle_log_text.gsub!("\067\065","\065\067")
     
     # 改行が重複している場合、１つにする
-    $game_temp.battle_log_text.gsub!(/(\\w\\n)+/,"\w\n")
-    $game_temp.battle_log_text.gsub!(/(\\w\\q)+/,"\w\q")
+    $game_temp.battle_log_text.gsub!(/(\\065\\n)+/,"\065\n")
+    $game_temp.battle_log_text.gsub!(/(\\065\\067)+/,"\065\067")
     
-    # \w\n・\w\qだけの場合、テキストを消す
-    if ["\w\n","\w\q"].include?($game_temp.battle_log_text)
+    # \065\n・\065\067だけの場合、テキストを消す
+    if ["\065\n","\065\067"].include?($game_temp.battle_log_text)
       $game_temp.battle_log_text = ""
     end
 

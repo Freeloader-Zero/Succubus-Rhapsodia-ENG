@@ -22,11 +22,11 @@ module RPG
       when 2 # 衰弱
         effect = "" #{myname}は絶頂に達した！"
         recover = "#{myname} ｍustered the ｗillpoｗer to stand back up!"
-        report = "#{myname} can't ｍuster any strength\m\n due to the lingering affects of cliｍax!"
+        report = "#{myname} can't ｍuster any strength\066\n due to the lingering affects of cliｍax!"
       when 3 # 絶頂
         effect = "" #{myname}は絶頂に達した！"
         recover = "#{myname}'s orgasｍ has settled!"
-        report = "#{myname} can't ｍuster any strength\m\n due to the lingering affects of cliｍax!"
+        report = "#{myname} can't ｍuster any strength\066\n due to the lingering affects of cliｍax!"
       when 6 # クライシス
         effect = "#{myname} nearly caｍe!"
         recover = "#{myname} regained coｍposure!"
@@ -55,31 +55,31 @@ module RPG
           effect = "#{myname} violated #{username}!"
         end
       when 13 # ディレイ
-        effect = "#{myname} yelps in surprise!\n\m #{myname}'s ｍoveｍents have dulled!"
+        effect = "#{myname} yelps in surprise!\n\066 #{myname}'s ｍoveｍents have dulled!"
         recover = ""
       when 17 # 苦痛スタン
         if $game_temp.used_skill != nil
           if user.is_a?(Game_Actor)
             if $game_temp.used_skill.element_set.include?(10) #口淫系
               if myself == $game_actors[101]
-              effect = "#{myname} flinched froｍ the\n\m attack to his ｍouth!"
+              effect = "#{myname} flinched froｍ the\n\066 attack to his ｍouth!"
               else
-              effect = "#{myname} flinched froｍ the\n\m attack to her ｍouth!"
+              effect = "#{myname} flinched froｍ the\n\066 attack to her ｍouth!"
               end
             elsif $game_temp.used_skill.element_set.include?(11) #肛姦系
               if myself == $game_actors[101]
-              effect = "#{myname} ｗas stunned by the\n\m attack to his ass!"
+              effect = "#{myname} ｗas stunned by the\n\066 attack to his ass!"
               else
-              effect = "#{myname} ｗas stunned by the\n\m attack to her ass!"
+              effect = "#{myname} ｗas stunned by the\n\066 attack to her ass!"
               end
             else #苦痛系
               effect = "#{myname} flinched painfully!"
             end
           else
             if $game_temp.used_skill.element_set.include?(10) #口淫系
-              effect = "#{myname} sｗoons froｍ being\n\m attacked in the ｍouth!"
+              effect = "#{myname} sｗoons froｍ being\n\066 attacked in the ｍouth!"
             elsif $game_temp.used_skill.element_set.include?(11) #肛姦系
-              effect = "#{myname} cries out froｍ\n\m being attacked in the back!"
+              effect = "#{myname} cries out froｍ\n\066 being attacked in the back!"
             else #苦痛系
               effect = "#{myname} keels froｍ the pain!"
             end
@@ -96,7 +96,7 @@ module RPG
         #処理はGame_Battler4のスキルエフェクトで設定
         effect = recover = report =  ""
       when 19 # 両性具有化
-        effect = "#{myname}'s clit begins to enlarge...!\n\m A penis appeared betｗeen #{myname}'s crotch!"
+        effect = "#{myname}'s clit begins to enlarge...!\n\066 A penis appeared betｗeen #{myname}'s crotch!"
         recover = "#{myname}'s penis sloｗly disappeared!"
       when 20 # 潤滑♂(弱)
         effect = "#{myname}'s penis is ｗell-lubricated!"
@@ -107,20 +107,20 @@ module RPG
       when 22 # 潤滑♀(少)
         effect = "#{myname}'s pussy has gotten ｗet!"
         effect = "#{myname}'s pussy is sliｍy ｗith goo!" if myself.states.include?(27) or myself.states.include?(28)
-#        effect = "#{myname}のアソコから、\n\m徐々に蜜が染み出てきた…！"
-#        effect = "#{myname}のアソコが、\n\m付着した粘液のせいでぬるぬるしてきた…！" if myself.states.include?(27) or myself.states.include?(28)
+#        effect = "#{myname}のアソコから、\n\066徐々に蜜が染み出てきた…！"
+#        effect = "#{myname}のアソコが、\n\066付着した粘液のせいでぬるぬるしてきた…！" if myself.states.include?(27) or myself.states.include?(28)
         recover = ""
       when 23 # 潤滑♀(多)
         effect = "#{myname}'s pussy is sufficiently ｗet!"
         effect = "#{myname}'s pussy is sliｍy ｗith goo!" if myself.states.include?(27) or myself.states.include?(28)
-#        effect = "#{myname}のアソコから、\n\mとろりと蜜が滴り落ちて来た…！"
-#        effect = "#{myname}のアソコは、\n\m粘液と本人の蜜とで十二分に濡れてきた…！" if myself.states.include?(27) or myself.states.include?(28)
+#        effect = "#{myname}のアソコから、\n\066とろりと蜜が滴り落ちて来た…！"
+#        effect = "#{myname}のアソコは、\n\066粘液と本人の蜜とで十二分に濡れてきた…！" if myself.states.include?(27) or myself.states.include?(28)
         recover = ""
       when 24 # 潤滑♀(溢)
-        effect = "#{myname}'s pussy is overfloｗing ｗith\n\m vaginal secretions!"
+        effect = "#{myname}'s pussy is overfloｗing ｗith\n\066 vaginal secretions!"
         effect = "#{myname}'s pussy is sliｍy ｗith goo!" if myself.states.include?(27) or myself.states.include?(28)
-#        effect = "#{myname}のアソコから、\n\m蜜が止めどなく溢れ出して来る…！"
-#        effect = "#{myname}のアソコは、\n\m粘液と本人の蜜とで既にぐしょぐしょだ…！" if myself.states.include?(27) or myself.states.include?(28)
+#        effect = "#{myname}のアソコから、\n\066蜜が止めどなく溢れ出して来る…！"
+#        effect = "#{myname}のアソコは、\n\066粘液と本人の蜜とで既にぐしょぐしょだ…！" if myself.states.include?(27) or myself.states.include?(28)
         recover = ""
       #アナル系ステートは体験版では未搭載なので、誤作動防止のためテキスト封印
       when 25 # 潤滑Ａ(弱)
@@ -138,8 +138,8 @@ module RPG
       when 30 # 淫毒
         effect = "#{myname} ｗas poisoned ｗith aphrodisiacs!"
         report = "#{myname} is poisoned ｗith aphrodisiacs!"
-        recover = "The poison fang fell out of #{myname}...\w\n" +
-                  "Soon after, #{myname}'s body\n\m started to feel hot and flushed!"
+        recover = "The poison fang fell out of #{myname}...\065\n" +
+                  "Soon after, #{myname}'s body\n\066 started to feel hot and flushed!"
         if type == "recover"
           myself.add_state(35)
           myself.add_states_log.clear
@@ -155,14 +155,14 @@ module RPG
         effect = "#{myname} got lost in ecstasy!"
         recover = "#{myname} regained sanity!"
         if myself == $game_actors[101]
-          report = "#{myname} ｗears an expression\n\m of supreｍe bliss on his face!"
+          report = "#{myname} ｗears an expression\n\066 of supreｍe bliss on his face!"
         else
-          report = "#{myname} ｗears an expression\n\m of supreｍe bliss on her face!"
+          report = "#{myname} ｗears an expression\n\066 of supreｍe bliss on her face!"
         end
         # 視覚に働きかけるスキルの場合、メッセージを変化
 #        if skill != nil and skill != ""
 #          if skill.element_set.include?(21)
-#            effect = "#{myname}の視線は#{username}に釘付けになった！\w\n" + 
+#            effect = "#{myname}の視線は#{username}に釘付けになった！\065\n" + 
 #                     "#{myname}は心を奪われた！"
 #          end
 #        end
@@ -191,13 +191,13 @@ module RPG
       when 37 # 虚脱
         if user.is_a?(Game_Actor)
           effect = "#{myname}'s body started feeling ｗeak!"
-          effect = "#{myname}'s strength feels like\n\m it's being drained aｗay...!" if $msg.tag == "奉仕"
-          effect = "#{myname}'s strength feels like\n\m it's being drained aｗay...!" if myself.is_a?(Game_Actor)
-          effect = "#{myname}'s strength is crushed\n\m by the pressure!" if $game_temp.used_skill.name == "懺悔なさい"
+          effect = "#{myname}'s strength feels like\n\066 it's being drained aｗay...!" if $msg.tag == "奉仕"
+          effect = "#{myname}'s strength feels like\n\066 it's being drained aｗay...!" if myself.is_a?(Game_Actor)
+          effect = "#{myname}'s strength is crushed\n\066 by the pressure!" if $game_temp.used_skill.name == "懺悔なさい"
         elsif user.is_a?(Game_Enemy)
           effect = "#{myname}'s body becaｍe ｗeak!"
           effect = "#{myname}'s body is ｗeak froｍ aphrodisiacs!" if myself.state?(30)
-          effect = "#{myname}'s strength is crushed\n\m by the pressure!" if $game_temp.used_skill.name == "懺悔なさい"
+          effect = "#{myname}'s strength is crushed\n\066 by the pressure!" if $game_temp.used_skill.name == "懺悔なさい"
         end
         recover = "#{myname}'s strength has returned!"
         report = "#{myname} can't gather any strength!"
@@ -216,9 +216,9 @@ module RPG
           effect = "#{myname}'s body has sloｗly becoｍe nuｍb!" if myself.is_a?(Game_Actor)
         elsif user.is_a?(Game_Enemy)
           effect = "#{myname}'s body has been paralyzed!"
-          effect = "#{myname}'s\m\n body has been paralyzed by the poison!" if myself.state?(30)
+          effect = "#{myname}'s\066\n body has been paralyzed by the poison!" if myself.state?(30)
         end
-        recover = "#{myname}'s body\m\n has recovered froｍ paralysis!"
+        recover = "#{myname}'s body\066\n has recovered froｍ paralysis!"
         report = "#{myname}'s body is nuｍb...!"
       when 40 # 散漫
         if user.is_a?(Game_Actor)
@@ -228,7 +228,7 @@ module RPG
         elsif user.is_a?(Game_Enemy)
           effect = "#{myname} seeｍs to be lost in pleasure!"
           effect = "#{myname} looks a little light-headed!" if $msg.tag == "奉仕"
-          effect = "#{myname} can't concentrate\n\m because of the aphrodisiac's effects!" if myself.state?(30)
+          effect = "#{myname} can't concentrate\n\066 because of the aphrodisiac's effects!" if myself.state?(30)
         end
         recover = "#{myname} is no longer lost in pleasure!"
         report = "#{myname} can't focus!"
@@ -242,7 +242,7 @@ module RPG
         report = ""
       when 45 # 全身感度アップ
         effect = "#{myname} becaｍe sensitive!"
-        effect = "#{myname}'s body becaｍe sensitive\n\m froｍ the aphrodisiac!" if myself.state?(30)
+        effect = "#{myname}'s body becaｍe sensitive\n\066 froｍ the aphrodisiac!" if myself.state?(30)
         recover = ""
       when 46 # 口感度アップ
         effect = "#{myname}'s lips becaｍe sensitive!"
@@ -361,7 +361,7 @@ module RPG
       when 99 # マーキング
         effect = "#{myself.marking_battler.name}は#{myname}に\n"+
                  "目を付けられてしまった！"
-        recover = "#{myname}の#{myself.marking_battler.name}への\m\n"+
+        recover = "#{myname}の#{myself.marking_battler.name}への\066\n"+
                   "興味が落ち着いた！"
       when 101 # 祝福
         effect = "#{myname}は状態異常に強くなった！"

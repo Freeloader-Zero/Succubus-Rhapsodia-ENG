@@ -31,6 +31,24 @@ http://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_098909/
 
 Changelogs:
 
+v1.03:
+- replaced all script instances with their respective replacements:
+	- "\w" with "\065"
+	- "\m" with "\066"
+	- "\q" with "\067"
+	- this is a workaround for the "w", "m", and "q" letters going missing in the battle log (combat messages)
+	- reverted the double-byte "ｑ" workaround, going back to the normal single-byte "q" for aesthetic reasons, now that "\q" has been replaced
+	- "\y" remains commented out in Window_BattleLog, because it isn't used anyways
+	- did not replace "\H" because of how prominently used it is in the events via Map.rxdata files and System/Talk files
+- Changed class/enemy name "Neijorage" to "Neijorange", in favor of Strange's assessment of "Neijuranju" (since I also neglected to see the 2nd "n" in the codename "boss_neijurange"
+- Reverted class/enemy name "Raｍile " to "Ramile", "Raｍile Caster" to "Ramile Caster "
+- Reverted class/enemy name "Verｍiena " to "Vermiena"
+- Reverted class/enemy name "Wereｗolf " to "Werewolf"
+- Reverted class/enemy name "Faｍiliar " to "Familiar"
+- replaced a few "ｗ"s and "ｍ"s in Skill English for sake of making them even bytes
+- edited "Mild Prefuｍe" to "Mild Perfume" in Skills English
+
+
 v1.02:
 - updated scripts v1.09
 	- v1.09 added "enemy_before_earnest?" stuff to:

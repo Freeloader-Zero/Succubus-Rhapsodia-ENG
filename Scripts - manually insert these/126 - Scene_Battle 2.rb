@@ -35,7 +35,7 @@ class Scene_Battle
       text = "A group of succubi have appeared!"
       end
     end
-    $game_temp.battle_log_text += text + "\q"
+    $game_temp.battle_log_text += text + "\067"
     #▼システムウェイト
     case $game_system.ms_skip_mode
     when 3 #手動送りモード
@@ -93,9 +93,9 @@ class Scene_Battle
       @battle_log_window.keep_flag = false
       $game_temp.battle_log_text = ""
       if $game_party.actors.size == 1
-        $game_temp.battle_log_text += $game_actors[101].name + " has the initiative!\q"
+        $game_temp.battle_log_text += $game_actors[101].name + " has the initiative!\067"
       else
-        $game_temp.battle_log_text += $game_actors[101].name + " has the initiative!\q"
+        $game_temp.battle_log_text += $game_actors[101].name + " has the initiative!\067"
       end
       #▼システムウェイト
       case $game_system.ms_skip_mode
@@ -119,9 +119,9 @@ class Scene_Battle
       @battle_log_window.keep_flag = false
       $game_temp.battle_log_text = ""
       if $game_party.actors.size == 1
-        $game_temp.battle_log_text += $game_actors[101].name + " had the initiative taken by the eneｍy!\q"
+        $game_temp.battle_log_text += $game_actors[101].name + " had the initiative taken by the eneｍy!\067"
       else
-        $game_temp.battle_log_text += $game_actors[101].name + " had the initiative taken by the eneｍy!\q"
+        $game_temp.battle_log_text += $game_actors[101].name + " had the initiative taken by the eneｍy!\067"
       end
       #▼システムウェイト
       case $game_system.ms_skip_mode
@@ -552,21 +552,21 @@ class Scene_Battle
         for a in $game_party.party_actors
           # 多めに貰ったナレート
           if a.exp_plus_flag == true
-            text += "\w\q#{a.name} received ｍore experience than usual!"
+            text += "\065\067#{a.name} received ｍore experience than usual!"
             a.exp_plus_flag = false
           end
           text += a.level_up_log
           a.level_up_log = ""
           up_flag = true if text != ""
         end
-#        $game_temp.battle_log_text += "\w\n" + text + "\w\w" if text != ""
-        $game_temp.battle_log_text += text + "\w\w" if text != ""
+#        $game_temp.battle_log_text += "\065\n" + text + "\065\065" if text != ""
+        $game_temp.battle_log_text += text + "\065\065" if text != ""
         
         # その他戦闘後処理のチェック
         for actor in $game_party.party_actors
           if actor.equip?("ワイルドカード")
             actor.armor1_id = 0
-            text = "\w\q#{actor.name}'s eｑuipped \w\nWild Card has disappeared....."
+            text = "\065\067#{actor.name}'s eｑuipped \065\nWild Card has disappeared....."
             $game_temp.battle_log_text += text
           end
           if actor.equip?("手作りミサンガ")
@@ -574,7 +574,7 @@ class Scene_Battle
             if rand(100) < 5
               actor.armor1_id = 0
               actor.promise += 500
-              text = "\w\q#{actor.name}'s eｑuipped \nHoｍeｍade Misanga broke!"
+              text = "\065\067#{actor.name}'s eｑuipped \nHoｍeｍade Misanga broke!"
               $game_temp.battle_log_text += text
             end
           end

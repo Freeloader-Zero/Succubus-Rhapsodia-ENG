@@ -24,7 +24,7 @@ module SR_Util
   def self.special_undress(enemy)
     enemy.undress
     if $game_temp.battle_log_text != ""
-      text = "\w\q" + enemy.bms_states_update
+      text = "\065\067" + enemy.bms_states_update
     else
       text = enemy.bms_states_update
     end
@@ -240,7 +240,7 @@ module SR_Util
     log = $game_temp.battle_log_text
     if log != ""
       # 行数に合わせてウェイトを入れる
-      log = log.split(/[\n\q]/)
+      log = log.split(/[\n\067]/)
       ct = (4 * (log.size + 1)) + $game_system.battle_speed_time(0) + $game_system.important_wait_time
 #      ct = (4 * 3) + $game_system.battle_speed_time(0) + $game_system.important_wait_time
       $game_temp.set_wait_count = ct

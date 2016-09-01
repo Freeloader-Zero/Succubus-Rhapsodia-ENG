@@ -508,7 +508,7 @@ module RPG
       # 探索スキルや後方支援スキルを覚え満腹度の減りが微小と、探索に向く。
       #------------------------------------------------------------------------
       when 96,97
-        @name = "Faｍiliar "
+        @name = "Familiar"
         @exp_type = 3
         @maxhp, @maxsp = 240, 220
         @str, @dex, @agi, @int = 30, 65, 40, 50
@@ -544,7 +544,7 @@ module RPG
       # 素早さも高いが、器用さ、精神力は低く満腹度の減りも早め。
       #------------------------------------------------------------------------
       when 100,101
-        @name = "Wereｗolf "
+        @name = "Werewolf"
         @exp_type = 3
         @maxhp, @maxsp = 350, 340
         @str, @dex, @agi, @int = 150, 50, 105, 22
@@ -952,7 +952,7 @@ module RPG
       # 攻撃性能も悪いわけではなく、攻撃するだけで自然とバステがつくので強力。
       #------------------------------------------------------------------------
       when 251 #ユニークサキュバス/ネイジュレンジ
-        @name, @graphics = "Neijorage ", "boss_neijurange"
+        @name, @graphics = "Neijorange", "boss_neijurange"
         @exp_type = 4
         @maxhp, @maxsp =  500, 400
         @str, @dex, @agi, @int = 80, 60, 5, 20
@@ -1095,7 +1095,7 @@ module RPG
       # 火力はそこまでといった印象ではないが、十分高い方。
       #------------------------------------------------------------------------
       when 257 #ユニークサキュバス/ラーミル
-        @name, @graphics = "Raｍile ", "boss_rarmil"
+        @name, @graphics = "Ramile", "boss_rarmil"
         @exp_type = 4
         @maxhp, @maxsp = 400, 450
         @str, @dex, @agi, @int = 80, 50, 60, 250
@@ -1118,7 +1118,7 @@ module RPG
       # その代わり空腹率は最大値の7。完全に戦闘特化となっている。
       #------------------------------------------------------------------------
       when 258 #ユニークサキュバス/ヴェルミィーナ
-        @name, @graphics = "Verｍiena ", "boss_vermiena"
+        @name, @graphics = "Vermiena", "boss_vermiena"
         @exp_type = 4
         @maxhp, @maxsp = 450, 450
         @str, @dex, @agi, @int = 140, 140, 100, 100

@@ -99,14 +99,14 @@ class Game_Enemy < Game_Battler
        when "‰©" ; [1, "_˜a", "_˜a", "ã•i"]
        end
     # -----------------------------------------------------------------------
-    when "Fa‚iliar "
+    when "Familiar"
       personality_group = 
        case self.class_color
        when "Â" ; [1, "]‡", "’W”‘", "’W”‘"]
        when "—Î" ; [1, "“|ö", "“|ö", "“|ö"]
        end
     # -----------------------------------------------------------------------
-    when "Were‚—olf "
+    when "Werewolf"
       personality_group = 
        case self.class_color
        when "•" ; [1, "‹•¨", "‹•¨", "ŠÃ‚¦«"]
@@ -184,7 +184,7 @@ class Game_Enemy < Game_Battler
     # -----------------------------------------------------------------------
     when "Unique Succubus ","Unique Tycoon ","Unique Witch"
       case self.class_color
-      when "Neijorage "
+      when "Neijorange"
         personality_group = [1, "’¨‹C", "’¨‹C", "’¨‹C"]
         ability_group += ["‹¹‚ª«Š´‘Ñ/100"]
       when "Rejeo "
@@ -202,11 +202,11 @@ class Game_Enemy < Game_Battler
       when "Sylphe"
         personality_group = [1, "‚‹M", "‚‹M", "‚‹M"]
         ability_group += ["Œû‚ª«Š´‘Ñ/100"]
-      when "Ra‚ile "
+      when "Ramile"
         personality_group = [1, "Œ‰•È", "Œ‰•È", "Œ‰•È"]
         ability_group += ["‹¹‚ª«Š´‘Ñ/100"]
         ability_group += ["–ÏŽ·/100"]
-      when "Ver‚iena "
+      when "Vermiena"
         personality_group = [1, "˜Iˆ«‹¶", "˜Iˆ«‹¶", "˜Iˆ«‹¶"]
         ability_group += ["—‰A‚ª«Š´‘Ñ/100"]
       end
