@@ -7,9 +7,10 @@ English fan translations for the game, "Succubus Rhapsodia"
 Game version:
 v1.09
 
-Translation version:
-v1.03
+Translation version**:
+v0.161
 
+**estimated percentage of translation completion
 
 ==========================================================
 
@@ -31,7 +32,7 @@ http://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_098909/
 
 Changelogs:
 
-v1.03:
+v0.161:
 - replaced all script instances with their respective replacements:
 	- "\w" with "\065"
 	- "\m" with "\066"
@@ -47,9 +48,10 @@ v1.03:
 - Reverted class/enemy name "Faｍiliar " to "Familiar"
 - replaced a few "ｗ"s and "ｍ"s in Skill English for sake of making them even bytes
 - edited "Mild Prefuｍe" to "Mild Perfume" in Skills English
+- revised translation versioning; version now means an estimated percentage of the translation completion of the base game content.
 
 
-v1.02:
+v0.160: (08/31/2016)
 - updated scripts v1.09
 	- v1.09 added "enemy_before_earnest?" stuff to:
 		- Game_Battler Textmake
@@ -58,11 +60,11 @@ v1.02:
 - translated pre-opening setup scene for Laurat
 	- Map227.rxdata
 
-v1.01: 
+v0.151: 
 - skilltext for Provoke
 
 
-v1.00: initial base
+v0.150: (8/30/2016), initial base
 - Adopted Strange's "Translation Toolbox", "Skills English", 
 	- replaced ~all "skill.name" instances with "skill.UK_name"
 	- translates Skill names
