@@ -1833,6 +1833,18 @@ class Scene_Battle
 #        loss = loss * 3
 #      end
     end
+
+    #--------------------------------------------------------------
+    # –{‹C‚É‚È‚é–²–‚‚ª‚Ü‚¾–{‹C‚ğo‚µ‚Ä‚¢‚È‚¢ê‡A‚u‚o‚ğ‚P‚¾‚¯c‚·
+    #--------------------------------------------------------------
+    if SR_Util.enemy_before_earnest?(@ecstasy_battlers_count[0])
+      # Œ¸­‚u‚o‚ª‚»‚Ì–²–‚‚ÌŒ»İ‚u‚oˆÈã‚Ìê‡
+      if loss >= @ecstasy_battlers_count[0].sp
+        # ‚u‚o‚ğ‚P‚¾‚¯c‚·
+        loss = @ecstasy_battlers_count[0].sp - 1
+      end
+    end
+    
     # ‚±‚±‚ÅŒ¸­‚·‚é‚u‚o‚ğŠm’è‚·‚é‚ªAÀÛ‚ÉŒ¸‚é‚Ì‚Í‚±‚ÌŸ‚ÌƒXƒeƒbƒv‚Å
     $ecstasy_loss_sp = loss
     unless $msg.talking_ecstasy_flag != nil

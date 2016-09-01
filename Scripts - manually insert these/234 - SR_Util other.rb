@@ -5,6 +5,20 @@
 module SR_Util
   
   #--------------------------------------------------------------------------
+  # ● この敵夢魔が本気を出していない
+  #--------------------------------------------------------------------------
+  def self.enemy_before_earnest?(enemy)
+    result = false
+    # ベストエンドヴェルミィーナ戦
+    if $game_temp.battle_troop_id == 603
+      # エネミー位置が０番且つ、まだ本気を出していない
+      if enemy == $game_troop.enemies[0] and not $game_troop.enemies[0].earnest
+        result = true
+      end
+    end
+    return result
+  end
+  #--------------------------------------------------------------------------
   # ● 特殊な服を脱ぐ
   #--------------------------------------------------------------------------
   def self.special_undress(enemy)

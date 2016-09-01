@@ -5,10 +5,10 @@
 English fan translations for the game, "Succubus Rhapsodia"
 
 Game version:
-v1.08
+v1.09
 
 Translation version:
-v1.01
+v1.02
 
 
 ==========================================================
@@ -31,8 +31,18 @@ http://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_098909/
 
 Changelogs:
 
+v1.02:
+- updated scripts v1.09
+	- v1.09 added "enemy_before_earnest?" stuff to:
+		- Game_Battler Textmake
+		- Scene_Battle 4
+		- SR_Util other
+- translated pre-opening setup scene for Laurat
+	- Map227.rxdata
 
-v1.01: skilltext for Provoke
+v1.01: 
+- skilltext for Provoke
+
 
 v1.00: initial base
 - Adopted Strange's "Translation Toolbox", "Skills English", 

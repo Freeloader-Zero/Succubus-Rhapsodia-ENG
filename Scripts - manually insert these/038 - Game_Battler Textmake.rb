@@ -134,6 +134,12 @@ class Game_Battler
         else
           text = "#{myname} didn't take any pleasure!"
         end
+        #-------------------------------------------------------------------------
+        # 本気になる夢魔がまだ本気を出していないために失神しない場合、テキストを変更
+        #-------------------------------------------------------------------------
+        if SR_Util.enemy_before_earnest?(self)
+          text = "#{myname}'s body lurges in great pleasure!"
+        end
       else
         n = self.damage * 80 / 100
         text = "#{myname} recovered #{(damage.abs).to_s}ＥＰ!"
