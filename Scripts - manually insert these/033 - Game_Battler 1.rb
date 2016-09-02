@@ -579,7 +579,7 @@ class Game_Battler
   # ♀挿入判定（ディルド側）
   def dildo_insert?
     # ディルドが相手の「アソコ」で「♀挿入」によりホールドされていればtrue
-    return (self.hold.dildo.parts == "アソコ" and self.hold.dildo.type == "張子♀挿入")
+    return (self.hold.dildo.parts == "アソコ" and self.hold.dildo.type == "ディルド♀挿入")
   end
   # ♀挿入判定（♀側）
   # インサート画が存在する場合、これがtrueだということを条件にする。
@@ -594,14 +594,14 @@ class Game_Battler
   
   # ディルド♀挿入判定（♀側）
   def dildo_vagina_insert?
-    return (self.hold.vagina.parts == "ディルド" and self.hold.vagina.type == "張子♀挿入")
+    return (self.hold.vagina.parts == "ディルド" and self.hold.vagina.type == "ディルド♀挿入")
   end
   
   # ♀挿入判定（♀側特殊）
   def vagina_insert_special?
     return true if (self.hold.vagina.parts == "尻尾" and self.hold.vagina.type == "♀挿入")
     return true if (self.hold.vagina.parts == "触手" and self.hold.vagina.type == "♀挿入")
-    return true if (self.hold.vagina.parts == "ディルド" and self.hold.vagina.type == "張子♀挿入")
+    return true if (self.hold.vagina.parts == "ディルド" and self.hold.vagina.type == "ディルド♀挿入")
     return false
   end
   # 総合♀挿入判定
@@ -635,7 +635,7 @@ class Game_Battler
   # ディルド口淫判定（ディルド側）
   def dildo_oralsex?
     # ディルドが相手の「口」で「口挿入」によりホールドされていればtrue
-    return (self.hold.dildo.parts == "口" and self.hold.dildo.type == "張子口挿入")
+    return (self.hold.dildo.parts == "口" and self.hold.dildo.type == "ディルド口挿入")
   end
   # 口淫判定（口側）
   # インサート画が存在する場合、これがtrueだということを条件にする。
@@ -648,14 +648,14 @@ class Game_Battler
   # ディルド口淫判定（口側）
   def dildo_mouth_oralsex?
     # ディルドが相手の「口」で「口挿入」によりホールドされていればtrue
-    return (self.hold.mouth.parts == "ディルド" and self.hold.mouth.type == "張子口挿入")
+    return (self.hold.mouth.parts == "ディルド" and self.hold.mouth.type == "ディルド口挿入")
   end
   # 口淫判定（口側特殊）
   # インサート画が存在する場合、これがtrueだということを条件にする。
   def mouth_oralsex_special?
     return true if (self.hold.mouth.parts == "尻尾" and self.hold.mouth.type == "口挿入")
     return true if (self.hold.mouth.parts == "触手" and self.hold.mouth.type == "口挿入")
-    return true if (self.hold.mouth.parts == "ディルド" and self.hold.mouth.type == "張子口挿入")
+    return true if (self.hold.mouth.parts == "ディルド" and self.hold.mouth.type == "ディルド口挿入")
     return false
   end
   # 総合口淫判定
@@ -689,7 +689,7 @@ class Game_Battler
   # ディルド肛姦判定（ディルド側）
   def dildo_analsex?
     # ディルドが相手の「アナル」で「尻挿入」によりホールドされていればtrue
-    return (self.hold.dildo.parts == "アナル" and self.hold.dildo.type == "張子尻挿入")
+    return (self.hold.dildo.parts == "アナル" and self.hold.dildo.type == "ディルド尻挿入")
   end
   # 肛姦判定（尻側）
   # インサート画が存在する場合、これがtrueだということを条件にする。
@@ -701,14 +701,14 @@ class Game_Battler
   # ディルド肛姦判定（尻側）
   def dildo_anal_analsex?
     # アナルが相手の「ディルド」で「尻挿入」によりホールドされていればtrue
-    return (self.hold.anal.parts == "ディルド" and self.hold.anal.type == "張子尻挿入")
+    return (self.hold.anal.parts == "ディルド" and self.hold.anal.type == "ディルド尻挿入")
   end
   # 肛姦判定（尻側）
   # インサート画が存在する場合、これがtrueだということを条件にする。
   def anal_analsex?
     return true if (self.hold.anal.parts == "尻尾" and self.hold.anal.type == "尻挿入")
     return true if (self.hold.anal.parts == "触手" and self.hold.anal.type == "触手尻挿入")
-    return true if (self.hold.anal.parts == "ディルド" and self.hold.anal.type == "張子尻挿入")
+    return true if (self.hold.anal.parts == "ディルド" and self.hold.anal.type == "ディルド尻挿入")
     return false
   end
   # 総合肛姦判定

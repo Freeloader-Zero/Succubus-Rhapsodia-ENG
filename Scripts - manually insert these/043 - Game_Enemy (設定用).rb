@@ -217,10 +217,12 @@ class Game_Enemy < Game_Battler
     case self.id
     when 25 # テスト用インプ
       personality_group = [1, "勝ち気", "勝ち気", "勝ち気"]
-    when 26 # テスト用ウルフ
-      personality_group = [1, "虚勢", "虚勢", "虚勢"]
+    when 26 # テスト用ミミック
+      personality_group = [1, "意地悪", "意地悪", "意地悪"]
     when 27 # テスト用キャスト
       personality_group = [1, "内気", "内気", "内気"]
+    when 29 # テスト用ファミリア
+      personality_group = [1, "倒錯", "倒錯", "倒錯"]
     when 31 # Lv.1 # チュートリアル
       personality_group = [1, "好色", "好色", "好色"]
       ability_group += ["胸が性感帯/100"]

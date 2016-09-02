@@ -84,13 +84,13 @@ module SR_Util
 #      box.push(["vagina","anal"])
       box.push(["vagina"])
       box.push(["vagina"])
-    elsif hold_type == "’£qŠ‘}“ü"
+    elsif hold_type == "ƒfƒBƒ‹ƒhŠ‘}“ü"
       box.push(["dildo"])
       box.push(["vagina"])
-    elsif hold_type == "’£qŒû‘}“ü"
+    elsif hold_type == "ƒfƒBƒ‹ƒhŒû‘}“ü"
       box.push(["dildo"])
       box.push(["mouth"])
-    elsif hold_type == "’£qK‘}“ü"
+    elsif hold_type == "ƒfƒBƒ‹ƒhK‘}“ü"
       box.push(["dildo"])
       box.push(["anal"])
     elsif hold_type == "Gè‹zˆø"

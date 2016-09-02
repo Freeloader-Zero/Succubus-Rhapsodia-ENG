@@ -1031,11 +1031,11 @@ class Scene_Battle
       go_flag = true if skill_element_set.include?(174) and enemy_one.anal_analsex?
       #触手拘束＝対象の上半身が拘束状態
       go_flag = true if skill_element_set.include?(175) and enemy_one.tentacle_binding?
-      #Ｄ♀挿入＝対象のアソコが張子♀挿入状態
+      #Ｄ♀挿入＝対象のアソコがディルド♀挿入状態
       go_flag = true if skill_element_set.include?(183) and enemy_one.dildo_vagina_insert?
-      #Ｄ口挿入＝対象の口が張子口挿入状態
+      #Ｄ口挿入＝対象の口がディルド口挿入状態
       go_flag = true if skill_element_set.include?(184) and enemy_one.dildo_mouth_oralsex?
-      #Ｄ尻挿入＝対象の尻が張子尻挿入状態
+      #Ｄ尻挿入＝対象の尻がディルド尻挿入状態
       go_flag = true if skill_element_set.include?(185) and enemy_one.dildo_anal_analsex?
       #触手吸引＝対象のペニスが触手吸引状態
       go_flag = true if skill_element_set.include?(209) and enemy_one.tentacle_penis_absorbing?
@@ -1102,8 +1102,11 @@ class Scene_Battle
     @actor_command_window.visible = false
     #●スキル位置記憶をしない場合はスキルを規定のスキルに合わせる
     unless $game_system.system_arrow == true
+      # 下の記述をメソッド化
+      skill_cursor_set
+=begin
       if @active_battler.holding?
-        for i in 0..@skill_window.item_max
+        for i in 0...@skill_window.item_max
           #インサート：♂
           if @active_battler.penis_insert?
             if @skill_window.data[i].name == "スウィング"
@@ -1198,7 +1201,7 @@ class Scene_Battle
         end
         #ホールドで無い場合
       else
-        for i in 0..@skill_window.item_max
+        for i in 0...@skill_window.item_max
         #キッスにカーソルを合わせる
           if @skill_window.data[i].name == "キッス"
             @skill_window.index = i
@@ -1206,6 +1209,7 @@ class Scene_Battle
           end
         end
       end
+=end
     #●スキル位置記憶をする場合
     else
       #スキル記憶が無い場合は、必ずキッスにセットする
@@ -1213,7 +1217,10 @@ class Scene_Battle
         @active_battler.skill_collect == "" or
         (@active_battler.holding? and @active_battler.skill_collect.element_set.include?(131)) or
         (not @active_battler.holding? and @active_battler.skill_collect.element_set.include?(132))
-        for i in 0..@skill_window.item_max
+        # 下の記述をメソッド化
+        skill_cursor_set
+=begin
+        for i in 0...@skill_window.item_max
           if @active_battler.holding?
             #インサート：♂
             if @active_battler.penis_insert?
@@ -1308,13 +1315,121 @@ class Scene_Battle
             end
           end
         end
+=end
       #スキル記憶がある場合、そのスキルにカーソルをセットする
       else
-        for i in 0..@skill_window.item_max
+        through_flag = false
+        for i in 0...@skill_window.item_max
           if @skill_window.data[i].name == @active_battler.skill_collect.name
+            @skill_window.index = i
+            through_flag = true
+            break
+          end
+        end
+        # ない場合は初期位置にセットする
+        unless through_flag
+          skill_cursor_set
+        end
+      end
+    end
+  end
+  #--------------------------------------------------------------------------
+  # ● スキルカーソルの初期設定
+  #--------------------------------------------------------------------------
+  def skill_cursor_set
+    # 状態に合わせて初期カーソル位置を変更
+    for i in 0...@skill_window.item_max
+      if @active_battler.holding?
+        #インサート：♂
+        if @active_battler.penis_insert?
+          if @skill_window.data[i].name == "スウィング"
             @skill_window.index = i
             break
           end
+        #インサート：♀
+        elsif @active_battler.vagina_insert?
+          if @skill_window.data[i].name == "グラインド"
+            @skill_window.index = i
+            break
+          end
+        #インサート：口
+        elsif @active_battler.penis_oralsex?
+          if @skill_window.data[i].name == "オーラルピストン"
+            @skill_window.index = i
+            break
+          end
+        #顔面騎乗・尻騎乗（攻）
+        elsif @active_battler.vagina_riding?
+          if @skill_window.data[i].name == "ライディング"
+            @skill_window.index = i
+            break
+          end
+        #顔面騎乗・尻騎乗（守）
+        elsif @active_battler.mouth_riding? or @active_battler.mouth_hipriding?
+          if @skill_window.data[i].name == "リック"
+            @skill_window.index = i
+            break
+          end
+        #貝合わせ
+        elsif @active_battler.shellmatch?
+          if @skill_window.data[i].name == "スクラッチ"
+            @skill_window.index = i
+            break
+          end
+        #クンニ
+        elsif @active_battler.mouth_draw?
+          if @skill_window.data[i].name == "サック"
+            @skill_window.index = i
+            break
+          end
+        #被クンニ
+        elsif @active_battler.vagina_draw?
+          if @skill_window.data[i].name == "プッシング"
+            @skill_window.index = i
+            break
+          end
+        #拘束
+        elsif @active_battler.tops_binder?
+          if @skill_window.data[i].name == "ミスチーフ"
+            @skill_window.index = i
+            break
+          end
+        #被拘束
+        elsif @active_battler.tops_binding?
+          if @skill_window.data[i].name == "リアカレス"
+            @skill_window.index = i
+            break
+          end
+        #ディルドインサート
+        elsif @active_battler.dildo_insert?
+          if @skill_window.data[i].name == "ディルドスウィング"
+            @skill_window.index = i
+            break
+          end
+        #ディルドインマウス
+        elsif @active_battler.dildo_oralsex?
+          if @skill_window.data[i].name == "オーラルディルド"
+            @skill_window.index = i
+            break
+          end
+        #デモンズサック
+        elsif @active_battler.tentacle_draw?
+          if @skill_window.data[i].name == "デモンズサック"
+            @skill_window.index = i
+            break
+          end
+        #該当しない場合は解除スキルのリリースにカーソルを合わせる
+        else
+          if @skill_window.data[i].name == "リリース"
+            @skill_window.index = i
+            break
+          end
+        end
+      #非ホールド状態ならキッスにカーソルを合わせる
+      else
+        if @skill_window.data[i].name == "キッス"
+          @skill_window.index = i
+          break
         end
       end
     end

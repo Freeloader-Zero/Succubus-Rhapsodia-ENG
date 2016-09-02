@@ -120,11 +120,11 @@ module RPG
       when "Iｍp","Devil ","Deｍon", "Goblin", "Goblin Leader "
         pantsu = "panties"
       when "Nightｍare"
-        pantsu = "thin cloth"
+        pantsu = "tights"
       when "Werewolf", "Werecat ", "Taｍaｍo"
         pantsu = "loin cloth"
       when "Sliｍe", "Gold Sliｍe "
-        pantsu = "crotch ｍucus"
+        pantsu = "loin mucus"
       when "Gargoyle"
         pantsu = "groin slate"
       else
@@ -134,18 +134,18 @@ module RPG
       #攻めの形容
       # 追撃時でない場合
       if $game_switches[78] == false
-        tec = ["緩急をつけて","愛おしむように"]
-        tec.push("慣れた様子で") if myself.positive?
-        tec.push("心得た様子で") if myself.positive?
-        tec.push("恥じらう様子を見せつつも") if myself.negative?
-        tec.push("うっとりした表情で") if myself.negative?
+        tec = ["erratically","amorously"]
+        tec.push("skillfully") if myself.positive?
+        tec.push("smoothly") if myself.positive?
+        tec.push("coyly") if myself.negative?
+        tec.push("blissfully") if myself.negative?
       # 追撃時の場合
       else
-        tec = ["うっとりした表情で","愛おしむように"]
-        tec.push("休む間も与えず") if myself.positive?
-        tec.push("反応を愉しむように") if myself.positive?
-        tec.push("恍惚とした表情で") if myself.negative?
-        tec.push("熱心に") if myself.negative?
+        tec = ["delightfully","amorously"]
+        tec.push("relentlessly") if myself.positive?
+        tec.push("provokingly") if myself.positive?
+        tec.push("ecstatically") if myself.negative?
+        tec.push("eagerly") if myself.negative?
       end
       tec = tec[rand(tec.size)]
   #================================================================================================================================#
@@ -245,6 +245,19 @@ module RPG
           else
             action = "#{targetname},\n\066 has been pushed doｗn by #{myname}!"
           end
+        end
+        avoid = ""
+  #------------------------------------------------------------------------#
+      when "オーラルインサート","ディルドインマウス"
+        if skill.name == "ディルドインマウス"
+          penis_word = "ディルド"
+        else
+          penis_word = "ペニス"
+        end
+        if target.is_a?(Game_Enemy) #エネミーをホールドする
+          action = premess + "、そそり勃つ#{penis_word}を\n\m#{targetname}の口元に突きつけた！"
+        elsif target.is_a?(Game_Actor) #アクターがホールドされる
+          action = premess + "、そそり勃つ#{penis_word}を\n\m#{targetname}の口元に突き出した！"
         end
         avoid = ""
   #------------------------------------------------------------------------#
@@ -414,25 +427,25 @@ module RPG
   #------------------------------------------------------------------------#
       when "ヘブンリーフィール"
         if target.is_a?(Game_Enemy) #エネミーをホールドする
-          action = premess + "腕を広げ、\n\066#{targetname}に覆いかぶさった！"
+          action = premess + " extends out her arms,\n\066 pressing down on #{targetname}!"
         elsif target.is_a?(Game_Actor) #アクターがホールドされる
-          action = premess + "その#{myself.bustsize}で、\n\066#{targetname}に覆いかぶさってきた！"
+          action = premess + "\066 tries to\n envelop #{targetname} in her #{myself.bustsize}!"
         end
         avoid = ""
   #------------------------------------------------------------------------#
       when "デモンズアブソーブ"
-        action = "#{myname}の操る触手の先が開き、\n\066#{targetname}のペニスを咥え込もうとしている！"
+        action = "#{myname} opens up a tentacle,\n\066 and begins bringing it down over #{targetname}'s penis!"
         avoid = ""
   #------------------------------------------------------------------------#
       when "デモンズドロウ"
-        action = "#{myname}の操る触手が怪しく蠢き、\n\066#{targetname}のアソコに勢い良く伸びてきた！"
+        action = "#{myname}'s tentacle wriggles suspiciously,\n\066 then lunges at #{targetname}'s crotch!"
         avoid = ""
   #------------------------------------------------------------------------#
       when "ヘブンリーフィール"
         if target.is_a?(Game_Enemy) #エネミーをホールドする
-          action = premess + "腕を広げ、\n\066#{targetname}に覆いかぶさった！"
+          action = premess + " extends out her arms,\n\066 pressing down on #{targetname}!"
         elsif target.is_a?(Game_Actor) #アクターがホールドされる
-          action = premess + "その#{myself.bustsize}で、\n\066#{targetname}に覆いかぶさってきた！"
+          action = premess + "\066 tries to\n envelop #{targetname} in her #{myself.bustsize}!"
         end
         avoid = ""
   #------------------------------------------------------------------------#
@@ -766,7 +779,11 @@ module RPG
         end
   #------------------------------------------------------------------------#
       when 32,35,37,41,47,34,38 #スウィング、グラインド
-        action = premess + "腰を振った！"
+        if myself == $game_actors[101]
+          action = premess + " thrusts his pelvis!"
+        else
+          action = premess + " shakes her waist!"
+        end
         if $mood.point > 50
           #性格診断
           case myself.personality
@@ -894,19 +911,27 @@ module RPG
       when 73   #ミスチーフ
         case $mood.point
         when 50..100
-          action = premess + "手を伸ばし、\n\066#{targetname}のアソコを愛撫した！"
-          action = premess + "抱きしめたまま、\n\066#{targetname}の唇を強引に奪った！" if $game_variables[17] > 50
+          action = premess + " reaches out with her hand,\n\066 and caresses #{targetname}'s crotch!"
+          if myself == $game_actors[101]
+          action = premess + " embraces #{targetname} closely,\n\066 and forces her tongue in his mouth!" if $game_variables[17] > 50
+          else
+          action = premess + " embraces #{targetname} closely,\n\066 and forces her tongue in her mouth!" if $game_variables[17] > 50
+          end
         else
-          action = premess + "手を伸ばし、\n\066#{targetname}の太股を優しく撫で回した！"
-          action = premess + "抱きしめたまま、\n\066#{targetname}の#{target.bustsize}を刺激した！" if $game_variables[17] > 50
+          action = premess + " reaches out,\n\066 softly stroking #{targetname}'s thighs!"
+          if myself == $game_actors[101]
+          action = premess + " holds back #{targetname} with her arms\n\066 as she fondles her #{target.bustsize}!" if $game_variables[17] > 50
+        else
+          action = premess + " holds down #{targetname}\n\066 with her arms while she rubs his #{target.bustsize}!" if $game_variables[17] > 50
+          end
         end
         avoid = ""
   #------------------------------------------------------------------------#
       when 74   #リアカレス
         case $mood.point
         when 50..100
-          action = premess + "後ろ手で、\n\066#{targetname}のアソコの愛撫を試みた！"
-          action = premess + "振り向いて、\n\066#{targetname}とキスを試みた！" if $game_variables[17] > 50
+          action = premess + " caresses #{targetname}'s\n\066 crotch from the rear!"
+          action = premess + " turns around, \n\066 and tries to kiss #{targetname}!" if $game_variables[17] > 50
         else
           action = premess + "後ろ手で、\n\066#{targetname}の太股を優しく撫で回した！"
           action = premess + "体をよじり、\n\066#{targetname}の#{target.bustsize}を刺激した！" if $game_variables[17] > 50
@@ -924,19 +949,23 @@ module RPG
         avoid = ""
   #------------------------------------------------------------------------#
       when 79   #レックレス
-        action = premess + "身をよじり、\n\066体勢を変えようと試みた！"
+        if myself == $game_actors[101]
+        action = premess + "  shifts his body around, \n\066 trying to change posture!"
+        else
+        action = premess + "  shifts her body around, \n\066 trying to change posture!"
+        end
         avoid = ""
   #------------------------------------------------------------------------#
       when 101   #ティーズ
-        action = premess + "、\n\066#{targetname}を焦らすように愛撫した！"
+        action = premess + ",\n\066 teasingly caresses #{targetname}!"
         avoid = ""
   #------------------------------------------------------------------------#
       when 104   #トリックレイド
-        action = premess + "、\n\066#{targetname}の不意をつき翻弄した！"
+        action = premess + ",\n\066 suddenly attacks #{targetname}!"
         avoid = ""
   #------------------------------------------------------------------------#
       when 106   #ディバウアー
-        action = premess + "貪るように、\n\066#{targetname}の体躯をまさぐった！"
+        action = premess + " voraciously gropes and \n\066 rubs down #{targetname}'s body!"
         avoid = ""
   #------------------------------------------------------------------------#
       when 121   #ブレス
@@ -944,7 +973,11 @@ module RPG
         avoid = ""
   #------------------------------------------------------------------------#
       when 122   #カームブレス
-        action = "#{myname}は深く息を吸い込み、\n\066乱れた呼吸を鎮めた！"
+        if myself == $game_actors[101]
+        action = "#{myname} inhales deeply,\n\066 calming his breathing!"
+        else
+        action = "#{myname} inhales deeply,\n\066 calming her breathing!"
+        end
         avoid = ""
   #------------------------------------------------------------------------#
       when 123   #ウェイト
@@ -960,7 +993,11 @@ module RPG
         avoid = ""
   #------------------------------------------------------------------------#
       when 125   #リフレッシュ
-        action = "#{myname}は意識を集中し、\n\066自身の状態変化を全て打ち消した！"
+        if myself == $game_actors[101]
+        action = "#{myname} calms his mind,\n\066 clearing it of all abnormalities!"
+        else
+        action = "#{myname} calms her mind,\n\066 clearing it of all abnormalities!"
+        end
         avoid = ""
   #------------------------------------------------------------------------#
       when 126   #チェック

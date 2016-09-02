@@ -112,16 +112,22 @@ class Talk_Sys
           $msg.at_parts = "♀挿入：アソコ側"
         #▼オーラルインサートorオーラルアクセプト(口挿入状態)
         elsif $game_actors[101].oralsex_now?
+          $msg.tag = "愛撫・通常"
           $msg.at_parts = "口挿入：口側"
         #▼バックインサートorバックアクセプト(尻挿入状態)
         elsif $game_actors[101].analsex_now?
+          $msg.tag = "愛撫・通常"
           $msg.at_parts = "尻挿入：尻側"
         #▼エンブレイス(密着状態)
         elsif $msg.t_enemy.binding_now?
+          $msg.tag = "愛撫・通常"
           $msg.at_parts = "背面拘束"
         #▼ペリスコープ(パイズリ状態)
         elsif $msg.t_enemy.paizuri_now?
+          $msg.tag = "愛撫・通常"
           $msg.at_parts = "パイズリ"
+        else
+          $msg.tag = "愛撫・通常"
         end
         @talk_command_type = "継続タイプ"
         return
@@ -509,6 +515,7 @@ class Talk_Sys
         if $msg.tag == "奉仕"
           $msg.talking_ecstasy_flag = "enemy"
         else
+          p "アクター" if $DEBUG
           $msg.talking_ecstasy_flag = "actor"
         end
         damage_target.add_state(11)

@@ -994,9 +994,24 @@ class Scene_Battle
     case @active_battler.current_action.kind
     when 1 #スキルの場合
       @command = @skill
+      @command = $data_skills[@active_battler.current_action.skill_id] unless @command.is_a?(RPG::Skill)
     when 2 #アイテムの場合
       @command = @item
+      @command = $data_items[@active_battler.current_action.item_id] unless @command.is_a?(RPG::Item)
     end
+    
+    # @commandにスキルまたはアイテム情報が入っていない場合
+    unless @command.is_a?(RPG::Skill) or @command.is_a?(RPG::Item)
+      if $DEBUG
+        debug_text = ""
+        debug_text += "@commandにスキルまたはアイテム以外の情報が入っています。\n"
+        debug_text += "このまま動作しますが、エラーになる確率が高いです。\n"
+        debug_text += "@command：#{@command}"
+        Audio.se_play("Audio/SE/069-Animal04", 80, 100)
+        print debug_text
+      end
+    end
+
 =begin
     # ★エネミーの表示状態の変更（対象が全体の場合は変更無し）
     if @target_battlers[0].is_a?(Game_Enemy) \
@@ -1470,7 +1485,9 @@ class Scene_Battle
     #▼クライシスキャラクターを格納する
     #------------------------------------------------------
     #トーク中、ダメージ無しスキル、回復スキル使用の場合は格納しない
-    unless $game_switches[79] == true and @command.element_set.include?(16) and @command.element_set.include?(17)
+    if not $game_switches[79] == true and
+      not @command.element_set.include?(16) and
+      not @command.element_set.include?(17)
       for target in @target_battlers
         unless @ecstasy_battlers.include?(target)
           unless @crisis_mes_stop_flag == true
@@ -2290,6 +2307,7 @@ class Scene_Battle
   # ● フレーム更新 (メインフェーズ ステップ 6 : リフレッシュ)
   #--------------------------------------------------------------------------
   def update_phase4_step6
+
 #    p "update4-6"if $DEBUG
     case @active_battler.current_action.kind
     when 1 #スキルの場合
@@ -2344,6 +2362,10 @@ class Scene_Battle
         $weak_result += 1 #行った回数を＋１
         # バトルログを表示
         if @active_battler.is_a?(Game_Actor)
+          
+          # 追撃時の属性チェック(@0830)
+          attack_element_check
+          
           # 口上イベントをセットアップ
           common_event = $data_common_events[31]
           $game_system.battle_interpreter.setup(common_event.list, 0)

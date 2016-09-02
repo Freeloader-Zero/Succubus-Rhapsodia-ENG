@@ -17,7 +17,7 @@ when 6   #インサート
 when 7   #オーラルインサート
    return "Oral Insert "
 when 8   #バックインサート
-   return "Backdoor insert "
+   return "Backdoor Insert "
 when 9   #トーク
    return "Talk"
 when 10   #トークレジスト
@@ -43,7 +43,7 @@ when 22   #ディルドインバック
 when 25   #デモンズアブソーブ
    return "Feeler Suck-in"
 when 26   #デモンズドロウ
-   return "Feeler Insert "
+   return "Tentacle Insert "
 when 28   #インタラプト
    return "Interrupt "
 when 29   #リリース
@@ -73,7 +73,7 @@ when 42   #バックディルド
 when 47   #グラインド
    return "Grind"
 when 48   #ハードグラインド
-   return "Wild Ride "
+   return "Wild Grind"
 when 50   #タイトクロッチ
    return "Tighten "
 when 52   #スクラッチ
@@ -186,7 +186,7 @@ when 162   #イリスペタル
 when 163   #イリスフラウ
    return "Iris Aura "
 when 164   #イリスコロナ
-   return "Iris Croｗn"
+   return "Iris Corona"
 when 165   #イリスシード・アルダ
    return "Iris Seed - All "
 when 166   #イリスペタル・アルダ
@@ -194,53 +194,53 @@ when 166   #イリスペタル・アルダ
 when 167   #イリスフラウ・アルダ
    return "Iris Aura - All "
 when 171   #ラナンブルム
-   return "Leanan Bloom"
+   return "Lanan Blooｍ"
 when 172   #ラナンブルム・アルダ
-   return "Leanan Bloom - All"
+   return "Lanan Blooｍ - All"
 when 173   #ラナンイーザ
-   return "Leanan Wither "
+   return "Lananize"
 when 174   #ラナンイーザ・アルダ
-   return "Leanan Wither - All "
+   return "Lananize - All"
 when 175   #ネリネブルム
-   return "Nellin Bloom"
+   return "Neline Bloom"
 when 176   #ネリネブルム・アルダ
-   return "Nellin Bloom - All"
+   return "Neline Bloom - All"
 when 177   #ネリネイーザ
-   return "Nellin Wither "
+   return "Nelinaze"
 when 178   #ネリネイーザ・アルダ
-   return "Nellin Wither - All "
+   return "Nelinaze - All"
 when 179   #エルダブルム
-   return "Elda Bloom"
+   return "Elder Blooｍ"
 when 180   #エルダブルム・アルダ
-   return "Elda Bloom - All"
+   return "Elder Blooｍ - All"
 when 181   #エルダイーザ
-   return "Elda Wither "
+   return "Elderize"
 when 182   #エルダイーザ・アルダ
-   return "Elda Wither - All "
+   return "Elderize - All"
 when 183   #サフラブルム
    return "Saffron Blooｍ"
 when 184   #サフラブルム・アルダ
    return "Saffron Blooｍ - All"
 when 185   #サフライーザ
-   return "Saffron Wither "
+   return "Saffrize"
 when 186   #サフライーザ・アルダ
-   return "Saffron Wither - All "
+   return "Saffrize - All"
 when 187   #コリオブルム
    return "Kurio Blooｍ"
 when 188   #コリオブルム・アルダ
    return "Kurio Blooｍ - All"
 when 189   #コリオイーザ
-   return "Kurio Wither"
+   return "Kuriolize "
 when 190   #コリオイーザ・アルダ
-   return "Kurio Wither - All"
+   return "Kuriolize - All "
 when 191   #アスタブルム
-   return "Alta Bloom"
+   return "Aster Bloom"
 when 192   #アスタブルム・アルダ
-   return "Alta Bloom - All"
+   return "Aster Bloom - All "
 when 193   #アスタイーザ
-   return "Alta Wither"
+   return "Asterize"
 when 194   #アスタイーザ・アルダ
-   return "Alta Wither - All"
+   return "Asterize - All"
 when 195   #ストレリブルム
    return "Storm Bloom "
 when 196   #ストレリブルム・アルダ
@@ -262,35 +262,35 @@ when 204   #フィルス
 when 205   #ペイド・フィルス
    return "Mass Flirt"
 when 206   #レザラジィ
-   return "Resaraji"
+   return "Lethargy"
 when 207   #ペイド・レザラジィ
-   return "Mass Resaraji "
+   return "Mass Lethargy "
 when 208   #テラー
-   return "Toll"
+   return "Terror"
 when 209   #ペイド・テラー
-   return "Mass Toll "
+   return "Mass Terror "
 when 210   #パラライズ
    return "Paralyze"
 when 211   #ペイド・パラライズ
    return "Mass Paralyze "
 when 212   #ルーズ
-   return "Sleep "
+   return "Trance"
 when 213   #ペイド・ルーズ
-   return "Mass Sleep"
+   return "Mass Trance "
 when 215   #トリムルート
-   return "Liliuｍ Root"
+   return "Treme Root"
 when 216   #トリムストーク
-   return "Lilium Stalk"
+   return "Treme Stalk "
 when 217   #トリムヴァイン
-   return "Liliuｍ Steｍ"
+   return "Treme Stem"
 when 219   #ブルムカール
    return "Bloom Call"
 when 220   #ブルムカール・アルダ
    return "Bloom Call - All"
 when 221   #イーザカール
-   return "Wither Call"
+   return "Lyzing Call "
 when 222   #イーザカール・アルダ
-   return "Wither Call - All"
+   return "Lyzing Call - All "
 when 224   #ウォッシュフルード
    return "Cleansing Waters"
 when 239   #シャイニングレイジ
@@ -425,7 +425,7 @@ when 591   #アイヴィクローズ
 when 592   #デモンズクローズ
    return "Demon Wrap"
 when 599   #焦燥
-   return "Ｈaste "
+   return "Ｈaste"
 when 600   #専心
    return "Concentration"
 when 601   #本能の呼び覚まし
@@ -516,7 +516,7 @@ when 716   #デモンズクローズ
 when 717   #デモンズアブソーブ
    return "Feeler Suck-in"
 when 718   #デモンズドロウ
-   return "Feeler Insert "
+   return "Tentacle Insert "
 when 719   #インサルトツリー
    return "Tentacle Wrap "
 when 772   #エナジードレイン

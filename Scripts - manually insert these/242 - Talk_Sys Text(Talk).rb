@@ -133,7 +133,7 @@ class Talk_Sys
             m = "#{speaker}#{emotion} runs her\066\n hands over her #{$msg.t_enemy.bustsize}!"
             m = "#{speaker}#{emotion} traces her\066\n nipple ｗith her finger!" if rand($mood.point) > 50
           else
-            m = "#{speaker}#{emotion} sｑueezes her m\n #{$msg.t_enemy.bustsize} ｗith her hands!"
+            m = "#{speaker}#{emotion} squeezes her m\n #{$msg.t_enemy.bustsize} ｗith her hands!"
             m = "#{speaker}#{emotion} traces her\066\n nipple ｗith her finger!" if rand($mood.point) > 50
           end
         #アソコに指入れで自慰
@@ -217,7 +217,7 @@ class Talk_Sys
             if $game_actors[101].critical == true
               action = ["leｗdly","tightly","firmly"]
               action = action[rand(action.size)]
-              move = ["tightens around","strangles","sｑueezes"]
+              move = ["tightens around","strangles","squeezes"]
               move = move[rand(move.size)]
             else
               action = ""
@@ -362,237 +362,342 @@ class Talk_Sys
     # ●愛撫・通常
     #==============================================================================
     when "愛撫・通常"
-      m = "#{speaker}は微笑むと、\066\n#{master}のペニスを愛撫してきた！"
-      case $msg.at_type
-      #--------------------------------------------------------------------------
-      when "手"
-        #●弱点を突いた
-        if $game_actors[101].critical == true
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker}は反応を楽しむかのように、\066\n#{master}のペニスを艶かしく指で弄ぶ！"
-              m = "#{speaker}は愛おしむかのように、\066\n#{master}のペニスを艶かしく指で弄ぶ！" if $msg.t_enemy.love > 0
-            else
-              m = "#{speaker}は心得た指捌きで、\066\n#{master}のペニスを間断なく攻め立ててきた！"
-            end
-          else
-            if $msg.chain_attack == true
-              m = "#{speaker}は間断なく、\066\n#{master}のペニスの敏感な部分を攻めてきた！"
-            else
-              m = "#{speaker}は指を絡めて、\066\n#{master}のペニスの敏感な部分を攻めてきた！"
-            end
-          end
-        else
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker}は間断なく、\066\n#{master}のペニスを指で攻め立てる！"
-            else
-              m = "#{speaker}は指を絡めて、\066\n#{master}のペニスをしごき上げてきた！"
-            end
-          else
-            if $msg.chain_attack == true
-              m = "#{speaker}は、\066\n#{master}のペニスに指を絡め愛撫してきた！"
-            else
-              m = "#{speaker}は手で、\066\n#{master}のペニスをしごいてきた！"
-            end
-          end
-        end
-      #--------------------------------------------------------------------------
-      when "口"
-        #●弱点を突いた
-        if $game_actors[101].critical == true
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker}は反応を楽しむかのように、\066\n#{master}のペニスを根元から舐め上げてきた！"
-              m = "#{speaker}は愛おしむかのように、\066\n#{master}のペニスを根元から舐め上げてきた！" if $msg.t_enemy.love > 0
-            else
-              m = "#{speaker}は心得た舌使いで、\066\n#{master}のペニスを間断なく舐め回してきた！"
-            end
-          else
-            if $msg.chain_attack == true
-              m = "#{speaker}は間断なく、\066\n#{master}のペニスの敏感な部分を舐め続けた！"
-            else
-              m = "#{speaker}は舌先で、\066\n#{master}のペニスの敏感な部分を舐め上げた！"
-            end
-          end
-        else
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker}は間断なく、\066\n#{master}のペニスを丹念に舐め上げてきた！"
-            else
-              m = "#{speaker}は舌先で、\066\n#{master}のペニスを焦らすように舐め上げた！"
-            end
-          else
-            if $msg.chain_attack == true
-              m = "#{speaker}は休むことなく、\066\n#{master}のペニスを丹念に舐め上げてきた！"
-            else
-              m = "#{speaker}は舌で、\066\n#{master}のペニスを舐め上げてきた！"
-            end
-          end
-        end
-      #--------------------------------------------------------------------------
-      when "足"
-        #●弱点を突いた
-        if $game_actors[101].critical == true
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker}は反応を楽しむかのように、\066\n#{master}のペニスを両足の裏でしごいてきた！"
-              m = "#{speaker}は愛おしむかのように、\066\n#{master}のペニスを両足の裏でしごいてきた！" if $msg.t_enemy.love > 0
-            else
-              m = "#{speaker}は心得ていると言わんばかりに、\066\n#{master}のペニスを足裏で捏ね回してきた！"
-            end
-          else
-            if $msg.chain_attack == true
-              m = "#{speaker}は休むことなく、\066\n#{master}のペニスを足裏で捏ね回してきた！"
-            else
-              m = "#{speaker}は足の裏で、\066\n#{master}のペニスの敏感な部分をしごいてきた！"
-            end
-          end
-        else
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker}は緩急をつけながら、\066\n#{master}のペニスを足の指で更に弄ぶ！"
-            else
-              m = "#{speaker}は足の指で、\066\n#{master}のペニスを焦らすように弄んできた！"
-            end
-          else
-            if $msg.chain_attack == true
-              m = "#{speaker}は緩急をつけながら、\066\n#{master}のペニスを足裏でしごいてきた！"
-            else
-              m = "#{speaker}は足の裏で、\066\n#{master}のペニスを軽く踏みつけた！"
-            end
-          end
-        end
-      #--------------------------------------------------------------------------
-      when "胸"
-        if $msg.chain_attack == true
-          m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを間断なく愛撫してきた！"
-          m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに擦り付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
-        else
-          m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
-          m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
-        end
-        #●弱点を突いた
-        if $game_actors[101].critical == true
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
-                m = "#{speaker}は反応を楽しむかのように、\066\n#{$msg.t_enemy.bustsize}をペニスに擦り付けてきた！"
-                m = "#{speaker}は愛おしむかのように、\066\n#{$msg.t_enemy.bustsize}をペニスに擦り付けてきた！" if $msg.t_enemy.love > 0
+      case $msg.talk_step
+      when 77 #愛撫を最初から断った場合
+        m = "#{master}は誘惑に負けず、\066\n#{speaker}の申し出を断った！"
+        m = "#{master}は後ろ髪を引かれる思いで、\066\n何とか#{speaker}の要求を断った！" if $game_actors[101].state?(35)
+      when 78 #愛撫を途中で断った場合
+        m = "#{master}は何とか意思を振り絞り、\066\n#{speaker}の行為を押し留めた！"
+      #●愛撫を受け入れた場合
+      else
+        m = "#{speaker}は微笑むと、\066\n#{master}のペニスを愛撫してきた！"
+        case $msg.at_type
+        #--------------------------------------------------------------------------
+        when "手"
+          #●弱点を突いた
+          if $game_actors[101].critical == true
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker}は反応を楽しむかのように、\066\n#{master}のペニスを艶かしく指で弄ぶ！"
+                m = "#{speaker}は愛おしむかのように、\066\n#{master}のペニスを艶かしく指で弄ぶ！" if $msg.t_enemy.love > 0
               else
-                m = "#{speaker}は反応を楽しむかのように、\066\n#{$msg.t_enemy.bustsize}でペニスを艶かしく愛撫してきた！"
-                m = "#{speaker}は愛おしむかのように、\066\n#{$msg.t_enemy.bustsize}でペニスを艶かしく愛撫してきた！" if $msg.t_enemy.love > 0
+                m = "#{speaker}は心得た指捌きで、\066\n#{master}のペニスを間断なく攻め立ててきた！"
               end
             else
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              if $msg.chain_attack == true
+                m = "#{speaker}は間断なく、\066\n#{master}のペニスの敏感な部分を攻めてきた！"
+              else
+                m = "#{speaker}は指を絡めて、\066\n#{master}のペニスの敏感な部分を攻めてきた！"
+              end
             end
           else
-            if $msg.chain_attack == true
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを間断なく愛撫してきた！"
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに擦り付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker}は間断なく、\066\n#{master}のペニスを指で攻め立てる！"
+              else
+                m = "#{speaker}は指を絡めて、\066\n#{master}のペニスをしごき上げてきた！"
+              end
             else
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              if $msg.chain_attack == true
+                m = "#{speaker}は、\066\n#{master}のペニスに指を絡め愛撫してきた！"
+              else
+                m = "#{speaker}は手で、\066\n#{master}のペニスをしごいてきた！"
+              end
             end
           end
-        else
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを間断なく愛撫してきた！"
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに擦り付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+        #--------------------------------------------------------------------------
+        when "口"
+          #●弱点を突いた
+          if $game_actors[101].critical == true
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker}は反応を楽しむかのように、\066\n#{master}のペニスを根元から舐め上げてきた！"
+                m = "#{speaker}は愛おしむかのように、\066\n#{master}のペニスを根元から舐め上げてきた！" if $msg.t_enemy.love > 0
+              else
+                m = "#{speaker}は心得た舌使いで、\066\n#{master}のペニスを間断なく舐め回してきた！"
+              end
             else
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              if $msg.chain_attack == true
+                m = "#{speaker}は間断なく、\066\n#{master}のペニスの敏感な部分を舐め続けた！"
+              else
+                m = "#{speaker}は舌先で、\066\n#{master}のペニスの敏感な部分を舐め上げた！"
+              end
             end
           else
-            if $msg.chain_attack == true
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを間断なく愛撫してきた！"
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに擦り付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker}は間断なく、\066\n#{master}のペニスを丹念に舐め上げてきた！"
+              else
+                m = "#{speaker}は舌先で、\066\n#{master}のペニスを焦らすように舐め上げた！"
+              end
             else
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
-              m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              if $msg.chain_attack == true
+                m = "#{speaker}は休むことなく、\066\n#{master}のペニスを丹念に舐め上げてきた！"
+              else
+                m = "#{speaker}は舌で、\066\n#{master}のペニスを舐め上げてきた！"
+              end
+            end
+          end
+        #--------------------------------------------------------------------------
+        when "足"
+          #●弱点を突いた
+          if $game_actors[101].critical == true
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker}は反応を楽しむかのように、\066\n#{master}のペニスを両足の裏でしごいてきた！"
+                m = "#{speaker}は愛おしむかのように、\066\n#{master}のペニスを両足の裏でしごいてきた！" if $msg.t_enemy.love > 0
+              else
+                m = "#{speaker}は心得ていると言わんばかりに、\066\n#{master}のペニスを足裏で捏ね回してきた！"
+              end
+            else
+              if $msg.chain_attack == true
+                m = "#{speaker}は休むことなく、\066\n#{master}のペニスを足裏で捏ね回してきた！"
+              else
+                m = "#{speaker}は足の裏で、\066\n#{master}のペニスの敏感な部分をしごいてきた！"
+              end
+            end
+          else
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker}は緩急をつけながら、\066\n#{master}のペニスを足の指で更に弄ぶ！"
+              else
+                m = "#{speaker}は足の指で、\066\n#{master}のペニスを焦らすように弄んできた！"
+              end
+            else
+              if $msg.chain_attack == true
+                m = "#{speaker}は緩急をつけながら、\066\n#{master}のペニスを足裏でしごいてきた！"
+              else
+                m = "#{speaker}は足の裏で、\066\n#{master}のペニスを軽く踏みつけた！"
+              end
+            end
+          end
+        #--------------------------------------------------------------------------
+        when "胸"
+          if $msg.chain_attack == true
+            m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを間断なく愛撫してきた！"
+            m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに擦り付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+          else
+            m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
+            m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+          end
+          #●弱点を突いた
+          if $game_actors[101].critical == true
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+                  m = "#{speaker}は反応を楽しむかのように、\066\n#{$msg.t_enemy.bustsize}をペニスに擦り付けてきた！"
+                  m = "#{speaker}は愛おしむかのように、\066\n#{$msg.t_enemy.bustsize}をペニスに擦り付けてきた！" if $msg.t_enemy.love > 0
+                else
+                  m = "#{speaker}は反応を楽しむかのように、\066\n#{$msg.t_enemy.bustsize}でペニスを艶かしく愛撫してきた！"
+                  m = "#{speaker}は愛おしむかのように、\066\n#{$msg.t_enemy.bustsize}でペニスを艶かしく愛撫してきた！" if $msg.t_enemy.love > 0
+                end
+              else
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              end
+            else
+              if $msg.chain_attack == true
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを間断なく愛撫してきた！"
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに擦り付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              else
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              end
+            end
+          else
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを間断なく愛撫してきた！"
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに擦り付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              else
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              end
+            else
+              if $msg.chain_attack == true
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを間断なく愛撫してきた！"
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに擦り付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              else
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを挟みしごいてきた！"
+                m = "#{speaker}は#{$msg.t_enemy.bustsize}を、\066\n#{master}のペニスに押し付けてきた！" if $data_SDB[$msg.t_enemy.class_id].bust_size < 3
+              end
+            end
+          end
+        #--------------------------------------------------------------------------
+        when "♀"
+          #●弱点を突いた
+          if $game_actors[101].critical == true
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "As if enjoying his reaction, #{speaker}\066\n continues to bounce up and doｗn #{master}'s penis!"
+                m = "#{speaker} continues to lovingly bounce\066\n up and doｗn #{master}'s penis!" if $msg.t_enemy.love > 0
+              else
+                m = "Having found his ｗeakness, #{speaker} grinds\066\n her pussy doｗn on #{master}'s penis!"
+              end
+            else
+              if $msg.chain_attack == true
+                m = "#{speaker} continues grinding her hips\066\n back and forth on #{master}'s penis!"
+              else
+                m = "#{speaker} rubs her pussy on #{master},\066\n vigorously inciting response froｍ his penis!"
+              end
+            end
+          else
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker} continues bouncing ｗildly\066\n on #{master}'s penis!"
+              else
+                m = "#{speaker} rubs her pussy against\066\n #{master}'s penis!"
+              end
+            else
+              if $msg.chain_attack == true
+                m = "#{speaker} continues bouncing ｗildly\066\n on #{master}'s penis!"
+              else
+                m = "#{speaker} rubs her pussy against\066\n #{master}'s penis!"
+              end
+            end
+          end
+        #--------------------------------------------------------------------------
+        when "尻尾"
+          #●弱点を突いた
+          if $game_actors[101].critical == true
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker}は反応を楽しむかのように、\066\n#{master}のペニスを尻尾でしごいてきた！"
+                m = "#{speaker}は愛おしむかのように、\066\n#{master}のペニスを尻尾でしごいてきた！" if $msg.t_enemy.love > 0
+              else
+                m = "#{speaker}は慣れた腰使いで、\066\n#{master}のペニスを尻尾で弄んできた！"
+              end
+            else
+              if $msg.chain_attack == true
+                m = "#{speaker}は尻尾をくねらせ、\066\n#{master}のペニスを間断なくしごき上げてきた！"
+              else
+                m = "#{speaker}は尻尾を巧みに使い、\066\n#{master}のペニスをしごき上げてきた！"
+              end
+            end
+          else
+            case @weakpoints
+            when 20,10
+              if $msg.chain_attack == true
+                m = "#{speaker}はリズミカルに、\066\n尻尾で#{master}のペニスをしごき上げてきた！"
+              else
+                m = "#{speaker}は自分の尻尾を、\066\n#{master}のペニスに巻き付けてきた！"
+              end
+            else
+              if $msg.chain_attack == true
+                m = "#{speaker}はリズミカルに、\066\n尻尾で#{master}のペニスをしごき上げてきた！"
+              else
+                m = "#{speaker}は自分の尻尾を、\066\n#{master}のペニスに巻き付けてきた！"
+              end
             end
           end
         end
-      #--------------------------------------------------------------------------
-      when "♀"
-        #●弱点を突いた
-        if $game_actors[101].critical == true
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "As if enjoying his reaction, #{speaker}\066\n continues to bounce up and doｗn #{master}'s penis!"
-              m = "#{speaker} continues to lovingly bounce\066\n up and doｗn #{master}'s penis!" if $msg.t_enemy.love > 0
+        #■ホールド暫定措置
+        if $msg.t_enemy.holding_now?
+        case $msg.at_parts
+        #▼オーラル
+        #--------------------------------------------------------------------------
+        when "口挿入：口側"
+          if $game_actors[101].critical == true
+            if $msg.t_enemy.initiative_level > 0
+              #●
+              action = "しゃぶってきた"
+              #●
+              mouth = ["大胆に","音を立てて","激しく"]
+              mouth.push("吸い込むように","艶かしく","緩急をつけて") if $msg.t_enemy.positive?
+              mouth.push("一所懸命に","一心不乱に","蕩けた表情で") if $msg.t_enemy.negative?
+              mouth.push("愛おしむように") if $mood.point > 70
             else
-              m = "Having found his ｗeakness, #{speaker} grinds\066\n her pussy doｗn on #{master}'s penis!"
+              #●
+              action = "喉奥まで呑み込んできた"
+              #●
+              mouth = ["大胆に"]
+              mouth.push("妖艶な表情で") if $msg.t_enemy.positive?
+              mouth.push("一所懸命に") if $msg.t_enemy.negative?
+              mouth.push("愛おしむように") if $mood.point > 70
+            end
+            mouth = mouth[rand(mouth.size)]
+          else
+            if $msg.t_enemy.initiative_level > 0
+              #●
+              action = "しゃぶってきた"
+              #●
+              mouth = ["ゆっくりと"]
+              mouth.push("焦らすように","ゆったりと") if $msg.t_enemy.positive?
+              mouth.push("おずおずと","控えめに","恥らいつつも") if $msg.t_enemy.negative?
+              mouth.push("愛おしむように") if $mood.point > 70
+            else
+              #●
+              action = "喉奥まで呑み込んできた"
+              #●
+              mouth = ["ゆっくりと"]
+              mouth.push("焦らすように","じわじわと") if $msg.t_enemy.positive?
+              mouth.push("おずおずと","意を決して") if $msg.t_enemy.negative?
+            end
+            mouth = mouth[rand(mouth.size)]
+          end
+          m = "#{speaker}は#{master}のペニスを、\066\n#{mouth}#{action}！"
+        #▼パイズリ
+        #--------------------------------------------------------------------------
+        when "パイズリ"
+          if $game_actors[101].critical == true
+            action = "しごいてきた"
+            #●
+            bust = ["大胆に","激しく"]
+            bust.push("艶かしく","緩急をつけて") if $msg.t_enemy.positive?
+            bust.push("一所懸命に","一心不乱に","蕩けた表情で") if $msg.t_enemy.negative?
+            bust.push("愛おしむように") if $mood.point > 70
+          else
+            action = "挟んできた"
+            #●
+            bust = ["ゆっくりと","上下に"]
+            bust.push("焦らすように","ゆったりと") if $msg.t_enemy.positive?
+            bust.push("おずおずと","控えめに","恥らいつつも") if $msg.t_enemy.negative?
+            bust.push("愛おしむように") if $mood.point > 70
+          end
+          bust = bust[rand(bust.size)]
+          m = "#{speaker}は#{$msg.t_enemy.bustsize}で、\066\n#{master}のペニスを#{bust}#{action}！"
+        #--------------------------------------------------------------------------
+        when "背面拘束"
+          action = []
+          if $game_actors[101].critical == true
+            action.push("の首筋を舌先で舐めてきた！")
+            action.push("の耳たぶを甘噛みしてきた！")
+            action.push("の乳首を舌先で舐めてきた！")
+            action.push("に自分の胸を押し付けてきた！")
+            #ペニスが空いている場合
+            if $game_actors[101].hold.penis.battler == nil
+              action.push("のペニスを指で弄ってきた！") 
+              action.push("のペニスを指先で撫でてきた！")
+            #ペニスがインサート中の場合(アナル含む)
+            elsif $game_actors[101].penis_insert? or $game_actors[101].penis_analsex?
+              hold_target = $game_actors[101].hold.penis.battler
+              action.push("の腰を前に押し出した！\066\n#{hold_target}との結合部がより深くなった！")
+            #ペニスがパイズリ中の場合
+            elsif $game_actors[101].penis_paizuri?
+              action.push("の腰を押さえ込んだ！\066\n#{hold_target}の動きが更に激しくなった！")
             end
           else
-            if $msg.chain_attack == true
-              m = "#{speaker} continues grinding her hips\066\n back and forth on #{master}'s penis!"
-            else
-              m = "#{speaker} rubs her pussy on #{master},\066\n vigorously inciting response froｍ his penis!"
-            end
+            action.push("のわきの下を舌で舐めてきた！")
+            action.push("の首筋にふぅっと息を吹きかけた！")
+            action.push("の胸板に指を這わせてきた！")
+            action.push("の腰をさわさわと撫でてきた！")
+            action.push("の太ももをさわさわと撫でてきた！")
           end
-        else
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker} continues bouncing ｗildly\066\n on #{master}'s penis!"
-            else
-              m = "#{speaker} rubs her pussy against\066\n #{master}'s penis!"
-            end
-          else
-            if $msg.chain_attack == true
-              m = "#{speaker} continues bouncing ｗildly\066\n on #{master}'s penis!"
-            else
-              m = "#{speaker} rubs her pussy against\066\n #{master}'s penis!"
-            end
-          end
+          action = action[rand(action.size)]
+          m = "#{speaker}は密着したまま、\066\n#{master}#{action}"
         end
-      #--------------------------------------------------------------------------
-      when "尻尾"
-        #●弱点を突いた
-        if $game_actors[101].critical == true
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker}は反応を楽しむかのように、\066\n#{master}のペニスを尻尾でしごいてきた！"
-              m = "#{speaker}は愛おしむかのように、\066\n#{master}のペニスを尻尾でしごいてきた！" if $msg.t_enemy.love > 0
-            else
-              m = "#{speaker}は慣れた腰使いで、\066\n#{master}のペニスを尻尾で弄んできた！"
-            end
-          else
-            if $msg.chain_attack == true
-              m = "#{speaker}は尻尾をくねらせ、\066\n#{master}のペニスを間断なくしごき上げてきた！"
-            else
-              m = "#{speaker}は尻尾を巧みに使い、\066\n#{master}のペニスをしごき上げてきた！"
-            end
-          end
-        else
-          case @weakpoints
-          when 20,10
-            if $msg.chain_attack == true
-              m = "#{speaker}はリズミカルに、\066\n尻尾で#{master}のペニスをしごき上げてきた！"
-            else
-              m = "#{speaker}は自分の尻尾を、\066\n#{master}のペニスに巻き付けてきた！"
-            end
-          else
-            if $msg.chain_attack == true
-              m = "#{speaker}はリズミカルに、\066\n尻尾で#{master}のペニスをしごき上げてきた！"
-            else
-              m = "#{speaker}は自分の尻尾を、\066\n#{master}のペニスに巻き付けてきた！"
-            end
-          end
-        end
+        end #if $msg.t_enemy.holding_now?
       #--------------------------------------------------------------------------
       end
     #==============================================================================
@@ -603,7 +708,7 @@ class Talk_Sys
       when "♀挿入"
         case $msg.talk_step
         when 2 #挿入受諾
-          m = "Having invited #{master}, #{speaker} ｑuickly\066\n stabs his penis into her pussy before he can escape!"
+          m = "Having invited #{master}, #{speaker} quickly\066\n stabs his penis into her pussy before he can escape!"
         when 77 #挿入拒否
           m = "#{master} hardens his resolve to resist her invitation!"
         end
@@ -751,9 +856,46 @@ class Talk_Sys
       else #好色
         emotion = "sｍiles suggestively"
       end
-      m = "#{speaker} #{emotion} as she gazes\066\n doｗn at #{master}'s crotch!"
+      m = "#{speaker}は#{emotion}、\066\n#{master}のペニスを見つめている！"
+      #▼別ホールドの専用が出来るまでの一時措置(@0830)
+      if $msg.t_enemy.holding_now?
+        emotion = ""
+        case $msg.t_enemy.personality
+        when "勝ち気","高慢","意地悪"
+          emotion = "舌なめずりをしつつ"
+        when "上品","柔和"
+          emotion = "柔らかい笑みを浮かべ"
+        when "淡泊","虚勢"
+          emotion = "熱っぽい瞳で"
+        when "内気","従順","倒錯"
+          emotion = "潤んだ瞳で"
+        when "不思議","天然"
+          emotion = "屈託の無い笑みを浮かべ"
+        when "陽気","甘え性"
+          emotion = "悪戯っぽい笑みを浮かべ"
+        else #好色
+          emotion = "妖艶な笑みを浮かべ"
+        end
+        action = []
+        case $msg.at_parts
+        #▼インサート・アクセプト
+        #--------------------------------------------------------------------------
+        when "♀挿入：アソコ側","尻挿入：尻側"
+          action.push("の背に腕を回してきた")
+          action.push("を見下ろしてきた") if $msg.t_enemy.initiative_level > 0
+        when "口挿入：口側","パイズリ"
+          action.push("を見上げてきた")
+          action.push("のペニスと戯れている") if $msg.t_enemy.initiative_level > 0
+        when "背面拘束"
+          action.push("に更に身体を密着させてきた")
+        else
+          action.push("に更に身体を密着させてきた")
+        end
+        action = action[rand(action.size)]
+        m = "#{speaker}は#{emotion}、\066\n#{master}#{action}！"
+      end
     #==============================================================================
-    # ●愛撫・通常
+    # ●愛撫・性交
     #==============================================================================
     when "愛撫・性交"
       emotion = ""

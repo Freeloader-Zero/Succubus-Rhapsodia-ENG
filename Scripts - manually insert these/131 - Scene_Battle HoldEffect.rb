@@ -111,7 +111,7 @@ class Scene_Battle
           when "Œû‘}“ü"
             hold_target.hold.penis.set(nil, nil, nil, nil)
             target.hold.mouth.set(nil, nil, nil, nil)
-          when "’£qŒû‘}“ü"
+          when "ƒfƒBƒ‹ƒhŒû‘}“ü"
             hold_target.hold.dildo.set(nil, nil, nil, nil)
             target.hold.mouth.set(nil, nil, nil, nil)
           when "ƒNƒ“ƒj"
@@ -137,7 +137,7 @@ class Scene_Battle
             #S‘©ƒ^ƒCƒv‚ÍƒCƒjƒVƒAƒ`ƒu‚ªØ‚ê‚½’iŠK‚ÅŠO‚ê‚é
             hold_target.hold.mouth.set(nil, nil, nil, nil)
             target.hold.vagina.set(nil, nil, nil, nil)
-          when "’£qŠ‘}“ü"
+          when "ƒfƒBƒ‹ƒhŠ‘}“ü"
             hold_target.hold.dildo.set(nil, nil, nil, nil)
             target.hold.vagina.set(nil, nil, nil, nil)
           when "Šç–Ê‹Ræ"
@@ -157,7 +157,7 @@ class Scene_Battle
           case target.hold.anal.type
           when "K‘}“ü"
             hold_target.hold.penis.initiative = 2
-          when "’£qK‘}“ü"
+          when "ƒfƒBƒ‹ƒhK‘}“ü"
             hold_target.hold.dildo.set(nil, nil, nil, nil)
             target.hold.anal.set(nil, nil, nil, nil)
           when "K‹Ræ"
@@ -209,11 +209,11 @@ class Scene_Battle
           #K”ö‚ÍƒCƒjƒVƒAƒ`ƒu‚ªØ‚ê‚½’iŠK‚ÅŠO‚ê‚é
           hold_target = target.hold.dildo.battler
           case target.hold.dildo.type
-          when "’£qŠ‘}“ü"
+          when "ƒfƒBƒ‹ƒhŠ‘}“ü"
             hold_target.hold.vagina.set(nil, nil, nil, nil)
-          when "’£qŒû‘}“ü"
+          when "ƒfƒBƒ‹ƒhŒû‘}“ü"
             hold_target.hold.mouth.set(nil, nil, nil, nil)
-          when "’£qK‘}“ü"
+          when "ƒfƒBƒ‹ƒhK‘}“ü"
             hold_target.hold.anal.set(nil, nil, nil, nil)
           end
           target.hold.dildo.set(nil, nil, nil, nil)

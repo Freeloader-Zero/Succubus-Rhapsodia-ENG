@@ -4,15 +4,18 @@
 
 English fan translations for the game, "Succubus Rhapsodia"
 
-Game version:
-v1.09
 
-Translation version**:
-v0.161
+:::[ Game version ]:::
+== v1.10
+
+:::[ Translation version ]:::**
+== v0.162
 
 **estimated percentage of translation completion
 
 ==========================================================
+
+:::[ Game ]:::
 
 Official Site:
 http://succbusrhapsodia.x.fc2.com/top.html
@@ -30,9 +33,45 @@ http://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_098909/
 ==========================================================
 
 
-Changelogs:
+:::[ Instructions ]:::
 
-v0.161:
+
+For Translators:
+1a. If you don't have the RPG Maker XP Editor, you can directly edit individual sections of the Scripts.rxdata via the "Scripts - manually download these" folder.
+1b. If you have the RPG Maker XP Editor installed, just download the "Data" folder, and dump it into game folder.
+2b. Merge/Overwrite when prompted.
+3b. Use "Game.rxproj" from within the game folder to use RPG Maker XP Editor to edit the game.
+- if you don't know what the game.rxproj file is and/or don't have it, just make a .txt file, type "RPGXP 1.05" into it (the "1.05" can be replaced with whatever version your RPG Maker XP editor is), then rename the .txt file to "game.rxproj". If your system doesn't yet recognize the file, you can open game.rxproj by right-clicking it, and then selecting "Open with >", "RPG Maker XP".
+
+
+For testers and freeloaders:
+1. dump "Data" into game folder.
+2. Merge/Overwrite when prompted.
+3. fapping is optional.
+
+
+
+
+==========================================================
+
+
+:::[ Changelogs ]:::
+
+
+v0.162: (09/01/2016)
+- updated scripts to game v1.10
+	- adds large amounts of conditional dialogues text for Talk, for chain attacks
+	- rewords some Dildo strings
+- changed some underwear names
+	- Slime's underwear from "crotch mucus" to "loin mucus", because I think the latter sounds a little better
+	- Nightmare's underwear from "thin cloth" to "tights"
+- corrected some skill descriptions; descriptions for skills 002-249 are translated with relative accuracy
+- revised some skill names
+-> Added the Scripts.rxdata to repository for easier downloading and testing purposes
+	- "Scripts - manually insert these" will be kept and manually updated for comparing changes within Scripts.rxdata, or for quick edits
+
+
+v0.161: (08/31/2016)
 - replaced all script instances with their respective replacements:
 	- "\w" with "\065"
 	- "\m" with "\066"
@@ -51,7 +90,7 @@ v0.161:
 - revised translation versioning; version now means an estimated percentage of the translation completion of the base game content.
 
 
-v0.160: (08/31/2016)
+v0.160:
 - updated scripts v1.09
 	- v1.09 added "enemy_before_earnest?" stuff to:
 		- Game_Battler Textmake
