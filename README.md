@@ -32,6 +32,16 @@ DMM:
 http://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_098909/
 
 
+-------=:::[ Other Links ]:::=------
+
+
+ULMF thread:
+http://www.ulmf.org/bbs/showthread.php?t=29519
+
+Github Repository:
+https://github.com/Freeloader-Zero/Succubus-Rhapsodia-ENG
+
+
 ==========================================================
 
 
@@ -47,14 +57,14 @@ For Translators:
 - 4) Merge/Overwrite when prompted.
 - 5) Open "Game.rxproj" from within the game folder to use RPG Maker XP Editor to edit the game.
 
-- if you don't know what the game.rxproj file is and/or don't have it, just make a .txt file, type "RPGXP 1.05" into it (the "1.05" can be replaced with whatever version your RPG Maker XP editor is), then rename the .txt file to "game.rxproj". If your system doesn't yet recognize the file, you can open game.rxproj by right-clicking it, and then selecting "Open with >", "RPG Maker XP".
+	- if you don't know what the game.rxproj file is and/or don't have it, just make a .txt file, type "RPGXP 1.05" into it (the "1.05" can be replaced with whatever version your RPG Maker XP editor is), then rename the .txt file to "game.rxproj". If your system doesn't yet recognize the file, you can open game.rxproj by right-clicking it, and then selecting "Open with >", "RPG Maker XP".
 
 
-For testers and freeloaders:
+For testers, freeloaders and other folks:
 - 0) Make sure you've installed/patched your game to the appropriate version that this translation uses.
 - 1) Download and dump into game folder (except for "Scripts - manually download these", you don't need them; the scripts are already included in the "Scripts.rxdata" file inside the "Data" folder).
 - 2) Merge/Overwrite when prompted.
-- 3) fapping is optional; enjoyment is mandatory.
+- 3) fapping is optional; enjoyment is mandatory. ;)
 
 
 
@@ -130,14 +140,16 @@ v0.150: (8/30/2016), initial base
 	
 ==========================================================
 
-NOTE TO OTHER EDITORS:
 
-- "Data" folder
-	- extract this to the game directory
-	- edit with RPG Maker XP Editor (e.g. Enemies.rxdata is edited via hitting F9 in the editor, then going to the "Enemies" tab)
-- "Scripts - manually insert these"
-	- edit the .rb files with a text editor, like Notepad++
-	- manually copy these into the game scripts (F11) via the RPG Maker XP editor
-	- if you add more sections from the script, add the position in the Script section listing to the front of the file name. (e.g. RPG::Skilltext os 14th from the top of the script sections listing, therefore it is named "014 - RPG-Skilltext.rb") (used hyphen in name instead of colons because file names cannot have colons).
-	- the .spacer files are to be kept blank, only for keeping track of position
+
+-------=:::[ Credits, thus far ]:::=-------
+
+- Strange
+	- Translation Toolbox, Skill names, Trait/Ability names
+	- http://www.ulmf.org/bbs/member.php?u=179069
+
+- SFrame
+	- Combat messages, descriptions, General UI, just fooling around for now
+	- http://www.ulmf.org/bbs/member.php?u=16290
+	
 	
