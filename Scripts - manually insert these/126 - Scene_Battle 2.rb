@@ -35,7 +35,7 @@ class Scene_Battle
       text = "A group of succubi have appeared!"
       end
     end
-    $game_temp.battle_log_text += text + "\067"
+    $game_temp.battle_log_text += text + "\"
     #¥ƒVƒXƒeƒ€ƒEƒFƒCƒg
     case $game_system.ms_skip_mode
     when 3 #è“®‘—‚èƒ‚[ƒh
@@ -93,9 +93,9 @@ class Scene_Battle
       @battle_log_window.keep_flag = false
       $game_temp.battle_log_text = ""
       if $game_party.actors.size == 1
-        $game_temp.battle_log_text += $game_actors[101].name + " has the initiative!\067"
+        $game_temp.battle_log_text += $game_actors[101].name + " has the initiative!\"
       else
-        $game_temp.battle_log_text += $game_actors[101].name + " has the initiative!\067"
+        $game_temp.battle_log_text += $game_actors[101].name + " has the initiative!\"
       end
       #¥ƒVƒXƒeƒ€ƒEƒFƒCƒg
       case $game_system.ms_skip_mode
@@ -119,9 +119,9 @@ class Scene_Battle
       @battle_log_window.keep_flag = false
       $game_temp.battle_log_text = ""
       if $game_party.actors.size == 1
-        $game_temp.battle_log_text += $game_actors[101].name + " had the initiative taken by the ene‚y!\067"
+        $game_temp.battle_log_text += $game_actors[101].name + " had the initiative taken by the ene‚y!\"
       else
-        $game_temp.battle_log_text += $game_actors[101].name + " had the initiative taken by the ene‚y!\067"
+        $game_temp.battle_log_text += $game_actors[101].name + " had the initiative taken by the ene‚y!\"
       end
       #¥ƒVƒXƒeƒ€ƒEƒFƒCƒg
       case $game_system.ms_skip_mode
@@ -552,21 +552,21 @@ class Scene_Battle
         for a in $game_party.party_actors
           # ‘½‚ß‚É–á‚Á‚½ƒiƒŒ[ƒg
           if a.exp_plus_flag == true
-            text += "\065\067#{a.name} received ‚ore experience than usual!"
+            text += "\\#{a.name} received ‚ore experience than usual!"
             a.exp_plus_flag = false
           end
           text += a.level_up_log
           a.level_up_log = ""
           up_flag = true if text != ""
         end
-#        $game_temp.battle_log_text += "\065\n" + text + "\065\065" if text != ""
-        $game_temp.battle_log_text += text + "\065\065" if text != ""
+#        $game_temp.battle_log_text += "\\n" + text + "\\" if text != ""
+        $game_temp.battle_log_text += text + "\\" if text != ""
         
         # ‚»‚Ì‘¼í“¬Œãˆ—‚Ìƒ`ƒFƒbƒN
         for actor in $game_party.party_actors
           if actor.equip?("ƒƒCƒ‹ƒhƒJ[ƒh")
             actor.armor1_id = 0
-            text = "\065\067#{actor.name}'s e‚‘uipped \065\nWild Card has disappeared....."
+            text = "\\#{actor.name}'s e‚‘uipped \\nWild Card has disappeared....."
             $game_temp.battle_log_text += text
           end
           if actor.equip?("èì‚èƒ~ƒTƒ“ƒK")
@@ -574,7 +574,7 @@ class Scene_Battle
             if rand(100) < 5
               actor.armor1_id = 0
               actor.promise += 500
-              text = "\065\067#{actor.name}'s e‚‘uipped \nHo‚e‚ade Misanga broke!"
+              text = "\\#{actor.name}'s e‚‘uipped \nHo‚e‚ade Misanga broke!"
               $game_temp.battle_log_text += text
             end
           end

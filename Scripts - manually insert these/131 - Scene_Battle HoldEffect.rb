@@ -444,7 +444,7 @@ class Scene_Battle
         text = "#{active.name}‚Ì‘€‚éGè‚ª‰ö‚µ‚­å¿‚­‚ÆA\n#{target.name}‚ÍŒÒ‚ğ‘å‚«‚­L‚°‚½p¨‚É‚³‚ê‚Ä‚µ‚Ü‚Á‚½I"
       end
     end
-    $game_temp.battle_log_text += text + "\065\067"
+    $game_temp.battle_log_text += text + "\\"
   end
   #--------------------------------------------------------------------------
   # š ƒz[ƒ‹ƒhI—¹ƒeƒLƒXƒgˆ—
@@ -538,13 +538,13 @@ class Scene_Battle
     end
     a = ""
     a += text[0] if text[0] != nil
-    a += "\n\066" if text[1] != nil
+    a += "\n\" if text[1] != nil
     a += text[1] if text[1] != nil
-    a += "\n\066" if text[2] != nil
+    a += "\n\" if text[2] != nil
     a += text[2] if text[2] != nil
-    a += "\n\066" if text[3] != nil
+    a += "\n\" if text[3] != nil
     a += text[3] if text[3] != nil
-    $game_temp.battle_log_text += a + "\065\067"
+    $game_temp.battle_log_text += a + "\\"
   end
   #--------------------------------------------------------------------------
   # œ —Œğ‚Ìƒz[ƒ‹ƒh•t—^‚É‚æ‚éƒCƒjƒVƒAƒ`ƒu•Ï“®
@@ -1027,7 +1027,7 @@ class Scene_Battle
     # ƒz[ƒ‹ƒhƒ|ƒbƒv‚Ìw¦
     hold_pops_order
     # ‘ÌˆÊƒeƒLƒXƒg
-    $game_temp.battle_log_text += "\065\067" + hd_text if hd_text != ""
+    $game_temp.battle_log_text += "\\" + hd_text if hd_text != ""
   end
 =end
 

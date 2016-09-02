@@ -9,7 +9,7 @@ English fan translations for the game, "Succubus Rhapsodia"
 - v1.10
 
 ---=:::[ Translation version* ]:::=---
-- v0.162
+- v0.163
 
 *estimated percentage of translation completion
 
@@ -73,6 +73,12 @@ For testers, freeloaders and other folks:
 
 
 -------=:::[ Changelogs ]:::=-------
+
+
+v0.163: (09/02/2016)
+- fixed missing/invisible damage numbers
+	- mass replaced all \065, \066, and \067 instances with \, \, and \
+	- I guess the curse of invisibility passed on from the \w, \m, and \q.... (my mistake for not paying attention to the damage while stability testing)
 
 
 v0.162: (09/01/2016)

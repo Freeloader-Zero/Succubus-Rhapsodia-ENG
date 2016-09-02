@@ -296,14 +296,14 @@ class Incense_System
     if $incense.data[box_number] != []
       for incense_one in $incense.data[box_number]
         if incense_one.name == name
-          txt += text_alter(incense_one.start_text + "\065\067", box_number)
+          txt += text_alter(incense_one.start_text + "\\", box_number)
         end
       end
     end
     if txt != ""
       if $game_system.system_read_mode != 0
         txt += "CLEAR"
-        txt.sub!("\065\067CLEAR","")
+        txt.sub!("\\CLEAR","")
       end
       $game_temp.battle_log_text += txt
     else
@@ -318,17 +318,17 @@ class Incense_System
     if $incense.data[box_number] != []
       for incense_one in $incense.data[box_number]
         if incense_one.name == name
-          txt += text_alter(incense_one.end_text + "\065\067", box_number)
+          txt += text_alter(incense_one.end_text + "\\", box_number)
         end
       end
     end
     if txt != ""
       if $game_system.system_read_mode != 0
         txt += "CLEAR"
-        txt.sub!("\065\067CLEAR","")
+        txt.sub!("\\CLEAR","")
       end
       # Ž–‘O‚ÉƒeƒLƒXƒg‚ª‚ ‚Á‚½ê‡‚Í‰üs‚ð‘}‚·
-      txt = "\065\067" + txt if $game_temp.battle_log_text != "" 
+      txt = "\\" + txt if $game_temp.battle_log_text != "" 
       $game_temp.battle_log_text += txt
     else
       return ""
@@ -342,14 +342,14 @@ class Incense_System
     for i in 0..2
       if $incense.data[i] != []
         for incense_one in $incense.data[i]
-          txt += text_alter(incense_one.fragranting_text + "\065\067", i)
+          txt += text_alter(incense_one.fragranting_text + "\\", i)
         end
       end
     end
     if txt != ""
       if $game_system.system_read_mode != 0
         txt += "CLEAR"
-        txt.sub!("\065\067CLEAR","")
+        txt.sub!("\\CLEAR","")
       end
       $game_temp.battle_log_text += txt
     else
@@ -374,7 +374,7 @@ class Incense_System
       s1 = delegate.name
       s1 += "‚½‚¿" if count > 1
       change_flag = text.gsub!("–¡•û", s1)
-      text.gsub!("brk", "\065\n") if change_flag != nil and s1.size > 10 * 3
+      text.gsub!("brk", "\\n") if change_flag != nil and s1.size > 10 * 3
     end
     count = 0
     delegate = nil  
@@ -388,7 +388,7 @@ class Incense_System
       s2 = delegate.name
       s2 += "‚½‚¿" if count > 1
       change_flag = text.gsub!("‘ŠŽè", s2)
-      text.gsub!("brk", "\065\n") if change_flag != nil and  s2.size > 10 * 3
+      text.gsub!("brk", "\\n") if change_flag != nil and  s2.size > 10 * 3
     end
     text.gsub!("brk", "")
     return text

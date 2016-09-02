@@ -338,8 +338,8 @@ class Scene_Box
           @now_actor.level = @now_actor.level + 1
           # ÉeÉLÉXÉgÇêÆå`Ç∑ÇÈ
           text = @now_actor.level_up_log
-          text.gsub!("\065","")
-          text.gsub!("\067","\n")
+          text.gsub!("\","")
+          text.gsub!("\","\n")
           @now_actor.level_up_log = ""
           $game_temp.message_text = text
           @now_actor.promise -= @bonus[0]

@@ -15,13 +15,13 @@ class Game_Battler
     for i in self.states
       if $data_states[i].id != 6 and self.exist? and not self.dead?
         ms = $data_states[i].message($data_states[i],"report",self,nil)
-        text = (text + ms + "\065\067") if ms != ""
+        text = (text + ms + "\\") if ms != ""
       end
     end
     # ƒƒbƒZ[ƒW•\¦
     if text != ""
       text += "CLEAR"
-      text.sub!("\065\067CLEAR","")
+      text.sub!("\\CLEAR","")
       return text
     else
       return ""
@@ -50,7 +50,7 @@ class Game_Battler
           return text1
         end
         #‰üs‚ğ‘}“ü
-        text1 = text1 + ms1 + "\065\067" if ms1 != ""
+        text1 = text1 + ms1 + "\\" if ms1 != ""
       end
       #Ši”[I—¹‚µ‚½‚çƒƒO‚ğÁ‹‚·‚é
       self.add_states_log.clear
@@ -60,7 +60,7 @@ class Game_Battler
       for i in self.remove_states_log
         ms2 = i.message(i,"recover", self, user)
         #‰üs‚ğ‘}“ü
-        text2 = text2 + ms2 + "\065\067" if ms2 != ""
+        text2 = text2 + ms2 + "\\" if ms2 != ""
       end
       #Ši”[I—¹‚µ‚½‚çƒƒO‚ğÁ‹‚·‚é
       self.remove_states_log.clear
@@ -71,7 +71,7 @@ class Game_Battler
     if text != ""
       #•¶Í‚ª‚ ‚éê‡AÅŒã‚Ì‰üs‚ğÁ‚·
       text += "CLEAR"
-      text.sub!("\065\067CLEAR","")
+      text.sub!("\\CLEAR","")
       return text
     else
       return ""
@@ -84,10 +84,10 @@ class Game_Battler
     user = $game_temp.battle_active_battler
     text = skill.message(skill, "action", self, user)
     if text != "" and text != nil
-      text = text + "\067"
+      text = text + "\"
       # ’§”­‚É‚æ‚é‘ÎÛ•ÏX‚ª”­¶‚µ‚Ä‚¢‚éê‡A—UˆøƒƒbƒZ[ƒW‚ğo‚·
       if $game_temp.incite_flag
-        text = "#{user.name} ‚—as invited!\067\066" + text
+        text = "#{user.name} ‚—as invited!\\" + text
       end
       $game_temp.battle_log_text = text
     end
@@ -105,8 +105,8 @@ class Game_Battler
       damage = self.damage
       # œƒNƒŠƒeƒBƒJƒ‹ˆ—
       if self.critical and self.damage != "Miss"
-#        plus += "ƒZƒ“ƒVƒ…ƒAƒ‹ƒXƒgƒ[ƒNI\065\067"
-        plus += "Sensual StrokeI\065\067"
+#        plus += "ƒZƒ“ƒVƒ…ƒAƒ‹ƒXƒgƒ[ƒNI\\"
+        plus += "Sensual StrokeI\\"
         self.animation_id = 103
         self.animation_hit = true
         self.damage_pop = true
@@ -179,13 +179,13 @@ class Game_Battler
     # ¡“ÁêƒXƒLƒ‹
     case skill.id
     when 419   #ƒAƒ“ƒ‰ƒbƒL[ƒƒA
-      text = "#{$game_actors[101].name}‚Í•sK‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½I\065\067"
+      text = "#{$game_actors[101].name}‚Í•sK‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½I\\"
       # •sK‚Å‚È‚¢ê‡A•sKó‘Ô‚É‚·‚éB
       if $game_variables[61] == 0
         $game_variables[61] = 50 
       end
     when 239   #ƒVƒƒƒCƒjƒ“ƒOƒŒƒCƒW
-      text = "ˆÅ‚ğÙ‚­‘MŒõ‚Ì“S’Æ‚ªAˆ«‚µ‚«Ò‚Ç‚à‚ğŠÑ‚­II\065\067"
+      text = "ˆÅ‚ğÙ‚­‘MŒõ‚Ì“S’Æ‚ªAˆ«‚µ‚«Ò‚Ç‚à‚ğŠÑ‚­II\\"
     end
     #------------------------------------------------------------------------#        
     return text
@@ -198,7 +198,7 @@ class Game_Battler
     user = $game_temp.battle_active_battler
     text = item.message(item, "action", self, user)
     if text != nil
-      text = text + "\067"
+      text = text + "\"
       $game_temp.battle_log_text = text
     end
   end
@@ -213,7 +213,7 @@ class Game_Battler
     # EP‚ÆVP—¼•û‰ñ•œ‚Ìê‡
     if (item.recover_hp_rate > 0 or item.recover_hp > 0) and
        (item.recover_sp_rate > 0 or item.recover_sp > 0)
-      text = "#{myname} recovered #{(damage.abs).to_s}‚d‚o!\067" + 
+      text = "#{myname} recovered #{(damage.abs).to_s}‚d‚o!\" + 
              "#{myname} recovered #{(recover_sp).to_s}‚u‚o!I"
       text = "‚µ‚©‚µ¡‚ÍŒø‰Ê‚ª–³‚©‚Á‚½I" if self.state?("Šã")
     # EP‚Ì‚İ‰ñ•œ‚Ìê‡
@@ -263,7 +263,7 @@ class Game_Battler
       text = "#{myname}'s face is blushing red ‚—ith e‚barrass‚ent...!"
     #------------------------------------------------------------------------
     when "˜Iˆ«‹¶"
-      text = "#{myname} appears a‚used,\n\066 sneering and laughing at #{user}...!"
+      text = "#{myname} appears a‚used,\n\ sneering and laughing at #{user}...!"
     #------------------------------------------------------------------------
     else
       text = "#{myname} see‚s to be pleased...!"

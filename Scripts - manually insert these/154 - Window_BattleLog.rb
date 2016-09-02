@@ -66,9 +66,9 @@ class Window_BattleLog < Window_Base
     
 =begin
       # ƒƒO‹¸³
-      if ["\067\067","\067\065\067","\067\066\067","\067\y\067"].include?($game_temp.battle_back_log)
+      if ["\\","\\\","\\\","\\y\"].include?($game_temp.battle_back_log)
         $game_temp.battle_back_log += "CLEAR"
-        $game_temp.battle_back_log.gsub!("\067CLEAR","")
+        $game_temp.battle_back_log.gsub!("\CLEAR","")
       elsif $game_temp.battle_back_log == "\n"
         $game_temp.battle_back_log = ""
       end
@@ -76,20 +76,20 @@ class Window_BattleLog < Window_Base
     
     
 =begin
-    # ƒ}ƒjƒ…ƒAƒ‹ƒ‚[ƒh‚Í––”ö‚É\067‚ð‚Â‚¯‚é
+    # ƒ}ƒjƒ…ƒAƒ‹ƒ‚[ƒh‚Í––”ö‚É\‚ð‚Â‚¯‚é
     if $game_system.system_read_mode == 0
       text += "CHECK"
-      if text.match("\065\067CHECK")
+      if text.match("\\CHECK")
         text.gsub!("CHECK","")
       else
-        text.gsub!("CHECK","\065\067")
+        text.gsub!("CHECK","\\")
       end
     end
 =end
 
 =begin    
     # ƒƒO‹¸³
-    if ["\n","\067"].include?(text)
+    if ["\n","\"].include?(text)
       $game_temp.battle_log_text = ""
       return
     end
@@ -145,7 +145,7 @@ class Window_BattleLog < Window_Base
         next
       end
       # ƒEƒFƒCƒg•¶Žš(’·ŽžŠÔ)‚Ìê‡
-      if c == "\065"
+      if c == "\"
         # ƒEƒFƒCƒg‚ð“ü‚ê‚é
         case $game_system.ms_skip_mode
         when 3 #Žè“®‘—‚èƒ‚[ƒh
@@ -165,7 +165,7 @@ class Window_BattleLog < Window_Base
         return
       end
       # ƒEƒFƒCƒg•¶Žš(’ZŽžŠÔ)‚Ìê‡
-      if c == "\066"
+      if c == "\"
         # ƒEƒFƒCƒg‚ð“ü‚ê‚é
         case $game_system.ms_skip_mode
         when 3 #Žè“®‘—‚èƒ‚[ƒh
@@ -241,7 +241,7 @@ class Window_BattleLog < Window_Base
         next
       end
       # Žè“®‰üs•¶Žš‚Ìê‡
-      if c == "\067"
+      if c == "\"
         # y ‚É 1 ‚ð‰ÁŽZ
         y += 1
         x = 0
@@ -371,15 +371,15 @@ class Window_BattleLog < Window_Base
   def log_correction
 
     # ƒEƒFƒCƒg‚Ì‡˜‚ð’¼‚·
-    $game_temp.battle_log_text.gsub!("\n\065","\065\n")
-    $game_temp.battle_log_text.gsub!("\067\065","\065\067")
+    $game_temp.battle_log_text.gsub!("\n\","\\n")
+    $game_temp.battle_log_text.gsub!("\\","\\")
     
     # ‰üs‚ªd•¡‚µ‚Ä‚¢‚éê‡A‚P‚Â‚É‚·‚é
-    $game_temp.battle_log_text.gsub!(/(\\065\\n)+/,"\065\n")
-    $game_temp.battle_log_text.gsub!(/(\\065\\067)+/,"\065\067")
+    $game_temp.battle_log_text.gsub!(/(\\\\n)+/,"\\n")
+    $game_temp.battle_log_text.gsub!(/(\\\\)+/,"\\")
     
-    # \065\nE\065\067‚¾‚¯‚Ìê‡AƒeƒLƒXƒg‚ðÁ‚·
-    if ["\065\n","\065\067"].include?($game_temp.battle_log_text)
+    # \\nE\\‚¾‚¯‚Ìê‡AƒeƒLƒXƒg‚ðÁ‚·
+    if ["\\n","\\"].include?($game_temp.battle_log_text)
       $game_temp.battle_log_text = ""
     end
 

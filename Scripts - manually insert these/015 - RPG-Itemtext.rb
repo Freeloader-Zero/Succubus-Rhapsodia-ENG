@@ -23,7 +23,7 @@ module RPG
       # ■IDで判断(必要に応じて個別設定)
       case item.id
       when 51,52,53 # 小さなポピー、鮮やかな花冠、ロマンスブーケ
-        action = prm + "#{targetname}に\n\066#{itemname}を渡した！"
+        action = prm + "#{targetname}に\n\#{itemname}を渡した！"
         avoid  = "しかし#{myname}はもう十分満足そうだ……"
       end
       # メッセージ出力

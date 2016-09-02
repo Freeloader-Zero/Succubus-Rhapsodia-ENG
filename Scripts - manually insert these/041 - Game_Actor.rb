@@ -519,19 +519,19 @@ class Game_Actor < Game_Battler
     # ƒŒƒxƒ‹ƒAƒbƒv
     while @exp >= @exp_list[@level+1] and @exp_list[@level+1] > 0
       @level += 1
-      text += "\065\067" #if up_flag
+      text += "\\" #if up_flag
       text += "#{myname} reached Lv.#{@level.to_s}!"
       # ƒXƒLƒ‹K“¾
       for j in $data_classes[@class_id].learnings
         if j[0] == @level
           if j[1] == 0
             learn_skill(j[2])
-            text += "\065\067#{myname} learned #{$data_skills[j[2]].UK_name}!"
+            text += "\\#{myname} learned #{$data_skills[j[2]].UK_name}!"
           else
             gain_ability(j[2])
             # ”ñ•\¦‘f¿‚Í•\¦‚µ‚È‚¢
             if $data_ability[j[2]].hidden == false
-              text += "\065\067#{myname} got the y#{$data_ability[j[2]].UK_name}z trait!"
+              text += "\\#{myname} got the y#{$data_ability[j[2]].UK_name}z trait!"
             end
           end
         end
@@ -766,7 +766,7 @@ class Game_Actor < Game_Battler
       # í“¬’†‚É‰ñ•œ‚µ‚½ê‡‚ÍƒƒO‚ğo‚·
       if $game_temp.in_battle
         self.remove_states_log.delete($data_states[15])
-        text = "\065\n#{self.name}'s hunger has been satiated!"
+        text = "\\n#{self.name}'s hunger has been satiated!"
         $game_temp.battle_log_text += text
       end
     end 

@@ -63,7 +63,7 @@ class Scene_Battle
       # ƒwƒ‹ƒvƒEƒBƒ“ƒhƒE‚É "–hŒä" ‚ğ•\¦
       @help_window.set_text($data_system.words.guard, 1)
       #  šƒoƒgƒ‹ƒƒO‚ğ•\¦
-      $game_temp.battle_log_text += @active_battler.name + "‚Í–hŒä‚µ‚Ä‚¢‚écc\067"
+      $game_temp.battle_log_text += @active_battler.name + "‚Í–hŒä‚µ‚Ä‚¢‚écc\"
       @phase4_step = 6
       return
     end
@@ -76,7 +76,7 @@ class Scene_Battle
       @help_window.set_text("“¦‚°‚é", 1)
       # šƒoƒgƒ‹ƒƒO‚ğ•\¦
       # “¦‚°‚éƒƒbƒZ[ƒW‚Í•Ê‚ÌêŠ‚É‘‚©‚È‚¢‚Æƒ_ƒ‚İ‚½‚¢B(’²¸’†)
-      $game_temp.battle_log_text += @active_battler.name + "‚Í“¦‚°o‚µ‚½I\067"
+      $game_temp.battle_log_text += @active_battler.name + "‚Í“¦‚°o‚µ‚½I\"
       # “¦‚°‚é
       @active_battler.escape
       @phase4_step = 6
@@ -90,7 +90,7 @@ class Scene_Battle
       if @active_battler.hidden == false and @active_battler.another_action == false
         if @active_battler.is_a?(Game_Enemy) and not $game_temp.first_attack_flag == 1
           # šƒoƒgƒ‹ƒƒO‚ğ•\¦
-          $game_temp.battle_log_text += @active_battler.name + " is observing...\067"
+          $game_temp.battle_log_text += @active_battler.name + " is observing...\"
         else
           @wait_count = 0
         end
@@ -111,7 +111,7 @@ class Scene_Battle
         $game_temp.forcing_battler = nil
         @active_battler.white_flash = true
         # šƒoƒgƒ‹ƒƒO‚ğ•\¦
-        $game_temp.battle_log_text += @active_battler.name + " ran a‚—ay!\065\067"
+        $game_temp.battle_log_text += @active_battler.name + " ran a‚—ay!\\"
         # ƒEƒFƒCƒg‚ğÄİ’è
         #¥ƒVƒXƒeƒ€ƒEƒFƒCƒg
         case $game_system.ms_skip_mode
@@ -181,7 +181,7 @@ class Scene_Battle
           actor_2.checking = 0
         end
         # ƒoƒgƒ‹ƒƒO‚ğ•\¦
-        $game_temp.battle_log_text += actor_1.name + " and " + actor_2.name + "\065\n s‚—itched places!\065\067"
+        $game_temp.battle_log_text += actor_1.name + " and " + actor_2.name + "\\n s‚—itched places!\\"
         # ƒXƒe[ƒ^ƒX‰æ–Ê‚ğƒŠƒtƒŒƒbƒVƒ…
         @status_window.refresh
         # ƒAƒNƒVƒ‡ƒ“‹­§‘ÎÛ‚Ìƒoƒgƒ‰[‚ğƒNƒŠƒA
@@ -242,7 +242,7 @@ class Scene_Battle
     # “¦‘–¸”s‚Ìê‡
     else
       # šƒoƒgƒ‹ƒƒO‚ğ•\¦
-      $game_temp.battle_log_text += "‚µ‚©‚µ‰ñ‚è‚±‚Ü‚ê‚Ä‚µ‚Ü‚Á‚½I\067"
+      $game_temp.battle_log_text += "‚µ‚©‚µ‰ñ‚è‚±‚Ü‚ê‚Ä‚µ‚Ü‚Á‚½I\"
       # ƒEƒFƒCƒg‚ğÄİ’è
       #¥ƒVƒXƒeƒ€ƒEƒFƒCƒg
       case $game_system.ms_skip_mode
