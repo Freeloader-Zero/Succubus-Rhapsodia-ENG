@@ -5,7 +5,7 @@
 English fan translations for the game, "Succubus Rhapsodia"
 
 
---=:::[ Game version ]:::=--
+------=:::[ Game version ]:::=------
 - v1.10
 
 --=:::[ Translation version* ]:::=--
@@ -16,7 +16,7 @@ English fan translations for the game, "Succubus Rhapsodia"
 ==========================================================
 
 
---=:::[ Game ]:::=--
+----------=:::[ Game ]:::=----------
 
 
 Official Site:
@@ -35,7 +35,7 @@ http://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_098909/
 ==========================================================
 
 
---=:::[ Instructions ]:::=--
+------=:::[ Instructions ]:::=------
 
 
 For Translators:
@@ -62,7 +62,7 @@ For testers and freeloaders:
 ==========================================================
 
 
---=:::[ Changelogs ]:::=--
+-------=:::[ Changelogs ]:::=-------
 
 
 v0.162: (09/01/2016)
