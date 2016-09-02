@@ -8,7 +8,7 @@ English fan translations for the game, "Succubus Rhapsodia"
 ------=:::[ Game version ]:::=------
 - v1.10
 
---=:::[ Translation version* ]:::=--
+---=:::[ Translation version* ]:::=---
 - v0.162
 
 *estimated percentage of translation completion
@@ -35,26 +35,26 @@ http://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_098909/
 ==========================================================
 
 
-------=:::[ Instructions ]:::=------
+-------=:::[ Instructions ]:::=-------
 
 
 For Translators:
-0a. If you don't have the RPG Maker XP Editor, you can directly edit individual sections of the Scripts.rxdata via the "Scripts - manually download these" folder.
-0b. If you have the RPG Maker XP Editor installed, read further:
-1. Make sure you've installed/patched your game to the appropriate version that this translation uses.
-2. Download all but the "Scripts - manually download these" folder.
-3. dump into game folder.
-4. Merge/Overwrite when prompted.
-5. Use "Game.rxproj" from within the game folder to use RPG Maker XP Editor to edit the game.
+- 0a. If you don't have the RPG Maker XP Editor, you can directly edit individual sections of the Scripts.rxdata via the "Scripts - manually download these" folder.
+- 0b. If you have the RPG Maker XP Editor installed, read further:
+- 1. Make sure you've installed/patched your game to the appropriate version that this translation uses.
+- 2. Download all but the "Scripts - manually download these" folder.
+- 3. dump into game folder.
+- 4. Merge/Overwrite when prompted.
+- 5. Use "Game.rxproj" from within the game folder to use RPG Maker XP Editor to edit the game.
 
 - if you don't know what the game.rxproj file is and/or don't have it, just make a .txt file, type "RPGXP 1.05" into it (the "1.05" can be replaced with whatever version your RPG Maker XP editor is), then rename the .txt file to "game.rxproj". If your system doesn't yet recognize the file, you can open game.rxproj by right-clicking it, and then selecting "Open with >", "RPG Maker XP".
 
 
 For testers and freeloaders:
-0. Make sure you've installed/patched your game to the appropriate version that this translation uses.
-1. Download and dump into game folder (except for "Scripts - manually download these", you don't need them; the scripts are already included in the "Scripts.rxdata" file inside the "Data" folder).
-2. Merge/Overwrite when prompted.
-3. fapping is optional; enjoyment is mandatory.
+- 0. Make sure you've installed/patched your game to the appropriate version that this translation uses.
+- 1. Download and dump into game folder (except for "Scripts - manually download these", you don't need them; the scripts are already included in the "Scripts.rxdata" file inside the "Data" folder).
+- 2. Merge/Overwrite when prompted.
+- 3. fapping is optional; enjoyment is mandatory.
 
 
 
