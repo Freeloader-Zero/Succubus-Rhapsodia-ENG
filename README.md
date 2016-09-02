@@ -45,7 +45,7 @@ For Translators:
 - 2. Download all but the "Scripts - manually download these" folder.
 - 3. dump into game folder.
 - 4. Merge/Overwrite when prompted.
-- 5. Use "Game.rxproj" from within the game folder to use RPG Maker XP Editor to edit the game.
+- 5. Open "Game.rxproj" from within the game folder to use RPG Maker XP Editor to edit the game.
 
 - if you don't know what the game.rxproj file is and/or don't have it, just make a .txt file, type "RPGXP 1.05" into it (the "1.05" can be replaced with whatever version your RPG Maker XP editor is), then rename the .txt file to "game.rxproj". If your system doesn't yet recognize the file, you can open game.rxproj by right-clicking it, and then selecting "Open with >", "RPG Maker XP".
 
