@@ -3,6 +3,18 @@
 # I'd rather not use it for all purposes, 
 # but hopefully, it will help around
 #
+def is_translated?(moonrune)
+  begin
+    if moonrune.translation_check != moonrune
+      return true
+    else
+      return false
+    end
+      rescue 
+      p "something went awry with is_translated?"
+      return false
+  end
+end
 
 def translation_check
 # moonrune.translation_check will return:
