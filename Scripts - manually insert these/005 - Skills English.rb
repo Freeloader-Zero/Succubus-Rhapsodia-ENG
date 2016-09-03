@@ -1,529 +1,530 @@
 module RPG
+  
   class Skill
     attr_accessor :UK_name
     def UK_name
       
       case @id
-#¡Actor base skills
-
-when 2   #•‚ğ’E‚ª‚·
-   return "Strip "
-when 4   #•‚ğ’E‚®
-   return "Undress "
-when 5   #ƒVƒFƒ‹ƒ}ƒbƒ`
+      
+#â– Actor base skills
+when 2   #æœã‚’è„±ãŒã™
+   return "Strip"
+when 4   #æœã‚’è„±ã
+   return "Undress"
+when 5   #ã‚·ã‚§ãƒ«ãƒãƒƒãƒ
    return "Scissors"
-when 6   #ƒCƒ“ƒT[ƒg
+when 6   #ã‚¤ãƒ³ã‚µãƒ¼ãƒˆ
    return "Insert"
-when 7   #ƒI[ƒ‰ƒ‹ƒCƒ“ƒT[ƒg
-   return "Oral Insert "
-when 8   #ƒoƒbƒNƒCƒ“ƒT[ƒg
-   return "Backdoor Insert "
-when 9   #ƒg[ƒN
+when 7   #ã‚ªãƒ¼ãƒ©ãƒ«ã‚¤ãƒ³ã‚µãƒ¼ãƒˆ
+   return "Oral insert"
+when 8   #ãƒãƒƒã‚¯ã‚¤ãƒ³ã‚µãƒ¼ãƒˆ
+   return "Backdoor insert"
+when 9   #ãƒˆãƒ¼ã‚¯
    return "Talk"
-when 10   #ƒg[ƒNƒŒƒWƒXƒg
-   return "Sweet Talk"
-when 13   #ƒAƒNƒZƒvƒg
-   return "Accept"
-when 14   #ƒI[ƒ‰ƒ‹ƒAƒNƒZƒvƒg
-   return "Oral Accept "
-when 15   #ƒoƒbƒNƒAƒNƒZƒvƒg
-   return "Backdoor Accept "
-when 16   #ƒhƒƒEƒlƒNƒ^[
-   return "Dra‚— Nectar "
-when 17   #ƒGƒ“ƒuƒŒƒCƒX
-   return "E‚brace"
-when 18   #ƒGƒLƒTƒCƒgƒrƒ…[
-   return "Facesit "
-when 20   #ƒfƒBƒ‹ƒhƒCƒ“ƒT[ƒg
-   return "Dildo Insert"
-when 21   #ƒfƒBƒ‹ƒhƒCƒ“ƒ}ƒEƒX
-   return "Dildo Gag "
-when 22   #ƒfƒBƒ‹ƒhƒCƒ“ƒoƒbƒN
-   return "Dildo Backdoor"
-when 25   #ƒfƒ‚ƒ“ƒYƒAƒuƒ\[ƒu
-   return "Feeler Suck-in"
-when 26   #ƒfƒ‚ƒ“ƒYƒhƒƒE
-   return "Tentacle Insert "
-when 28   #ƒCƒ“ƒ^ƒ‰ƒvƒg
-   return "Interrupt "
-when 29   #ƒŠƒŠ[ƒX
-   return "Release "
-when 30   #ƒXƒgƒ‰ƒOƒ‹
+when 10   #ãƒˆãƒ¼ã‚¯ãƒ¬ã‚¸ã‚¹ãƒˆ
+   return "Sweet talk"
+when 13   #ã‚¢ã‚¯ã‚»ãƒ—ãƒˆ
+   return "Invite"
+when 14   #ã‚ªãƒ¼ãƒ©ãƒ«ã‚¢ã‚¯ã‚»ãƒ—ãƒˆ
+   return "Oral invite"
+when 15   #ãƒãƒƒã‚¯ã‚¢ã‚¯ã‚»ãƒ—ãƒˆ
+   return "Backdoor invite"
+when 16   #ãƒ‰ãƒ­ã‚¦ãƒã‚¯ã‚¿ãƒ¼
+   return "Tongue insert"
+when 17   #ã‚¨ãƒ³ãƒ–ãƒ¬ã‚¤ã‚¹
+   return "Embrace"
+when 18   #ã‚¨ã‚­ã‚µã‚¤ãƒˆãƒ“ãƒ¥ãƒ¼
+   return "Straddle"
+when 20   #ãƒ‡ã‚£ãƒ«ãƒ‰ã‚¤ãƒ³ã‚µãƒ¼ãƒˆ
+   return "Dildo insert"
+when 21   #ãƒ‡ã‚£ãƒ«ãƒ‰ã‚¤ãƒ³ãƒã‚¦ã‚¹
+   return "Dildo gag"
+when 22   #ãƒ‡ã‚£ãƒ«ãƒ‰ã‚¤ãƒ³ãƒãƒƒã‚¯
+   return "Anal plug-in"
+when 25   #ãƒ‡ãƒ¢ãƒ³ã‚ºã‚¢ãƒ–ã‚½ãƒ¼ãƒ–
+   return "Feeler suck-in"
+when 26   #ãƒ‡ãƒ¢ãƒ³ã‚ºãƒ‰ãƒ­ã‚¦
+   return "Feeler insert"
+when 28   #ã‚¤ãƒ³ã‚¿ãƒ©ãƒ—ãƒˆ
+   return "Interrupt"
+when 29   #ãƒªãƒªãƒ¼ã‚¹
+   return "Release"
+when 30   #ã‚¹ãƒˆãƒ©ã‚°ãƒ«
    return "Struggle"
    
-   #¡‰techniques
-when 32   #ƒXƒEƒBƒ“ƒO
+   #â– â™‚techniques
+when 32   #ã‚¹ã‚¦ã‚£ãƒ³ã‚°
    return "Thrust"
-when 33   #ƒwƒ”ƒBƒXƒEƒBƒ“ƒO
+when 33   #ãƒ˜ãƒ´ã‚£ã‚¹ã‚¦ã‚£ãƒ³ã‚°
    return "Piston"
-when 34   #ƒfƒBƒ‹ƒhƒXƒEƒBƒ“ƒO
-   return "Strappon Thrust "
-when 35   #ƒ‰ƒrƒ“ƒOƒsƒXƒgƒ“
-   return "Chest Frottage"
-when 37   #ƒI[ƒ‰ƒ‹ƒsƒXƒgƒ“
-   return "Oral Piston "
-when 38   #ƒI[ƒ‰ƒ‹ƒfƒBƒ‹ƒh
-   return "Oral Dildo"
-when 41   #ƒoƒbƒNƒsƒXƒgƒ“
-   return "Anal Thrust "
-when 42   #ƒoƒbƒNƒfƒBƒ‹ƒh
-   return "Anal Dildo "
+when 34   #ãƒ‡ã‚£ãƒ«ãƒ‰ã‚¹ã‚¦ã‚£ãƒ³ã‚°
+   return "Strapon thrust"
+when 35   #ãƒ©ãƒ“ãƒ³ã‚°ãƒ”ã‚¹ãƒˆãƒ³
+   return "Chest frottage"
+when 37   #ã‚ªãƒ¼ãƒ©ãƒ«ãƒ”ã‚¹ãƒˆãƒ³
+   return "Throat piston"
+when 38   #ã‚ªãƒ¼ãƒ©ãƒ«ãƒ‡ã‚£ãƒ«ãƒ‰
+   return "Throat dildo"
+when 41   #ãƒãƒƒã‚¯ãƒ”ã‚¹ãƒˆãƒ³
+   return "Anal thrust"
+when 42   #ãƒãƒƒã‚¯ãƒ‡ã‚£ãƒ«ãƒ‰
+   return "Dildo ram"
 
-   #¡Štechniques
-when 47   #ƒOƒ‰ƒCƒ“ƒh
+   #â– â™€techniques
+when 47   #ã‚°ãƒ©ã‚¤ãƒ³ãƒ‰
    return "Grind"
-when 48   #ƒn[ƒhƒOƒ‰ƒCƒ“ƒh
-   return "Wild Grind"
-when 50   #ƒ^ƒCƒgƒNƒƒbƒ`
-   return "Tighten "
-when 52   #ƒXƒNƒ‰ƒbƒ`
-   return "Tribadis‚"
-when 53   #ƒn[ƒhƒXƒNƒ‰ƒbƒ`
-   return "Rubdo‚—n"
-when 55   #ƒ‰ƒCƒfƒBƒ“ƒO
-   return "Facerub "
-when 56   #ƒvƒbƒVƒ“ƒO
-   return "Facepress "
+when 48   #ãƒãƒ¼ãƒ‰ã‚°ãƒ©ã‚¤ãƒ³ãƒ‰
+   return "Wild ride"
+when 50   #ã‚¿ã‚¤ãƒˆã‚¯ãƒ­ãƒƒãƒ
+   return "Tighten"
+when 52   #ã‚¹ã‚¯ãƒ©ãƒƒãƒ
+   return "Tribadism"
+when 53   #ãƒãƒ¼ãƒ‰ã‚¹ã‚¯ãƒ©ãƒƒãƒ
+   return "Rubdown"
+when 55   #ãƒ©ã‚¤ãƒ‡ã‚£ãƒ³ã‚°
+   return "Facerub"
+when 56   #ãƒ—ãƒƒã‚·ãƒ³ã‚°
+   return "Facepress"
    
-   #¡Oral techniques
+   #â– Oral techniques
 
-when 58   #ƒXƒ[ƒg
-   return "Blowjob "
-when 59   #ƒfƒB[ƒvƒXƒ[ƒg
+when 58   #ã‚¹ãƒ­ãƒ¼ãƒˆ
+   return "Blowjob"
+when 59   #ãƒ‡ã‚£ãƒ¼ãƒ—ã‚¹ãƒ­ãƒ¼ãƒˆ
    return "Deepthroat"
-when 60   #ƒhƒƒEƒXƒ[ƒg
-   return "Throat Dra‚—"
-when 61   #ƒTƒbƒN
+when 60   #ãƒ‰ãƒ­ã‚¦ã‚¹ãƒ­ãƒ¼ãƒˆ
+   return "Suck on"
+when 61   #ã‚µãƒƒã‚¯
    return "Lick"
    
-   #¡Anal techniques
+   #â– Anal techniques
    
-when 64   #ƒXƒNƒC[ƒY
-   return "Squeeze "
-when 67   #ƒ^ƒCƒgƒz[ƒ‹
-   return "Tighten "
+when 64   #ã‚¹ã‚¯ã‚¤ãƒ¼ã‚º
+   return "Squeeze"
+when 67   #ã‚¿ã‚¤ãƒˆãƒ›ãƒ¼ãƒ«
+   return "Tighten"
    
-   #¡Hold counters
+   #â– Hold counters
       
-when 71   #ƒŠƒbƒN
-   return "Lick Pussy"
-when 72   #ƒŠƒbƒN
-   return "Lick Ass"
-when 73   #ƒ~ƒXƒ`[ƒt
+when 71   #ãƒªãƒƒã‚¯
+   return "Lick pussy"
+when 72   #ãƒªãƒƒã‚¯
+   return "Lick ass"
+when 73   #ãƒŸã‚¹ãƒãƒ¼ãƒ•
    return "Tickle"
-when 74   #ƒŠƒAƒJƒŒƒX
-   return "Caress Back"
-when 79   #ƒŒƒbƒNƒŒƒX
+when 74   #ãƒªã‚¢ã‚«ãƒ¬ã‚¹
+   return "Caress"
+when 79   #ãƒ¬ãƒƒã‚¯ãƒ¬ã‚¹
    return "Squirm"
    
-   #¡Actor attacks
+   #â– Actor attacks
 
-when 81   #ƒLƒbƒX
+when 81   #ã‚­ãƒƒã‚¹
    return "Kiss"
-when 82   #ƒoƒXƒg
-   return "Chest "
-when 83   #ƒqƒbƒv
+when 82   #ãƒã‚¹ãƒˆ
+   return "Chest"
+when 83   #ãƒ’ãƒƒãƒ—
    return "Hips"
-when 84   #ƒNƒƒbƒ`
+when 84   #ã‚¯ãƒ­ãƒƒãƒ
    return "Crotch"
-when 85   #ƒJƒŒƒX
-   return "Caress "
+when 85   #ã‚«ãƒ¬ã‚¹
+   return "Caress"
    
-   #¡Partner attacks
+   #â– Partner attacks
 
-when 87   #ƒLƒbƒX
+when 87   #ã‚­ãƒƒã‚¹
    return "Kiss"
-when 91   #ƒc[ƒpƒt
-   return "Chest Press "
-when 101   #ƒeƒB[ƒY
-   return "Tease "
-when 102   #ƒ~ƒXƒ`[ƒti–vj
-   return "Tease out "
-when 103   #ƒtƒ@ƒXƒgƒŒƒCƒh
-   return "Quick Raid"
-when 104   #ƒgƒŠƒbƒNƒŒƒCƒh
-   return "Trick Raid"
-when 106   #ƒfƒBƒoƒEƒA[
-   return "Devour "
-when 111   #ƒvƒŒƒWƒƒ[
-   return "Self-pleasure "
+when 91   #ãƒ„ãƒ¼ãƒ‘ãƒ•
+   return "Chest press"
+when 101   #ãƒ†ã‚£ãƒ¼ã‚º
+   return "Tease"
+when 102   #ãƒŸã‚¹ãƒãƒ¼ãƒ•ï¼ˆæ²¡ï¼‰
+   return "Tease out"
+when 103   #ãƒ•ã‚¡ã‚¹ãƒˆãƒ¬ã‚¤ãƒ‰
+   return "Quick raid"
+when 104   #ãƒˆãƒªãƒƒã‚¯ãƒ¬ã‚¤ãƒ‰
+   return "Trick raid"
+when 106   #ãƒ‡ã‚£ãƒã‚¦ã‚¢ãƒ¼
+   return "Devour"
+when 111   #ãƒ—ãƒ¬ã‚¸ãƒ£ãƒ¼
+   return "Self-pleasure"
    
-   #¡Actor support techniques
+   #â– Actor support techniques
 
-when 121   #ƒuƒŒƒX
+when 121   #ãƒ–ãƒ¬ã‚¹
    return "Breath"
-when 122   #ƒJ[ƒ€ƒuƒŒƒX
-   return "Cal‚ Breath"
-when 123   #ƒEƒFƒCƒg
+when 122   #ã‚«ãƒ¼ãƒ ãƒ–ãƒ¬ã‚¹
+   return "Calm breath"
+when 123   #ã‚¦ã‚§ã‚¤ãƒˆ
    return "Wait"
-when 124   #ƒCƒ“ƒgƒ‰ƒXƒg
-   return "Entrust "
-when 125   #ƒŠƒtƒŒƒbƒVƒ…
-   return "Refresh "
-when 126   #ƒ`ƒFƒbƒN
-   return "Check "
-when 127   #ƒAƒiƒ‰ƒCƒY
-   return "Analyze "
-when 135   #ƒXƒgƒŠƒbƒv
-   return "Strip Partner "
-when 140   #ƒeƒ“ƒvƒe[ƒVƒ‡ƒ“
+when 124   #ã‚¤ãƒ³ãƒˆãƒ©ã‚¹ãƒˆ
+   return "Entrust"
+when 125   #ãƒªãƒ•ãƒ¬ãƒƒã‚·ãƒ¥
+   return "Refresh"
+when 126   #ãƒã‚§ãƒƒã‚¯
+   return "Check"
+when 127   #ã‚¢ãƒŠãƒ©ã‚¤ã‚º
+   return "Analyze"
+when 135   #ã‚¹ãƒˆãƒªãƒƒãƒ—
+   return "Striptease"
+when 140   #ãƒ†ãƒ³ãƒ—ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³
    return "Temptation"
-when 145   #ƒK[ƒh
-   return "Guard "
-when 146   #ƒCƒ“ƒfƒ…ƒA
+when 145   #ã‚¬ãƒ¼ãƒ‰
+   return "Guard"
+when 146   #ã‚¤ãƒ³ãƒ‡ãƒ¥ã‚¢
    return "Endure"
-when 148   #ƒAƒs[ƒ‹
+when 148   #ã‚¢ãƒ”ãƒ¼ãƒ«
    return "Appeal"
-when 149   #ƒvƒƒ”ƒH[ƒN
-   return "Provoke "
+when 149   #ãƒ—ãƒ­ãƒ´ã‚©ãƒ¼ã‚¯
+   return "Provoke"
 
-   #¡Succubi common magic
+   #â– Succubi common magic
 
-when 161   #ƒCƒŠƒXƒV[ƒh
-   return "Iris Seed "
-when 162   #ƒCƒŠƒXƒyƒ^ƒ‹
-   return "Iris Petal"
-when 163   #ƒCƒŠƒXƒtƒ‰ƒE
-   return "Iris Aura "
-when 164   #ƒCƒŠƒXƒRƒƒi
-   return "Iris Corona"
-when 165   #ƒCƒŠƒXƒV[ƒhEƒAƒ‹ƒ_
-   return "Iris Seed - All "
-when 166   #ƒCƒŠƒXƒyƒ^ƒ‹EƒAƒ‹ƒ_
-   return "Iris Petal - All"
-when 167   #ƒCƒŠƒXƒtƒ‰ƒEEƒAƒ‹ƒ_
-   return "Iris Aura - All "
-when 171   #ƒ‰ƒiƒ“ƒuƒ‹ƒ€
-   return "Lanan Bloo‚"
-when 172   #ƒ‰ƒiƒ“ƒuƒ‹ƒ€EƒAƒ‹ƒ_
-   return "Lanan Bloo‚ - All"
-when 173   #ƒ‰ƒiƒ“ƒC[ƒU
-   return "Lananize"
-when 174   #ƒ‰ƒiƒ“ƒC[ƒUEƒAƒ‹ƒ_
-   return "Lananize - All"
-when 175   #ƒlƒŠƒlƒuƒ‹ƒ€
-   return "Neline Bloom"
-when 176   #ƒlƒŠƒlƒuƒ‹ƒ€EƒAƒ‹ƒ_
-   return "Neline Bloom - All"
-when 177   #ƒlƒŠƒlƒC[ƒU
-   return "Nelinaze"
-when 178   #ƒlƒŠƒlƒC[ƒUEƒAƒ‹ƒ_
-   return "Nelinaze - All"
-when 179   #ƒGƒ‹ƒ_ƒuƒ‹ƒ€
-   return "Elder Bloo‚"
-when 180   #ƒGƒ‹ƒ_ƒuƒ‹ƒ€EƒAƒ‹ƒ_
-   return "Elder Bloo‚ - All"
-when 181   #ƒGƒ‹ƒ_ƒC[ƒU
-   return "Elderize"
-when 182   #ƒGƒ‹ƒ_ƒC[ƒUEƒAƒ‹ƒ_
-   return "Elderize - All"
-when 183   #ƒTƒtƒ‰ƒuƒ‹ƒ€
-   return "Saffron Bloo‚"
-when 184   #ƒTƒtƒ‰ƒuƒ‹ƒ€EƒAƒ‹ƒ_
-   return "Saffron Bloo‚ - All"
-when 185   #ƒTƒtƒ‰ƒC[ƒU
-   return "Saffrize"
-when 186   #ƒTƒtƒ‰ƒC[ƒUEƒAƒ‹ƒ_
-   return "Saffrize - All"
-when 187   #ƒRƒŠƒIƒuƒ‹ƒ€
-   return "Kurio Bloo‚"
-when 188   #ƒRƒŠƒIƒuƒ‹ƒ€EƒAƒ‹ƒ_
-   return "Kurio Bloo‚ - All"
-when 189   #ƒRƒŠƒIƒC[ƒU
-   return "Kuriolize "
-when 190   #ƒRƒŠƒIƒC[ƒUEƒAƒ‹ƒ_
-   return "Kuriolize - All "
-when 191   #ƒAƒXƒ^ƒuƒ‹ƒ€
-   return "Aster Bloom"
-when 192   #ƒAƒXƒ^ƒuƒ‹ƒ€EƒAƒ‹ƒ_
-   return "Aster Bloom - All "
-when 193   #ƒAƒXƒ^ƒC[ƒU
-   return "Asterize"
-when 194   #ƒAƒXƒ^ƒC[ƒUEƒAƒ‹ƒ_
-   return "Asterize - All"
-when 195   #ƒXƒgƒŒƒŠƒuƒ‹ƒ€
-   return "Storm Bloom "
-when 196   #ƒXƒgƒŒƒŠƒuƒ‹ƒ€EƒAƒ‹ƒ_
-   return "Storm Bloom - All "
-when 197   #ƒXƒgƒŒƒŠƒC[ƒU
-   return "Storm Wither"
-when 198   #ƒXƒgƒŒƒŠƒC[ƒUEƒAƒ‹ƒ_
-   return "Storm Wither - All"
-when 200   #ƒ`ƒƒ[ƒ€
-   return "Char‚"
-when 201   #ƒyƒCƒhEƒ`ƒƒ[ƒ€
-   return "Mass Charm"
-when 202   #ƒ‰ƒXƒg
+when 161   #ã‚¤ãƒªã‚¹ã‚·ãƒ¼ãƒ‰
+   return "Heal seed"
+when 162   #ã‚¤ãƒªã‚¹ãƒšã‚¿ãƒ«
+   return "Heal petal"
+when 163   #ã‚¤ãƒªã‚¹ãƒ•ãƒ©ã‚¦
+   return "Heal aura"
+when 164   #ã‚¤ãƒªã‚¹ã‚³ãƒ­ãƒŠ
+   return "Heal halo"
+when 165   #ã‚¤ãƒªã‚¹ã‚·ãƒ¼ãƒ‰ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Heal seed"
+when 166   #ã‚¤ãƒªã‚¹ãƒšã‚¿ãƒ«ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Heal petal"
+when 167   #ã‚¤ãƒªã‚¹ãƒ•ãƒ©ã‚¦ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Heal aura"
+when 171   #ãƒ©ãƒŠãƒ³ãƒ–ãƒ«ãƒ 
+   return "Charisma"
+when 172   #ãƒ©ãƒŠãƒ³ãƒ–ãƒ«ãƒ ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Charisma"
+when 173   #ãƒ©ãƒŠãƒ³ã‚¤ãƒ¼ã‚¶
+   return "Disgrace"
+when 174   #ãƒ©ãƒŠãƒ³ã‚¤ãƒ¼ã‚¶ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Disgrace"
+when 175   #ãƒãƒªãƒãƒ–ãƒ«ãƒ 
+   return "Resistance"
+when 176   #ãƒãƒªãƒãƒ–ãƒ«ãƒ ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Resistance"
+when 177   #ãƒãƒªãƒã‚¤ãƒ¼ã‚¶
+   return "Vulnerability"
+when 178   #ãƒãƒªãƒã‚¤ãƒ¼ã‚¶ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Vulnerability"
+when 179   #ã‚¨ãƒ«ãƒ€ãƒ–ãƒ«ãƒ 
+   return "Energy"
+when 180   #ã‚¨ãƒ«ãƒ€ãƒ–ãƒ«ãƒ ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Energy"
+when 181   #ã‚¨ãƒ«ãƒ€ã‚¤ãƒ¼ã‚¶
+   return "Debility"
+when 182   #ã‚¨ãƒ«ãƒ€ã‚¤ãƒ¼ã‚¶ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Debility"
+when 183   #ã‚µãƒ•ãƒ©ãƒ–ãƒ«ãƒ 
+   return "Deftness"
+when 184   #ã‚µãƒ•ãƒ©ãƒ–ãƒ«ãƒ ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Deftness"
+when 185   #ã‚µãƒ•ãƒ©ã‚¤ãƒ¼ã‚¶
+   return "Klutz"
+when 186   #ã‚µãƒ•ãƒ©ã‚¤ãƒ¼ã‚¶ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Klutz"
+when 187   #ã‚³ãƒªã‚ªãƒ–ãƒ«ãƒ 
+   return "Haste"
+when 188   #ã‚³ãƒªã‚ªãƒ–ãƒ«ãƒ ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Haste"
+when 189   #ã‚³ãƒªã‚ªã‚¤ãƒ¼ã‚¶
+   return "Slow"
+when 190   #ã‚³ãƒªã‚ªã‚¤ãƒ¼ã‚¶ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Slow"
+when 191   #ã‚¢ã‚¹ã‚¿ãƒ–ãƒ«ãƒ 
+   return "Mana surge"
+when 192   #ã‚¢ã‚¹ã‚¿ãƒ–ãƒ«ãƒ ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Mana surge"
+when 193   #ã‚¢ã‚¹ã‚¿ã‚¤ãƒ¼ã‚¶
+   return "Mana drain"
+when 194   #ã‚¢ã‚¹ã‚¿ã‚¤ãƒ¼ã‚¶ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Mana drain"
+when 195   #ã‚¹ãƒˆãƒ¬ãƒªãƒ–ãƒ«ãƒ 
+   return "Efflorescence"
+when 196   #ã‚¹ãƒˆãƒ¬ãƒªãƒ–ãƒ«ãƒ ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Efflorescence"
+when 197   #ã‚¹ãƒˆãƒ¬ãƒªã‚¤ãƒ¼ã‚¶
+   return "Storm of Decay"
+when 198   #ã‚¹ãƒˆãƒ¬ãƒªã‚¤ãƒ¼ã‚¶ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Storm of Decay"
+when 200   #ãƒãƒ£ãƒ¼ãƒ 
+   return "Charm"
+when 201   #ãƒšã‚¤ãƒ‰ãƒ»ãƒãƒ£ãƒ¼ãƒ 
+   return "Mass charm"
+when 202   #ãƒ©ã‚¹ãƒˆ
    return "Lust"
-when 203   #ƒyƒCƒhEƒ‰ƒXƒg
-   return "Mass Lust "
-when 204   #ƒtƒBƒ‹ƒX
-   return "Flirt "
-when 205   #ƒyƒCƒhEƒtƒBƒ‹ƒX
-   return "Mass Flirt"
-when 206   #ƒŒƒUƒ‰ƒWƒB
-   return "Lethargy"
-when 207   #ƒyƒCƒhEƒŒƒUƒ‰ƒWƒB
-   return "Mass Lethargy "
-when 208   #ƒeƒ‰[
-   return "Terror"
-when 209   #ƒyƒCƒhEƒeƒ‰[
-   return "Mass Terror "
-when 210   #ƒpƒ‰ƒ‰ƒCƒY
+when 203   #ãƒšã‚¤ãƒ‰ãƒ»ãƒ©ã‚¹ãƒˆ
+   return "Mass lust"
+when 204   #ãƒ•ã‚£ãƒ«ã‚¹
+   return "Flirt"
+when 205   #ãƒšã‚¤ãƒ‰ãƒ»ãƒ•ã‚£ãƒ«ã‚¹
+   return "Mass flirt"
+when 206   #ãƒ¬ã‚¶ãƒ©ã‚¸ã‚£
+   return "Collapse"
+when 207   #ãƒšã‚¤ãƒ‰ãƒ»ãƒ¬ã‚¶ãƒ©ã‚¸ã‚£
+   return "Mass Collapse"
+when 208   #ãƒ†ãƒ©ãƒ¼
+   return "Soften"
+when 209   #ãƒšã‚¤ãƒ‰ãƒ»ãƒ†ãƒ©ãƒ¼
+   return "Mass soften"
+when 210   #ãƒ‘ãƒ©ãƒ©ã‚¤ã‚º
    return "Paralyze"
-when 211   #ƒyƒCƒhEƒpƒ‰ƒ‰ƒCƒY
-   return "Mass Paralyze "
-when 212   #ƒ‹[ƒY
-   return "Trance"
-when 213   #ƒyƒCƒhEƒ‹[ƒY
-   return "Mass Trance "
-when 215   #ƒgƒŠƒ€ƒ‹[ƒg
-   return "Treme Root"
-when 216   #ƒgƒŠƒ€ƒXƒg[ƒN
-   return "Treme Stalk "
-when 217   #ƒgƒŠƒ€ƒ”ƒ@ƒCƒ“
-   return "Treme Stem"
-when 219   #ƒuƒ‹ƒ€ƒJ[ƒ‹
-   return "Bloom Call"
-when 220   #ƒuƒ‹ƒ€ƒJ[ƒ‹EƒAƒ‹ƒ_
-   return "Bloom Call - All"
-when 221   #ƒC[ƒUƒJ[ƒ‹
-   return "Lyzing Call "
-when 222   #ƒC[ƒUƒJ[ƒ‹EƒAƒ‹ƒ_
-   return "Lyzing Call - All "
-when 224   #ƒEƒHƒbƒVƒ…ƒtƒ‹[ƒh
-   return "Cleansing Waters"
-when 239   #ƒVƒƒƒCƒjƒ“ƒOƒŒƒCƒW
-   return "Shining Rage"
+when 211   #ãƒšã‚¤ãƒ‰ãƒ»ãƒ‘ãƒ©ãƒ©ã‚¤ã‚º
+   return "Mass paralyze"
+when 212   #ãƒ«ãƒ¼ã‚º
+   return "Sleep"
+when 213   #ãƒšã‚¤ãƒ‰ãƒ»ãƒ«ãƒ¼ã‚º
+   return "Mass sleep"
+when 215   #ãƒˆãƒªãƒ ãƒ«ãƒ¼ãƒˆ
+   return "Body cleanse"
+when 216   #ãƒˆãƒªãƒ ã‚¹ãƒˆãƒ¼ã‚¯
+   return "Mind cleanse"
+when 217   #ãƒˆãƒªãƒ ãƒ´ã‚¡ã‚¤ãƒ³
+   return "Removal"
+when 219   #ãƒ–ãƒ«ãƒ ã‚«ãƒ¼ãƒ«
+   return "Dispel"
+when 220   #ãƒ–ãƒ«ãƒ ã‚«ãƒ¼ãƒ«ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass Dispel"
+when 221   #ã‚¤ãƒ¼ã‚¶ã‚«ãƒ¼ãƒ«
+   return "Uncurse"
+when 222   #ã‚¤ãƒ¼ã‚¶ã‚«ãƒ¼ãƒ«ãƒ»ã‚¢ãƒ«ãƒ€
+   return "Mass uncurse"
+when 224   #ã‚¦ã‚©ãƒƒã‚·ãƒ¥ãƒ•ãƒ«ãƒ¼ãƒ‰
+   return "Cleansing waters"
+when 239   #ã‚·ãƒ£ã‚¤ãƒ‹ãƒ³ã‚°ãƒ¬ã‚¤ã‚¸
+   return "Shining rage"
 
-   #¡¡‚l‚`‚o skills¡¡
+   #â– â– ï¼­ï¼¡ï¼° skillsâ– â– 
    
-when 241   #ƒNƒbƒLƒ“ƒO
-   return "Cooking "
-when 248   #ƒT[ƒ”ƒ@ƒ“ƒgƒR[ƒ‹
-   return "Servant Talk"
-when 249   #ƒ‰ƒ“ƒNƒAƒbƒv
-   return "Rank Up "
+when 241   #ã‚¯ãƒƒã‚­ãƒ³ã‚°
+   return "Cook"
+when 248   #ã‚µãƒ¼ãƒ´ã‚¡ãƒ³ãƒˆã‚³ãƒ¼ãƒ«
+   return "Servant talk"
+when 249   #ãƒ©ãƒ³ã‚¯ã‚¢ãƒƒãƒ—
+   return "Rank up"
    
-   #¡Enemy basic techniques
+   #â– Enemy basic techniques
 
-when 251   #•‚ğ’E‚®
-   return "Undress "
-when 252   #ƒXƒgƒŠƒbƒv
-   return "Strip "
-when 253   #ƒVƒ‡ƒEƒ_ƒEƒ“
-   return "Sho‚—do‚—n"
-when 257   #•‚ğ’E‚ª‚·
-   return "Expose "
-when 260   #•i’è‚ß
-   return "Check out "
-when 261   #è‚Ù‚Ç‚«
-   return "Setup "
-when 262   #ŠÃ‚â‚©‚µ
-   return "Indulge "
-when 263   #ƒXƒpƒ“ƒN
-   return "Spank "
-when 275   #‚â‚¯‚­‚»O˜AŒ‚
+when 251   #æœã‚’è„±ã
+   return "Undress"
+when 252   #ã‚¹ãƒˆãƒªãƒƒãƒ—
+   return "Strip"
+when 253   #ã‚·ãƒ§ã‚¦ãƒ€ã‚¦ãƒ³
+   return "Showdown"
+when 257   #æœã‚’è„±ãŒã™
+   return "Expose"
+when 260   #å“å®šã‚
+   return "Check out"
+when 261   #æ‰‹ã»ã©ã
+   return "Foreplay"
+when 262   #ç”˜ã‚„ã‹ã—
+   return "Indulge"
+when 263   #ã‚¹ãƒ‘ãƒ³ã‚¯
+   return "Spank"
+when 275   #ã‚„ã‘ããä¸‰é€£æ’ƒ
    return "Desperation 3-ways"
-when 276   #ƒq[ƒ[ƒLƒŠƒ“ƒO
+when 276   #ãƒ’ãƒ¼ãƒ­ãƒ¼ã‚­ãƒªãƒ³ã‚°
    return "Hero killer"
-when 277   #ƒƒeƒIƒGƒNƒŠƒvƒX
-   return "Meteo rain "
-when 278   #ƒ[ƒ‹ƒhƒuƒŒƒCƒJ[
-   return "World Breaker "
-when 279   #ƒXƒLƒ‹Œˆ‚ß’¼‚µ
-   return "Pick Again"
+when 277   #ãƒ¡ãƒ†ã‚ªã‚¨ã‚¯ãƒªãƒ—ã‚¹
+   return "Meteo rain"
+when 278   #ãƒ¯ãƒ¼ãƒ«ãƒ‰ãƒ–ãƒ¬ã‚¤ã‚«ãƒ¼
+   return "World breaker"
+when 279   #ã‚¹ã‚­ãƒ«æ±ºã‚ç›´ã—
+   return "Pick again"
    
-   #¡Random basic attacks¡
+   #â– Random basic attacksâ– 
 
-when 281   #yRDzƒLƒbƒX
+when 281   #ã€RDã€‘ã‚­ãƒƒã‚¹
    return "Kiss"
-when 282   #yRDzèU‚ß
+when 282   #ã€RDã€‘æ‰‹æ”»ã‚
    return "Attack w/ hand"
-when 283   #yRDzŒûU‚ß
-   return "Attack w/ Mouth"
-when 284   #yRDz‹¹U‚ß
+when 283   #ã€RDã€‘å£æ”»ã‚
+   return "Attack w/ mouth"
+when 284   #ã€RDã€‘èƒ¸æ”»ã‚
    return "Attack w/ chest"
-when 285   #yRDzƒAƒ\ƒRU‚ß
+when 285   #ã€RDã€‘ã‚¢ã‚½ã‚³æ”»ã‚
    return "Attack w/ pussy"
-when 286   #yRDz‘«U‚ß
+when 286   #ã€RDã€‘è¶³æ”»ã‚
    return "Attack w/ feet"
-when 287   #yRDzˆ¤•
-   return "Caress "
-when 288   #yRDzK”öU‚ß
-   return "Tail Attack"
-when 289   #yRDz“¹‹ïU‚ß
-   return "Tool Attack"
-when 290   #yRDz“Áêg‘ÌU‚ß
-   return "Special Anatomy Attack"
-when 292   #yRDzƒz[ƒ‹ƒh‹Z
-   return "Hold Attack"
-when 293   #yRDz©•ªƒz[ƒ‹ƒh’†‚ÌU‚ß
+when 287   #ã€RDã€‘æ„›æ’«
+   return "Caress"
+when 288   #ã€RDã€‘å°»å°¾æ”»ã‚
+   return "Tail attack"
+when 289   #ã€RDã€‘é“å…·æ”»ã‚
+   return "Tool attack"
+when 290   #ã€RDã€‘ç‰¹æ®Šèº«ä½“æ”»ã‚
+   return "Special anatomy attack"
+when 292   #ã€RDã€‘ãƒ›ãƒ¼ãƒ«ãƒ‰æŠ€
+   return "Hold attack"
+when 293   #ã€RDã€‘è‡ªåˆ†ãƒ›ãƒ¼ãƒ«ãƒ‰ä¸­ã®æ”»ã‚
    return "Attack while held"
-when 294   #yRDz–¡•ûƒz[ƒ‹ƒh’†‚Ì‰‡Œì
+when 294   #ã€RDã€‘å‘³æ–¹ãƒ›ãƒ¼ãƒ«ãƒ‰ä¸­ã®æ´è­·
    return "Defend held friend"
-when 296   #yRDzƒRƒ“ƒtƒ…[ƒY
+when 296   #ã€RDã€‘ã‚³ãƒ³ãƒ•ãƒ¥ãƒ¼ã‚º
    return "Confused"
-when 297   #ƒtƒBƒA[
+when 297   #ãƒ•ã‚£ã‚¢ãƒ¼
    return "Fear"
-when 298   #ƒtƒŠ[ƒAƒNƒVƒ‡ƒ“
-   return "Free Action "
-when 299   #ƒGƒ‚[ƒVƒ‡ƒ“
-   return "E‚otion"
+when 298   #ãƒ•ãƒªãƒ¼ã‚¢ã‚¯ã‚·ãƒ§ãƒ³
+   return "Free action"
+when 299   #ã‚¨ãƒ¢ãƒ¼ã‚·ãƒ§ãƒ³
+   return "Emotion"
 
 ###   
 # note: from here onwards, only including skills with element 14 (name shows in battle)
 ###
-   #Special Handiworks
+   #â—‡Special Handiworksâ—‡
    
-when 359   #ƒZƒbƒgƒT[ƒNƒ‹
-   return "Set Circle"
-when 360   #ƒR[ƒ‹ƒhƒ^ƒbƒ`
-   return "Cold Touch"
-when 361   #ƒTƒfƒBƒXƒgƒJƒŒƒX
-   return "Touch of Sadis‚"
-when 362   #ƒvƒ‰ƒCƒXƒIƒuƒnƒŒƒ€
-   return "‚gare‚ Pleasure"
-when 363   #ƒvƒ‰ƒCƒXƒIƒuƒVƒi[
-   return "Bushin Pleasure"
-when 364   #ƒyƒ‹ƒ\ƒiƒuƒŒƒCƒN
-   return "Persona Break"
-when 365   #ƒLƒƒƒXƒgƒGƒ“ƒgƒŠ[
-   return "Caster Gate"
+when 359   #ã‚»ãƒƒãƒˆã‚µãƒ¼ã‚¯ãƒ«
+   return "Set circle"
+when 360   #ã‚³ãƒ¼ãƒ«ãƒ‰ã‚¿ãƒƒãƒ
+   return "Cold touch"
+when 361   #ã‚µãƒ‡ã‚£ã‚¹ãƒˆã‚«ãƒ¬ã‚¹
+   return "Hand of sadist"
+when 362   #ãƒ—ãƒ©ã‚¤ã‚¹ã‚ªãƒ–ãƒãƒ¬ãƒ 
+   return "Harem Master"
+when 363   #ãƒ—ãƒ©ã‚¤ã‚¹ã‚ªãƒ–ã‚·ãƒŠãƒ¼
+   return "Bushin pleasure"
+when 364   #ãƒšãƒ«ã‚½ãƒŠãƒ–ãƒ¬ã‚¤ã‚¯
+   return "Persona break"
+when 365   #ã‚­ãƒ£ã‚¹ãƒˆã‚¨ãƒ³ãƒˆãƒªãƒ¼
+   return "Caster gate"
    
-   #Special mouthworks
+   #â—‡Special mouthworksâ—‡
    
-when 415   #ƒnƒEƒŠƒ“ƒO
+when 415   #ãƒã‚¦ãƒªãƒ³ã‚°
    return "Howling"
-when 416   #–‚«‚ÌŒû•t‚¯
-   return "Devil's Kiss"
-when 417   #j•Ÿ‚ÌŒû•t‚¯
-   return "Blessed Kiss"
-when 418   #ƒXƒC[ƒgƒEƒBƒXƒp[
-   return "S‚—eet Whisper"
-when 419   #ƒAƒ“ƒ‰ƒbƒL[ƒƒA
-   return "Dejected Love"
-when 420   #ƒAƒ“ƒ‰ƒbƒL[ƒƒA
-   return "Dejected Love"
-when 421   #œğ‰÷‚È‚³‚¢
+when 416   #é­”æ€§ã®å£ä»˜ã‘
+   return "Evil kiss"
+when 417   #ç¥ç¦ã®å£ä»˜ã‘
+   return "Blessing kiss"
+when 418   #ã‚¹ã‚¤ãƒ¼ãƒˆã‚¦ã‚£ã‚¹ãƒ‘ãƒ¼
+   return "Sweet whisper"
+when 419   #ã‚¢ãƒ³ãƒ©ãƒƒã‚­ãƒ¼ãƒ­ã‚¢
+   return "Dejected love"
+when 420   #ã‚¢ãƒ³ãƒ©ãƒƒã‚­ãƒ¼ãƒ­ã‚¢
+   return "Dejected love"
+when 421   #æ‡ºæ‚”ãªã•ã„
    return "Confess"
    
-   #Ÿspecial physicalsŸ
+   #â—†special physicalsâ—†
    
-when 586   #ƒŒƒXƒgƒŒ[ƒVƒ‡ƒ“
+when 586   #ãƒ¬ã‚¹ãƒˆãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³
    return "Restoration"
-when 587   #ƒXƒ‰ƒCƒ~[ƒŠƒLƒbƒh
-   return "Slimy Fluids"
-when 588   #Œƒ—ã
+when 587   #ã‚¹ãƒ©ã‚¤ãƒŸãƒ¼ãƒªã‚­ãƒƒãƒ‰
+   return "Slimy fluids"
+when 588   #æ¿€åŠ±
    return "Cheer"
-when 589   #ƒoƒbƒhƒXƒ|ƒA
-   return "Noxious Spores"
-when 590   #ƒXƒ|ƒAƒNƒ‰ƒEƒh
-   return "Spore Cloud"
-when 591   #ƒAƒCƒ”ƒBƒNƒ[ƒY
+when 589   #ãƒãƒƒãƒ‰ã‚¹ãƒã‚¢
+   return "Noxious spores"
+when 590   #ã‚¹ãƒã‚¢ã‚¯ãƒ©ã‚¦ãƒ‰
+   return "Spore cloud"
+when 591   #ã‚¢ã‚¤ãƒ´ã‚£ã‚¯ãƒ­ãƒ¼ã‚º
    return "Entangle"
-when 592   #ƒfƒ‚ƒ“ƒYƒNƒ[ƒY
-   return "Demon Wrap"
-when 599   #Å‘‡
-   return "‚gaste"
-when 600   #êS
+when 592   #ãƒ‡ãƒ¢ãƒ³ã‚ºã‚¯ãƒ­ãƒ¼ã‚º
+   return "Demon wrap"
+when 599   #ç„¦ç‡¥
+   return "Aggravate"
+when 600   #å°‚å¿ƒ
    return "Concentration"
-when 601   #–{”\‚ÌŒÄ‚ÑŠo‚Ü‚µ
-   return "Primal Instincts"
-when 602   #©M‰ßè
+when 601   #æœ¬èƒ½ã®å‘¼ã³è¦šã¾ã—
+   return "Primal instincts"
+when 602   #è‡ªä¿¡éå‰°
    return "Overconfidence"
    
-   #ŸincensesŸ
+   #â—†incensesâ—†
    
-when 611   #ƒŠƒ‰ƒbƒNƒXƒ^ƒCƒ€
-   return "Relaxation Ti‚e"
-when 612   #ƒXƒC[ƒgƒAƒƒ}
-   return "Sweet Aro‚a"
-when 613   #ƒpƒbƒVƒ‡ƒ“ƒr[ƒg
-   return "Passion Beats"
-when 614   #ƒ}ƒCƒ‹ƒhƒpƒtƒ…[ƒ€
-   return "Mild Perfume"
-when 615   #ƒŒƒbƒhƒJ[ƒyƒbƒg
-   return "Red Carpet"
-when 618   #ƒXƒgƒŒƒ“ƒWƒXƒ|ƒA
-   return "Strange Spores"
-when 619   #ƒEƒB[ƒNƒXƒ|ƒA
-   return "Weakening Spores"
-when 620   #ˆĞ”—
+when 611   #ãƒªãƒ©ãƒƒã‚¯ã‚¹ã‚¿ã‚¤ãƒ 
+   return "Relaxation time"
+when 612   #ã‚¹ã‚¤ãƒ¼ãƒˆã‚¢ãƒ­ãƒ
+   return "Sweet aroma"
+when 613   #ãƒ‘ãƒƒã‚·ãƒ§ãƒ³ãƒ“ãƒ¼ãƒˆ
+   return "Passion beats"
+when 614   #ãƒã‚¤ãƒ«ãƒ‰ãƒ‘ãƒ•ãƒ¥ãƒ¼ãƒ 
+   return "Mild prefume"
+when 615   #ãƒ¬ãƒƒãƒ‰ã‚«ãƒ¼ãƒšãƒƒãƒˆ
+   return "Red carpet"
+when 618   #ã‚¹ãƒˆãƒ¬ãƒ³ã‚¸ã‚¹ãƒã‚¢
+   return "Strange spores"
+when 619   #ã‚¦ã‚£ãƒ¼ã‚¯ã‚¹ãƒã‚¢
+   return "Weakening spores"
+when 620   #å¨è¿«
    return "Intimidate"
-when 621   #S’Í‚İ
-   return "Heart Grasp"
-when 622   #‘S‚Ä‚ÍŒ»
-   return "One with the Flow"
-when 625   #ƒ‰ƒuƒtƒŒƒOƒ‰ƒ“ƒX
-   return "Love Fragrance"
-when 626   #ƒXƒ‰ƒCƒ€ƒtƒB[ƒ‹ƒh
-   return "Sli‚e Field"
+when 621   #å¿ƒæ´ã¿
+   return "Heart grasp"
+when 622   #å…¨ã¦ã¯ç¾
+   return "One with the flow"
+when 625   #ãƒ©ãƒ–ãƒ•ãƒ¬ã‚°ãƒ©ãƒ³ã‚¹
+   return "Love fragrance"
+when 626   #ã‚¹ãƒ©ã‚¤ãƒ ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰
+   return "Slime field"
    
-   #ŸDefensive skillsŸ
+   #â—†Defensive skillsâ—†
    
-when 631   #Œƒ—ã‚ğó‚¯‚é
-   return "Cheer up"
+when 631   #æ¿€åŠ±ã‚’å—ã‘ã‚‹
+   return "Encourage"
    
-   #œHolding skills - baseœ
+   #â—Holding skills - baseâ—
    
-when 682   #ƒAƒNƒZƒvƒg
-   return "Accept"
-when 683   #ƒVƒFƒ‹ƒ}ƒbƒ`
+when 682   #ã‚¢ã‚¯ã‚»ãƒ—ãƒˆ
+   return "Cowgirl invite"
+when 683   #ã‚·ã‚§ãƒ«ãƒãƒƒãƒ
    return "Scissors"
-when 684   #ƒGƒLƒTƒCƒgƒrƒ…[
-   return "Facesit "
-when 687   #ƒI[ƒ‰ƒ‹ƒAƒNƒZƒvƒg
-   return "Oral Insert "
-when 688   #ƒhƒƒEƒlƒNƒ^[
-   return "Oral Pin"
-when 689   #ƒtƒ‰ƒbƒ^ƒiƒCƒY
+when 684   #ã‚¨ã‚­ã‚µã‚¤ãƒˆãƒ“ãƒ¥ãƒ¼
+   return "Straddle"
+when 687   #ã‚ªãƒ¼ãƒ©ãƒ«ã‚¢ã‚¯ã‚»ãƒ—ãƒˆ
+   return "Oral insert"
+when 688   #ãƒ‰ãƒ­ã‚¦ãƒã‚¯ã‚¿ãƒ¼
+   return "Tongue insert"
+when 689   #ãƒ•ãƒ©ãƒƒã‚¿ãƒŠã‚¤ã‚º
    return "Lock lips"
-when 691   #ƒoƒbƒNƒAƒNƒZƒvƒg
-   return "Anal catch"
-when 692   #ƒCƒ“ƒ‚ƒ‰ƒ‹ƒrƒ…[
-   return "Dark Side "
-when 695   #ƒGƒ“ƒuƒŒƒCƒX
-   return "E‚brace"
-when 696   #ƒGƒLƒVƒrƒWƒ‡ƒ“ / hold legs in place
-   return "Spread 'em" #"Exhibition"
-when 697   #ƒyƒŠƒXƒR[ƒv / Paizuri bearhold
-   return "Paizuri Lock"#"Periscope"
-when 698   #ƒwƒuƒ“ƒŠ[ƒtƒB[ƒ‹ / Puff-puff headhold
-   return "Heaven's Feel "
-when 700   #ƒCƒ“ƒT[ƒg
+when 691   #ãƒãƒƒã‚¯ã‚¢ã‚¯ã‚»ãƒ—ãƒˆ
+   return "Anal invite"
+when 692   #ã‚¤ãƒ³ãƒ¢ãƒ©ãƒ«ãƒ“ãƒ¥ãƒ¼
+   return "Reverse straddle"
+when 695   #ã‚¨ãƒ³ãƒ–ãƒ¬ã‚¤ã‚¹
+   return "Embrace"
+when 696   #ã‚¨ã‚­ã‚·ãƒ“ã‚¸ãƒ§ãƒ³ / hold legs in place
+   return "Shameful display" #"Exhibition"
+when 697   #ãƒšãƒªã‚¹ã‚³ãƒ¼ãƒ— / Paizuri bearhold
+   return "Oppai invite"#"Periscope"
+when 698   #ãƒ˜ãƒ–ãƒ³ãƒªãƒ¼ãƒ•ã‚£ãƒ¼ãƒ« / Puff-puff headhold
+   return "Heaven's feel"
+when 700   #ã‚¤ãƒ³ã‚µãƒ¼ãƒˆ
    return "Insert"
-when 701   #ƒI[ƒ‰ƒ‹ƒCƒ“ƒT[ƒg
-   return "Oral Insert "
-when 702   #ƒoƒbƒNƒCƒ“ƒT[ƒg
-   return "Backdoor Insert "
-when 705   #ƒCƒ“ƒT[ƒgƒeƒCƒ‹
-   return "Tail Insert "
-when 706   #ƒ}ƒEƒXƒCƒ“ƒeƒCƒ‹
-   return "Oral Tail Insert"
-when 707   #ƒoƒbƒNƒCƒ“ƒeƒCƒ‹
-   return "Anal Tail Insert"
-when 710   #ƒfƒBƒ‹ƒhƒCƒ“ƒT[ƒg
-   return "Dildo Insert "
-when 711   #ƒfƒBƒ‹ƒhƒCƒ“ƒ}ƒEƒX
-   return "Oral Dildo Insert "
-when 712   #ƒfƒBƒ‹ƒhƒCƒ“ƒoƒbƒN
-   return "Anal Dildo Insert "
-when 715   #ƒAƒCƒ”ƒBƒNƒ[ƒY
+when 701   #ã‚ªãƒ¼ãƒ©ãƒ«ã‚¤ãƒ³ã‚µãƒ¼ãƒˆ
+   return "Oral insert"
+when 702   #ãƒãƒƒã‚¯ã‚¤ãƒ³ã‚µãƒ¼ãƒˆ
+   return "Backdoor insert"
+when 705   #ã‚¤ãƒ³ã‚µãƒ¼ãƒˆãƒ†ã‚¤ãƒ«
+   return "Tail insert"
+when 706   #ãƒã‚¦ã‚¹ã‚¤ãƒ³ãƒ†ã‚¤ãƒ«
+   return "Tail mouth insert"
+when 707   #ãƒãƒƒã‚¯ã‚¤ãƒ³ãƒ†ã‚¤ãƒ«
+   return "Tail anal insert"
+when 710   #ãƒ‡ã‚£ãƒ«ãƒ‰ã‚¤ãƒ³ã‚µãƒ¼ãƒˆ
+   return "Dildo insert"
+when 711   #ãƒ‡ã‚£ãƒ«ãƒ‰ã‚¤ãƒ³ãƒã‚¦ã‚¹
+   return "Dildo gag"
+when 712   #ãƒ‡ã‚£ãƒ«ãƒ‰ã‚¤ãƒ³ãƒãƒƒã‚¯
+   return "Anal plug-in"
+when 715   #ã‚¢ã‚¤ãƒ´ã‚£ã‚¯ãƒ­ãƒ¼ã‚º
    return "Entangle"
-when 716   #ƒfƒ‚ƒ“ƒYƒNƒ[ƒY
-   return "Demon Wrap"
-when 717   #ƒfƒ‚ƒ“ƒYƒAƒuƒ\[ƒu
-   return "Feeler Suck-in"
-when 718   #ƒfƒ‚ƒ“ƒYƒhƒƒE
-   return "Tentacle Insert "
-when 719   #ƒCƒ“ƒTƒ‹ƒgƒcƒŠ[
-   return "Tentacle Wrap "
-when 772   #ƒGƒiƒW[ƒhƒŒƒCƒ“
-   return "Energy Drain"
-when 773   #ƒŒƒxƒ‹ƒhƒŒƒCƒ“
-   return "Level Drain "
-when 971   #‚à‚ª‚­
+when 716   #ãƒ‡ãƒ¢ãƒ³ã‚ºã‚¯ãƒ­ãƒ¼ã‚º
+   return "Demon wrap"
+when 717   #ãƒ‡ãƒ¢ãƒ³ã‚ºã‚¢ãƒ–ã‚½ãƒ¼ãƒ–
+   return "Feeler suck-in"
+when 718   #ãƒ‡ãƒ¢ãƒ³ã‚ºãƒ‰ãƒ­ã‚¦
+   return "Feeler insert"
+when 719   #ã‚¤ãƒ³ã‚µãƒ«ãƒˆãƒ„ãƒªãƒ¼
+   return "Tentacle wrap"
+when 772   #ã‚¨ãƒŠã‚¸ãƒ¼ãƒ‰ãƒ¬ã‚¤ãƒ³
+   return "Energy drain"
+when 773   #ãƒ¬ãƒ™ãƒ«ãƒ‰ãƒ¬ã‚¤ãƒ³
+   return "Level drain"
+when 971   #ã‚‚ãŒã
    return "Struggle"
    
       end
