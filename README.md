@@ -11,7 +11,8 @@ English fan translations for the game, "Succubus Rhapsodia"
 ---=:::[ Translation version* ]:::=---
 - v0.163
 
-*estimated percentage of translation completion
+*Last publically released version
+*Estimated percentage of translation completion
 
 ==========================================================
 
@@ -73,6 +74,24 @@ For testers, freeloaders and other folks:
 
 
 -------=:::[ Changelogs ]:::=-------
+
+
+v0.165: (09/04/2016)
+- translated more skilltext; some fixes
+	- translated and implemented the combat message variations (mood and personality-dependent variations)
+	- translated the random idle messages
+	- indented some lines that ran out of bounds of the combat message box
+	- changed all "ｗ" (double-byte "w") within skilltext to the normal single-byte "w"
+- changed statetext
+	- changed all "ｗ" (double-byte "w") within statetext to the normal single-byte "w"
+- adjusted some skill names
+- changed Slime's underwear from "loin mucus" to "protective mucus"
+- removed 8 lines Window_Battle_BackLog that I seem to have forgot to remove after testing
+
+
+**v0.000 (09/04/2016)**
+- added original **branch to github.
+	- includes the original game v1.10 versions of the scripts from scripts.rxdata that I changed
 
 
 v0.163: (09/02/2016)

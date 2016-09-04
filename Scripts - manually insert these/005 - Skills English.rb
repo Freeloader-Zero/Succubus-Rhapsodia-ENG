@@ -180,7 +180,7 @@ when 149   #プロヴォーク
    #■Succubi common magic
 
 when 161   #イリスシード
-   return "Iris Seed "
+   return "Iris Seed"
 when 162   #イリスペタル
    return "Iris Petal"
 when 163   #イリスフラウ
@@ -326,9 +326,9 @@ when 263   #スパンク
 when 275   #やけくそ三連撃
    return "Desperation 3-ways"
 when 276   #ヒーローキリング
-   return "Hero killer"
+   return "Hero Killer"
 when 277   #メテオエクリプス
-   return "Meteo rain "
+   return "Meteor Eclipse"
 when 278   #ワールドブレイカー
    return "World Breaker "
 when 279   #スキル決め直し

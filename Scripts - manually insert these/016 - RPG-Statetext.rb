@@ -21,7 +21,7 @@ module RPG
         effect = recover = report =  ""
       when 2 # Šã
         effect = "" #{myname}‚Íâ’¸‚É’B‚µ‚½I"
-        recover = "#{myname} ‚ustered the ‚—illpo‚—er to stand back up!"
+        recover = "#{myname} ‚ustered the willpower to stand back up!"
         report = "#{myname} can't ‚uster any strength\\n due to the lingering affects of cli‚ax!"
       when 3 # â’¸
         effect = "" #{myname}‚Íâ’¸‚É’B‚µ‚½I"
@@ -35,15 +35,15 @@ module RPG
         if user.is_a?(Game_Actor)
           if myself.is_a?(Game_Actor)
             effect = "#{myname} beca‚e naked!"
-            effect = "#{myname} ‚—as stripped naked!" if $msg.tag == "’‡ŠÔ’Eˆß"
+            effect = "#{myname} was stripped naked!" if $msg.tag == "’‡ŠÔ’Eˆß"
           else
             effect = "#{myname} has been stripped naked!"
             effect = "#{myname} beca‚e naked!" if $msg.tag == "–²–‚’Eˆß"
           end
         elsif user.is_a?(Game_Enemy)
           if myself.is_a?(Game_Actor)
-            effect = "#{myname} ‚—as stripped naked!"
-            effect = "#{myname} beca‚e naked as told!" if $game_switches[89] == true
+            effect = "#{myname} was stripped naked!"
+            effect = "#{myname} willingly strips naked!" if $game_switches[89] == true
           else
             effect = "#{myname} beca‚e naked!"
           end
@@ -68,16 +68,16 @@ module RPG
               end
             elsif $game_temp.used_skill.element_set.include?(11) #ãèŠ­Œn
               if myself == $game_actors[101]
-              effect = "#{myname} ‚—as stunned by the\n\ attack to his ass!"
+              effect = "#{myname} was stunned by the\n\ attack to his ass!"
               else
-              effect = "#{myname} ‚—as stunned by the\n\ attack to her ass!"
+              effect = "#{myname} was stunned by the\n\ attack to her ass!"
               end
             else #‹ê’ÉŒn
               effect = "#{myname} flinched painfully!"
             end
           else
             if $game_temp.used_skill.element_set.include?(10) #ŒûˆúŒn
-              effect = "#{myname} s‚—oons fro‚ being\n\ attacked in the ‚outh!"
+              effect = "#{myname} swoons fro‚ being\n\ attacked in the ‚outh!"
             elsif $game_temp.used_skill.element_set.include?(11) #ãèŠ­Œn
               effect = "#{myname} cries out fro‚\n\ being attacked in the back!"
             else #‹ê’ÉŒn
@@ -96,29 +96,29 @@ module RPG
         #ˆ—‚ÍGame_Battler4‚ÌƒXƒLƒ‹ƒGƒtƒFƒNƒg‚Åİ’è
         effect = recover = report =  ""
       when 19 # —¼«‹ï—L‰»
-        effect = "#{myname}'s clit begins to enlarge...!\n\ A penis appeared bet‚—een #{myname}'s crotch!"
-        recover = "#{myname}'s penis slo‚—ly disappeared!"
+        effect = "#{myname}'s clit begins to enlarge...!\n\ A penis appeared between #{myname}'s crotch!"
+        recover = "#{myname}'s penis slowly disappeared!"
       when 20 # ŠŠ‰(ã)
-        effect = "#{myname}'s penis is ‚—ell-lubricated!"
+        effect = "#{myname}'s penis is well-lubricated!"
         recover = ""
       when 21 # ŠŠ‰(‹­)
         effect = "#{myname}'s penis is extre‚ely lubricated!"
         recover = ""
       when 22 # ŠŠŠ(­)
-        effect = "#{myname}'s pussy has gotten ‚—et!"
-        effect = "#{myname}'s pussy is sli‚y ‚—ith goo!" if myself.states.include?(27) or myself.states.include?(28)
+        effect = "#{myname}'s pussy has gotten wet!"
+        effect = "#{myname}'s pussy is sli‚y with goo!" if myself.states.include?(27) or myself.states.include?(28)
 #        effect = "#{myname}‚ÌƒAƒ\ƒR‚©‚çA\n\™X‚É–¨‚ªõ‚İo‚Ä‚«‚½cI"
 #        effect = "#{myname}‚ÌƒAƒ\ƒR‚ªA\n\•t’…‚µ‚½”S‰t‚Ì‚¹‚¢‚Å‚Ê‚é‚Ê‚é‚µ‚Ä‚«‚½cI" if myself.states.include?(27) or myself.states.include?(28)
         recover = ""
       when 23 # ŠŠŠ(‘½)
-        effect = "#{myname}'s pussy is sufficiently ‚—et!"
-        effect = "#{myname}'s pussy is sli‚y ‚—ith goo!" if myself.states.include?(27) or myself.states.include?(28)
+        effect = "#{myname}'s pussy is sufficiently wet!"
+        effect = "#{myname}'s pussy is sli‚y with goo!" if myself.states.include?(27) or myself.states.include?(28)
 #        effect = "#{myname}‚ÌƒAƒ\ƒR‚©‚çA\n\‚Æ‚ë‚è‚Æ–¨‚ª“H‚è—‚¿‚Ä—ˆ‚½cI"
 #        effect = "#{myname}‚ÌƒAƒ\ƒR‚ÍA\n\”S‰t‚Æ–{l‚Ì–¨‚Æ‚Å\“ñ•ª‚É”G‚ê‚Ä‚«‚½cI" if myself.states.include?(27) or myself.states.include?(28)
         recover = ""
       when 24 # ŠŠŠ(ˆì)
-        effect = "#{myname}'s pussy is overflo‚—ing ‚—ith\n\ vaginal secretions!"
-        effect = "#{myname}'s pussy is sli‚y ‚—ith goo!" if myself.states.include?(27) or myself.states.include?(28)
+        effect = "#{myname}'s pussy is overflowing with\n\ vaginal secretions!"
+        effect = "#{myname}'s pussy is sli‚y with goo!" if myself.states.include?(27) or myself.states.include?(28)
 #        effect = "#{myname}‚ÌƒAƒ\ƒR‚©‚çA\n\–¨‚ª~‚ß‚Ç‚È‚­ˆì‚êo‚µ‚Ä—ˆ‚écI"
 #        effect = "#{myname}‚ÌƒAƒ\ƒR‚ÍA\n\”S‰t‚Æ–{l‚Ì–¨‚Æ‚ÅŠù‚É‚®‚µ‚å‚®‚µ‚å‚¾cI" if myself.states.include?(27) or myself.states.include?(28)
         recover = ""
@@ -136,8 +136,8 @@ module RPG
       when 29 # ƒXƒ‰ƒCƒ€
         effect = recover = ""
       when 30 # ˆú“Å
-        effect = "#{myname} ‚—as poisoned ‚—ith aphrodisiacs!"
-        report = "#{myname} is poisoned ‚—ith aphrodisiacs!"
+        effect = "#{myname} was poisoned with aphrodisiacs!"
+        report = "#{myname} is poisoned with aphrodisiacs!"
         recover = "The poison fang fell out of #{myname}...\\n" +
                   "Soon after, #{myname}'s body\n\ started to feel hot and flushed!"
         if type == "recover"
@@ -155,9 +155,9 @@ module RPG
         effect = "#{myname} got lost in ecstasy!"
         recover = "#{myname} regained sanity!"
         if myself == $game_actors[101]
-          report = "#{myname} ‚—ears an expression\n\ of supre‚e bliss on his face!"
+          report = "#{myname} wears an expression\n\ of supre‚e bliss on his face!"
         else
-          report = "#{myname} ‚—ears an expression\n\ of supre‚e bliss on her face!"
+          report = "#{myname} wears an expression\n\ of supre‚e bliss on her face!"
         end
         # ‹Šo‚É“­‚«‚©‚¯‚éƒXƒLƒ‹‚Ìê‡AƒƒbƒZ[ƒW‚ğ•Ï‰»
 #        if skill != nil and skill != ""
@@ -180,9 +180,9 @@ module RPG
           effect = "#{myname} has gone berserk!"
           effect = "#{myname} has goes berserk!" if $msg.tag == "•òd"
         elsif user.is_a?(Game_Enemy)
-          effect = "#{myname} ‚—ent berserk!"
+          effect = "#{myname} went berserk!"
         end
-        recover = "#{myname} has cal‚ed do‚—n!"
+        recover = "#{myname} has cal‚ed down!"
         if myself == $game_actors[101]
           report = "#{myname} can't control hi‚self!"
         else
@@ -190,30 +190,30 @@ module RPG
         end
       when 37 # ‹•’E
         if user.is_a?(Game_Actor)
-          effect = "#{myname}'s body started feeling ‚—eak!"
-          effect = "#{myname}'s strength feels like\n\ it's being drained a‚—ay...!" if $msg.tag == "•òd"
-          effect = "#{myname}'s strength feels like\n\ it's being drained a‚—ay...!" if myself.is_a?(Game_Actor)
+          effect = "#{myname}'s body started feeling weak!"
+          effect = "#{myname}'s strength feels like\n\ it's being drained away...!" if $msg.tag == "•òd"
+          effect = "#{myname}'s strength feels like\n\ it's being drained away...!" if myself.is_a?(Game_Actor)
           effect = "#{myname}'s strength is crushed\n\ by the pressure!" if $game_temp.used_skill.name == "œğ‰÷‚È‚³‚¢"
         elsif user.is_a?(Game_Enemy)
-          effect = "#{myname}'s body beca‚e ‚—eak!"
-          effect = "#{myname}'s body is ‚—eak fro‚ aphrodisiacs!" if myself.state?(30)
+          effect = "#{myname}'s body beca‚e weak!"
+          effect = "#{myname}'s body is weak fro‚ aphrodisiacs!" if myself.state?(30)
           effect = "#{myname}'s strength is crushed\n\ by the pressure!" if $game_temp.used_skill.name == "œğ‰÷‚È‚³‚¢"
         end
         recover = "#{myname}'s strength has returned!"
         report = "#{myname} can't gather any strength!"
       when 38 # ˆØ•|
         if user.is_a?(Game_Actor)
-          effect = "#{myname} feels overpo‚—ered by the ene‚y!"
-          effect = "#{myname} is feeling over‚—helmed!" if $msg.tag == "•òd"
+          effect = "#{myname} feels overpowered by the ene‚y!"
+          effect = "#{myname} is feeling overwhelmed!" if $msg.tag == "•òd"
         elsif user.is_a?(Game_Enemy)
-          effect = "#{myname} is feeling over‚—hel‚ed!"
+          effect = "#{myname} is feeling overwhel‚ed!"
         end
-        recover = "#{myname} no longer feels over‚—hel‚ed!"
-        report = "#{myname} is a‚—ed by the ene‚y!"
+        recover = "#{myname} no longer feels overwhel‚ed!"
+        report = "#{myname} is awed by the ene‚y!"
       when 39 # –ƒáƒ
         if user.is_a?(Game_Actor)
           effect = "#{myname} has been paralyzed!"
-          effect = "#{myname}'s body has slo‚—ly beco‚e nu‚b!" if myself.is_a?(Game_Actor)
+          effect = "#{myname}'s body has slowly beco‚e nu‚b!" if myself.is_a?(Game_Actor)
         elsif user.is_a?(Game_Enemy)
           effect = "#{myname}'s body has been paralyzed!"
           effect = "#{myname}'s\\n body has been paralyzed by the poison!" if myself.state?(30)
@@ -234,7 +234,7 @@ module RPG
         report = "#{myname} can't focus!"
       when 41 # ‚—g
         effect = "#{myname} beca‚e excited!"
-        recover = "#{myname}'s excite‚ent has ‚—orn off!"
+        recover = "#{myname}'s excite‚ent has worn off!"
         report = ""
       when 42 # ’¾’…
         effect = "#{myname} has beco‚e co‚posed!"
@@ -261,66 +261,66 @@ module RPG
         recover = ""
 
       when 80 # ƒXƒe[ƒg‘‰Á
-        effect = "#{myname}'s stats has increased!" if myself.is_a?(Game_Actor)
-        effect = "#{myname}'s stats has increased!" if myself.is_a?(Game_Enemy)
+        effect = "#{myname}'s stat has increased!" if myself.is_a?(Game_Actor)
+        effect = "#{myname}'s stat has increased!" if myself.is_a?(Game_Enemy)
         case $msg.tag
         when "–£—Í", "–£—Í{"
-          effect.gsub!("”\—Í","–£—Í") 
+          effect.gsub!("stat","charm") 
         when "”E‘Ï—Í", "”E‘Ï—Í{"
-          effect.gsub!("”\—Í","”E‘Ï—Í") 
+          effect.gsub!("stat","endurance") 
         when "¸—Í", "¸—Í{"
-          effect.gsub!("”\—Í","¸—Í") 
+          effect.gsub!("stat","vitality") 
         when "Ší—p‚³", "Ší—p‚³{"
-          effect.gsub!("”\—Í","Ší—p‚³") 
+          effect.gsub!("stat","dexterity") 
         when "‘f‘‚³", "‘f‘‚³{"
-          effect.gsub!("”\—Í","‘f‘‚³") 
+          effect.gsub!("stat","agility") 
         when "¸_—Í", "¸_—Í{"
-          effect.gsub!("”\—Í","¸_—Í") 
+          effect.gsub!("stat","spirit") 
         end
         if $msg.tag[/{/] != nil
-          effect.gsub!("‹­‰»","X‚É‹­‰»") 
+          effect.gsub!("increased","increased futher") 
         end
         myself.remove_state(80)
         recover = ""
       when 81 # ƒXƒe[ƒgŒ¸­
-        effect = "#{myname}'s stats have decreased!" if myself.is_a?(Game_Enemy)
-        effect = "#{myname}'s stats have decreased!" if myself.is_a?(Game_Actor)
+        effect = "#{myname}'s stat has decreased!" if myself.is_a?(Game_Enemy)
+        effect = "#{myname}'s stat has decreased!" if myself.is_a?(Game_Actor)
         case $msg.tag
         when "–£—Í", "–£—Í|"
-          effect.gsub!("”\—Í","–£—Í") 
+          effect.gsub!("stat","charm") 
         when "”E‘Ï—Í", "”E‘Ï—Í|"
-          effect.gsub!("”\—Í","”E‘Ï—Í") 
+          effect.gsub!("stat","endurance") 
         when "¸—Í", "¸—Í|"
-          effect.gsub!("”\—Í","¸—Í") 
+          effect.gsub!("stat","vitality") 
         when "Ší—p‚³", "¸—Í|"
-          effect.gsub!("”\—Í","Ší—p‚³") 
+          effect.gsub!("stat","dexterity") 
         when "‘f‘‚³", "‘f‘‚³|"
-          effect.gsub!("”\—Í","‘f‘‚³") 
+          effect.gsub!("stat","agility") 
         when "¸_—Í", "¸_—Í|"
-          effect.gsub!("”\—Í","¸_—Í") 
+          effect.gsub!("stat","spirit") 
         end
         if $msg.tag[/|/] != nil
-          effect.gsub!("ã‘Ì‰»","X‚Éã‘Ì‰»") 
+          effect.gsub!("decreased","decreased further") 
         end
         myself.remove_state(81)
         recover = ""
       when 82 # ƒXƒe[ƒg‘S‘‰Á
-        effect = "#{myname}‚Ì‘S”\—Í‚ğ‹­‰»‚µ‚½I" if myself.is_a?(Game_Actor)
-        effect = "#{myname}‚Ì‘S”\—Í‚ª‹­‰»‚³‚ê‚½I" if myself.is_a?(Game_Enemy)
+        effect = "All of #{myname}'s stats\n\ have increased!" if myself.is_a?(Game_Actor)
+        effect = "All of #{myname}'s stats\n\ have been increased!" if myself.is_a?(Game_Enemy)
         myself.remove_state(82)
         recover = ""
       when 83 # ƒXƒe[ƒg‘SŒ¸­
-        effect = "#{myname}‚Ì‘S”\—Í‚ğã‘Ì‰»‚³‚¹‚½I" if myself.is_a?(Game_Enemy)
-        effect = "#{myname}‚Í‘S”\—Í‚ğã‘Ì‰»‚³‚¹‚ç‚ê‚½I" if myself.is_a?(Game_Actor)
+        effect = "All of #{myname}'s stats\n\ have decreased!" if myself.is_a?(Game_Enemy)
+        effect = "All of #{myname}'s stats\n\ have been decreased!" if myself.is_a?(Game_Actor)
         myself.remove_state(83)
         recover = ""
       when 84 # ƒXƒe[ƒgˆÛ
-        effect = "‚µ‚©‚µ#{myname}‚É‚ÍŒø‰Ê‚ª–³‚©‚Á‚½I"
+        effect = "But it had no effect on #{myname}!"
         myself.remove_state(84)
         recover = ""
       when 85 # ‹­‰»‰ğœ
-        effect = "One of #{myname}'s buffs has ‚—orn off!" if myself.is_a?(Game_Enemy)
-        effect = "One of #{myname}'s buffs has ‚—orn off!" if myself.is_a?(Game_Actor)
+        effect = "One of #{myname}'s buffs has worn off!" if myself.is_a?(Game_Enemy)
+        effect = "One of #{myname}'s buffs has worn off!" if myself.is_a?(Game_Actor)
         myself.remove_state(85)
         recover = ""
       when 86 # ’á‰º‰ğœ
@@ -394,7 +394,7 @@ module RPG
         if user.is_a?(Game_Actor)
           effect = "#{myname} has been restrained!"
         elsif user.is_a?(Game_Enemy)
-          effect = "#{myname} ‚—as restrained!"
+          effect = "#{myname} was restrained!"
         end
         recover = "#{myname} has been freed!"
         report = "#{myname}'s body is restrained!"

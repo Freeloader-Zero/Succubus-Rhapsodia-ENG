@@ -89,15 +89,6 @@ class Window_BattleBackLog < Window_Base
       self.contents.draw_text(4 + x, 24 * line_deep + @start_y, 40, 32, c)
       # x ‚É•`‰æ‚µ‚½•¶Žš‚Ì•‚ð‰ÁŽZ
       x += self.contents.text_size(c).width #+ 2
-      if c == "\"
-        x = @start_x
-        line_deep += 1
-        next
-      end
-      # •¶Žš‚ð•`‰æ
-      self.contents.draw_text(4 + x, 24 * line_deep + @start_y, 40, 32, c)
-      # x ‚É•`‰æ‚µ‚½•¶Žš‚Ì•‚ð‰ÁŽZ
-      x += self.contents.text_size(c).width #+ 2
     end
     # ˆê”Ô‰º‚Ìs‚ª•\Ž¦‚³‚ê‚é‚æ‚¤‚É•\Ž¦
   end
