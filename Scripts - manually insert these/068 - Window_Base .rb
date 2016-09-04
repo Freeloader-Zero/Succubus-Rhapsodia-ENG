@@ -185,7 +185,7 @@ class Window_Base < Window
         if $game_temp.in_battle and type == 0
           text = "LV." + battler.level.to_s
         else
-          text = "[Fine]"
+          text = "[³í]"
         end
       end
     else
@@ -329,7 +329,7 @@ class Window_Base < Window
   #     width : •`‰ææ‚Ì•
   #--------------------------------------------------------------------------
   def draw_actor_fed(actor, x, y, width = 144)
-    self.contents.draw_text(x, y, width, 24, "Satiety:")
+    self.contents.draw_text(x, y, width, 24, "–ž• “x")
     self.contents.font.color = actor.fed <= 10 ? knockout_color :
      actor.fed <= 20 ? crisis_color : normal_color
     self.contents.draw_text(x - 44, y, width, 24, actor.fed.to_s, 2)
@@ -368,9 +368,9 @@ class Window_Base < Window
       parameter_value = actor.int
     end
     self.contents.font.color = system_color
-    self.contents.draw_text(x, y, 110, 32, parameter_name)
+    self.contents.draw_text(x, y, 120, 32, parameter_name)
     self.contents.font.color = normal_color
-    self.contents.draw_text(x + 65, y, 36, 32, parameter_value.to_s, 2)
+    self.contents.draw_text(x + 50, y, 36, 32, parameter_value.to_s, 2)
   end
   #--------------------------------------------------------------------------
   # œ ƒAƒCƒeƒ€–¼‚Ì•`‰æ

@@ -144,7 +144,7 @@ class Scene_Menu
         target = $game_party.actors[@target_window.index]
         # 対象が主人公の場合は使用不可
         if target == $game_actors[101]
-          $game_temp.error_message = "#{$game_actors[101].name} cannot use this item."
+          $game_temp.error_message = "#{$game_actors[101].name}にはこのアイテムを使用できない"
           # ブザー SE を演奏
           $game_system.se_play($data_system.buzzer_se)
           # ●エラーメッセージを表示
@@ -152,7 +152,7 @@ class Scene_Menu
           $game_temp.error_message = ""
           return
         elsif target.fed == 100
-          $game_temp.error_message = "#{target.name} cannot use this item on a full stomach."
+          $game_temp.error_message = "#{target.name}は満腹でこのアイテムを使用できない"
           # ブザー SE を演奏
           $game_system.se_play($data_system.buzzer_se)
           # ●エラーメッセージを表示
@@ -167,7 +167,7 @@ class Scene_Menu
         target = $game_party.actors[@target_window.index]
         # レベルが最大だと使用不可
         if target.level >= $MAX_LEVEL
-          $game_temp.error_message = "#{target.name} cannot level any further."
+          $game_temp.error_message = "#{target.name}はすでに最大レベルに達している"
           # ブザー SE を演奏
           $game_system.se_play($data_system.buzzer_se)
           # ●エラーメッセージを表示

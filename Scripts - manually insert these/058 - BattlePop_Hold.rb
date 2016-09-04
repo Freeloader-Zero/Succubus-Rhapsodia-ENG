@@ -140,11 +140,11 @@ class BattlePop_Hold
       end
       # 座標例外処理
       case @battler.class_name
-      when "Succubus"
+      when "サキュバス"
         @x_basepoint += 15
-      when "Little Witch "
+      when "プチウィッチ"
         @y_basepoint += 30
-      when "Sliｍe"
+      when "スライム"
         @x_basepoint += 15
       end
       @x_basepoint += 25 if @battler.boss_graphic?

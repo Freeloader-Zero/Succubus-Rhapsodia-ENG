@@ -75,6 +75,12 @@ For testers, freeloaders and other folks:
 -------=:::[ Changelogs ]:::=-------
 
 
+
+**v0.000 (09/04/2016)**
+- added original **branch to github.
+	- includes the original game v1.10 versions of the scripts from scripts.rxdata that I changed
+
+
 v0.163: (09/02/2016)
 - fixed missing/invisible damage numbers
 	- mass replaced all \065, \066, and \067 instances with \, \, and \

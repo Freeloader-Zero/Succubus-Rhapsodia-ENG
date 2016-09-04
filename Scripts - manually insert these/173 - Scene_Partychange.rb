@@ -103,11 +103,11 @@ class Scene_Partychange
     
     case @status_command
     when 0
-      text = "←→：Party member　↑↓：Next window"
+      text = "←→：表示メンバー変更　↑↓：ウィンドウ変更"
     when 1
-      text = "ENTER: Examine Skills　←→：Party member　↑↓：Next window"
+      text = "決定：スキル確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
     when 2
-      text = "ENTER: Examine Traits　←→：Party member　↑↓：Next window"
+      text = "決定：素質確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
     end
     @help_window.set_text(text, 1)
     

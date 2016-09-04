@@ -148,8 +148,8 @@ class Scene_Menu
       @center_window.index = -1
       @center_window.refresh
       @center_window1 = Window_SkillStatus.new(actor)
-      @overF_text = "T r a i t s"
-      text = "ENTER: Examine Traits　←→：Cycle Party Member　↑↓：Change Window"
+      @overF_text = "A b i l i t y"
+      text = "決定：素質確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       @party_command = 1
       return
@@ -168,8 +168,8 @@ class Scene_Menu
       @center_window.active = false
       @center_window.refresh
       @center_window1 = Window_SkillStatus.new(actor)
-      @overF_text = "S k i l l s"
-      text = "ENTER: Examine Skills　←→：Cycle Party Member　↑↓：Change Window"
+      @overF_text = "S k i l l"
+      text = "決定：スキル確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       @party_command = 2
       return

@@ -98,7 +98,7 @@ class Window_Skill < Window_Selectable
       opacity = 128
     end
     self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
-    self.contents.draw_text(x + 28, y, 204, 32, skill.UK_name, 0)
+    self.contents.draw_text(x + 28, y, 204, 32, skill.name, 0)
     if skill.sp_cost != 0
       self.contents.draw_text(x + 178, y, 48, 32, "VP", 0) 
       self.contents.draw_text(x + 184, y, 48, 32, "-" + skill.sp_cost.to_s, 2) 

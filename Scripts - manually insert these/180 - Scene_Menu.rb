@@ -117,9 +117,9 @@ class Scene_Menu
     @underF[5].x = 430
     @underF[5].bitmap = Bitmap.new(180, 100)
     @underF[5].bitmap.font.size = $default_size_mini
-    @underF[5].bitmap.draw_text(0, 56, 180, 20, "Contracted Succubi:", 0)
+    @underF[5].bitmap.draw_text(0, 56, 180, 20, "契約した夢魔数", 0)
     @underF[5].bitmap.draw_text(0, 56, 180, 20, $game_party.home_actors.to_s + " / " + $game_party.box_max.to_s, 2)
-    @underF[5].bitmap.draw_text(0, 76, 180, 20, "Total Dream Power:", 0)
+    @underF[5].bitmap.draw_text(0, 76, 180, 20, "夢の魔力", 0)
     @underF[5].bitmap.draw_text(0, 76, 180, 20, $game_party.all_d_power.to_s, 2)
     
     @window = []
@@ -162,9 +162,9 @@ class Scene_Menu
     
     @menu_party_command_window = []
     
-    commands = ["Status", "Cancel"]
+    commands = ["ステータス", "キャンセル"]
     @menu_party_command_window[0] = Window_Command.new(120, commands)
-    commands = ["Status", "Move", "Feed", "Cancel"]
+    commands = ["ステータス", "並び替え", "精の献上", "キャンセル"]
     @menu_party_command_window[1] = Window_Command.new(120, commands)
     for window in @menu_party_command_window
       window.x = (640 - window.width) / 2
@@ -396,17 +396,17 @@ class Scene_Menu
       @underF[1].color = @select_color
       @underF[2].color = @nonselect_color
       @underF[3].color = @nonselect_color
-      @underF[4].bitmap.draw_text(0, 36, 180, 20, "Examine party members", 1)
+      @underF[4].bitmap.draw_text(0, 36, 180, 20, "パーティメンバーを確認します", 1)
     when 1 # Item
       @underF[1].color = @nonselect_color
       @underF[2].color = @select_color
       @underF[3].color = @nonselect_color
-      @underF[4].bitmap.draw_text(0, 36, 180, 20, "Use an item", 1)
+      @underF[4].bitmap.draw_text(0, 36, 180, 20, "アイテムを使います", 1)
     when 2 # System
       @underF[1].color = @nonselect_color
       @underF[2].color = @nonselect_color
       @underF[3].color = @select_color
-      @underF[4].bitmap.draw_text(0, 36, 180, 20, "Change settings", 1)
+      @underF[4].bitmap.draw_text(0, 36, 180, 20, "設定を変えます", 1)
     end
     
     if @select.visible == true

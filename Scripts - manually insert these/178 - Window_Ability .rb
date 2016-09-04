@@ -75,7 +75,7 @@ class Window_Ability < Window_Selectable
     bitmap = RPG::Cache.icon(ability.icon_name)
     opacity = 255
     self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
-    self.contents.draw_text(x + 28, y, 204, 32, "y" + ability.UK_name + "z" , 0)
+    self.contents.draw_text(x + 28, y, 204, 32, "y" + ability.name + "z" , 0)
   end
   #--------------------------------------------------------------------------
   # œ ƒwƒ‹ƒvƒeƒLƒXƒgXV

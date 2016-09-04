@@ -80,25 +80,25 @@ class Window_Battle_Command < Window_Base
       @item.opacity = 100
       @change.opacity = 100
       @escape.opacity = 100
-      @help.bitmap.draw_text(x, y, 200, 30, "Use a technique", 1) 
+      @help.bitmap.draw_text(x, y, 200, 30, "スキルを使います", 1) 
     when 1 # アイテム
       @skill.opacity = 100
       @item.opacity = 255
       @change.opacity = 100
       @escape.opacity = 100
-      @help.bitmap.draw_text(x, y, 200, 30, "Use an item", 1) 
+      @help.bitmap.draw_text(x, y, 200, 30, "アイテムを使います", 1) 
     when 2 # パーティ交代
       @skill.opacity = 100
       @item.opacity = 100
       @change.opacity = 255
       @escape.opacity = 100
-      @help.bitmap.draw_text(x, y, 200, 30, "Switch partner", 1) 
+      @help.bitmap.draw_text(x, y, 200, 30, "メンバーを入れ替えます", 1) 
     when 3 # 逃走
       @skill.opacity = 100
       @item.opacity = 100
       @change.opacity = 100
       @escape.opacity = 255
-      @help.bitmap.draw_text(x, y, 200, 30, "Run away", 1) 
+      @help.bitmap.draw_text(x, y, 200, 30, "逃走します", 1) 
     end
   end
   #--------------------------------------------------------------------------

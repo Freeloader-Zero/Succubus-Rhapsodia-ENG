@@ -141,7 +141,7 @@ class Scene_Battle
     result = 0
     if text != ""
       # 行数に合わせてウェイトを入れる
-      text_size = text.split(/[\n\]/).size
+      text_size = text.split(/[\n\q]/).size
     else 
       text_size = 0
     end

@@ -67,9 +67,9 @@ class Scene_Box
     @underF[4].x = 430
     @underF[4].bitmap = Bitmap.new(180, 100)
     @underF[4].bitmap.font.size = $default_size_mini
-    @underF[4].bitmap.draw_text(0, 56, 180, 20, "Contracted Succubi: ", 0)
+    @underF[4].bitmap.draw_text(0, 56, 180, 20, "Œ_–ñ‚µ‚½–²–‚”", 0)
     @underF[4].bitmap.draw_text(0, 56, 180, 20, $game_party.home_actors.to_s + " / " + $game_party.box_max.to_s, 2)
-    @underF[4].bitmap.draw_text(0, 76, 180, 20, "Total Dream Power:", 0)
+    @underF[4].bitmap.draw_text(0, 76, 180, 20, "–²‚Ì–‚—Í", 0)
     @underF[4].bitmap.draw_text(0, 76, 180, 20, $game_party.all_d_power.to_s, 2)
 
 
@@ -142,16 +142,16 @@ class Scene_Box
     @command_window = []
     
     # ƒ{ƒbƒNƒX—p
-    commands = ["Status", "Bring", "Move", "Bonuses", "Terminate", "Cancel"]
+    commands = ["ƒXƒe[ƒ^ƒX", "˜A‚ê‚Äs‚­", "•À‚Ñ‘Ö‚¦", "ƒ{[ƒiƒXK“¾", "Œ_–ñ”jŠü", "ƒLƒƒƒ“ƒZƒ‹"]
     @command_window[0] = Window_Command.new(130, commands)
     # ƒp[ƒeƒB—pi–²–‚—pj
-    commands = ["Status", "Leave", "Move", "Bonuses", "Terminate", "Cancel"]
+    commands = ["ƒXƒe[ƒ^ƒX", "—a‚¯‚é", "êŠŒğ‘ã",  "ƒ{[ƒiƒXK“¾", "Œ_–ñ”jŠü", "ƒLƒƒƒ“ƒZƒ‹"]
     @command_window[1] = Window_Command.new(130, commands)
     # ƒp[ƒeƒB—piålŒö—pj
-    commands = ["Status", "Cancel"]
+    commands = ["ƒXƒe[ƒ^ƒX", "ƒLƒƒƒ“ƒZƒ‹"]
     @command_window[2] = Window_Command.new(130, commands)
     # ƒ{ƒbƒNƒX•À‚Ñ‘Ö‚¦—p
-    commands = ["Move", "®—ñ"]
+    commands = ["êŠŒğ‘ã", "®—ñ"]
     @command_window[3] = Window_Command.new(130, commands)
     for window in @command_window
       window.x = (640 - window.width) / 2
@@ -338,8 +338,8 @@ class Scene_Box
           @now_actor.level = @now_actor.level + 1
           # ƒeƒLƒXƒg‚ğ®Œ`‚·‚é
           text = @now_actor.level_up_log
-          text.gsub!("\","")
-          text.gsub!("\","\n")
+          text.gsub!("\w","")
+          text.gsub!("\q","\n")
           @now_actor.level_up_log = ""
           $game_temp.message_text = text
           @now_actor.promise -= @bonus[0]
@@ -713,15 +713,15 @@ class Scene_Box
         when 4 # Œ_–ñ”jŠü
           # ƒ†ƒj[ƒN‚ÍŒ_–ñ”jŠü•s‰Â
           if @now_actor.boss_graphic?
-            text = "Cannot terminate a contract from a unique succubus!"
+            text = "ƒ†ƒj[ƒN–²–‚‚ÍŒ_–ñ‚ğ”jŠü‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñI"
             # ƒuƒU[ SE ‚ğ‰‰‘t
             $game_system.se_play($data_system.buzzer_se)
             $game_temp.message_text = text
             $game_temp.script_message = true
             return
           end
-          text = "Upon contract termination, this succubus will disappear.\n"
-          text += " Are you sure that you want to terminate your contract \n with " + @now_actor.name + "? \nNevermind\nTerminate"
+          text = "Œ_–ñ‚ğ”jŠü‚µ‚Ä‚µ‚Ü‚¦‚ÎA‚à‚¤‚±‚Ì–²–‚‚Í\nƒz[ƒ€‚É‚¢‚È‚­‚È‚Á‚Ä‚µ‚Ü‚¢‚Ü‚·B\n"
+          text += "–{“–‚É" + @now_actor.name + "‚Æ‚ÌŒ_–ñ‚ğ”jŠü‚µ‚Ä‚à‚æ‚ë‚µ‚¢‚Å‚·‚©H\n‚â‚ß‚é\n”jŠü‚·‚é"
           $game_temp.choice_start = 3
           # Œˆ’è SE ‚ğ‰‰‘t
           $game_system.se_play($data_system.decision_se) 
@@ -794,15 +794,15 @@ class Scene_Box
         when 4 # Œ_–ñ”jŠü
           # ƒ†ƒj[ƒN‚ÍŒ_–ñ”jŠü•s‰Â
           if @now_actor.boss_graphic?
-            text = "Cannot terminate a contract from a unique succubus!"
+            text = "ƒ†ƒj[ƒN–²–‚‚ÍŒ_–ñ‚ğ”jŠü‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñI"
             # ƒuƒU[ SE ‚ğ‰‰‘t
             $game_system.se_play($data_system.buzzer_se)
             $game_temp.message_text = text
             $game_temp.script_message = true
             return
           end
-          text = "Upon contract termination, this succubus will disappear.\n"
-          text += " Are you sure that you want to terminate your contract \n with " + @now_actor.name + "? \nNevermind\nTerminate"
+          text = "Œ_–ñ‚ğ”jŠü‚µ‚Ä‚µ‚Ü‚¦‚ÎA‚à‚¤‚±‚Ì–²–‚‚Í\nƒz[ƒ€‚É‚¢‚È‚­‚È‚Á‚Ä‚µ‚Ü‚¢‚Ü‚·B\n"
+          text += "–{“–‚É" + @now_actor.name + "‚Æ‚ÌŒ_–ñ‚ğ”jŠü‚µ‚Ä‚à‚æ‚ë‚µ‚¢‚Å‚·‚©H\n‚â‚ß‚é\n”jŠü‚·‚é"
           $game_temp.choice_start = 3
           # Œˆ’è SE ‚ğ‰‰‘t
           $game_system.se_play($data_system.decision_se) 
@@ -894,11 +894,11 @@ class Scene_Box
     when 0 # Party
       @underF[1].color = @select_color
       @underF[2].color = @nonselect_color
-      @underF[3].bitmap.draw_text(0, 36, 180, 20, "Examine succubi at home", 1)
+      @underF[3].bitmap.draw_text(0, 36, 180, 20, "ƒz[ƒ€‚É‚¢‚é–²–‚‚ğŠm”F‚µ‚Ü‚·", 1)
     when 1 # Item
       @underF[1].color = @nonselect_color
       @underF[2].color = @select_color
-      @underF[3].bitmap.draw_text(0, 36, 180, 20, "Examine succubi in party", 1)
+      @underF[3].bitmap.draw_text(0, 36, 180, 20, "ƒp[ƒeƒBƒƒ“ƒo[‚ğŠm”F‚µ‚Ü‚·", 1)
     end
 
     
@@ -926,9 +926,9 @@ class Scene_Box
     
     @underF[4].bitmap.clear
     @underF[4].bitmap.font.size = $default_size_mini
-    @underF[4].bitmap.draw_text(0, 56, 180, 20, "Contracted Succubi: ", 0)
+    @underF[4].bitmap.draw_text(0, 56, 180, 20, "Œ_–ñ‚µ‚½–²–‚”", 0)
     @underF[4].bitmap.draw_text(0, 56, 180, 20, $game_party.home_actors.to_s + " / " + $game_party.box_max.to_s, 2)
-    @underF[4].bitmap.draw_text(0, 76, 180, 20, "Total Dream Power:", 0)
+    @underF[4].bitmap.draw_text(0, 76, 180, 20, "–²‚Ì–‚—Í", 0)
     @underF[4].bitmap.draw_text(0, 76, 180, 20, $game_party.all_d_power.to_s, 2)
 
   end

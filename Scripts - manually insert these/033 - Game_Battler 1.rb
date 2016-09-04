@@ -66,7 +66,6 @@ class Game_Battler
   attr_accessor :lub_flag_female          # ♀潤滑進行フラグ
   attr_accessor :lub_flag_anal            # 尻穴潤滑進行フラグ
   attr_accessor :earnest                  # 本気フラグ
-  attr_accessor :UK_name                  # $UKmode go!
   
   #--------------------------------------------------------------------------
   # ● オブジェクト初期化
@@ -1482,15 +1481,5 @@ class Game_Battler
     text.gsub!("主人公短縮名","#{$msg.short_name($game_actors[101])}")
     return text
   end
-  #----------------------------------------------------------------
-  # ● defining UK names - temporary definition w/ rescue
-  #----------------------------------------------------------------
-  def UK_name
-    text = self.defaultname_self
-    if self.is_a?(Game_Enemy)
-      text = $data_enemies[@enemy_id].UK_name rescue text = error
-      else text = "not an enemy"
-    end
-    return text
-  end
+  
 end

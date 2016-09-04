@@ -105,9 +105,9 @@ class Scene_Box
       
       case @bonus[1]
       when 0 # スキルの場合
-        text = "#{@now_actor.name} can learn 「#{$data_skills[@bonus[2]].name}」."
-        text += "\nLearn Skill? (Will consume #{@bonus[0]} Contract Beads!)"
-        text += "\nNo\nYes"
+        text = "#{@now_actor.name}に、スキル「#{$data_skills[@bonus[2]].name}」を"
+        text += "\n習得させますか？（契約の珠を#{@bonus[0]}消費します）"
+        text += "\nいいえ\nはい"
         $game_temp.choice_start = 2
         # 決定 SE を演奏
         $game_system.se_play($data_system.decision_se) 
@@ -121,9 +121,9 @@ class Scene_Box
 
         
       when 1 # 素質の場合
-        text = "#{@now_actor.name} can acquire 【#{$data_ability[@bonus[2]].name}】."
-        text += "\nAcquire trait? (Will consume #{@bonus[0]} Contract Beads!)"
-        text += "\nNo\nYes"
+        text = "#{@now_actor.name}に、素質【#{$data_ability[@bonus[2]].name}】を"
+        text += "\n習得させますか？（契約の珠を#{@bonus[0]}消費します）"
+        text += "\nいいえ\nはい"
         $game_temp.choice_start = 2
         # 決定 SE を演奏
         $game_system.se_play($data_system.decision_se) 
@@ -158,9 +158,9 @@ class Scene_Box
           @promise_left_window.refresh
           Graphics.transition(8)
         when 1 # レベルを上げる
-          text = "Level up #{@now_actor.name}?"
-          text += "\n(Will consume #{@bonus[0]} Contract Beads)"
-          text += "\nYes\nNo"
+          text = "#{@now_actor.name}のレベルを上げますか？"
+          text += "\n（契約の珠を#{@bonus[0]}消費します）"
+          text += "\nいいえ\nはい"
           $game_temp.choice_start = 2
           # 決定 SE を演奏
           $game_system.se_play($data_system.decision_se) 
@@ -181,9 +181,9 @@ class Scene_Box
           @petname_flag = true
           return
         when 3 # 金を採取する
-          text = "Can extract 3000Lps. from #{@now_actor.name}. Extract?"
-          text += "\n（Will consume #{@bonus[0]} Contract Beads)"
-          text += "\nYes\nNo"
+          text = "#{@now_actor.name}から金を採取し、3000Lps.を得ますか？"
+          text += "\n（契約の珠を#{@bonus[0]}消費します）"
+          text += "\nいいえ\nはい"
           $game_temp.choice_start = 2
           # 決定 SE を演奏
           $game_system.se_play($data_system.decision_se) 

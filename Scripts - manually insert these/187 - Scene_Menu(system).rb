@@ -100,8 +100,8 @@ class Scene_Menu
         # 決定 SE を演奏
         $game_system.se_play($data_system.decision_se)
         
-        text = "Quit game?"
-        text += "\nCancel\nBack to Title\nShutdown"
+        text = "ゲームをやめますか？"
+        text += "\nキャンセル\nタイトルへ戻る\nシャットダウン"
         $game_temp.choice_start = 1
         # 決定 SE を演奏
         $game_system.se_play($data_system.decision_se) 

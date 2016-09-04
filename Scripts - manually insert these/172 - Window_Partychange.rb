@@ -34,7 +34,7 @@ class Window_Partychange < Window_Selectable
   # ● ヘルプテキスト更新
   #--------------------------------------------------------------------------
   def update_help
-    @help_window.set_text("Confirm party.")
+    @help_window.set_text("パーティを確認します。")
   end
   #--------------------------------------------------------------------------
   # ● リフレッシュ

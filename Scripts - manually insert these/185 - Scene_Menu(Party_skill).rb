@@ -121,7 +121,7 @@ class Scene_Menu
       @center_window.index = -2
       @center_window.refresh
       @overF_text = "S t a t u s"
-      text = "ENTER: Examine Equipment/Runes　←→：Cycle Party Member　↑↓：Change Window"
+      text = "決定：装備変更・ルーン刻印　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       @center_window1.dispose
       @party_command = 0
@@ -139,8 +139,8 @@ class Scene_Menu
       @center_window.refresh
       @center_window.index = -1
       @center_window.refresh
-      @overF_text = "T r a i t s"
-      text = "ENTER: Examine Traits　←→：Cycle Party Member　↑↓：Change Window"
+      @overF_text = "A b i l i t y"
+      text = "決定：素質確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       @party_command = 1
       return
@@ -161,7 +161,7 @@ class Scene_Menu
       @center_window.active = false
       @center_window.index = -1
       @center_window.refresh
-      text = "ENTER: Examine Skills　←→：Cycle Party Member　↑↓：Change Window"
+      text = "決定：スキル確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       return
     end
@@ -189,7 +189,7 @@ class Scene_Menu
         @target_window.visible = true
         @target_window.active = true
         @target_window.icon = @skill.icon_name
-        @target_window.name = @skill.UK_name
+        @target_window.name = @skill.name
         # 効果範囲 (単体/全体) に応じてカーソル位置を設定
         if @skill.scope == 4 || @skill.scope == 6
           @target_window.index = -1

@@ -61,16 +61,16 @@ class Window_PromiseLeft < Window_Base
     y_2 += 10
     unless @actor == $game_actors[101]
       self.contents.font.color = system_color
-      self.contents.draw_text(x_1, y_2 + 72, 84, 24, "Appetite")
-      self.contents.draw_text(x_1 + 88, y_2 + 72, 84, 24, "Dream Power ")
-      self.contents.draw_text(x_1, y_2 + 96, 84, 24, "Favor ")
-      self.contents.draw_text(x_1 + 88, y_2 + 96, 98, 24, "Energy Consumed")
-      self.contents.draw_text(264, 10, 110, 24, "Contract Beads")
+      self.contents.draw_text(x_1, y_2 + 72, 84, 24, "DŠ´“x")
+      self.contents.draw_text(x_1 + 98, y_2 + 72, 84, 24, "–²‚Ì–‚—Í")
+      self.contents.draw_text(x_1, y_2 + 96, 84, 24, "‹ó• —¦")
+      self.contents.draw_text(x_1 + 98, y_2 + 96, 84, 24, "‹z¸—Ê")
+      self.contents.draw_text(264, 10, 84, 24, "Œ_–ñ‚ÌŽì")
       self.contents.font.color = normal_color
-      self.contents.draw_text(x_1 + 32, y_2 + 72, 48, 24, @actor.digest.to_s, 2)
-      self.contents.draw_text(x_1 + 164, y_2 + 72, 48, 24, @actor.d_power.to_s, 2)
-      self.contents.draw_text(x_1 + 32, y_2 + 96, 48, 24, @actor.love.to_s, 2)
-      self.contents.draw_text(x_1 + 164, y_2 + 96, 48, 24, @actor.absorb.to_s, 2)
+      self.contents.draw_text(x_1 + 32, y_2 + 72, 48, 24, @actor.love.to_s, 2)
+      self.contents.draw_text(x_1 + 144, y_2 + 72, 48, 24, @actor.d_power.to_s, 2)
+      self.contents.draw_text(x_1 + 32, y_2 + 96, 48, 24, @actor.digest.to_s, 2)
+      self.contents.draw_text(x_1 + 144, y_2 + 96, 48, 24, @actor.absorb.to_s, 2)
       self.contents.draw_text(446 - 100, 10, 84 + 100, 24, @actor.promise.to_s, 2)
     end
     

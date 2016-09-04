@@ -493,7 +493,7 @@ class Window_Message < Window_Selectable
       # 行数の取得
       @lines_max = @now_text.scan(/\n/).size
       # 現在搭載されている制御文字を配列化
-      rxs = [/\\\065\[(\065+)\]/, /\\[.]/, /\\[|]/, /\\[>]/, /\\[<]/, /\\[!]/,
+      rxs = [/\\\w\[(\w+)\]/, /\\[.]/, /\\[|]/, /\\[>]/, /\\[<]/, /\\[!]/,
               /\\[~]/, /\\[i]/, /\\[Oo]\[([0-9]+)\]/, /\\[Hh]\[([0-9]+)\]/,
               /\\[b]\[([0-9]+)\]/, /\\[Rr]\[(.*?)\]/, /\\[B]/, /\\[I]/, /\\[Mm]/]
       # インフォウィンドウの強制センタリング
@@ -1125,7 +1125,7 @@ class Window_Message < Window_Selectable
       end
     when "\053"
       @write_wait += $game_system.battle_speed_time(1)
-    when "\n" # [改行処理]
+    when"\n" # [改行処理]
       @y += 1
       @line_index += 1
       line_reset

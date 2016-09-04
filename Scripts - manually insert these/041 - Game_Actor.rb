@@ -519,19 +519,19 @@ class Game_Actor < Game_Battler
     # ƒŒƒxƒ‹ƒAƒbƒv
     while @exp >= @exp_list[@level+1] and @exp_list[@level+1] > 0
       @level += 1
-      text += "\\" #if up_flag
-      text += "#{myname} reached Lv.#{@level.to_s}!"
+      text += "\w\q" #if up_flag
+      text += "#{myname}‚ÍALv.#{@level.to_s}‚É‚È‚Á‚½I"
       # ƒXƒLƒ‹K“¾
       for j in $data_classes[@class_id].learnings
         if j[0] == @level
           if j[1] == 0
             learn_skill(j[2])
-            text += "\\#{myname} learned #{$data_skills[j[2]].UK_name}!"
+            text += "\w\q#{myname}‚ÍA#{$data_skills[j[2]].name}‚ğK“¾‚µ‚½I"
           else
             gain_ability(j[2])
             # ”ñ•\¦‘f¿‚Í•\¦‚µ‚È‚¢
             if $data_ability[j[2]].hidden == false
-              text += "\\#{myname} got the y#{$data_ability[j[2]].UK_name}z trait!"
+              text += "\w\q#{myname}‚ÍAy#{$data_ability[j[2]].name}z‚ğK“¾‚µ‚½I"
             end
           end
         end
@@ -705,7 +705,7 @@ class Game_Actor < Game_Battler
       if @fed <= 20 and not self.state?(15)
         $game_temp.hungry = true
         self.add_state(15)
-        text = "#{@name}\n seems to be hungry again..."
+        text = "#{@name}‚Í\n‚¨• ‚ª‹ó‚¢‚Ä‚«‚½‚æ‚¤‚¾cc"
         SR_Util.announce(text)
       end
       if @fed <= 0
@@ -766,7 +766,7 @@ class Game_Actor < Game_Battler
       # í“¬’†‚É‰ñ•œ‚µ‚½ê‡‚ÍƒƒO‚ğo‚·
       if $game_temp.in_battle
         self.remove_states_log.delete($data_states[15])
-        text = "\\n#{self.name}'s hunger has been satiated!"
+        text = "\w\n#{self.name}‚Ì‹ó• ‚ªû‚Ü‚Á‚½I"
         $game_temp.battle_log_text += text
       end
     end 

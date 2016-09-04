@@ -146,7 +146,7 @@ class Resist_Game < Window_Base
       @success_bitmap[i].bitmap.font.size = 28
     end
     
-    @success_bitmap[0].bitmap.draw_text(0, 0, 200, 30, "Success!", 1)
+    @success_bitmap[0].bitmap.draw_text(0, 0, 200, 30, "Succuces!", 1)
     @success_bitmap[1].bitmap.draw_text(0, 0, 200, 30, "failure...", 1)
     @success_bitmap[2].bitmap.draw_text(0, 0, 200, 30, "AcceptanceI", 1)
     @success_bitmap[3].bitmap.draw_text(0, 0, 200, 30, "Dissuade...I", 1)

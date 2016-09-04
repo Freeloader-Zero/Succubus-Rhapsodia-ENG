@@ -100,9 +100,9 @@ class Window_Skill_Battle < Window_Skill
     opacity = self.contents.font.color == normal_color ? 255 : 128
     self.contents.blt(x, y + 4, bitmap, Rect.new(0, 0, 24, 24), opacity)
     if $game_switches[85] == true and skill.name == "トーク"
-      self.contents.draw_text(x + 28, y, 204, 32, "Pillow Talk", 0)
+      self.contents.draw_text(x + 28, y, 204, 32, "ピロートーク", 0)
     else
-      self.contents.draw_text(x + 28, y, 204, 32, skill.UK_name, 0)
+      self.contents.draw_text(x + 28, y, 204, 32, skill.name, 0)
     end
     
     # スキルコスト

@@ -40,9 +40,9 @@ class Game_Battler
   #●人間属(明らかに夢魔・魔物でない方々)
   def tribe_human?
     case $data_SDB[self.class_id].name
-    when "Little Witch","Witch ","Caster","Slave "
+    when "プチウィッチ","ウィッチ","キャスト","スレイヴ"
       return true
-    when "Priestess ","Cursed Magus","Ramile","Huｍan"
+    when "プリーステス","カースメイガス","ラーミル","人間"
       return true
     else
       return false
@@ -51,7 +51,7 @@ class Game_Battler
   #●スライム属(服が粘液)
   def tribe_slime?
     case $data_SDB[self.class_id].name
-    when "Sliｍe","Gold Sliｍe ","Queen Sliｍe"
+    when "スライム","ゴールドスライム","クイーンスライム"
       return true
     else
       return false
@@ -59,18 +59,18 @@ class Game_Battler
   end
   #●ガーゴイル属(服が鱗)
   def tribe_gargoyle?
-    return true if $data_SDB[self.class_id].name == "Gargoyle"
+    return true if $data_SDB[self.class_id].name == "ガーゴイル"
     return false
   end
   #●ファミリア属(同種に対して口調が変わる)
   def tribe_familiar?
-    return true if $data_SDB[self.class_id].name == "Familiar"
+    return true if $data_SDB[self.class_id].name == "ファミリア"
     return false
   end
   #●子鬼属(コマンダー指揮範囲となる。インプも例外的に含まれる)
   def tribe_gobrin?
     case $data_SDB[self.class_id].name
-    when "Goblin","Goblin Leader ","Iｍp"
+    when "ゴブリン","ギャングコマンダー","インプ"
       return true
     else
       return false
@@ -83,17 +83,17 @@ class Game_Battler
     bust = "胸"
     case $data_SDB[self.class_id].bust_size
     when 0 #ロウ君
-      bust = "chest"
+      bust = "胸板"
     when 1 #Ａ
-      bust = "youthful breasts"
+      bust = "膨らみかけの胸"
     when 2 #Ｂ
-      bust = "shapely breasts"
+      bust = "慎ましい胸"
     when 3 #Ｃ
-      bust = "round breasts"
+      bust = "形の良い胸"
     when 4 #Ｄ
-      bust = "voluptuous breasts"
+      bust = "豊満な胸"
     when 5 #Ｅ以上
-      bust = "incredible breasts"
+      bust = "迫力ある胸"
     end
     return bust
   end

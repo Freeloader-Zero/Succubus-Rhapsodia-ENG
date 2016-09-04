@@ -126,7 +126,7 @@ module SR_Util
     box = []
     for actor in $takeover_actors
       # バグ持ちのデビルの性格を変更
-      if actor.class_name == "Devil " and
+      if actor.class_name == "デビル" and
        not (actor.personality == "勝ち気" or actor.personality == "虚勢")
         actor.personality = "勝ち気"
       end

@@ -233,13 +233,13 @@ class Scene_Battle
     # ƒNƒ‰ƒCƒVƒX•ñƒƒbƒZ[ƒW•\¦
     for actor in $game_party.battle_actors
       if actor.exist? and actor.state?(6)
-        text += $data_states[6].message($data_states[6], "report", actor, nil) + "\\"
+        text += $data_states[6].message($data_states[6], "report", actor, nil) + "\w\q"
         txc += 1
       end
     end
     for enemy in $game_troop.enemies
       if enemy.exist? and enemy.state?(6)
-        text += $data_states[6].message($data_states[6], "report", enemy, nil) + "\\"
+        text += $data_states[6].message($data_states[6], "report", enemy, nil) + "\w\q"
         txc += 1
       end
     end
@@ -257,7 +257,7 @@ class Scene_Battle
       end
       if $game_system.system_read_mode != 0
         text += "CLEAR"
-        text.sub!("\\CLEAR","")
+        text.sub!("\w\qCLEAR","")
       end
       $game_temp.battle_log_text += text if text != ""
     end
@@ -280,7 +280,7 @@ class Scene_Battle
       if actor.exist? and not actor.dead?
 #        actor.remove_states_auto
         ms = actor.bms_states_report
-        text1 = (text1 + ms + "\\") if ms != ""
+        text1 = (text1 + ms + "\w\q") if ms != ""
         txc += 1 if ms != ""
       end
     end
@@ -289,11 +289,11 @@ class Scene_Battle
       if enemy.exist?
 #        enemy.remove_states_auto
         ms = enemy.bms_states_report
-        text2 = (text2 + ms + "\\") if ms != ""
+        text2 = (text2 + ms + "\w\q") if ms != ""
         txc += 1 if ms != ""
       end
     end
-#    text2.sub!("\\\\n\\n\\n\\n","\\n") if text2.include?("\\n\\n\\n\\n\\n")
+#    text2.sub!("\w\q\w\n\w\n\w\n\w\n","\w\n") if text2.include?("\w\n\w\n\w\n\w\n\w\n")
     text = text1 + text2
     if text != ""
 =begin
@@ -312,7 +312,7 @@ class Scene_Battle
 =end
       if $game_system.system_read_mode != 0
         text += "CLEAR"
-        text.sub!("\\CLEAR","")
+        text.sub!("\w\qCLEAR","")
       end
       $game_temp.battle_log_text += text
       #¥ƒVƒXƒeƒ€ƒEƒFƒCƒg
@@ -355,7 +355,7 @@ class Scene_Battle
         
 #        actor.remove_states_auto
         ms = actor.bms_states_update
-        text1 = (text1 + ms + "\\") if ms != ""
+        text1 = (text1 + ms + "\w\q") if ms != ""
         txc += 1 if ms != ""
       end
     end
@@ -366,7 +366,7 @@ class Scene_Battle
         #enemy.persona_break if enemy.state?(106) #”j–Ê•¹”­
 #        enemy.remove_states_auto
         ms = enemy.bms_states_update
-        text2 = (text2 + ms + "\\") if ms != ""
+        text2 = (text2 + ms + "\w\q") if ms != ""
         txc += 1 if ms != ""
       end
     end
@@ -386,7 +386,7 @@ class Scene_Battle
       end
       if $game_system.system_read_mode != 0
         text += "CLEAR"
-        text.sub!("\\CLEAR","")
+        text.sub!("\w\qCLEAR","")
       end
       $game_temp.battle_log_text += text
     end
@@ -491,7 +491,7 @@ class Scene_Battle
         if actor.exist? and not actor.dead?
           actor.remove_states_auto
           ms = actor.bms_states_update
-          text1 = (text1 + ms + "\\") if ms != ""
+          text1 = (text1 + ms + "\w\q") if ms != ""
           txc += 1
         end
       end
@@ -500,7 +500,7 @@ class Scene_Battle
         if enemy.exist?
           enemy.remove_states_auto
           ms = enemy.bms_states_update
-          text2 = (text2 + ms + "\\") if ms != ""
+          text2 = (text2 + ms + "\w\q") if ms != ""
           txc += 1
         end
       end
@@ -521,7 +521,7 @@ class Scene_Battle
         end
         if $game_system.system_read_mode != 0
           text += "CLEAR"
-          text.sub!("\\CLEAR","")
+          text.sub!("\w\qCLEAR","")
         end
         $game_temp.battle_log_text += text
         before_text_flag = true # ƒeƒLƒXƒg—L‚è‚Ìƒtƒ‰ƒO‚ğ—§‚Ä‚é
@@ -556,7 +556,7 @@ class Scene_Battle
             if enemy.ecstasy_turn == 0 and enemy.weaken?
               enemy.remove_state(2) if enemy.states.include?(2) #Šã
               enemy.remove_state(3) if enemy.states.include?(3) #â’¸
-              text += enemy.bms_states_update + "\\"
+              text += enemy.bms_states_update + "\w\q"
               enemy.animation_id = 12
               enemy.animation_hit = true
               txc += 1
@@ -582,7 +582,7 @@ class Scene_Battle
             if actor.ecstasy_turn == 0 and actor.weaken?
               actor.remove_state(2) if actor.states.include?(2) #Šã
               actor.remove_state(3) if actor.states.include?(3) #â’¸
-              text += actor.bms_states_update + "\\"
+              text += actor.bms_states_update + "\w\q"
               actor.animation_id = 12
               actor.animation_hit = true
               txc += 1
@@ -607,10 +607,10 @@ class Scene_Battle
       if text != ""
         if $game_system.system_read_mode != 0
           text += "CLEAR"
-          text.sub!("\\CLEAR","")
+          text.sub!("\w\qCLEAR","")
         end
         # –‘O‚ÉƒeƒLƒXƒg‚ª‚ ‚Á‚½ê‡‚Í‰üs‚ğ‘}‚·
-        text = "\\" + text if before_text_flag 
+        text = "\w\q" + text if before_text_flag 
         $game_temp.battle_log_text += text
         #¥ƒVƒXƒeƒ€ƒEƒFƒCƒg
         case $game_system.ms_skip_mode
@@ -685,7 +685,7 @@ class Scene_Battle
       $msg.tag = ""
       
       # ƒoƒbƒNƒƒO‚É‰üsw’è‚ğ’Ç‰Á
-#      $game_temp.battle_back_log += "\"
+#      $game_temp.battle_back_log += "\q"
 
       # ƒXƒe[ƒ^ƒXƒEƒBƒ“ƒhƒE‚ğƒŠƒtƒŒƒbƒVƒ…
       @status_window.refresh
@@ -882,7 +882,7 @@ class Scene_Battle
             hold_effect(@skill, @active_battler, target)
           # ‚»‚Ì‘¼
           else
-            $game_temp.battle_log_text += "Resist Successful\\" 
+            $game_temp.battle_log_text += "ƒŒƒWƒXƒg‚É¬Œ÷‚µ‚Ü‚µ‚½\w\q" 
           end
         # ¸”s
         else
@@ -892,11 +892,11 @@ class Scene_Battle
           $msg.talk_step = 3
           #ó‚¯“ü‚ê‚½ê‡‚ÍSE‚ğ–Â‚ç‚³‚¸AƒŒƒWƒXƒgƒJƒEƒ“ƒg‚ğã‚°‚È‚¢
           if $game_switches[89]
-            $game_temp.battle_log_text += @active_battler.name + " gave up!\\"
+            $game_temp.battle_log_text += @active_battler.name + "‚Ív‚¢‚Æ‚Ç‚Ü‚Á‚½I\w\q"
           else
           # ”ğ‚¯‚éSE‚ğ–Â‚ç‚µA‘ÎÛ‚ÌƒŒƒWƒXƒgƒJƒEƒ“ƒg‚ğ{‚P‚·‚é
             Audio.se_play("Audio/SE/063-Swing02", 80, 100)
-            $game_temp.battle_log_text += target.name + " resisted it!\\"
+            $game_temp.battle_log_text += target.name + "‚É’ïR‚³‚ê‚½I\w\q"
             target.resist_count += 1
           end
           if @skill.element_set.include?(6)
@@ -925,7 +925,7 @@ class Scene_Battle
           $msg.talk_step = 2
           # ”ğ‚¯‚éSE‚ğ–Â‚ç‚µA‘ÎÛ‚ÌƒŒƒWƒXƒgƒJƒEƒ“ƒg‚ğ{‚P‚·‚é
           Audio.se_play("Audio/SE/063-Swing02", 80, 100)
-          $game_temp.battle_log_text += target.name + " resisted it!\\"
+          $game_temp.battle_log_text += target.name + "‚Í’ïR‚µ‚½I\w\q"
           target.resist_count += 1
           if @skill.element_set.include?(6)
             @hold_shake = false
@@ -965,7 +965,7 @@ class Scene_Battle
             hold_effect(@skill, @active_battler, target)
           # ‚»‚Ì‘¼
           else
-            $game_temp.battle_log_text += "Failed to resist.\\" 
+            $game_temp.battle_log_text += "ƒŒƒWƒXƒg‚É¸”s‚µ‚Ü‚µ‚½\w\q" 
           end
         end
       end
@@ -1082,11 +1082,11 @@ class Scene_Battle
             #¤ƒXƒLƒ‹ƒeƒLƒXƒg‚ª‚ ‚é‚È‚ç‘}“ü
             text1 += skill_result if skill_result != ""
             #¤‘ÎÛ‚ÌƒXƒe[ƒgƒeƒLƒXƒg‚ª‚ ‚é‚È‚ç‘}“ü
-            text1 += "\\" + state_result if state_result != ""
+            text1 += "\w\q" + state_result if state_result != ""
             #¤©g‚ÌƒXƒe[ƒgƒeƒLƒXƒg‚ª‚ ‚é‚È‚ç‘}“ü
-            text1 += "\\" + state_result2 if state_result2 != ""
+            text1 += "\w\q" + state_result2 if state_result2 != ""
             #¤ƒeƒLƒXƒg‚ª‘¶İ‚·‚é‚È‚çAÅŒã‚É‰üs‚ğ‘}“ü
-            text1 += "\\" if text1 != ""
+            text1 += "\w\q" if text1 != ""
             #------------------------------------------------------
             # œ‘¡‚è•¨ƒAƒCƒeƒ€‚Ìê‡A—FD“x‚É‰‚¶‚ÄƒAƒjƒ[ƒVƒ‡ƒ“‚ğw¦
             #------------------------------------------------------
@@ -1106,12 +1106,12 @@ class Scene_Battle
               # ÀÛ‚ÉEP‚ğŒ¸Z
               @active_battler.hp -= rebound
               # ƒoƒgƒ‹ƒƒO‚ğ•\¦(ƒŠƒoƒEƒ“ƒh‚ª”­¶‚µ‚È‚¢ê‡‚Í•\¦‚µ‚È‚¢j
-              text3 += "\" + @active_battler.name + " took " + rebound.to_s + " rebound pleasure!\" if rebound > 0
+              text3 += "\w" + @active_battler.name + "‚Í " + rebound.to_s + " ‚Ì‰õŠ´‚ğó‚¯‚½I\q" if rebound > 0
               if @active_battler.hp > 0 and not @active_battler.state?(6)
                 if @active_battler.hpp <= $mood.crisis_point(@active_battler) + rand(5)
                   @active_rebound_flag = true
                   @active_battler.add_state(6)
-                  text3 += @active_battler.bms_states_update + "\\"
+                  text3 += @active_battler.bms_states_update + "\w\q"
                 end
               end
               # ‰æ‘œ•ÏX
@@ -1126,7 +1126,7 @@ class Scene_Battle
               if vp_drain > 0
                 target.sp -= vp_drain
                 @active_battler.sp += vp_drain
-                text3 += "\" + @active_battler.name + " had " + vp_drain.to_s + " energy absorbed!\\"
+                text3 += "\w" + @active_battler.name + "‚Í¸‹C‚ğ " + vp_drain.to_s + " ‹zû‚µ‚½I\w\q"
                 if target.sp <= 0
                   target.sp_down_flag = true
                 end
@@ -1141,7 +1141,7 @@ class Scene_Battle
             if @command.element_set.include?(202)
               if target.level > 1
                 target.level -= 1
-                text3 += "\" + "#{target.name} became Lv.#{target.level.to_s}!"
+                text3 += "\w" + "#{target.name}‚ÍLv.#{target.level.to_s}‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½I"
                 # g—pÒ‚ÉƒXƒgƒŒƒŠƒuƒ‹ƒ€‚Ì‹­‰»€–Ú‚ğ’Ê‚·
                 level_drain_text = ""
 #                @active_battler.capacity_alteration_effect($data_skills[195])
@@ -1150,7 +1150,7 @@ class Scene_Battle
 #               
                 # ƒeƒLƒXƒg‚ª‚ ‚é‚È‚ç‚»‚±‚ğ’Ê‚·
 #                if level_drain_text != "" and level_drain_text != "‚µ‚©‚µ#{@active_battler.name}‚É‚ÍŒø‰Ê‚ª–³‚©‚Á‚½I"
-                  text3 += level_drain_text + "\\"
+                  text3 += level_drain_text + "\w\q"
 #                end
                 # ‹zû‚µ‚½‚È‚çƒAƒjƒ‚ğ•t‚¯‚é
                 @active_battler.animation_id = 168
@@ -1162,13 +1162,13 @@ class Scene_Battle
             #------------------------------------------------------
             if $game_switches[82] == true
               brk = ""
-              brk = "A\n\" if SR_Util.names_over?(@active_battler.name,$game_temp.battle_target_battler[0].name)
+              brk = "A\n\m" if SR_Util.names_over?(@active_battler.name,$game_temp.battle_target_battler[0].name)
               #ƒeƒB[ƒY‚Ìê‡AƒXƒCƒbƒ`‚ğ‘¦‰ğœ‚·‚é
               if @active_battler.is_a?(Game_Actor) and @command.id == 101
-                text3 += "\" + @active_battler.name + "‚Í#{brk}#{$game_temp.battle_target_battler[0].name}‚ğÅ‚ç‚µ‚Ä‚¢‚éI\\"
+                text3 += "\w" + @active_battler.name + "‚Í#{brk}#{$game_temp.battle_target_battler[0].name}‚ğÅ‚ç‚µ‚Ä‚¢‚éI\w\q"
               #–²–‚‚©‚ç‚ÌÅ‚ç‚µUŒ‚‚ğH‚ç‚Á‚½ê‡AƒXƒCƒbƒ`‚ğ‘¦‰ğœ‚·‚é
               elsif @active_battler.is_a?(Game_Enemy)
-                text3 += "\" + @active_battler.name + "‚Í#{brk}#{$game_temp.battle_target_battler[0].name}‚ğÅ‚ç‚µ‚Ä‚¢‚éI\\"
+                text3 += "\w" + @active_battler.name + "‚Í#{brk}#{$game_temp.battle_target_battler[0].name}‚ğÅ‚ç‚µ‚Ä‚¢‚éI\w\q"
               end
               $game_switches[82] = false
             end
@@ -1177,11 +1177,11 @@ class Scene_Battle
             #------------------------------------------------------
             if @active_battler.is_a?(Game_Actor) and @active_battler.have_ability?("“´@—Í")
               brk = ""
-              brk = "A\n\" if SR_Util.names_over?(@active_battler.name, $game_temp.battle_target_battler[0].name, 16)
+              brk = "A\n\m" if SR_Util.names_over?(@active_battler.name, $game_temp.battle_target_battler[0].name, 16)
               # ‘ÎÛ‚ª“G‚ÅAƒ`ƒFƒbƒNƒtƒ‰ƒO‚ª‚P–¢–‚ÌA‚P‚É‚µ‚ÄƒiƒŒ[ƒg‚ğo‚·
               if target.is_a?(Game_Enemy) and target.checking < 1
                 target.checking = 1
-                text3 += "\" + @active_battler.name + " examined #{brk}#{$game_temp.battle_target_battler[0].name}!\\"
+                text3 += "\w" + @active_battler.name + "‚Í#{brk}#{$game_temp.battle_target_battler[0].name}‚Ì–‚ğ’²‚×ã‚°‚½I\w\q"
               end
             end
             #------------------------------------------------------
@@ -1203,11 +1203,11 @@ class Scene_Battle
             #‘ÎÛ‚ÌƒXƒe[ƒg‚©‚çƒXƒe[ƒgƒŠƒUƒ‹ƒg‚ğŒÄ‚Ño‚·
             state_result = target.bms_states_update
             if state_result != "" #•t—^ƒXƒe[ƒg‚ª‚ ‚éê‡
-              text1 += state_result + "\\"
+              text1 += state_result + "\w\q"
             elsif state_result == "" #•t—^ƒXƒe[ƒg‚ª–³‚¢ê‡
               text1 += ""
             else
-              text1 += state_result + "\\"
+              text1 += state_result + "\w\q"
             end
             # ‹­‰»E’á‰º–‚–@ŠÖ˜Aˆ—
             for i in 80..87
@@ -1231,21 +1231,21 @@ class Scene_Battle
             bs = 0
             for i in SR_Util.checking_states
               if $data_skills[@skill.id].plus_state_set.include?(i) and target.states.include?(i)
-                text1 += "‚go‚—ever " + target.name + " cannot be effected ‚ore than this!\\"
+                text1 += "‚µ‚©‚µ" + target.name + "‚É‚Í‚±‚êˆÈãŒø‰Ê‚ª–³‚¢I\w\q"
                 bs = 1
                 break
               end
             end
             if bs == 0
               skill_result = target.bms_skill_effect(@skill)
-              text1 += skill_result + "\\"
+              text1 += skill_result + "\w\q"
             end
           #************************************************************************
           # ¥u‘¡‚è•¨ƒAƒCƒeƒ€v‚Ìê‡A‘¡‚è•¨ƒAƒCƒeƒ€‚Ì¸”s‚ğ•\¦
           #************************************************************************
           elsif target.is_a?(Game_Enemy) and @command.element_set.include?(199) and
             skill_result = target.bms_item_effect(@item)
-            text1 += skill_result + "\\"
+            text1 += skill_result + "\w\q"
           #************************************************************************
           # ¥uƒ_ƒ[ƒW–³‚µƒXƒLƒ‹v‚Å‚Í‚È‚¢ê‡
           #************************************************************************
@@ -1253,7 +1253,7 @@ class Scene_Battle
 #          else
 #            # ƒ~ƒX‚µ‚½ê‡‚Í”ğ‚¯‚éSE‚ğ–Â‚ç‚·
 #            Audio.se_play("Audio/SE/063-Swing02", 80, 100)
-            $game_temp.battle_log_text += "\" + target.name + " was not effected!\"
+            $game_temp.battle_log_text += "\w" + target.name + "‚ÉŒø‰Ê‚Í‚È‚©‚Á‚½I\q"
           end
         end
         #======================================================================================
@@ -1274,7 +1274,7 @@ class Scene_Battle
             $msg.callsign = 17 if $game_switches[85] == true
             target.undress
             #‘ÎÛ‚ÌƒXƒe[ƒgó‹µ‚ğƒeƒLƒXƒg‚ÉŠi”[
-            text1 += target.bms_states_update + "\\"
+            text1 += target.bms_states_update + "\w\q"
           #œƒAƒNƒ^[‘¤‚Ì‹““®
           else
             #ålŒö
@@ -1303,7 +1303,7 @@ class Scene_Battle
             target.animation_id = 104
             target.animation_hit = true
             target.undress
-            text1 += target.bms_states_update + "\\"
+            text1 += target.bms_states_update + "\w\q"
           end
         end
         #************************************************************************
@@ -1319,14 +1319,14 @@ class Scene_Battle
           target.animation_id = 90
           target.animation_hit = true
           @active_battler.undress
-          text1 += @active_battler.bms_states_update + "\\"
+          text1 += @active_battler.bms_states_update + "\w\q"
           @active_battler.graphic_change = true
         end
         #************************************************************************
         # ¥ƒCƒjƒVƒAƒ`ƒu•ÏXŒn
         #************************************************************************
         if @command.element_set.include?(207)
-          text1 += "#{@active_battler.name}‚Íå“±Œ ‚ğæ‚è–ß‚µ‚½I\\"
+          text1 += "#{@active_battler.name}‚Íå“±Œ ‚ğæ‚è–ß‚µ‚½I\w\q"
         end
         #************************************************************************
         # ¥ƒCƒ“ƒZƒ“ƒX‘S‚Äíœ
@@ -1334,9 +1334,9 @@ class Scene_Battle
         if @command.element_set.include?(213)
           delete_flag = $incense.delete_incense_all
           if delete_flag
-            text1 += "ê‚ÉŠ|‚©‚Á‚Ä‚¢‚éŒø‰Ê‚ª‚·‚×‚Ä–³‚­‚È‚Á‚½I\\"
+            text1 += "ê‚ÉŠ|‚©‚Á‚Ä‚¢‚éŒø‰Ê‚ª‚·‚×‚Ä–³‚­‚È‚Á‚½I\w\q"
           else
-            text1 += "‚µ‚©‚µŒø‰Ê‚Í–³‚©‚Á‚½I\\"
+            text1 += "‚µ‚©‚µŒø‰Ê‚Í–³‚©‚Á‚½I\w\q"
           end
         end
         #************************************************************************
@@ -1365,7 +1365,7 @@ class Scene_Battle
           target.used_sadism = 0
           battler_stan(target)
           enemies_display(target)
-          text1 += "#{target.name}‚ªŒ»‚ê‚½I\\"
+          text1 += "#{target.name}‚ªŒ»‚ê‚½I\w\q"
         end
         
      #elsif target.damage == nil ƒ_ƒ[ƒW‚ª–³‚¢ê‡‚Ìˆ—‚ÍŒ»ó‚Å‚Í“Á‚É–³‚¢‚½‚ß••ˆó
@@ -1401,10 +1401,10 @@ class Scene_Battle
     if @command.name == "ƒAƒ“ƒ‰ƒbƒL[ƒƒA"
       # •sK‚Å‚È‚¢ê‡A•sKó‘Ô‚É‚·‚éB
       unless $game_party.unlucky?
-        text1 += "#{$game_actors[101].name}‚Í•sK‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½I\\"
+        text1 += "#{$game_actors[101].name}‚Í•sK‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½I\w\q"
         $game_variables[61] = 50 
       else
-        text1 += "‚µ‚©‚µŒø‰Ê‚Í–³‚©‚Á‚½I\\"
+        text1 += "‚µ‚©‚µŒø‰Ê‚Í–³‚©‚Á‚½I\w\q"
       end
     end
     #************************************************************************
@@ -1416,7 +1416,7 @@ class Scene_Battle
         # ”­¶ˆ—
         text1 = incense_start_effect
       else
-        text1 = "‚µ‚©‚µŒø‰Ê‚Í–³‚©‚Á‚½I\\"
+        text1 = "‚µ‚©‚µŒø‰Ê‚Í–³‚©‚Á‚½I\w\q"
       end
     end
     #–{”\‚ÌŒÄ‚ÑŠo‚Ü‚µ‚Å©ŒÈ–\‘–‚µ‚½ê‡A‚»‚Ìƒ^[ƒ“‚Ì’Ç‰ÁƒAƒNƒVƒ‡ƒ“‚ğƒLƒƒƒ“ƒZƒ‹‚·‚é
@@ -1440,14 +1440,14 @@ class Scene_Battle
       a = text1 + text2 + text3
       if $game_system.system_read_mode != 0
         a += "CLEAR"
-        a.sub!("\\CLEAR","")
+        a.sub!("\w\qCLEAR","")
         a.sub!("CLEAR","") if a[/(CLEAR)/] != nil
       end
       $game_temp.battle_log_text += a
     else
       # ƒ}ƒjƒ…ƒAƒ‹‘€ì‚Ìê‡AŒø‰Ê‚ª‚È‚¢ê‡‚Å‚àƒ|[ƒY‚ğ•t‚¯‚é
 #      if $game_system.system_read_mode == 0
-#        $game_temp.battle_log_text += "@\\"
+#        $game_temp.battle_log_text += "@\w\q"
 #      end
     end
     
@@ -1932,7 +1932,7 @@ class Scene_Battle
     #--------------------------------------------------------------------------------------
     # ©”šˆÈŠO‚ÅSPƒ_ƒEƒ“ƒtƒ‰ƒO‚ğ—^‚¦‚éê‡‚Ìˆ—
     if @ecstasy_battlers_count[0].is_a?(Game_Enemy) and @ecstasy_battlers_count[0].sp_down_flag == true
-      $game_temp.battle_log_text = "#{@ecstasy_battlers_count[0].name} has reached cli‚ax!"
+      $game_temp.battle_log_text = "#{@ecstasy_battlers_count[0].name}‚ğâ’¸‚³‚¹‚½I"
       # â’¸‚³‚¹‚½ƒLƒƒƒ‰‚ªy‹z¸z‚¿‚Ìê‡A‹z¸ƒƒ\ƒbƒh‚ğ’Ê‚·
       if @active_battler.have_ability?("‹z¸")
         SR_Util.energy_drain(@active_battler,@ecstasy_battlers_count[0]) 
@@ -2229,7 +2229,7 @@ class Scene_Battle
           end
           $game_party.battle_actor_refresh
           # ƒoƒgƒ‹ƒƒO‚ğ•\¦
-          $game_temp.battle_log_text += b_actor.name + " has entered battle!\\"
+          $game_temp.battle_log_text += b_actor.name + "‚ªí“¬‚É“ü‚Á‚½I\w\q"
           # ƒXƒe[ƒ^ƒX‰æ–Ê‚ğƒŠƒtƒŒƒbƒVƒ…
           @status_window.refresh
           #œƒoƒgƒ‹ƒg[ƒNŠÖ˜A‚ğƒŠƒZƒbƒg

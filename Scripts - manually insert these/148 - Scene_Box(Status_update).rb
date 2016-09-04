@@ -112,7 +112,7 @@ class Scene_Box
       @center_window.refresh
       @center_window.index = -1
       @center_window1.visible = true
-      @overF_text = "T r a i t s"
+      @overF_text = "A b i l i t y"
       status_refresh
       @status_command = 2
       return
@@ -129,7 +129,7 @@ class Scene_Box
       @center_window.index = -1
       @center_window.active = false
       @center_window1.visible = true
-      @overF_text = "S k i l l s"
+      @overF_text = "S k i l l"
       status_refresh
       @status_command = 1
       return
@@ -230,7 +230,7 @@ class Scene_Box
       @center_window.refresh
       @center_window.index = -1
       @center_window.active = false
-      @overF_text = "T r a i t s"
+      @overF_text = "A b i l i t y"
       status_refresh
       @status_command = 2
       return
@@ -315,7 +315,7 @@ class Scene_Box
       @center_window.refresh
       @center_window.index = -1
       @center_window.active = false
-      @overF_text = "S k i l l s"
+      @overF_text = "S k i l l"
       status_refresh
       @status_command = 1
       return
@@ -388,13 +388,13 @@ class Scene_Box
     @overF[1].bitmap.draw_text(375, 0, 200, 32, @overF_text, 1)
     case @overF_text
     when "S t a t u s"
-      text = "ENTER: Examine Equipment/Runes　←→：Cycle Party Member　↑↓：Change Window"
-    when "T r a i t s"
-      text = "ENTER: Examine Traits　←→：Cycle Party Member　↑↓：Change Window"
-    when "S k i l l s"
-      text = "ENTER: Examine Skills　←→：Cycle Party Member　↑↓：Change Window"
+      text = "決定：装備変更・ルーン刻印　←→：表示メンバー変更　↑↓：ウィンドウ変更"
+    when "A b i l i t y"
+      text = "決定：素質確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
+    when "S k i l l"
+      text = "決定：スキル確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
     when "E q u i p"
-      text = "決定：スキル確認　←→：表示メンバー変更" #unused?
+      text = "決定：スキル確認　←→：表示メンバー変更"
     end
     @help_window.set_text(text, 1)
   end

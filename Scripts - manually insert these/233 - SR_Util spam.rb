@@ -101,7 +101,7 @@ module SR_Util
               enemy.add_state(10)
               enemy.lub_female += 60
               $game_temp.sperm_battler = enemy
-#              $game_temp.battle_log_text += "\065\n" + enemy.bms_states_update
+#              $game_temp.battle_log_text += "\w\n" + enemy.bms_states_update
               # コモンイベントによる精液箇所の判断（０はぶっかけ）
               $game_variables[4] = 1
               $game_temp.sperm_battler.sperm(n) if $game_system.system_sperm
@@ -109,7 +109,7 @@ module SR_Util
               $game_temp.sperm_battler.white_flash = true
               #ステートテキストを挿入
               brk = ""
-              brk = "、\n\066" if SR_Util.names_over?(enemy.name,$msg.t_target.name)
+              brk = "、\n\m" if SR_Util.names_over?(enemy.name,$msg.t_target.name)
               if enemy == $msg.t_enemy
                 if enemy.positive?
                   emotion = "アソコで絞り取った！"
@@ -120,10 +120,10 @@ module SR_Util
                 end
                 text = "#{enemy.name}は#{brk}#{$msg.t_target.name}の精を#{emotion}"
               else
-                text = "#{$msg.t_target.name}は堪えきれず、\066\n#{enemy.name}の中に精を吐き出してしまった！"
+                text = "#{$msg.t_target.name}は堪えきれず、\m\n#{enemy.name}の中に精を吐き出してしまった！"
               end
-              $game_temp.battle_log_text += text + "\n\066"
-#              $game_temp.battle_log_text += "\065\n" + enemy.bms_states_update + "\n"
+              $game_temp.battle_log_text += text + "\n\m"
+#              $game_temp.battle_log_text += "\w\n" + enemy.bms_states_update + "\n"
               # 画像変更
               $game_temp.sperm_battler.graphic_change = true
               # この夢魔を表示にする
@@ -148,7 +148,7 @@ module SR_Util
                 $game_temp.sperm_battler.white_flash = true
                 #ステートテキストを挿入
                 brk = ""
-                brk = "、\n\066" if SR_Util.names_over?(enemy.name,$msg.t_target.name)
+                brk = "、\n\m" if SR_Util.names_over?(enemy.name,$msg.t_target.name)
                 if enemy.mouth_oralsex?
                   if enemy == $msg.t_enemy
                     if enemy.positive?
@@ -160,19 +160,19 @@ module SR_Util
                     end
                     text = "#{enemy.name}は#{brk}#{$msg.t_target.name}の精を#{emotion}"
                   else
-                    text = "#{$msg.t_target.name}は堪えきれず、\066\n#{enemy.name}の口内に精を吐き出してしまった！"
+                    text = "#{$msg.t_target.name}は堪えきれず、\m\n#{enemy.name}の口内に精を吐き出してしまった！"
                   end
                 elsif enemy.tops_paizuri?
                   #夢魔の胸サイズ診断
                   brk2 = ""
-                  brk2 = "、\n\066" if (enemy.name.size + enemy.bustsize.size) > 33
+                  brk2 = "、\n\m" if (enemy.name.size + enemy.bustsize.size) > 33
                   if enemy == $msg.t_enemy
                     text = "#{enemy.name}は\n#{$msg.t_target.name}の精を#{enemy.bustsize}で受け止めた！"
                   else
-                    text = "#{$msg.t_target.name}は堪えきれず、\066\n#{enemy.name}の#{enemy.bustsize}に#{brk2}精を吐き出してしまった！"
+                    text = "#{$msg.t_target.name}は堪えきれず、\m\n#{enemy.name}の#{enemy.bustsize}に#{brk2}精を吐き出してしまった！"
                   end
                 end
-                $game_temp.battle_log_text += text + "\n\066"
+                $game_temp.battle_log_text += text + "\n\m"
                 # 画像変更
                 $game_temp.sperm_battler.graphic_change = true
                 # この夢魔を表示にする
@@ -190,9 +190,9 @@ module SR_Util
             $game_temp.sperm_battler.white_flash = true
             #ステートテキストを挿入
             brk = ""
-            brk = "、\n\066" if SR_Util.names_over?($msg.t_enemy.name,$msg.t_target.name)
-            text = "#{$msg.t_target.name}は堪えきれず、\066\n#{$msg.t_enemy.name}に精を吐き出してしまった！"
-            $game_temp.battle_log_text += text + "\n\066"
+            brk = "、\n\m" if SR_Util.names_over?($msg.t_enemy.name,$msg.t_target.name)
+            text = "#{$msg.t_target.name}は堪えきれず、\m\n#{$msg.t_enemy.name}に精を吐き出してしまった！"
+            $game_temp.battle_log_text += text + "\n\m"
             # 画像変更
             $game_temp.sperm_battler.graphic_change = true
             # この夢魔を表示にする

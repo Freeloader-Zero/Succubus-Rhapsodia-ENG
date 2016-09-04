@@ -56,8 +56,8 @@ class Scene_Battle
           target.hp += heal
           target.animation_id = 70
           target.animation_hit = true
-          text += "#{supporter}‚ÍƒCƒŠƒXƒyƒ^ƒ‹‚ğ‰r¥‚µ‚½I" + "\\"
-          text += "#{target.name}‚Ì‚d‚o‚ª #{heal.to_s} ‰ñ•œ‚µ‚½I" + "\\"
+          text += "#{supporter}‚ÍƒCƒŠƒXƒyƒ^ƒ‹‚ğ‰r¥‚µ‚½I" + "\w\q"
+          text += "#{target.name}‚Ì‚d‚o‚ª #{heal.to_s} ‰ñ•œ‚µ‚½I" + "\w\q"
           if target.hpp >= $mood.crisis_point(target) + rand(5)
             target.remove_state(6)
             target.crisis_flag = false
@@ -77,7 +77,7 @@ class Scene_Battle
           end
           target.animation_id = 73
           target.animation_hit = true
-          text += "#{supporter}‚ÍƒgƒŠƒ€ƒI[ƒ‹‚ğ‰r¥‚µ‚½I" + "\\"
+          text += "#{supporter}‚ÍƒgƒŠƒ€ƒI[ƒ‹‚ğ‰r¥‚µ‚½I" + "\w\q"
           for i in 34..40
             target.remove_state(i)
           end
@@ -104,13 +104,13 @@ class Scene_Battle
         # ƒsƒ“ƒ`‚ª–³‚¢ê‡‚Í©ŒR‘S‘Ì‚ğ100’ö“x¬‰ñ•œ
         #--------------------------------------------------------------------------
         else
-          text += "#{supporter}‚ÍƒCƒŠƒXƒV[ƒhEƒAƒ‹ƒ_‚ğ‰r¥‚µ‚½I" + "\\"
+          text += "#{supporter}‚ÍƒCƒŠƒXƒV[ƒhEƒAƒ‹ƒ_‚ğ‰r¥‚µ‚½I" + "\w\q"
           for actor_one in $game_party.battle_actors
             heal = 150 + rand(10) - rand(10)
             actor_one.hp += heal
             actor_one.animation_id = 69
             actor_one.animation_hit = true
-            text += "#{actor_one.name}‚Ì‚d‚o‚ª #{heal.to_s} ‰ñ•œ‚µ‚½I" + "\\"
+            text += "#{actor_one.name}‚Ì‚d‚o‚ª #{heal.to_s} ‰ñ•œ‚µ‚½I" + "\w\q"
             if actor_one.hpp >= $mood.crisis_point(actor_one) + rand(5)
               actor_one.remove_state(6)
               actor_one.crisis_flag = false
@@ -151,7 +151,7 @@ class Scene_Battle
       battler_one.capacity_alteration_effect($data_skills[i]) 
       m = "#{battler_one.bms_states_update}"
       if m != "‚µ‚©‚µ#{battler_one.name}‚É‚ÍŒø‰Ê‚ª–³‚©‚Á‚½I"
-        text += "\\" + m
+        text += "\w\q" + m
       end
     end
     return text
@@ -192,7 +192,7 @@ class Scene_Battle
       for target_one in @target_battlers
         heal_one = target_one.maxhp / 16
         target_one.hp += heal_one
-        text += "#{target_one.name}‚Ì‚d‚o‚ª #{heal_one.to_s} ‰ñ•œ‚µ‚½I" + "\\"
+        text += "#{target_one.name}‚Ì‚d‚o‚ª #{heal_one.to_s} ‰ñ•œ‚µ‚½I" + "\w\q"
         if target_one.hpp >= $mood.crisis_point(target_one) + rand(5)
           target_one.remove_state(6)
           target_one.crisis_flag = false
@@ -204,7 +204,7 @@ class Scene_Battle
     when "ƒ‰ƒuƒtƒŒƒOƒ‰ƒ“ƒX"
       $mood.rise(4)
     end
-    text = "\\" + text if text != ""
+    text = "\w\q" + text if text != ""
     return text
   end  
   #--------------------------------------------------------------------------
@@ -260,7 +260,7 @@ class Scene_Battle
           # y‚—gz‚ğ‚¿Ay’¾’…z‚ª–³‚¢ê‡‚Íy‚—gzˆ—
           if battler.have_ability?("‚—g") \
            and not battler.have_ability?("’¾’…")
-            text += "\\" if $game_temp.battle_log_text != ""
+            text += "\w\q" if $game_temp.battle_log_text != ""
             text += "#{battler.name}‚Í‹»•±‚µ‚Ä‚¢‚éI"
             $game_temp.battle_log_text += text
             battler.animation_id = 123
@@ -273,7 +273,7 @@ class Scene_Battle
           # y’¾’…z‚ğ‚¿Ay‚—gz‚ª–³‚¢ê‡‚Íy’¾’…zˆ—
           if battler.have_ability?("’¾’…") \
            and not battler.have_ability?("‚—g")
-            text += "\\" if $game_temp.battle_log_text != ""
+            text += "\w\q" if $game_temp.battle_log_text != ""
             text += "#{battler.name}‚Í—‚¿’…‚¢‚Ä‚¢‚éI"
             $game_temp.battle_log_text += text
             battler.animation_id = 124
@@ -336,7 +336,7 @@ class Scene_Battle
               battler.sp -= 100
               battler.animation_id = 190
               battler.animation_hit = true
-              text += "\\" if $game_temp.battle_log_text != ""
+              text += "\w\q" if $game_temp.battle_log_text != ""
               text += "#{battler.name}‚Í‘Šè‚ğ‹°•|‚É‹ì‚è—§‚Ä‚½I"
               if battler.is_a?(Game_Actor)
                 for enemy in $game_troop.enemies
@@ -345,7 +345,7 @@ class Scene_Battle
                     if enemy.add_states_log.include?($data_states[38])
                       enemy.animation_id = 80
                       enemy.animation_hit = true
-                      text += "\\" + enemy.bms_states_update(battler)
+                      text += "\w\q" + enemy.bms_states_update(battler)
                     end
                   end
                 end
@@ -374,7 +374,7 @@ class Scene_Battle
               battler.sp -= 100
               battler.animation_id = 190
               battler.animation_hit = true
-              text += "\\" if $game_temp.battle_log_text != ""
+              text += "\w\q" if $game_temp.battle_log_text != ""
               text += "#{battler.name}‚Í‘Šè‚ğ‹°•|‚É‹ì‚è—§‚Ä‚½I"
               if battler.is_a?(Game_Enemy)
                 for actor in $game_party.battle_actors
@@ -383,7 +383,7 @@ class Scene_Battle
                     if actor.add_states_log.include?($data_states[38])
                       actor.animation_id = 80
                       actor.animation_hit = true
-                      text += "\\" + actor.bms_states_update(battler)
+                      text += "\w\q" + actor.bms_states_update(battler)
                     end
                   end
                 end
@@ -429,7 +429,7 @@ class Scene_Battle
         for battler in @effect_order_battlers
           text = ""
           if $incense.exist?("ƒŒƒbƒhƒJ[ƒyƒbƒg", battler)
-            text += "\\" if $game_temp.battle_log_text != ""
+            text += "\w\q" if $game_temp.battle_log_text != ""
             text += "#{battler.name}‚ÍŒ€“I‚È“üê‚ğ‰Ê‚½‚µ‚½I"
             battler.animation_id = 55
             battler.animation_hit = true
@@ -494,7 +494,7 @@ class Scene_Battle
             end
             # ƒtƒ‰ƒO‚ª—§‚Á‚Ä‚¢‚ê‚Îˆ—‚ğs‚¤
             if go_flag
-              text += "\\" if $game_temp.battle_log_text != ""
+              text += "\w\q" if $game_temp.battle_log_text != ""
               text += "#{battler.name}‚Í–¡•û‚Ìâ’¸‚ğŒ©‚ÄV‚Á‚½I"
               # ‚±‚Ìƒoƒgƒ‰[‚Ì–£—Í‚Æ¸—Í‚ğ‚P’iŠKã‚°‚é
               # ƒ‰ƒiƒ“ƒuƒ‹ƒ€AƒGƒ‹ƒ_ƒuƒ‹ƒ€‚Ì‹­‰»€–Ú‚ğ’Ê‚·
@@ -551,7 +551,7 @@ class Scene_Battle
             end
             # ƒtƒ‰ƒO‚ª—§‚Á‚Ä‚¢‚ê‚Îˆ—‚ğs‚¤
             if go_flag
-              text += "\\" if $game_temp.battle_log_text != ""
+              text += "\w\q" if $game_temp.battle_log_text != ""
               text += "#{battler.name}‚Í•s—˜‚Èó‹µ‚É‘ÎRS‚ğ”R‚â‚µ‚½I"
               # ‚±‚Ìƒoƒgƒ‰[‚Ì¸—Í‚Æ‘f‘‚³‚ğ‚P’iŠKã‚°‚é
               # ƒGƒ‹ƒ_ƒuƒ‹ƒ€AƒRƒŠƒIƒuƒ‹ƒ€‚Ì‹­‰»€–Ú‚ğ’Ê‚·
@@ -597,7 +597,7 @@ class Scene_Battle
             go_flag = false if army_count <= 1
             # ƒtƒ‰ƒO‚ª—§‚Á‚Ä‚¢‚ê‚Îˆ—‚ğs‚¤
             if go_flag
-              text += "\\" if $game_temp.battle_log_text != ""
+              text += "\w\q" if $game_temp.battle_log_text != ""
               text += "#{battler.name}‚Ìâ’¸‚ª‘¼‚Ì–¡•û‚ğhŒƒ‚·‚éI"
               # Œø‰Ê‘ÎÛ‚ğ“ü‚ê‚é”z—ñ‚ğì¬
               effect_battlers = []
@@ -619,9 +619,9 @@ class Scene_Battle
                 if effected_one.add_states_log.include?($data_states[36])
                   effected_one.animation_id = 123
                   effected_one.animation_hit = true
-                  text += "\\" + effected_one.bms_states_update
+                  text += "\w\q" + effected_one.bms_states_update
                 else
-                  text += "\\" + "#{effected_one.name}‚É‚ÍŒø‰Ê‚ª‚È‚©‚Á‚½I"
+                  text += "\w\q" + "#{effected_one.name}‚É‚ÍŒø‰Ê‚ª‚È‚©‚Á‚½I"
                 end
               end
               $game_temp.battle_log_text += text
@@ -651,7 +651,7 @@ class Scene_Battle
     # ƒeƒLƒXƒg‚ª‚ ‚éê‡AƒEƒFƒCƒg‚ğì‚èƒƒ\ƒbƒh‚ğI—¹‚³‚¹‚éB
     if $game_temp.battle_log_text != ""
       @status_window.refresh
-      $game_temp.battle_log_text += "\\" if $game_system.system_read_mode == 0
+      $game_temp.battle_log_text += "\w\q" if $game_system.system_read_mode == 0
       #¥ƒVƒXƒeƒ€ƒEƒFƒCƒg
       @wait_count = system_wait_make($game_temp.battle_log_text)
       return_flag = true

@@ -33,7 +33,7 @@ class Scene_Box
       @window[1].visible = true
       @center_window.index = -2
       @center_window.help_window = nil
-      text = "ENTER: Equipment/Runes　←→：Party member　↑↓：Next window"
+      text = "決定：装備変更・ルーン刻印　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       @center_window.refresh
       @overF_text = "S t a t u s"
@@ -144,12 +144,12 @@ class Scene_Box
 
       if @center_window.index != 0
         if item != nil
-          text = "Once the rune is branded on, you won't be able to reuse it.\n Continue?"
-          text += "\nNevermind\nBrand Rune"
+          text = "ルーンは一度刻印してしまうと再利用する事ができません。\n刻印しますか？"
+          text += "\nやめる\n刻印する"
           $game_temp.choice_start = 2
         else
-          text = "Stop branding?"
-          text += "\nNo\nStop"
+          text = "刻印しているルーンを破棄してしまいますか？"
+          text += "\nやめる\n破棄する"
           $game_temp.choice_start = 1
         end
         # 決定 SE を演奏

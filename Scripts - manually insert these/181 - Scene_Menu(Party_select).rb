@@ -63,7 +63,7 @@ class Scene_Menu
       @window[0].y = 40
       @help_window.visible = true
       @help_window.window.visible = true
-      text = "ENTER: Examine Equipment/Runes　←→：Party member　↑↓：Next window"
+      text = "決定：装備変更・ルーン刻印　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       n = 340
       @help_window.y = n
@@ -168,7 +168,7 @@ class Scene_Menu
         # 決定 SE を演奏
         $game_system.se_play($data_system.decision_se)
         if $game_actors[101].sp <= $game_party.party_actors[@select_index].absorb
-          $game_temp.message_text = $game_actors[101].name + "'s VP is insufficient!"
+          $game_temp.message_text = $game_actors[101].name + "のVPが不足しています！"
         else
           @menu_party_command_window[1].visible = false
           @select.visible = false
@@ -214,7 +214,7 @@ class Scene_Menu
           @window[0].y = 40
           @help_window.visible = true
           @help_window.window.visible = true
-          text = "ENTER: Examine Equipment/Runes　←→：Party member　↑↓：Next window"
+          text = "決定：装備変更・ルーン刻印　←→：表示メンバー変更　↑↓：ウィンドウ変更"
           @help_window.set_text(text, 1)
           n = 340
           @help_window.y = n
@@ -262,7 +262,7 @@ class Scene_Menu
           @window[0].y = 40
           @help_window.visible = true
           @help_window.window.visible = true
-          text = "ENTER: Examine Equipment/Runes　←→：Party member　↑↓：Next window"
+          text = "決定：装備変更・ルーン刻印　←→：表示メンバー変更　↑↓：ウィンドウ変更"
           @help_window.set_text(text, 1)
           n = 340
           @help_window.y = n
@@ -287,7 +287,7 @@ class Scene_Menu
           $game_temp.message_window_showing = true
           $game_temp.script_message = true
           if not $game_party.actors[@select_index].state?(15)
-            text = "This succubus isn't hungry."
+            text = "空腹でない夢魔に精を献上することはできません！"
             $game_temp.message_text = text
             return
           end
@@ -296,9 +296,9 @@ class Scene_Menu
             eat = $game_party.actors[@select_index].absorb
 #            eat_p = (100 - $game_party.actors[@select_index].fed)
 #            eat = (eat * eat_p / 100).round
-            text = "Offer to feed energy to " + $game_party.actors[@select_index].name + "？\n"
-            text += "(Will consume " + eat.to_s + " of " + $game_actors[101].name + "'s VP)"
-            text += "\nDon't Feed\nFeed"
+            text = $game_party.actors[@select_index].name + "に精を献上しますか？\n"
+            text += "（" + $game_actors[101].name + "のVPを"+ eat.to_s + "消費します）"
+            text += "\nやめる\n献上する"
             $game_temp.choice_start = 2
             # 決定 SE を演奏
             $game_system.se_play($data_system.decision_se) 
@@ -306,7 +306,7 @@ class Scene_Menu
             $game_temp.choice_max = 2
             $game_temp.choice_cancel_type = 1
           else
-            text = "Cannot offer energy to an unconscious succubus!"
+            text = "失神している夢魔に精を献上することはできません！"
             $game_temp.message_text = text
           end
           return

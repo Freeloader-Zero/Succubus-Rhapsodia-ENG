@@ -41,36 +41,36 @@ class Window_SystemLeft < Window_Base
     
     self.contents.font.color = crisis_color
     self.contents.font.size = 22
-    self.contents.draw_text(x + 168, y + (y_a * 0), 200, 24, "Map Settings")
+    self.contents.draw_text(x + 168, y + (y_a * 0), 200, 24, "マップ設定")
     #
     self.contents.font.color = normal_color  
     self.contents.font.size = $default_size
-    self.contents.draw_text(x, y + (y_a * 1), 200, 24, "Default Movement")
-    self.contents.draw_text(x, y + (y_a * 2), 200, 24, "Partner Feeding")
-    self.contents.draw_text(x, y + (y_a * 3), 200, 24, "Crystal Priority")
-    self.contents.draw_text(x, y + (y_a * 4), 200, 24, "Partner Appetite")
+    self.contents.draw_text(x, y + (y_a * 1), 200, 24, "デフォルト移動方法")
+    self.contents.draw_text(x, y + (y_a * 2), 200, 24, "精の献上イベント")
+    self.contents.draw_text(x, y + (y_a * 3), 200, 24, "ポート機能設定")
+    self.contents.draw_text(x, y + (y_a * 4), 200, 24, "パートナー空腹度")
     #
     self.contents.font.color = crisis_color
     self.contents.font.size = 22
-    self.contents.draw_text(x + 168, y + (y_a * 5), 200, 24, "Battle Settings")
+    self.contents.draw_text(x + 168, y + (y_a * 5), 200, 24, "バトル設定")
     #
     self.contents.font.color = normal_color  
     self.contents.font.size = $default_size
-    self.contents.draw_text(x, y + (y_a * 6), 200, 24, "Battle Speed")
-    self.contents.draw_text(x, y + (y_a * 7), 200, 24, "Message Mode")
-    self.contents.draw_text(x, y + (y_a * 8), 200, 24, "Resist Minigame Delay")
-    self.contents.draw_text(x, y + (y_a * 9), 200, 24, "Bukkake")
-    self.contents.draw_text(x, y + (y_a * 10), 200, 24, "Cursor Memory")
-    self.contents.draw_text(x, y + (y_a * 11), 200, 24, "Erotic Messages")
+    self.contents.draw_text(x, y + (y_a * 6), 200, 24, "バトルスピード")
+    self.contents.draw_text(x, y + (y_a * 7), 200, 24, "メッセージモード")
+    self.contents.draw_text(x, y + (y_a * 8), 200, 24, "レジスト猶予時間")
+    self.contents.draw_text(x, y + (y_a * 9), 200, 24, "精液グラフィック表示")
+    self.contents.draw_text(x, y + (y_a * 10), 200, 24, "カーソル位置記憶")
+    self.contents.draw_text(x, y + (y_a * 11), 200, 24, "エロティックメッセージ")
     #
     self.contents.font.color = crisis_color
     self.contents.font.size = 22
-    self.contents.draw_text(x + 184, y + (y_a * 12), 200, 24, "Other")
+    self.contents.draw_text(x + 184, y + (y_a * 12), 200, 24, "その他")
     #
     self.contents.font.color = normal_color  
     self.contents.font.size = $default_size
-    self.contents.draw_text(x, y + (y_a * 13), 200, 24, "Screen Size")    
-    self.contents.draw_text(x, y + (y_a * 14), 200, 24, "Stop Game")    
+    self.contents.draw_text(x, y + (y_a * 13), 200, 24, "画面表示サイズ切り替え")    
+    self.contents.draw_text(x, y + (y_a * 14), 200, 24, "ゲーム中断")    
 
     self.cursor_rect.set(x - 4, y - 4 + (y_a * @index) - self.oy, 130, 32)
    
@@ -79,75 +79,75 @@ class Window_SystemLeft < Window_Base
     #●デフォルト移動
     x_a = 48
     color_change(1, false)
-    self.contents.draw_text(x, y + (y_a * 1), 200, 24, "Walk")
+    self.contents.draw_text(x, y + (y_a * 1), 200, 24, "歩行")
     color_change(1, true)
-    self.contents.draw_text(x + x_a + 2, y + (y_a * 1), 200, 24, "Dash")
+    self.contents.draw_text(x + x_a, y + (y_a * 1), 200, 24, "ダッシュ")
     #●精の献上
     x_a = 48
     color_change(2, true)
-    self.contents.draw_text(x, y + (y_a * 2), 200, 24, "Show")
+    self.contents.draw_text(x, y + (y_a * 2), 200, 24, "見る")
     color_change(2, false)
-    self.contents.draw_text(x + x_a + 8, y + (y_a * 2), 200, 24, "Hide")
+    self.contents.draw_text(x + x_a, y + (y_a * 2), 200, 24, "見ない")
     #●ポート設定
     x_a = 84
     color_change(3, false)
-    self.contents.draw_text(x, y + (y_a * 3), 200, 24, "Save")
+    self.contents.draw_text(x, y + (y_a * 3), 200, 24, "記録優先")
     color_change(3, true)
-    self.contents.draw_text(x + x_a - 20, y + (y_a * 3), 200, 24, "Teleport")
+    self.contents.draw_text(x + x_a, y + (y_a * 3), 200, 24, "転移優先")
     #●空腹度
     x_a = 48
     color_change(4, 0)
-    self.contents.draw_text(x + (x_a * 0), y + (y_a * 4), 200, 24, "Normal")
+    self.contents.draw_text(x + (x_a * 0), y + (y_a * 4), 200, 24, "標準")
     color_change(4, 1)
-    self.contents.draw_text(x + (x_a * 1) + 24, y + (y_a * 4), 200, 24, "Small")
+    self.contents.draw_text(x + (x_a * 1), y + (y_a * 4), 200, 24, "少食")
     color_change(4, 2)
-    self.contents.draw_text(x + (x_a * 2) + 30, y + (y_a * 4), 200, 24, "Constrained")
+    self.contents.draw_text(x + (x_a * 2), y + (y_a * 4), 200, 24, "節制")
     #●バトルスピード
     x_a = 48
     color_change(6, 0)
-    self.contents.draw_text(x + (x_a * 0), y + (y_a * 6), 200, 24, "Slow")
+    self.contents.draw_text(x + (x_a * 0), y + (y_a * 6), 200, 24, "遅い")
     color_change(6, 1)
-    self.contents.draw_text(x + (x_a * 1) + 20, y + (y_a * 6), 200, 24, "Normal")
+    self.contents.draw_text(x + (x_a * 1), y + (y_a * 6), 200, 24, "標準")
     color_change(6, 2)
-    self.contents.draw_text(x + (x_a * 2) + 48, y + (y_a * 6), 200, 24, "Fast")
+    self.contents.draw_text(x + (x_a * 2), y + (y_a * 6), 200, 24, "速い")
     #●メッセージモード
     x_a = 84
     color_change(7, 0)
-    self.contents.draw_text(x + (x_a * 0), y + (y_a * 7), 200, 24, "Manual")
+    self.contents.draw_text(x + (x_a * 0), y + (y_a * 7), 200, 24, "マニュアル")
     color_change(7, 1)
-    self.contents.draw_text(x + (x_a * 1) - 6, y + (y_a * 7), 200, 24, "Semiauto")
+    self.contents.draw_text(x + (x_a * 1), y + (y_a * 7), 200, 24, "セミオート")
     color_change(7, 2)
-    self.contents.draw_text(x + (x_a * 2), y + (y_a * 7), 200, 24, "Auto")
+    self.contents.draw_text(x + (x_a * 2), y + (y_a * 7), 200, 24, "フルオート")
     #●レジスト猶予期間
     x_a = 48
     color_change(8, 0)
-    self.contents.draw_text(x + (x_a * 0), y + (y_a * 8), 200, 24, "Short")
+    self.contents.draw_text(x + (x_a * 0), y + (y_a * 8), 200, 24, "短い")
     color_change(8, 1)
-    self.contents.draw_text(x + (x_a * 1) + 6, y + (y_a * 8), 200, 24, "Normal")
+    self.contents.draw_text(x + (x_a * 1), y + (y_a * 8), 200, 24, "標準")
     color_change(8, 2)
-    self.contents.draw_text(x + (x_a * 2) + 22, y + (y_a * 8), 200, 24, "Long")
+    self.contents.draw_text(x + (x_a * 2), y + (y_a * 8), 200, 24, "長い")
     color_change(8, 3)
-    self.contents.draw_text(x + (x_a * 3) + 24, y + (y_a * 8), 200, 24, "Relaxed")
+    self.contents.draw_text(x + (x_a * 3), y + (y_a * 8), 200, 24, "接待")
     #●精液グラフィック表示
     x_a = 48
     color_change(9, true)
-    self.contents.draw_text(x, y + (y_a * 9), 200, 24, "Show")
+    self.contents.draw_text(x, y + (y_a * 9), 200, 24, "表示")
     color_change(9, false)
-    self.contents.draw_text(x + x_a + 8, y + (y_a * 9), 200, 24, "Hide")
+    self.contents.draw_text(x + x_a, y + (y_a * 9), 200, 24, "非表示")
     #●カーソル位置記憶
     x_a = 48
     color_change(10, true)
-    self.contents.draw_text(x, y + (y_a * 10), 200, 24, "Yes")
+    self.contents.draw_text(x, y + (y_a * 10), 200, 24, "する")
     color_change(10, false)
-    self.contents.draw_text(x + x_a, y + (y_a * 10), 200, 24, "No")
+    self.contents.draw_text(x + x_a, y + (y_a * 10), 200, 24, "しない")
     #●エロティックメッセージ
     x_a = 48
     color_change(11, 0)
-    self.contents.draw_text(x, y + (y_a * 11), 200, 24, "Simple")
+    self.contents.draw_text(x, y + (y_a * 11), 200, 24, "簡易")
     color_change(11, 1)
-    self.contents.draw_text(x + x_a + 24, y + (y_a * 11), 200, 24, "Normal")
+    self.contents.draw_text(x + x_a, y + (y_a * 11), 200, 24, "標準")
     color_change(11, 2)
-    self.contents.draw_text(x + (x_a * 2) + 48, y + (y_a * 11), 200, 24, "Detailed")
+    self.contents.draw_text(x + (x_a * 2), y + (y_a * 11), 200, 24, "詳細")
     
 #    x_a = 96
 #    color_change(5, false)
@@ -247,29 +247,29 @@ class Window_SystemLeft < Window_Base
     when 0,5,12 #項目名
       text = ""
     when 1 # デフォルト移動
-      text = "Movement type when no key is pressed."
+      text = "決定キーを押していない時の移動方法の設定をします。"
     when 2 # 精の献上イベント
-      text = "Show or hide partner feeding animation. (Used from party menu)"
+      text = "精の献上イベントを見るか否かを設定します。"
     when 3 # ポート設定
-      text = "Set whether ｢Save｣ or ｢Teleport｣ is listed first."
+      text = "ポート機能「セーブ」と「テレポート」のどちらを上に表示するか設定します。"
     when 4 # 空腹度
-      text = "Set how fast partner Satiety decreases."
+      text = "パートナー夢魔の空腹度の減り方を設定をします。"
     when 6 # バトルスピード
-      text = "Set the overall battle speed."
+      text = "戦闘全体の速度を設定します。"
     when 7 # メッセージスピード
-      text = "Set the battle messages display delay."
+      text = "戦闘中のメッセージの表示時間を設定します。"
     when 8 # レジスト猶予
-      text = "Set how much time you get for the Resist minigame."
+      text = "レジスト猶予時間の設定をします。"
     when 9 # 精液グラフィック
-      text = "Whether cum graphics show when applicable."
+      text = "主人公が裸で絶頂した場合、相手夢魔に精液がかかるかを設定します。"
     when 10 # カーソル位置記憶
-      text = "Allows cursor to jump to the last used skill in battle."
+      text = "戦闘中、直前に使用したスキルの位置を記憶するかしないかを設定します。"
     when 11 # エロティックメッセージ
-      text = "Set how talkative the succubi are in battle."
+      text = "戦闘で夢魔の会話をどの程度表示するか設定します。"
     when 13 # フルスクリーン化
-      text = "Full screen or window."
+      text = "ゲーム画面のフルスクリーン／ウィンドウの切り替えを行います。"
     when 14 # ゲームをやめる
-      text = "Quit the game, or return to the title menu.。"
+      text = "ゲームを中断します。次に始める時は最後にセーブした所からとなります。"
     end
     @help_window.set_text(text == nil ? "" : text)
   end

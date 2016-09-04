@@ -33,7 +33,7 @@ class Scene_Menu
       @window[1].visible = true
       @center_window.index = -2
       @center_window.help_window = nil
-      text = "ENTER: Examine Equipment/Runes　←→：Cycle Party Member　↑↓：Change Window"
+      text = "決定：装備変更・ルーン刻印　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       @center_window.refresh
       @overF_text = "S t a t u s"

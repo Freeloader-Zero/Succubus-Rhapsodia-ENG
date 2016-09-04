@@ -51,7 +51,7 @@ class Window_Status < Window_Base
     self.contents.font.size = $default_size_mini
     draw_actor_hp(@actor, 20 + 24, y_1 + 84, 150, 1)
     draw_actor_sp(@actor, 20 + 24, y_1 + 112, 150, 1)
-    self.contents.draw_text(0, y_1 + 64, 200, 24, "Until Next Level: " + @actor.next_rest_exp_s + " Exp")
+    self.contents.draw_text(0, y_1 + 64, 200, 24, "次のレベルまで あと " + @actor.next_rest_exp_s + " Exp")
 
     
     self.contents.font.size = $default_size
@@ -67,21 +67,21 @@ class Window_Status < Window_Base
     
     unless @actor == $game_actors[101]
       self.contents.font.color = system_color
-      self.contents.draw_text(x_1, 168, 92, 24, "Appetite")
-      self.contents.draw_text(x_1 + 118, 168, 98, 24, "Dream Power ")
-      self.contents.draw_text(x_1, 192, 84, 24, "Favorability")
-      self.contents.draw_text(x_1, 216, 105, 24, "Contract Beads")
-      self.contents.draw_text(x_1, 240, 125, 24, "Energy Consumed")
+      self.contents.draw_text(x_1, 192, 84, 24, "好感度")
+      self.contents.draw_text(x_1 + 88, 192, 84, 24, "夢の魔力")
+      self.contents.draw_text(x_1, 216, 84, 24, "契約の珠")
+      self.contents.draw_text(x_1, 240, 84, 24, "空腹率")
+      self.contents.draw_text(x_1 + 88, 240, 84, 24, "吸精量")
       self.contents.font.color = normal_color
-      self.contents.draw_text(x_1 + 66, 168, 48, 24, @actor.digest.to_s, 2)
-      self.contents.draw_text(x_1 + 186, 168, 48, 24, @actor.d_power.to_s, 2)
-      self.contents.draw_text(x_1 + 186, 192, 48, 24, @actor.love.to_s, 2)
-      self.contents.draw_text(x_1 + 186 - 100, 216, 48 + 100, 24, @actor.promise.to_s, 2)
-      self.contents.draw_text(x_1 + 186, 240, 48, 24, @actor.absorb.to_s, 2)
+      self.contents.draw_text(x_1 + 32, 192, 48, 24, @actor.love.to_s, 2)
+      self.contents.draw_text(x_1 + 130, 192, 48, 24, @actor.d_power.to_s, 2)
+      self.contents.draw_text(x_1 + 130 - 100, 216, 48 + 100, 24, @actor.promise.to_s, 2)
+      self.contents.draw_text(x_1 + 32, 240, 48, 24, @actor.digest.to_s, 2)
+      self.contents.draw_text(x_1 + 130, 240, 48, 24, @actor.absorb.to_s, 2)
     end
     
     self.contents.font.color = system_color
-    self.contents.draw_text(x_1, 0, 92, 32, "Accessories ")
+    self.contents.draw_text(x_1, 0, 92, 32, "装備品")
     self.contents.font.color = normal_color
     
     equip = $data_armors[@actor.armor1_id]
@@ -94,7 +94,7 @@ class Window_Status < Window_Base
     end
   
     self.contents.font.color = system_color
-    self.contents.draw_text(x_1, 44, 96, 32, "Runes Branded")
+    self.contents.draw_text(x_1, 44, 92, 32, "刻印ルーン")
     self.contents.font.color = normal_color
     
     rune_y = 64

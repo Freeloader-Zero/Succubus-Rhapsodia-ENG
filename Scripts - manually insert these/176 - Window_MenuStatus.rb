@@ -63,8 +63,8 @@ class Window_MenuStatus < Window_Base
     self.contents.font.size = $default_size_mini
     draw_actor_hp(@actor, 120 + 24, 12 + 46, 150)
     draw_actor_sp(@actor, 120 + 24, 12 + 72, 150)
-    self.contents.draw_text(14, 135, 100, 24, "Until Next Level: ")
-    self.contents.draw_text(14, 150, 100, 24, " " + @actor.next_rest_exp_s + " Exp", 2)
+    self.contents.draw_text(14, 135, 100, 24, "ŽŸ‚ÌƒŒƒxƒ‹‚Ü‚Å")
+    self.contents.draw_text(14, 150, 100, 24, "‚ ‚Æ " + @actor.next_rest_exp_s + " Exp", 2)
   end
   
 end

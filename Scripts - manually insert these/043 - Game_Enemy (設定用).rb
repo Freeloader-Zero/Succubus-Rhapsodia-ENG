@@ -45,28 +45,28 @@ class Game_Enemy < Game_Battler
     # エネミーのクラスごとに自動設定
     case self.class_name
     # -----------------------------------------------------------------------
-    when "Lesser Succubus ","Succubus","Succubus Lord "
+    when "レッサーサキュバス","サキュバス","サキュバスロード"
       personality_group = 
        case self.class_color
        when "橙" ; [1, "好色", "陽気", "陽気"]
        when "桃" ; [1, "好色", "好色", "好色"]
        end
     # -----------------------------------------------------------------------
-    when "Iｍp","Devil ","Deｍon"
+    when "インプ","デビル","デーモン"
       personality_group = 
        case self.class_color
        when "緑" ; [1, "勝ち気", "虚勢", "虚勢"]
        when "白" ; [1, "高慢", "高慢", "高慢"]
        end
     # -----------------------------------------------------------------------
-    when "Little Witch","Witch "
+    when "プチウィッチ","ウィッチ"
       personality_group = 
        case self.class_color
        when "緑" ; [1, "上品", "淡泊", "淡泊"]
        when "紫" ; [1, "好色", "好色", "好色"]
        end
     # -----------------------------------------------------------------------
-    when "Caster"
+    when "キャスト"
       personality_group = 
        case self.class_color
        when "黄" ; [1, "内気", "内気", "従順"]
@@ -74,139 +74,139 @@ class Game_Enemy < Game_Battler
        end
        ability_group += ["女陰が性感帯/100"] if self.class_color == "黒"
     # -----------------------------------------------------------------------
-    when "Slave "
+    when "スレイヴ"
       personality_group = 
        case self.class_color
        when "紫" ; [1, "従順", "従順", "倒錯"]
        end
     # -----------------------------------------------------------------------
-    when "Nightｍare"
+    when "ナイトメア"
       personality_group = 
        case self.class_color
        when "黒" ; [1, "淡泊", "淡泊", "不思議"]
        when "黄" ; [1, "天然", "天然", "天然"]
        end
     # -----------------------------------------------------------------------
-    when "Sliｍe"
+    when "スライム"
       personality_group = 
        case self.class_color
        when "青" ; [1, "天然", "柔和", "柔和"]
        end
     # -----------------------------------------------------------------------
-    when "Gold Sliｍe "
+    when "ゴールドスライム"
       personality_group = 
        case self.class_color
        when "黄" ; [1, "柔和", "柔和", "上品"]
        end
     # -----------------------------------------------------------------------
-    when "Familiar"
+    when "ファミリア"
       personality_group = 
        case self.class_color
        when "青" ; [1, "従順", "淡泊", "淡泊"]
        when "緑" ; [1, "倒錯", "倒錯", "倒錯"]
        end
     # -----------------------------------------------------------------------
-    when "Werewolf"
+    when "ワーウルフ"
       personality_group = 
        case self.class_color
        when "黒" ; [1, "虚勢", "虚勢", "甘え性"]
        when "赤" ; [1, "勝ち気", "勝ち気", "勝ち気"]
        end
     # -----------------------------------------------------------------------
-    when "Werecat "
+    when "ワーキャット"
       personality_group = 
        case self.class_color
        when "黄" ; [2, "天然", "天然", "意地悪"]
        when "黒" ; [1, "不思議", "不思議", "不思議"]
        end
     # -----------------------------------------------------------------------
-    when "Goblin", "Goblin Leader "
+    when "ゴブリン", "ギャングコマンダー"
       personality_group = 
        case self.class_color
        when "赤" ; [1, "陽気", "甘え性", "甘え性"]
        end
     # -----------------------------------------------------------------------
-    when "Priestess "
+    when "プリーステス"
       personality_group = 
        case self.class_color
        when "白" ; [1, "上品", "高慢", "高慢"]
        end
     # -----------------------------------------------------------------------
-    when "Cursed Magus"
+    when "カースメイガス"
       personality_group = 
        case self.class_color
        when "黒" ; [1, "好色", "倒錯", "倒錯"]
        end
     # -----------------------------------------------------------------------
-    when "Alraune "
+    when "アルラウネ"
       personality_group = 
        case self.class_color
        when "緑" ; [1, "上品", "上品", "甘え性"]
        when "青" ; [1, "意地悪", "意地悪", "意地悪"]
        end
     # -----------------------------------------------------------------------
-    when "Matango "
+    when "マタンゴ"
       personality_group = 
        case self.class_color
        when "赤" ; [1, "内気", "上品", "上品"]
        end
     # -----------------------------------------------------------------------
-    when "Dark Angel"
+    when "ダークエンジェル"
       personality_group = 
        case self.class_color
        when "白" ; [1, "意地悪", "柔和", "柔和"]
        end
     # -----------------------------------------------------------------------
-    when "Gargoyle"
+    when "ガーゴイル"
       personality_group = 
        case self.class_color
        when "黒" ; [1, "高慢", "勝ち気", "勝ち気"]
        end
     # -----------------------------------------------------------------------
-    when "Miｍic"
+    when "ミミック"
       personality_group = 
        case self.class_color
        when "青" ; [1, "意地悪", "陽気", "陽気"]
        when "黒" ; [1, "不思議", "不思議", "不思議"]
        end
     # -----------------------------------------------------------------------
-    when "Taｍaｍo"
+    when "タマモ"
       personality_group = 
        case self.class_color
        when "赤" ; [1, "好色", "高慢", "高慢"]
        end
     # -----------------------------------------------------------------------
-    when "Liliｍ"
+    when "リリム"
       personality_group = 
        case self.class_color
        when "桃" ; [1, "好色", "意地悪", "意地悪"]
        end
     # -----------------------------------------------------------------------
-    when "Unique Succubus ","Unique Tycoon ","Unique Witch"
+    when "ユニークサキュバス","ユニークタイクーン","ユニークウィッチ"
       case self.class_color
-      when "Neijorange"
+      when "ネイジュレンジ"
         personality_group = [1, "暢気", "暢気", "暢気"]
         ability_group += ["胸が性感帯/100"]
-      when "Rejeo "
+      when "リジェオ"
         personality_group = [1, "気丈", "気丈", "気丈"]
         ability_group += ["口が性感帯/100"]
-      when "Fulbeua "
+      when "フルビュア"
         personality_group = [1, "独善", "独善", "独善"]
         ability_group += ["陰核が性感帯/100"]
-      when "Gilgoon "
+      when "ギルゴーン"
         personality_group = [1, "尊大", "尊大", "尊大"]
         ability_group += ["胸が性感帯/100"]
-      when "Yuganaught"
+      when "ユーガノット"
         personality_group = [1, "陰気", "陰気", "陰気"]
         ability_group += ["お尻が性感帯/100"]
-      when "Sylphe"
+      when "シルフェ"
         personality_group = [1, "高貴", "高貴", "高貴"]
         ability_group += ["口が性感帯/100"]
-      when "Ramile"
+      when "ラーミル"
         personality_group = [1, "潔癖", "潔癖", "潔癖"]
         ability_group += ["胸が性感帯/100"]
         ability_group += ["妄執/100"]
-      when "Vermiena"
+      when "ヴェルミィーナ"
         personality_group = [1, "露悪狂", "露悪狂", "露悪狂"]
         ability_group += ["女陰が性感帯/100"]
       end

@@ -120,7 +120,7 @@ class Scene_Menu
       @center_window.refresh
       @center_window1.dispose
       @overF_text = "S t a t u s"
-      text = "ENTER: Examine Equipment/Runes　←→：Cycle Party Member　↑↓：Change Window"
+      text = "決定：装備変更・ルーン刻印　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       @party_command = 0
       return
@@ -138,8 +138,8 @@ class Scene_Menu
       @center_window.index = -1
       @center_window.active = false
       @center_window.refresh
-      @overF_text = "S k i l l s"
-      text = "ENTER: Examine Skills　←→：Cycle Party Member　↑↓：Change Window"
+      @overF_text = "S k i l l"
+      text = "決定：スキル確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       @party_command = 2
       return
@@ -169,7 +169,7 @@ class Scene_Menu
       @center_window.active = false
       @center_window.index = -1
       @center_window.refresh
-      text = "ENTER: Examine Traits　←→：Cycle Party Member　↑↓：Change Window"
+      text = "決定：素質確認　←→：表示メンバー変更　↑↓：ウィンドウ変更"
       @help_window.set_text(text, 1)
       return
     end

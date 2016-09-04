@@ -66,9 +66,9 @@ class Window_BattleLog < Window_Base
     
 =begin
       # ƒƒO‹¸³
-      if ["\\","\\\","\\\","\\y\"].include?($game_temp.battle_back_log)
+      if ["\q\q","\q\w\q","\q\m\q","\q\y\q"].include?($game_temp.battle_back_log)
         $game_temp.battle_back_log += "CLEAR"
-        $game_temp.battle_back_log.gsub!("\CLEAR","")
+        $game_temp.battle_back_log.gsub!("\qCLEAR","")
       elsif $game_temp.battle_back_log == "\n"
         $game_temp.battle_back_log = ""
       end
@@ -76,20 +76,20 @@ class Window_BattleLog < Window_Base
     
     
 =begin
-    # ƒ}ƒjƒ…ƒAƒ‹ƒ‚[ƒh‚Í––”ö‚É\‚ð‚Â‚¯‚é
+    # ƒ}ƒjƒ…ƒAƒ‹ƒ‚[ƒh‚Í––”ö‚É\q‚ð‚Â‚¯‚é
     if $game_system.system_read_mode == 0
       text += "CHECK"
-      if text.match("\\CHECK")
+      if text.match("\w\qCHECK")
         text.gsub!("CHECK","")
       else
-        text.gsub!("CHECK","\\")
+        text.gsub!("CHECK","\w\q")
       end
     end
 =end
 
 =begin    
     # ƒƒO‹¸³
-    if ["\n","\"].include?(text)
+    if ["\n","\q"].include?(text)
       $game_temp.battle_log_text = ""
       return
     end
@@ -145,7 +145,7 @@ class Window_BattleLog < Window_Base
         next
       end
       # ƒEƒFƒCƒg•¶Žš(’·ŽžŠÔ)‚Ìê‡
-      if c == "\"
+      if c == "\w"
         # ƒEƒFƒCƒg‚ð“ü‚ê‚é
         case $game_system.ms_skip_mode
         when 3 #Žè“®‘—‚èƒ‚[ƒh
@@ -165,7 +165,7 @@ class Window_BattleLog < Window_Base
         return
       end
       # ƒEƒFƒCƒg•¶Žš(’ZŽžŠÔ)‚Ìê‡
-      if c == "\"
+      if c == "\m"
         # ƒEƒFƒCƒg‚ð“ü‚ê‚é
         case $game_system.ms_skip_mode
         when 3 #Žè“®‘—‚èƒ‚[ƒh
@@ -185,25 +185,25 @@ class Window_BattleLog < Window_Base
         return
       end
       # ƒEƒFƒCƒg•¶Žš(ƒVƒXƒeƒ€)‚Ìê‡
-      #if c == "\y"
-      #  # ƒEƒFƒCƒg‚ð“ü‚ê‚é
-      #  case $game_system.ms_skip_mode
-      #  when 3 #Žè“®‘—‚èƒ‚[ƒh
-      #    @wait_count = 1
-      #  when 2 #ƒfƒoƒbƒOƒ‚[ƒh
-      #    @wait_count = 8
-      #  when 1 #‰õ‘¬ƒ‚[ƒh
-      #    @wait_count = 12
-      #  else
-      #    @wait_count = $game_system.battle_speed_time(0)
-      #  end
-      #  $game_temp.battle_log_wait_flag = true
-      #  # ¡‚ÌÀ•W‚ðˆÛŽ‚µ‚Ä•Ô‚·
-      #  @keep_flag = true
-      #  @last_x = x
-      #  @last_y = y
-      #  return
-      #end
+      if c == "\y"
+        # ƒEƒFƒCƒg‚ð“ü‚ê‚é
+        case $game_system.ms_skip_mode
+        when 3 #Žè“®‘—‚èƒ‚[ƒh
+          @wait_count = 1
+        when 2 #ƒfƒoƒbƒOƒ‚[ƒh
+          @wait_count = 8
+        when 1 #‰õ‘¬ƒ‚[ƒh
+          @wait_count = 12
+        else
+          @wait_count = $game_system.battle_speed_time(0)
+        end
+        $game_temp.battle_log_wait_flag = true
+        # ¡‚ÌÀ•W‚ðˆÛŽ‚µ‚Ä•Ô‚·
+        @keep_flag = true
+        @last_x = x
+        @last_y = y
+        return
+      end
       # ‰üs•¶Žš‚Ìê‡
       if c == "\n"
         # y ‚É 1 ‚ð‰ÁŽZ
@@ -241,7 +241,7 @@ class Window_BattleLog < Window_Base
         next
       end
       # Žè“®‰üs•¶Žš‚Ìê‡
-      if c == "\"
+      if c == "\q"
         # y ‚É 1 ‚ð‰ÁŽZ
         y += 1
         x = 0
@@ -371,15 +371,15 @@ class Window_BattleLog < Window_Base
   def log_correction
 
     # ƒEƒFƒCƒg‚Ì‡˜‚ð’¼‚·
-    $game_temp.battle_log_text.gsub!("\n\","\\n")
-    $game_temp.battle_log_text.gsub!("\\","\\")
+    $game_temp.battle_log_text.gsub!("\n\w","\w\n")
+    $game_temp.battle_log_text.gsub!("\q\w","\w\q")
     
     # ‰üs‚ªd•¡‚µ‚Ä‚¢‚éê‡A‚P‚Â‚É‚·‚é
-    $game_temp.battle_log_text.gsub!(/(\\\\n)+/,"\\n")
-    $game_temp.battle_log_text.gsub!(/(\\\\)+/,"\\")
+    $game_temp.battle_log_text.gsub!(/(\\w\\n)+/,"\w\n")
+    $game_temp.battle_log_text.gsub!(/(\\w\\q)+/,"\w\q")
     
-    # \\nE\\‚¾‚¯‚Ìê‡AƒeƒLƒXƒg‚ðÁ‚·
-    if ["\\n","\\"].include?($game_temp.battle_log_text)
+    # \w\nE\w\q‚¾‚¯‚Ìê‡AƒeƒLƒXƒg‚ðÁ‚·
+    if ["\w\n","\w\q"].include?($game_temp.battle_log_text)
       $game_temp.battle_log_text = ""
     end
 

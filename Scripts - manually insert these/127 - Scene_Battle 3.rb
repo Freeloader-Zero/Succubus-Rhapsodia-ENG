@@ -218,7 +218,7 @@ class Scene_Battle
         if not $game_temp.battle_can_escape
           # ブザー SE を演奏
           $game_system.se_play($data_system.buzzer_se)
-          $game_temp.message_text = "Can't escape from this battle!"
+          $game_temp.message_text = "この戦闘からは逃げられない！"
           $game_temp.script_message = true
           @window_flag = false
           return
@@ -237,7 +237,7 @@ class Scene_Battle
             if actor.holding?
               # ブザー SE を演奏
               $game_system.se_play($data_system.buzzer_se)
-              $game_temp.message_text = "Can't escape because #{actor.name} is engaged in a hold!"
+              $game_temp.message_text = "#{actor.name}がホールド中だと逃げられない！"
               $game_temp.script_message = true
               @window_flag = false
               return
@@ -473,7 +473,7 @@ class Scene_Battle
           if $game_party.party_actors[@party_window.index].dead?
             # ブザー SE を演奏
             $game_system.se_play($data_system.buzzer_se)
-            $game_temp.message_text = "This succubus cannot be sｗitched out!"
+            $game_temp.message_text = "この夢魔とは替わることができない！"
             $game_temp.script_message = true
             @window_flag = false
             return
@@ -491,7 +491,7 @@ class Scene_Battle
           if @active_battler.holding?
             # ブザー SE を演奏
             $game_system.se_play($data_system.buzzer_se)
-            $game_temp.message_text = "Can't switch out when engaged in a hold!"
+            $game_temp.message_text = "ホールド中は交代することができない！"
             $game_temp.script_message = true
             @window_flag = false
             return
@@ -608,7 +608,7 @@ class Scene_Battle
         #(ただし口挿入時を除く)
         if command.element_set.include?(134) and (command.element_set.include?(94) or command.element_set.include?(95) or command.element_set.include?(97))
           unless (@enemy_arrow.enemy.insertable_half_nude? or @enemy_arrow.enemy.full_nude?)
-            $game_temp.error_message = "Can't use unless target is coｍpletely nude!"
+            $game_temp.error_message = "相手が服を脱いでいないと使用できません！"
             return
           end
 #        elsif command.element_set.include?(37) or command.element_set.include?(38)
@@ -619,7 +619,7 @@ class Scene_Battle
         # 相手が着衣状態である場合
         elsif not @enemy_arrow.enemy.full_nude?
           $game_system.se_play($data_system.cancel_se)
-          $game_temp.message_text = "Can't use unless target is coｍpletely nude!"
+          $game_temp.message_text = "相手が服を脱いでいないと使用できません！"
           $game_temp.script_message = true
           return
         end

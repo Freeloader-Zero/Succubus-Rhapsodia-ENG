@@ -24,7 +24,7 @@ module SR_Util
   def self.special_undress(enemy)
     enemy.undress
     if $game_temp.battle_log_text != ""
-      text = "\\" + enemy.bms_states_update
+      text = "\w\q" + enemy.bms_states_update
     else
       text = enemy.bms_states_update
     end
@@ -240,7 +240,7 @@ module SR_Util
     log = $game_temp.battle_log_text
     if log != ""
       # s”‚É‡‚í‚¹‚ÄƒEƒFƒCƒg‚ğ“ü‚ê‚é
-      log = log.split(/[\n\]/)
+      log = log.split(/[\n\q]/)
       ct = (4 * (log.size + 1)) + $game_system.battle_speed_time(0) + $game_system.important_wait_time
 #      ct = (4 * 3) + $game_system.battle_speed_time(0) + $game_system.important_wait_time
       $game_temp.set_wait_count = ct
@@ -512,7 +512,7 @@ module SR_Util
       text += "\n" if text != ""
       favor_actor.gain_ability(60)  # y’ˆ¤z
       favor_actor.gain_ability(302) # yƒAƒNƒZƒvƒgz‚ğ‚Á‚Ä‚¢‚È‚¢–²–‚‚à‚±‚±‚ÅK“¾
-      text += "#{$game_actors[101].name} earned some favor from #{favor_actor.name}!"
+      text += "#{$game_actors[101].name}‚Í#{favor_actor.name}‚©‚ç‚Ì’ˆ¤‚ğ“¾‚½I"
     end
     $game_variables[2] = ""
     $game_variables[2] = text if text != ""

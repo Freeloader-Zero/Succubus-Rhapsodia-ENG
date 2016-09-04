@@ -428,7 +428,7 @@ class Talk_Sys
     when "ˆ¤•E’Êí","ˆ¤•E«Œğ","•òd"
       #ƒNƒŠƒeƒBƒJƒ‹ˆ—
       if damage_target.critical == true
-        text += "Sensual StrokeI\\"
+        text += "Sensual StrokeI\w\q"
         damage_target.animation_id = 103
         damage_target.animation_hit = true
         base_dmg = (base_dmg * 5 / 4).round
@@ -526,7 +526,7 @@ class Talk_Sys
     #ƒXƒe[ƒ^ƒXƒEƒBƒ“ƒhƒEXV
     @stateswindow_refresh = true
     if $game_temp.battle_log_text != ""
-      $game_temp.battle_log_text += "\\" + text
+      $game_temp.battle_log_text += "\w\q" + text
     else
       $game_temp.battle_log_text += text
     end
@@ -688,7 +688,7 @@ class Talk_Sys
         unless $game_actors[101].states.include?(6)
           $game_actors[101].add_state(6)
           if $game_temp.battle_log_text != ""
-            text = "\\" + $game_actors[101].bms_states_update
+            text = "\w\q" + $game_actors[101].bms_states_update
           else
             text = $game_actors[101].bms_states_update
           end
@@ -727,7 +727,7 @@ class Talk_Sys
     when "ålŒö’Eˆß"
       $game_actors[101].undress
       if $game_temp.battle_log_text != ""
-        text = "\\" + $game_actors[101].bms_states_update
+        text = "\w\q" + $game_actors[101].bms_states_update
       else
         text = $game_actors[101].bms_states_update
       end
@@ -742,7 +742,7 @@ class Talk_Sys
           enemy.add_state(32) #ƒhƒLƒhƒL
           enemy.animation_id = 39
           if $game_temp.battle_log_text != ""
-            text = "\\" + enemy.bms_states_update
+            text = "\w\q" + enemy.bms_states_update
           else
             text = enemy.bms_states_update
           end
@@ -751,7 +751,7 @@ class Talk_Sys
     when "–²–‚’Eˆß"
       $msg.t_enemy.undress
       if $game_temp.battle_log_text != ""
-        text = "\\" + $msg.t_enemy.bms_states_update
+        text = "\w\q" + $msg.t_enemy.bms_states_update
       else
         text = $msg.t_enemy.bms_states_update
       end
@@ -765,7 +765,7 @@ class Talk_Sys
         $game_actors[101].add_state(32) #ƒhƒLƒhƒL
         $game_actors[101].animation_id = 39
         if $game_temp.battle_log_text != ""
-          text = "\\" + $game_actors[101].bms_states_update
+          text = "\w\q" + $game_actors[101].bms_states_update
         else
           text = $game_actors[101].bms_states_update
         end
@@ -776,7 +776,7 @@ class Talk_Sys
         unless $msg.t_enemy.states.include?(6)
           $msg.t_enemy.add_state(6)
           if $game_temp.battle_log_text != ""
-            text = "\\" + $msg.t_enemy.bms_states_update
+            text = "\w\q" + $msg.t_enemy.bms_states_update
           else
             text = $msg.t_enemy.bms_states_update
           end
@@ -787,7 +787,7 @@ class Talk_Sys
       case $msg.talk_step
       when 2
         $game_actors[101].add_state(32) #ƒhƒLƒhƒL
-        text += "\\" + $game_actors[101].bms_states_update
+        text += "\w\q" + $game_actors[101].bms_states_update
         $msg.t_enemy.add_state(16) #s“®•úŠü
       when 3..99
         plus = ($msg.talk_step * 5)
@@ -796,17 +796,17 @@ class Talk_Sys
         if $game_actors[101].state?(40)
           if rand($mood.point) + plus > [perc,60].min
             $game_actors[101].add_state(36) #–\‘–
-            text += "\\" + $game_actors[101].bms_states_update
+            text += "\w\q" + $game_actors[101].bms_states_update
           end
         elsif $game_actors[101].state?(35)
           if rand($mood.point) + plus > [perc,45].min
             $game_actors[101].add_state(40) #U–Ÿ
-            text += "\\" + $game_actors[101].bms_states_update
+            text += "\w\q" + $game_actors[101].bms_states_update
           end
         else
           if rand($mood.point) + plus > [perc,30].min
             $game_actors[101].add_state(35) #—~î
-            text += "\\" + $game_actors[101].bms_states_update
+            text += "\w\q" + $game_actors[101].bms_states_update
           end
         end
       end
@@ -815,7 +815,7 @@ class Talk_Sys
         unless $msg.t_enemy.states.include?(6)
           $msg.t_enemy.add_state(6)
           if $game_temp.battle_log_text != ""
-            text = "\\" + $msg.t_enemy.bms_states_update
+            text = "\w\q" + $msg.t_enemy.bms_states_update
           else
             text = $msg.t_enemy.bms_states_update
           end
@@ -826,7 +826,7 @@ class Talk_Sys
       case $msg.talk_step
       when 2
         $game_actors[101].add_state(32) #ƒhƒLƒhƒL
-        text += "\\" + $game_actors[101].bms_states_update
+        text += "\w\q" + $game_actors[101].bms_states_update
         $msg.t_enemy.add_state(16) #s“®•úŠü
       when 3..99
         plus = ($msg.talk_step * 5)
@@ -835,17 +835,17 @@ class Talk_Sys
         if $game_actors[101].state?(40)
           if rand($mood.point) + plus > [perc,60].min
             $game_actors[101].add_state(34) #œ’›
-            text += "\\" + $game_actors[101].bms_states_update
+            text += "\w\q" + $game_actors[101].bms_states_update
           end
         elsif $game_actors[101].state?(35)
           if rand($mood.point) + plus > [perc,45].min
             $game_actors[101].add_state(40) #U–Ÿ
-            text += "\\" + $game_actors[101].bms_states_update
+            text += "\w\q" + $game_actors[101].bms_states_update
           end
         else
           if rand($mood.point) + plus > [perc,30].min
             $game_actors[101].add_state(35) #—~î
-            text += "\\" + $game_actors[101].bms_states_update
+            text += "\w\q" + $game_actors[101].bms_states_update
           end
         end
       end

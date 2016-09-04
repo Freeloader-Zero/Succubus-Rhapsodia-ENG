@@ -258,35 +258,31 @@ class Scene_Battle
       brk = "\n" if SR_Util.names_over?(active.name,target.name)
       case skill.name
       when "ƒCƒ“ƒT[ƒg"
-        text = "#{active.name} inserted into #{target.name}!"
+        text = "#{active.name}‚Í#{target.name}‚É‘}“ü‚µ‚½I"
       when "ƒAƒNƒZƒvƒg"
-        text = "#{active.name} inserted #{target.name}'s penis into her pussy!"
+        text = "#{active.name}‚Í#{brk}©•ª‚ÌƒAƒ\ƒR‚ÉA\n#{target.name}‚ÌƒyƒjƒX‚ğ‘}“ü‚µ‚½I"
       when "ƒI[ƒ‰ƒ‹ƒCƒ“ƒT[ƒg"
-        text = "#{active.name} inserted into#{brk} #{target.name}'s ‚outh!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚ÌŒû‚É‘}“ü‚µ‚½I"
       when "ƒI[ƒ‰ƒ‹ƒAƒNƒZƒvƒg"
-        text = "#{active.name} sucked#{brk} #{target.name}'s penis into her ‚outh!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚ÌƒyƒjƒX‚ğŒû‚É™ø‚¦‚½I"
       when "ƒoƒbƒNƒCƒ“ƒT[ƒg"
-        text = "#{active.name} inserted into#{brk} up #{target.name}'s ass!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚Ì‚¨K‚É‘}“ü‚µ‚½I"
       when "ƒoƒbƒNƒAƒNƒZƒvƒg"
-        text = "#{active.name} inserted #{target.name}'s penis up her ass!"
+        text = "#{active.name}‚Í©•ª‚Ì‚¨K‚ÉA\n#{target.name}‚ÌƒyƒjƒX‚ğ‘}“ü‚µ‚½I"
       when "ƒGƒLƒTƒCƒgƒrƒ…["
-        text = "#{active.name} is straddling #{brk}#{target.name}'s face!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚Ì“ª‚É”næ‚è‚É‚È‚Á‚½I"
       when "ƒhƒƒEƒlƒNƒ^["
-        if active.name == $game_actors[101]
-        text = "#{active.name} drinks in #{brk}#{target.name}'s pussy ‚—ith his ‚outh!"
-        else
-        text = "#{active.name} drinks in #{brk}#{target.name}'s pussy\n ‚—ith her ‚outh!"
-        end
+        text = "#{active.name}‚Í#{brk}#{target.name}‚ÌƒAƒ\ƒR‚É‹z‚¢•t‚¢‚½I"
       when "ƒGƒ“ƒuƒŒƒCƒX"
-        text = "#{active.name} clings tightly to #{brk}#{target.name}!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚É•ø‚«‚Â‚¢‚½I"
       when "ƒVƒFƒ‹ƒ}ƒbƒ`"
-        text = "#{active.name} legs intertwined ‚—ith #{brk}#{target.name}'s!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚Æ‹r‚ğ—‚ß‡‚Á‚½I"
       when "ƒfƒBƒ‹ƒhƒCƒ“ƒT[ƒg"
-        text = "#{active.name} inserted into #{brk}#{target.name}!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚É‘}“ü‚µ‚½I"
       when "ƒfƒBƒ‹ƒhƒCƒ“ƒ}ƒEƒX"
-        text = "#{active.name} inserted into #{brk}#{target.name}'s ‚outh!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚ÌŒû‚É‘}“ü‚µ‚½I"
       when "ƒfƒBƒ‹ƒhƒCƒ“ƒoƒbƒN"
-        text = "#{active.name} inserted up #{brk}#{target.name}'s ass!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚Ì‚¨K‚É‘}“ü‚µ‚½I"
       when "ƒAƒCƒ”ƒBƒNƒ[ƒY","ƒfƒ‚ƒ“ƒYƒNƒ[ƒY"
         text = "#{active.name}‚Ì‘€‚éGè‚ÍA\n#{target.name}‚Ìg‘Ì‚ğ—‚ß‚Æ‚Á‚½I"
       when "ƒfƒ‚ƒ“ƒYƒAƒuƒ\[ƒu"
@@ -294,7 +290,7 @@ class Scene_Battle
       when "ƒfƒ‚ƒ“ƒYƒhƒƒE"
         text = "#{active.name}‚Ì‘€‚éGè‚ªA\n#{target.name}‚ÌƒAƒ\ƒR‚É‹z‚¢•t‚¢‚½I"
       when "ƒŠƒŠ[ƒX"
-        text = "#{active.name} broke free fro‚ #{target.name}!"
+        text = "#{active.name}‚Í#{brk}#{target.name}‚ğU‚è‚Ù‚Ç‚¢‚½I"
       when "ƒCƒ“ƒ^ƒ‰ƒvƒg"
         if active == $game_actors[101]
           for i in $game_party.actors
@@ -305,104 +301,100 @@ class Scene_Battle
         else
           partner = $game_actors[101]
         end
-        text = "#{active.name} separated #{partner.name} fro‚ #{target.name}!"
+        text = "#{active.name}‚ÍA\n#{partner.name}‚©‚ç#{target.name}‚ğˆø‚«—£‚µ‚½I"
       end
     elsif active.is_a?(Game_Enemy)
       #ƒz[ƒ‹ƒh–¼‚©‚çƒeƒLƒXƒg‚ğ®Œ`
       case skill.name
       when "ƒCƒ“ƒT[ƒg"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} spreads her legs\n to receive #{active.name}'s insertion!"
+          text = "#{target.name}‚Í©‚ç‹r‚ğL‚°A\n#{active.name}‚Ì‘}“ü‚ğŒ}‚¦“ü‚ê‚½I"
         else
-          text = "#{target.name} ‚—as violated by #{active.name}!"
+          text = "#{target.name}‚Í#{active.name}‚É”Æ‚³‚ê‚½I"
         end
       when "ƒAƒNƒZƒvƒg"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} lies on his back,\n ready to be inserted by #{active.name}!"
+          text = "#{target.name}‚Í©‚ç‹ÂŒü‚¯‚É‚È‚èA\n#{active.name}‚Ì‘}“ü‚ğŒ}‚¦“ü‚ê‚½I"
         else
-          text = "#{target.name} ‚—as violated by #{active.name}!"
+          text = "#{target.name}‚Í#{active.name}‚É”Æ‚³‚ê‚½I"
         end
       when "ƒI[ƒ‰ƒ‹ƒCƒ“ƒT[ƒg"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} opens her mouth\n to receive #{active.name}'s penis!"
+          text = "#{target.name}‚Í©‚çŒû‚ğŠJ‚¯A\n#{active.name}‚ÌƒyƒjƒX‚ğ™ø‚¦‚ñ‚¾I"
         else
-          text = "#{active.name}'s penis has been\n scre‚—ed into #{target.name}'s ‚outh!"
+          text = "#{target.name}‚ÌŒû‚É\n#{active.name}‚ÌƒyƒjƒX‚ª‚Ë‚¶‚Ü‚ê‚½I"
         end
       when "ƒI[ƒ‰ƒ‹ƒAƒNƒZƒvƒg"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} thrusts forward, offering\n his penis to #{active.name}'s lewd ‚outh!"
+          text = "#{target.name}‚Í©‚ç˜‚ğ“Ë‚«o‚µA\n#{active.name}‚ÌŒûˆú‚ğŒ}‚¦“ü‚ê‚½I"
         else
-          text = "#{target.name}'s penis ‚—as stuffed\n into #{active.name}'s ‚outh!"
+          text = "#{target.name}‚ÌƒyƒjƒX‚ÍA\n#{active.name}‚ÌŒû‚É™ø‚¦‚Ü‚ê‚Ä‚µ‚Ü‚Á‚½I"
         end
       when "ƒoƒbƒNƒCƒ“ƒT[ƒg"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} opens up her ass\n to receive #{active.name}'s penis!"
+          text = "#{target.name}‚Í©‚ç‚¨K‚ğã‚°A\n#{active.name}‚ÌƒyƒjƒX‚ğ‹eÀ‚Éó‚¯“ü‚ê‚½I"
         else
-          text = "#{target.name}'s sphincter has been pierced by\n #{active.name}'s penis!"
+          text = "#{target.name}‚Ì‹eÀ‚ÉA\n#{active.name}‚ÌƒyƒjƒX‚ª“Ë‚«“ü‚ê‚ç‚ê‚½I"
         end
       when "ƒoƒbƒNƒAƒNƒZƒvƒg"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} looks upward, ready to\n be inserted into #{active.name}'s ass!"
+          text = "#{target.name}‚Í©‚ç‹ÂŒü‚¯‚É‚È‚èA\n#{active.name}‚Ì‘}“ü‚ğó‚¯“ü‚ê‚½I"
         else
-          text = "#{target.name}'s penis has been s‚—allo‚—ed by\n #{active.name}'s ass!"
+          text = "#{target.name}‚ÌƒyƒjƒX‚ÍA\n#{active.name}‚Ì‹eÀ‚Éˆù‚İ‚Ü‚ê‚Ä‚µ‚Ü‚Á‚½I"
         end
       when "ƒGƒLƒTƒCƒgƒrƒ…["
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "Lying down, #{target.name} willingly accepts\n to be sat on by #{active.name}!"
+          text = "#{target.name}‚Í©‚ç‹ÂŒü‚¯‚É‚È‚èA\n#{active.name}‚Ì‹Ræ‚ğó‚¯“ü‚ê‚½I"
         else
-          text = "#{target.name}'s face is being s‚othered by\n #{active.name}'s pussy!"
+          text = "#{target.name}‚ÌŠç‚ªA\n#{active.name}‚ÌƒAƒ\ƒR‚Å‰Ÿ‚µ‚Â‚Ô‚³‚ê‚½I"
         end
       when "ƒCƒ“ƒ‚ƒ‰ƒ‹ƒrƒ…["
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "Lying down, #{target.name} willingly accepts\n to be sat on by #{active.name}!"
+          text = "#{target.name}‚Í©‚ç‹ÂŒü‚¯‚É‚È‚èA\n#{active.name}‚Ì‹Ræ‚ğó‚¯“ü‚ê‚½I"
         else
-          text = "#{target.name}'s face is being s‚othered by\n #{active.name}'s ass!"
+          text = "#{target.name}‚ÌŠç‚ªA\n#{active.name}‚Ì‚¨K‚Å‰Ÿ‚µ‚Â‚Ô‚³‚ê‚½I"
         end
       when "ƒGƒ“ƒuƒŒƒCƒX"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          if active.name == $game_actors[101]
-          text = "#{target.name} relaxes and entrusts his body\n to #{active.name}!"
-          else
-          text = "#{target.name} relaxes and entrusts her\n body to #{active.name}!"
-          end
+          text = "#{target.name}‚Í—Í‚ğ”²‚«A\n#{active.name}‚Ég‘Ì‚ğ—a‚¯‚½I"
         else
-          text = "#{active.name} clung tightly to #{target.name}!"
+          text = "#{target.name}‚Í#{active.name}‚É•ø‚«‚Â‚©‚ê‚½I"
         end
       when "ƒGƒLƒVƒrƒWƒ‡ƒ“"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} spreads her legs,\n entrusting herself to #{active.name}!"
+          text = "#{target.name}‚Í©‚ç‹r‚ğŠJ‚«A\n#{active.name}‚Ég‘Ì‚ğ—a‚¯‚½I"
         else
-          text = "#{active.name} clings on to #{target.name},\n opening up her crotch for all to see!"
+          text = "#{active.name}‚Í#{target.name}‚ğ•ø‚¦‚İA\nüˆÍ‚É—Ç‚­Œ©‚¦‚é‚æ‚¤‚ÉŒÒ‚ğ‘å‚«‚­ŠJ‚©‚¹‚½I"
         end
       when "ƒyƒŠƒXƒR[ƒv"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} thrusts out his pelvis\n and buries his penis in #{active.name}'s breasts!"
+          text = "#{target.name}‚Í©‚ç˜‚ğ“Ë‚«o‚µA\n#{active.name}‚Ì‹¹‚ÉƒyƒjƒX‚ğ‚¤‚¸‚ß‚½I"
         else
-          text = "#{target.name}'s penis has been\n s‚—allo‚—ed by #{active.name}'s cleavage!!"
+          text = "#{target.name}‚ÌƒyƒjƒX‚ÍA\n#{active.name}‚Ì‹¹‚Ì’JŠÔ‚Éˆù‚İ‚Ü‚ê‚½II"
         end
       when "ƒVƒFƒ‹ƒ}ƒbƒ`"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} opens her legs to accept #{active.name}!"
+          text = "#{target.name}‚Í©‚ç‹r‚ğL‚°A\n#{active.name}‚ğŒ}‚¦“ü‚ê‚½I"
         else
-          text = "#{target.name} legs have been entangled ‚—ith #{active.name}!"
+          text = "#{target.name}‚Í#{brk}#{active.name}‚É‹r‚ğ—‚ßæ‚ç‚ê‚½I"
         end
       when "ƒhƒƒEƒlƒNƒ^["
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} opens up her slit ‚—ith her\n finger, happily accepting #{active.name}'s ‚outh!"
+          text = "#{target.name}‚Í©‚çw‚ÅƒAƒ\ƒR‚ğL‚°A\n#{active.name}‚ÌŒûˆú‚ğŒ}‚¦“ü‚ê‚½I"
         else
-          text = "#{target.name}'s pussy is being sucked on\n by #{active.name}'s ‚outh!"
+          text = "#{target.name}‚ÌƒAƒ\ƒR‚ÉA\n#{active.name}‚ª‹z‚¢•t‚¢‚Ä‚«‚½I"
         end
       when "ƒCƒ“ƒT[ƒgƒeƒCƒ‹"
-        text = "#{active.name} sticks her tail inside #{target.name}'s pussy!"
+        text = "#{target.name}‚ÌƒAƒ\ƒR‚ÉA\n#{active.name}‚ÌK”ö‚ª“Ë‚«“ü‚ê‚ç‚ê‚½I"
       when "ƒ}ƒEƒXƒCƒ“ƒeƒCƒ‹"
-        text = "#{active.name} sticks her tail inside #{target.name}'s ‚outh!"
+        text = "#{target.name}‚ÌŒû‚ÉA\n#{active.name}‚ÌK”ö‚ª‚Ë‚¶‚Ü‚ê‚½I"
       when "ƒoƒbƒNƒCƒ“ƒeƒCƒ‹"
-        text = "#{active.name} sticks her tail up #{target.name}'s ass!"
+        text = "#{target.name}‚Ì‹eÀ‚ÉA\n#{active.name}‚ÌK”ö‚ª“Ë‚«“ü‚ê‚ç‚ê‚½I"
       when "ƒfƒBƒ‹ƒhƒCƒ“ƒT[ƒg"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
-          text = "#{target.name} spreads her legs to receive #{active.name}!"
+          text = "#{target.name}‚Í©‚ç‹r‚ğL‚°A\n#{active.name}‚ÌƒfƒBƒ‹ƒh‚Ì‘}“ü‚ğŒ}‚¦“ü‚ê‚½I"
         else
-          text = "#{active.name} pierces #{target.name}'s pussy!"
+          text = "#{target.name}‚ÌƒAƒ\ƒR‚ÉA\n#{active.name}‚ÌƒfƒBƒ‹ƒh‚ª“Ë‚«“ü‚ê‚ç‚ê‚½I"
         end
       when "ƒfƒBƒ‹ƒhƒCƒ“ƒ}ƒEƒX"
         if $game_switches[89] == true #ƒLƒƒƒ“ƒZƒ‹ƒL[‚Åó‚¯“ü‚ê‚½ê‡
@@ -444,7 +436,7 @@ class Scene_Battle
         text = "#{active.name}‚Ì‘€‚éGè‚ª‰ö‚µ‚­å¿‚­‚ÆA\n#{target.name}‚ÍŒÒ‚ğ‘å‚«‚­L‚°‚½p¨‚É‚³‚ê‚Ä‚µ‚Ü‚Á‚½I"
       end
     end
-    $game_temp.battle_log_text += text + "\\"
+    $game_temp.battle_log_text += text + "\w\q"
   end
   #--------------------------------------------------------------------------
   # š ƒz[ƒ‹ƒhI—¹ƒeƒLƒXƒgˆ—
@@ -465,13 +457,13 @@ class Scene_Battle
       holder = target.hold.penis.battler
       case target.hold.penis.type
       when "Š‘}“ü"
-        text.push("#{holder.name} releases his penis fro‚ her vagina!")
+        text.push("#{holder.name}‚ÍƒAƒ\ƒR‚©‚çƒyƒjƒX‚ğ”²‚¢‚½I")
       when "Œû‘}“ü"
-        text.push("#{holder.name}'s ‚outh releases his penis!")
+        text.push("#{holder.name}‚ÍƒyƒjƒX‚©‚çŒû‚ğ—£‚µ‚½I")
       when "K‘}“ü"
-        text.push("#{holder.name} released his penis fro‚ her ass!")
+        text.push("#{holder.name}‚Í‹eÀ‚©‚çƒyƒjƒX‚ğ”²‚¢‚½I")
       when "ƒpƒCƒYƒŠ"
-        text.push("#{holder.name} released his penis fro‚ her cleavage!")
+        text.push("#{holder.name}‚Í‹¹‚Ì’JŠÔ‚©‚çƒyƒjƒX‚ğ‰ğ•ú‚µ‚½I")
       end
     end
     if target.hold.vagina.battler != nil
@@ -479,11 +471,11 @@ class Scene_Battle
       case target.hold.vagina.type
       when "Š‘}“ü"
         item = target.hold.vagina.parts
-        text.push("#{holder.name} pulled his penis out of her #{item}!")
+        text.push("#{holder.name}‚Í#{item}‚ğˆø‚«”²‚¢‚½I")
       when "Šç–Ê‹Ræ","ƒNƒ“ƒj"
-        text.push("#{holder.name} pulls a‚—ay fro‚ #{target.name}'s crotch!")
+        text.push("#{holder.name}‚Í#{target.name}‚ğ‰ğ•ú‚µ‚½I")
       when "ŠL‡‚í‚¹"
-        text.push("#{holder.name} unt‚—ines her legs!")
+        text.push("#{holder.name}‚Í—‚Ü‚¹‚½‹r‚ğ‚Ù‚Ç‚¢‚½I")
       end
     end
     if target.hold.mouth.battler != nil
@@ -491,41 +483,41 @@ class Scene_Battle
       case target.hold.mouth.type
       when "Œû‘}“ü"
         item = target.hold.mouth.parts
-        text.push("#{holder.name} pulled his penis out of her #{item}!")
+        text.push("#{holder.name}‚Í#{item}‚ğˆø‚«”²‚¢‚½I")
       when "Šç–Ê‹Ræ","K‹Ræ","‚Ï‚Ó‚Ï‚Ó"
-        text.push("#{holder.name} releases #{target.name}!")
+        text.push("#{holder.name}‚Í#{target.name}‚ğ‰ğ•ú‚µ‚½I")
       when "ƒNƒ“ƒj","ƒLƒbƒX"
-        text.push("#{holder.name} parts fro‚ #{target.name}'s lips!")
+        text.push("#{holder.name}‚Í#{target.name}‚©‚ç—£‚ê‚½I")
       end
     end
     if target.hold.anal.battler != nil
       holder = target.hold.anal.battler
       case target.hold.anal.type
       when "K‘}“ü"
-        text.push("#{holder.name} pulled his penis out of her #{item}!")
+        text.push("#{holder.name}‚Í#{item}‚ğˆø‚«”²‚¢‚½I")
       when "K‹Ræ"
-        text.push("#{holder.name} releases #{target.name}!")
+        text.push("#{holder.name}‚Í#{target.name}‚©‚ç—£‚ê‚½I")
       end
     end
     if target.hold.tops.battler != nil
       holder = target.hold.tops.battler
       case target.hold.tops.type
       when "S‘©","ŠJ‹r","‚Ï‚Ó‚Ï‚Ó"
-        text.push("#{holder.name} lets go of #{target.name}!")
+        text.push("#{holder.name}‚Í#{target.name}‚ğ‰ğ•ú‚µ‚½I")
       end
     end
     if target.hold.tail.battler != nil
       holder = target.hold.tail.battler
       case target.hold.tail.type
       when "Š‘}“ü","Œû‘}“ü","K‘}“ü"
-        text.push("#{target.name} was released fro‚ her tail's grasp!")
+        text.push("#{holder.name}‚ÍK”ö‚ÌU‚ß‚©‚ç“¦‚ê‚½I")
       end
     end
     if target.hold.tentacle.battler != nil
       holder = target.hold.tentacle.battler
       case target.hold.tentacle.type
       when "Š‘}“ü","Œû‘}“ü","K‘}“ü"
-        text.push("#{holder.name} releases her tentacle!")
+        text.push("#{holder.name}‚ÍGè‚ÌU‚ß‚©‚ç“¦‚ê‚½I")
       end
     end
     if target.hold.dildo.battler != nil
@@ -533,18 +525,18 @@ class Scene_Battle
       brk = "A\n" if SR_Util.names_over?(holder.name,target.name)
       case target.hold.dildo.type
       when "Š‘}“ü","Œû‘}“ü","K‘}“ü"
-        text.push("#{holder.name} releases her dildo!")
+        text.push("#{holder.name}‚ÍƒfƒBƒ‹ƒh‚ÌU‚ß‚©‚ç“¦‚ê‚½I")
       end
     end
     a = ""
     a += text[0] if text[0] != nil
-    a += "\n\" if text[1] != nil
+    a += "\n\m" if text[1] != nil
     a += text[1] if text[1] != nil
-    a += "\n\" if text[2] != nil
+    a += "\n\m" if text[2] != nil
     a += text[2] if text[2] != nil
-    a += "\n\" if text[3] != nil
+    a += "\n\m" if text[3] != nil
     a += text[3] if text[3] != nil
-    $game_temp.battle_log_text += a + "\\"
+    $game_temp.battle_log_text += a + "\w\q"
   end
   #--------------------------------------------------------------------------
   # œ —Œğ‚Ìƒz[ƒ‹ƒh•t—^‚É‚æ‚éƒCƒjƒVƒAƒ`ƒu•Ï“®
@@ -1027,7 +1019,7 @@ class Scene_Battle
     # ƒz[ƒ‹ƒhƒ|ƒbƒv‚Ìw¦
     hold_pops_order
     # ‘ÌˆÊƒeƒLƒXƒg
-    $game_temp.battle_log_text += "\\" + hd_text if hd_text != ""
+    $game_temp.battle_log_text += "\w\q" + hd_text if hd_text != ""
   end
 =end
 

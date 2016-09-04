@@ -15,13 +15,13 @@ class Game_Battler
     for i in self.states
       if $data_states[i].id != 6 and self.exist? and not self.dead?
         ms = $data_states[i].message($data_states[i],"report",self,nil)
-        text = (text + ms + "\\") if ms != ""
+        text = (text + ms + "\w\q") if ms != ""
       end
     end
     # ƒƒbƒZ[ƒW•\¦
     if text != ""
       text += "CLEAR"
-      text.sub!("\\CLEAR","")
+      text.sub!("\w\qCLEAR","")
       return text
     else
       return ""
@@ -50,7 +50,7 @@ class Game_Battler
           return text1
         end
         #‰üs‚ğ‘}“ü
-        text1 = text1 + ms1 + "\\" if ms1 != ""
+        text1 = text1 + ms1 + "\w\q" if ms1 != ""
       end
       #Ši”[I—¹‚µ‚½‚çƒƒO‚ğÁ‹‚·‚é
       self.add_states_log.clear
@@ -60,7 +60,7 @@ class Game_Battler
       for i in self.remove_states_log
         ms2 = i.message(i,"recover", self, user)
         #‰üs‚ğ‘}“ü
-        text2 = text2 + ms2 + "\\" if ms2 != ""
+        text2 = text2 + ms2 + "\w\q" if ms2 != ""
       end
       #Ši”[I—¹‚µ‚½‚çƒƒO‚ğÁ‹‚·‚é
       self.remove_states_log.clear
@@ -71,7 +71,7 @@ class Game_Battler
     if text != ""
       #•¶Í‚ª‚ ‚éê‡AÅŒã‚Ì‰üs‚ğÁ‚·
       text += "CLEAR"
-      text.sub!("\\CLEAR","")
+      text.sub!("\w\qCLEAR","")
       return text
     else
       return ""
@@ -84,10 +84,10 @@ class Game_Battler
     user = $game_temp.battle_active_battler
     text = skill.message(skill, "action", self, user)
     if text != "" and text != nil
-      text = text + "\"
+      text = text + "\q"
       # ’§”­‚É‚æ‚é‘ÎÛ•ÏX‚ª”­¶‚µ‚Ä‚¢‚éê‡A—UˆøƒƒbƒZ[ƒW‚ğo‚·
       if $game_temp.incite_flag
-        text = "#{user.name} ‚—as invited!\\" + text
+        text = "#{user.name}‚Í—Uˆø‚³‚ê‚Ä‚¢‚éI\q\m" + text
       end
       $game_temp.battle_log_text = text
     end
@@ -105,8 +105,8 @@ class Game_Battler
       damage = self.damage
       # œƒNƒŠƒeƒBƒJƒ‹ˆ—
       if self.critical and self.damage != "Miss"
-#        plus += "ƒZƒ“ƒVƒ…ƒAƒ‹ƒXƒgƒ[ƒNI\\"
-        plus += "Sensual StrokeI\\"
+#        plus += "ƒZƒ“ƒVƒ…ƒAƒ‹ƒXƒgƒ[ƒNI\w\q"
+        plus += "Sensual StrokeI\w\q"
         self.animation_id = 103
         self.animation_hit = true
         self.damage_pop = true
@@ -118,31 +118,31 @@ class Game_Battler
       # œƒ_ƒ[ƒWˆ—(’l‚ªƒ}ƒCƒiƒX‚È‚ç‰ñ•œƒXƒLƒ‹)
       if damage > 0
         if user.is_a?(Game_Actor)
-          text = "Dealt #{damage.to_s} pleasure to #{myname}!"
-          text = "#{myname} ‚—rithes in pleasure!" if self.weaken? and not self.dead?
-          text = "#{myname}'s body spas‚s from intense pleasure!" if self.sp_down_flag == true
+          text = "#{myname}‚É #{damage.to_s} ‚Ì‰õŠ´‚ğ—^‚¦‚½I"
+          text = "#{myname}‚Í‰õŠ´‚Åg–ã‚¦‚µ‚Ä‚¢‚éI" if self.weaken? and not self.dead?
+          text = "#{myname}‚Ìg‘Ì‚ª‰õŠ´‚Å‘å‚«‚­’µ‚Ë‚éI" if self.sp_down_flag == true
         else
-          text = "#{myname} received #{damage.to_s} pleasure!"
-          text = "#{myname} ‚—rithes in pleasure!" if self.weaken?
-          text = "#{myname}'s body spas‚s from intense pleasure!" if self.sp_down_flag == true
-          text = "#{myname}'s vitality has been cut...!" if self.weaken? and self == $game_actors[101]
-          text = "#{myname}'s body has been pushed to its li‚it!" if self.sp_down_flag == true and self == $game_actors[101]
+          text = "#{myname}‚Í #{damage.to_s} ‚Ì‰õŠ´‚ğó‚¯‚½I"
+          text = "#{myname}‚Í‰õŠ´‚Åg–ã‚¦‚µ‚Ä‚¢‚éI" if self.weaken?
+          text = "#{myname}‚Ìg‘Ì‚ª‰õŠ´‚Å‘å‚«‚­’µ‚Ë‚éI" if self.sp_down_flag == true
+          text = "#{myname}‚ÌŠˆ—Í‚ªí‚ç‚ê‚Ä‚¢‚­ccI" if self.weaken? and self == $game_actors[101]
+          text = "#{myname}‚Ì¸‚ªŒÀŠE‚ğ’´‚¦‚Äi‚ç‚ê‚éI" if self.sp_down_flag == true and self == $game_actors[101]
         end
       elsif damage == 0# and damage < 1
         if user.is_a?(Game_Actor)
-          text = "#{myname} didn't take any pleasure!"
+          text = "#{myname}‚É‰õŠ´‚ğ—^‚¦‚ç‚ê‚È‚¢I"
         else
-          text = "#{myname} didn't take any pleasure!"
+          text = "#{myname}‚Í‰õŠ´‚ğó‚¯‚È‚©‚Á‚½I"
         end
         #-------------------------------------------------------------------------
         # –{‹C‚É‚È‚é–²–‚‚ª‚Ü‚¾–{‹C‚ğo‚µ‚Ä‚¢‚È‚¢‚½‚ß‚É¸_‚µ‚È‚¢ê‡AƒeƒLƒXƒg‚ğ•ÏX
         #-------------------------------------------------------------------------
         if SR_Util.enemy_before_earnest?(self)
-          text = "#{myname}'s body lurges in great pleasure!"
+          text = "#{myname}‚Ìg‘Ì‚ª‰õŠ´‚Å‘å‚«‚­’µ‚Ë‚éI"
         end
       else
         n = self.damage * 80 / 100
-        text = "#{myname} recovered #{(damage.abs).to_s}‚d‚o!"
+        text = "#{myname}‚Ì‚d‚o‚ª #{(damage.abs).to_s} ‰ñ•œ‚µ‚½I"
       end
     elsif self.damage == "Miss"
       text = skill.message(skill,"avoid", self, user)
@@ -179,13 +179,13 @@ class Game_Battler
     # ¡“ÁêƒXƒLƒ‹
     case skill.id
     when 419   #ƒAƒ“ƒ‰ƒbƒL[ƒƒA
-      text = "#{$game_actors[101].name}‚Í•sK‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½I\\"
+      text = "#{$game_actors[101].name}‚Í•sK‚É‚È‚Á‚Ä‚µ‚Ü‚Á‚½I\w\q"
       # •sK‚Å‚È‚¢ê‡A•sKó‘Ô‚É‚·‚éB
       if $game_variables[61] == 0
         $game_variables[61] = 50 
       end
     when 239   #ƒVƒƒƒCƒjƒ“ƒOƒŒƒCƒW
-      text = "ˆÅ‚ğÙ‚­‘MŒõ‚Ì“S’Æ‚ªAˆ«‚µ‚«Ò‚Ç‚à‚ğŠÑ‚­II\\"
+      text = "ˆÅ‚ğÙ‚­‘MŒõ‚Ì“S’Æ‚ªAˆ«‚µ‚«Ò‚Ç‚à‚ğŠÑ‚­II\w\q"
     end
     #------------------------------------------------------------------------#        
     return text
@@ -198,7 +198,7 @@ class Game_Battler
     user = $game_temp.battle_active_battler
     text = item.message(item, "action", self, user)
     if text != nil
-      text = text + "\"
+      text = text + "\q"
       $game_temp.battle_log_text = text
     end
   end
@@ -213,16 +213,16 @@ class Game_Battler
     # EP‚ÆVP—¼•û‰ñ•œ‚Ìê‡
     if (item.recover_hp_rate > 0 or item.recover_hp > 0) and
        (item.recover_sp_rate > 0 or item.recover_sp > 0)
-      text = "#{myname} recovered #{(damage.abs).to_s}‚d‚o!\" + 
-             "#{myname} recovered #{(recover_sp).to_s}‚u‚o!I"
+      text = "#{myname}‚Ì‚d‚o‚ª #{(damage.abs).to_s} ‰ñ•œ‚µ‚½I\q" + 
+             "#{myname}‚Ì‚u‚o‚ª #{(recover_sp).to_s} ‰ñ•œ‚µ‚½I"
       text = "‚µ‚©‚µ¡‚ÍŒø‰Ê‚ª–³‚©‚Á‚½I" if self.state?("Šã")
     # EP‚Ì‚İ‰ñ•œ‚Ìê‡
     elsif (item.recover_hp_rate > 0 or item.recover_hp > 0)
-      text = "#{myname} recovered #{(damage.abs).to_s}‚d‚o!"
-      text = "‚go‚—ever it seems to be ineffective!" if self.state?("Šã")
+      text = "#{myname}‚Ì‚d‚o‚ª #{(damage.abs).to_s} ‰ñ•œ‚µ‚½I"
+      text = "‚µ‚©‚µ¡‚ÍŒø‰Ê‚ª–³‚©‚Á‚½I" if self.state?("Šã")
     # VP‚Ì‚İ‰ñ•œ‚Ìê‡
     elsif (item.recover_sp_rate > 0 or item.recover_sp > 0)
-      text = "#{myname} recovered #{(recover_sp).to_s}‚u‚o!"
+      text = "#{myname}‚Ì‚u‚o‚ª #{(recover_sp).to_s} ‰ñ•œ‚µ‚½I"
     # ‘¡‚è•¨ƒAƒCƒeƒ€ƒAƒCƒeƒ€‚Ìê‡
     elsif item.element_set.include?(199)
       text = bms_present_response
@@ -245,28 +245,28 @@ class Game_Battler
     case self.personality
     #------------------------------------------------------------------------
     when "DF","‚–","“Æ‘P"
-      text = "#{myname} s‚iles suggestively...!"
+      text = "#{myname}‚Ív‚í‚¹‚Ô‚è‚É”÷Î‚ñ‚¾ccI"
     #------------------------------------------------------------------------
     when "—z‹C","“V‘R","ŠÃ‚¦«","’¨‹C"
-      text = "#{myname} is s‚iling happily...I"
+      text = "#{myname}‚Í––Ê‚ÌÎ‚İ‚ÅŠì‚ñ‚¾ccI"
     #------------------------------------------------------------------------
     when "DF","ã•i","_˜a","]‡","‚‹M"
-      text = "#{myname} has a sub‚issively pleased look on her face...!"
+      text = "#{myname}‚Í‘f’¼‚ÉŠì‚ñ‚Å‚¢‚é‚æ‚¤‚¾ccI"
     #------------------------------------------------------------------------
     when "Ÿ‚¿‹C","ˆÓ’nˆ«","‹Cä","‘¸‘å"
-      text = "#{myname} looks a‚—ay to shado‚— her e‚barrass‚ent...!"
+      text = "#{myname}‚ÍŠç‚ğ”w‚¯‚ÄÆ‚ê‚ğ‰B‚µ‚½ccI"
     #------------------------------------------------------------------------
     when "’W”‘","•sv‹c","“|ö","‰A‹C"
-      text = "#{myname} see‚s so‚e‚—hat pleased...!"
+      text = "#{myname}‚Í‚Ç‚¤‚â‚çŠì‚ñ‚Å‚¢‚é‚æ‚¤‚¾ccI"
     #------------------------------------------------------------------------
     when "“à‹C","‹•¨","Œ‰•È"
-      text = "#{myname}'s face is blushing red ‚—ith e‚barrass‚ent...!"
+      text = "#{myname}‚ÍŠç‚ğÔ‚­‚µ‚ÄÆ‚ê‚Ä‚¢‚éccI"
     #------------------------------------------------------------------------
     when "˜Iˆ«‹¶"
-      text = "#{myname} appears a‚used,\n\ sneering and laughing at #{user}...!"
+      text = "#{myname}‚Í‚»‚ê‚ğ–Ê”’‚ª‚é‚æ‚¤‚ÉA\n\m#{user}‚ğŒ©‚Äš}Î‚Á‚½ccI"
     #------------------------------------------------------------------------
     else
-      text = "#{myname} see‚s to be pleased...!"
+      text = "#{myname}‚ÍŠì‚ñ‚Å‚¢‚é‚æ‚¤‚¾ccI"
     end
     # •Ô‚·
     return text
