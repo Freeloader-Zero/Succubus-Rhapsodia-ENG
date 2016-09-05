@@ -40,9 +40,9 @@ class Game_Battler
   #●人間属(明らかに夢魔・魔物でない方々)
   def tribe_human?
     case $data_SDB[self.class_id].name
-    when "Little Witch","Witch ","Caster","Slave "
+    when "Little Witch","Witch","Caster","Slave"
       return true
-    when "Priestess ","Cursed Magus","Ramile","Huｍan"
+    when "Priestess","Cursed Magus","Ramile","Huｍan"
       return true
     else
       return false
@@ -51,7 +51,7 @@ class Game_Battler
   #●スライム属(服が粘液)
   def tribe_slime?
     case $data_SDB[self.class_id].name
-    when "Sliｍe","Gold Sliｍe ","Queen Sliｍe"
+    when "Sliｍe","Gold Slime","Queen Sliｍe"
       return true
     else
       return false
@@ -70,7 +70,7 @@ class Game_Battler
   #●子鬼属(コマンダー指揮範囲となる。インプも例外的に含まれる)
   def tribe_gobrin?
     case $data_SDB[self.class_id].name
-    when "Goblin","Goblin Leader ","Iｍp"
+    when "Goblin","Goblin Leader","Iｍp"
       return true
     else
       return false

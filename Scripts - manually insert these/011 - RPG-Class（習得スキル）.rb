@@ -87,7 +87,7 @@ module RPG
       #------------------------------------------------------------------------
       # ■■サキュバス種
       #------------------------------------------------------------------------
-      when "Lesser Succubus ","Succubus","Succubus Lord "
+      when "Lesser Succubus","Succubus","Succubus Lord"
         # Lv1.ツーパフ
         group.push([1, 0, 91])   
         # Lv1.【高揚】(桃)
@@ -99,7 +99,7 @@ module RPG
         # Lv12.【吸精】
         group.push([12, 1, 70])  
         # Lv12.ランクアップ（レッサーサキュバス）
-        group.push([12, 0, 249]) if self.name == "Lesser Succubus "
+        group.push([12, 0, 249]) if self.name == "Lesser Succubus"
         # Lv15.ラナンブルム
         group.push([15, 0, 171]) 
         # Lv15.ドロウネクター
@@ -119,7 +119,7 @@ module RPG
       #------------------------------------------------------------------------
       # ■■デビル種
       #------------------------------------------------------------------------
-      when "Iｍp","Devil ","Deｍon"
+      when "Iｍp","Devil","Deｍon"
         # Lv1.ネリネイーザ
         group.push([1, 0, 177])  
         # Lv6.テラー
@@ -133,21 +133,21 @@ module RPG
         # Lv16.サフライーザ
         group.push([16, 0, 185]) 
         # Lv18.【胆力】（デビル以降）
-        group.push([18, 1, 110]) if self.name == "Devil " or self.name == "Deｍon"
+        group.push([18, 1, 110]) if self.name == "Devil" or self.name == "Deｍon"
         # Lv20.【回復力】
         group.push([20, 1, 212]) 
         # Lv26.ドロウネクター
         group.push([26, 0, 16])  if $PRODUCT_VERSION 
         # Lv26.【ペリスコープ】（デビル以降）
-        group.push([26, 1, 307]) if $PRODUCT_VERSION and (self.name == "Devil " or self.name == "Deｍon") 
+        group.push([26, 1, 307]) if $PRODUCT_VERSION and (self.name == "Devil" or self.name == "Deｍon") 
         # Lv27.威迫（デビル以降）
-        group.push([27, 0, 620]) if self.name == "Devil " or self.name == "Deｍon"
+        group.push([27, 0, 620]) if self.name == "Devil" or self.name == "Deｍon"
         # Lv30.【溢れる回復力】（緑）
         group.push([30, 1, 213]) if self.color == "緑" 
         # Lv30.コリオイーザ・アルダ（白）
         group.push([30, 0, 190]) if self.color == "白"
         # Lv34.ランクアップ（デビル）
-        group.push([34, 0, 249]) if self.name == "Devil "
+        group.push([34, 0, 249]) if self.name == "Devil"
         # Lv34.【対抗心】
         group.push([34, 1, 151])  
         # Lv37.アスタイーザ・アルダ
@@ -155,7 +155,7 @@ module RPG
       #------------------------------------------------------------------------
       # ■■ウィッチ種
       #------------------------------------------------------------------------
-      when "Little Witch","Witch "
+      when "Little Witch","Witch"
         # Lv1.チェック
         group.push([1, 0, 126])
         # Lv1.【手際良い採取】（緑）
@@ -227,7 +227,7 @@ module RPG
       #------------------------------------------------------------------------
       # ■■スレイヴ種
       #------------------------------------------------------------------------
-      when "Slave "
+      when "Slave"
         # ☆シェルマッチ、スクラッチ、【アクセプト】は習得しない
         group.delete([1, 0, 5])
         group.delete([1, 0, 52])
@@ -283,15 +283,15 @@ module RPG
       #------------------------------------------------------------------------
       # ■■スライム種
       #------------------------------------------------------------------------
-      when "Sliｍe","Gold Sliｍe "
+      when "Sliｍe","Gold Slime"
         # Lv1.【柔軟】
         group.push([1, 1, 112])
         # Lv1.【粘体】
         group.push([1, 1, 114])
         # Lv1.【プロテクション】
-        group.push([1, 1, 115]) if self.name == "Gold Sliｍe "
+        group.push([1, 1, 115]) if self.name == "Gold Slime"
         # Lv1.【金運】
-        group.push([1, 1, 222]) if self.name == "Gold Sliｍe "
+        group.push([1, 1, 222]) if self.name == "Gold Slime"
         # Lv3.スライミーリキッド
         group.push([3, 0, 587])
         # Lv7.ツーパフ
@@ -395,7 +395,7 @@ module RPG
       #------------------------------------------------------------------------
       # ■■ワーキャット種
       #------------------------------------------------------------------------
-      when "Werecat "
+      when "Werecat"
         # Lv1.【柔軟】
         group.push([1, 1, 112])
         # Lv1.【金運】(黄)
@@ -425,11 +425,11 @@ module RPG
       #------------------------------------------------------------------------
       # ■■ゴブリン種
       #------------------------------------------------------------------------
-      when "Goblin","Goblin Leader "
+      when "Goblin","Goblin Leader"
         # Lv1.【小悪魔の連携】
         group.push([1, 1, 81]) if self.name == "Goblin"
         # Lv1.【小悪魔の統率】
-        group.push([1, 1, 82]) if self.name == "Goblin Leader "
+        group.push([1, 1, 82]) if self.name == "Goblin Leader"
         # Lv1.【奇襲の備え】
         group.push([1, 1, 227])
         # Lv4.エキサイトビュー
@@ -447,11 +447,11 @@ module RPG
         # Lv26.ランクアップ（ゴブリン）
         group.push([26, 0, 249]) if self.name == "Goblin"
         # Lv26.激励
-        group.push([26, 0, 588]) if self.name == "Goblin Leader "
+        group.push([26, 0, 588]) if self.name == "Goblin Leader"
         # Lv29.ガード
-        group.push([29, 0, 145]) if self.name == "Goblin Leader "
+        group.push([29, 0, 145]) if self.name == "Goblin Leader"
         # Lv29.パラライズ
-        group.push([29, 0, 210]) if self.name == "Goblin Leader "
+        group.push([29, 0, 210]) if self.name == "Goblin Leader"
         # Lv35.【対抗心】
         group.push([35, 1, 151]) 
         # Lv40.プロヴォーク
@@ -459,7 +459,7 @@ module RPG
       #------------------------------------------------------------------------
       # ■■プリーステス種
       #------------------------------------------------------------------------
-      when "Priestess "
+      when "Priestess"
         # ☆シェルマッチ、スクラッチ、【アクセプト】は習得しない
         group.delete([1, 0, 5])   
         group.delete([1, 0, 52])
@@ -525,7 +525,7 @@ module RPG
       #------------------------------------------------------------------------
       # ■■アルラウネ種
       #------------------------------------------------------------------------
-      when "Alraune "
+      when "Alraune"
         # Lv1.【ダウト】
         group.push([1, 1, 226])
         # Lv1.【免疫力】
@@ -565,7 +565,7 @@ module RPG
       #------------------------------------------------------------------------
       # ■■マタンゴ種
       #------------------------------------------------------------------------
-      when "Matango "
+      when "Matango"
         # Lv1.【ダウト】
         group.push([1, 1, 226])
         # Lv1.【免疫力】
@@ -747,7 +747,7 @@ module RPG
       #------------------------------------------------------------------------
       # ■■ユニークサキュバス種
       #------------------------------------------------------------------------
-      when "Unique Succubus ","Unique Tycoon ","Unique Witch"
+      when "Unique Succubus","Unique Tycoon","Unique Witch"
         case self.color
         #----------------------------------------------------------------------
         # ■■ネイジュレンジ
@@ -778,7 +778,7 @@ module RPG
         #----------------------------------------------------------------------
         # ■■リジェオ
         #----------------------------------------------------------------------
-        when "Rejeo "
+        when "Rejeo"
           # Lv1.【胸が性感帯】
           group.push([1, 1, 19])
           # Lv1.【無我夢中】
@@ -810,7 +810,7 @@ module RPG
         #----------------------------------------------------------------------
         # ■■フルビュア
         #----------------------------------------------------------------------
-        when "Fulbeua "
+        when "Fulbeua"
           # Lv1.【確固たる自尊心】
           group.push([1, 1, 93]) if $PRODUCT_VERSION
           # Lv1.【陰核が性感帯】
@@ -844,7 +844,7 @@ module RPG
         #----------------------------------------------------------------------
         # ■■ギルゴーン
         #----------------------------------------------------------------------
-        when "Gilgoon "
+        when "Gilgoon"
           # ☆シェルマッチ、スクラッチ、【アクセプト】は習得しない
           group.delete([1, 0, 5])   
           group.delete([1, 0, 52])

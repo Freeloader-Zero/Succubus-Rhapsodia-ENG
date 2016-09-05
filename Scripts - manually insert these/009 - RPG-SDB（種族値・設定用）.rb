@@ -90,7 +90,7 @@ module RPG
       # 平均水準以上の能力を持つが、ランクが上がる毎に満腹度や吸精量が重くなる。
       #------------------------------------------------------------------------
       when 5,6 
-        @name = "Lesser Succubus "
+        @name = "Lesser Succubus"
         @exp_type = 1
         @maxhp, @maxsp = 350, 300
         @str, @dex, @agi, @int = 60, 50, 45, 42
@@ -152,7 +152,7 @@ module RPG
         end
       #------------------------------------------------------------------------
       when 15,16 
-        @name = "Succubus Lord "
+        @name = "Succubus Lord"
         @exp_type = 1
         @maxhp, @maxsp =  400, 380
         @str, @dex, @agi, @int = 100, 100, 100, 82
@@ -218,7 +218,7 @@ module RPG
         end
       #------------------------------------------------------------------------
       when 26,27 # デビル
-        @name = "Devil "
+        @name = "Devil"
         @exp_type = 1
         @maxhp, @maxsp = 370, 370
         @str, @dex, @agi, @int = 110, 55, 65, 100
@@ -314,7 +314,7 @@ module RPG
         end
       #------------------------------------------------------------------------
       when 42,43 
-        @name = "Witch "
+        @name = "Witch"
         @exp_type = 2
         @maxhp, @maxsp = 310, 350
         @str, @dex, @agi, @int = 65, 50, 50, 140
@@ -385,7 +385,7 @@ module RPG
       # ルーンを５つ刻印できるため、カスタマイズ性がある。
       #------------------------------------------------------------------------
       when 63 
-        @name = "Slave "
+        @name = "Slave"
         @exp_type = 1
         @maxhp, @maxsp = 200, 200
         @str, @dex, @agi, @int = 30, 30, 30, 30
@@ -478,7 +478,7 @@ module RPG
       # その分、満腹度の減りは早め。
       #------------------------------------------------------------------------
       when 90
-        @name = "Gold Sliｍe "
+        @name = "Gold Slime"
         @exp_type = 3
         @maxhp, @maxsp = 480, 310
         @str, @dex, @agi, @int = 50, 50, 20, 60
@@ -579,7 +579,7 @@ module RPG
       # できることは多いのでカスタマイズ次第。
       #------------------------------------------------------------------------
       when 104,105
-        @name = "Werecat "
+        @name = "Werecat"
         @exp_type = 3
         @maxhp, @maxsp = 300, 300
         @str, @dex, @agi, @int = 90, 80, 110, 70
@@ -639,7 +639,7 @@ module RPG
         end
       #------------------------------------------------------------------------
       when 111
-        @name = "Goblin Leader "
+        @name = "Goblin Leader"
         @exp_type = 2
         @maxhp, @maxsp = 350, 320
         @str, @dex, @agi, @int = 110, 50, 80, 90
@@ -669,7 +669,7 @@ module RPG
       # 回復手段も豊富だが、ホールドには弱く完封もされやすい。
       #------------------------------------------------------------------------
       when 118
-        @name = "Priestess "
+        @name = "Priestess"
         @exp_type = 3
         @maxhp, @maxsp = 380, 340
         @str, @dex, @agi, @int = 5, 5, 30, 120
@@ -729,7 +729,7 @@ module RPG
       # 【ロマンチスト】により高ムード時の爆発力がある。
       #------------------------------------------------------------------------
       when 126,127
-        @name = "Alraune "
+        @name = "Alraune"
         @exp_type = 3
         @maxhp, @maxsp = 370, 320
         @str, @dex, @agi, @int = 80, 80, 25, 50
@@ -763,7 +763,7 @@ module RPG
       # 耐久力そこそこ、火力はあんまりといった所。ナイトメアの相互互換。
       #------------------------------------------------------------------------
       when 133
-        @name = "Matango "
+        @name = "Matango"
         @exp_type = 3
         @maxhp, @maxsp = 420, 310
         @str, @dex, @agi, @int = 35, 47, 35, 60
@@ -976,7 +976,7 @@ module RPG
       # 素早さも高いが、ＶＰはかなり低く戦闘ではスタミナ切れが早い。
       #------------------------------------------------------------------------
       when 252 #ユニークサキュバス/リジェオ
-        @name, @graphics = "Rejeo ", "boss_rejeo"
+        @name, @graphics = "Rejeo", "boss_rejeo"
         @exp_type = 4
         @maxhp, @maxsp = 350, 200
         @str, @dex, @agi, @int = 60, 80, 110, 80
@@ -1000,7 +1000,7 @@ module RPG
       # 耐久力は決して低くはないものの、不安の残る所。
       #------------------------------------------------------------------------
       when 253 #ユニークサキュバス/フルビュア
-        @name, @graphics = "Fulbeua ", "boss_fulbeua"
+        @name, @graphics = "Fulbeua", "boss_fulbeua"
         @exp_type = 4
         @maxhp, @maxsp =  360, 400
         @str, @dex, @agi, @int = 110, 95, 102, 70
@@ -1024,7 +1024,7 @@ module RPG
       # 攻撃性能は低く、戦闘型支援タイプ。精神力も膨大で、魔法の効果は高い。
       #------------------------------------------------------------------------
       when 254 #ユニークサキュバス/ギルゴーン
-        @name, @graphics = "Gilgoon ", "boss_gilgoon"
+        @name, @graphics = "Gilgoon", "boss_gilgoon"
         @exp_type = 4
         @maxhp, @maxsp =  250, 1000
         @str, @dex, @agi, @int = 30, 30, 40, 300

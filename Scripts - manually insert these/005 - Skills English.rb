@@ -25,6 +25,33 @@ when 10   #トークレジスト
 when 13   #アクセプト
    return "Accept"
 when 14   #オーラルアクセプト
+   return "Oral Accept "module RPG
+  class Skill
+    attr_accessor :UK_name
+    def UK_name
+      
+      case @id
+#■Actor base skills
+
+when 2   #服を脱がす
+   return "Strip "
+when 4   #服を脱ぐ
+   return "Undress "
+when 5   #シェルマッチ
+   return "Scissors"
+when 6   #インサート
+   return "Insert"
+when 7   #オーラルインサート
+   return "Oral Insert "
+when 8   #バックインサート
+   return "Backdoor Insert "
+when 9   #トーク
+   return "Talk"
+when 10   #トークレジスト
+   return "Sweet Talk"
+when 13   #アクセプト
+   return "Accept"
+when 14   #オーラルアクセプト
    return "Oral Accept "
 when 15   #バックアクセプト
    return "Backdoor Accept "
@@ -258,17 +285,17 @@ when 202   #ラスト
 when 203   #ペイド・ラスト
    return "Mass Lust "
 when 204   #フィルス
-   return "Flirt "
+   return "Flirt"
 when 205   #ペイド・フィルス
    return "Mass Flirt"
 when 206   #レザラジィ
    return "Lethargy"
 when 207   #ペイド・レザラジィ
-   return "Mass Lethargy "
+   return "Mass Lethargy"
 when 208   #テラー
    return "Terror"
 when 209   #ペイド・テラー
-   return "Mass Terror "
+   return "Mass Terror"
 when 210   #パラライズ
    return "Paralyze"
 when 211   #ペイド・パラライズ
@@ -288,9 +315,9 @@ when 219   #ブルムカール
 when 220   #ブルムカール・アルダ
    return "Bloom Call - All"
 when 221   #イーザカール
-   return "Lyzing Call "
+   return "Lyzing Call"
 when 222   #イーザカール・アルダ
-   return "Lyzing Call - All "
+   return "Lyzing Call - All"
 when 224   #ウォッシュフルード
    return "Cleansing Waters"
 when 239   #シャイニングレイジ

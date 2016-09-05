@@ -45,21 +45,21 @@ class Game_Enemy < Game_Battler
     # ƒGƒlƒ~[‚ÌƒNƒ‰ƒX‚²‚Æ‚ÉŽ©“®Ý’è
     case self.class_name
     # -----------------------------------------------------------------------
-    when "Lesser Succubus ","Succubus","Succubus Lord "
+    when "Lesser Succubus","Succubus","Succubus Lord"
       personality_group = 
        case self.class_color
        when "žò" ; [1, "DF", "—z‹C", "—z‹C"]
        when "“" ; [1, "DF", "DF", "DF"]
        end
     # -----------------------------------------------------------------------
-    when "I‚p","Devil ","De‚on"
+    when "I‚p","Devil","De‚on"
       personality_group = 
        case self.class_color
        when "—Î" ; [1, "Ÿ‚¿‹C", "‹•¨", "‹•¨"]
        when "”’" ; [1, "‚–", "‚–", "‚–"]
        end
     # -----------------------------------------------------------------------
-    when "Little Witch","Witch "
+    when "Little Witch","Witch"
       personality_group = 
        case self.class_color
        when "—Î" ; [1, "ã•i", "’W”‘", "’W”‘"]
@@ -74,7 +74,7 @@ class Game_Enemy < Game_Battler
        end
        ability_group += ["—‰A‚ª«Š´‘Ñ/100"] if self.class_color == "•"
     # -----------------------------------------------------------------------
-    when "Slave "
+    when "Slave"
       personality_group = 
        case self.class_color
        when "Ž‡" ; [1, "]‡", "]‡", "“|ö"]
@@ -93,7 +93,7 @@ class Game_Enemy < Game_Battler
        when "Â" ; [1, "“V‘R", "_˜a", "_˜a"]
        end
     # -----------------------------------------------------------------------
-    when "Gold Sli‚e "
+    when "Gold Slime"
       personality_group = 
        case self.class_color
        when "‰©" ; [1, "_˜a", "_˜a", "ã•i"]
@@ -113,20 +113,20 @@ class Game_Enemy < Game_Battler
        when "Ô" ; [1, "Ÿ‚¿‹C", "Ÿ‚¿‹C", "Ÿ‚¿‹C"]
        end
     # -----------------------------------------------------------------------
-    when "Werecat "
+    when "Werecat"
       personality_group = 
        case self.class_color
        when "‰©" ; [2, "“V‘R", "“V‘R", "ˆÓ’nˆ«"]
        when "•" ; [1, "•sŽv‹c", "•sŽv‹c", "•sŽv‹c"]
        end
     # -----------------------------------------------------------------------
-    when "Goblin", "Goblin Leader "
+    when "Goblin", "Goblin Leader"
       personality_group = 
        case self.class_color
        when "Ô" ; [1, "—z‹C", "ŠÃ‚¦«", "ŠÃ‚¦«"]
        end
     # -----------------------------------------------------------------------
-    when "Priestess "
+    when "Priestess"
       personality_group = 
        case self.class_color
        when "”’" ; [1, "ã•i", "‚–", "‚–"]
@@ -138,14 +138,14 @@ class Game_Enemy < Game_Battler
        when "•" ; [1, "DF", "“|ö", "“|ö"]
        end
     # -----------------------------------------------------------------------
-    when "Alraune "
+    when "Alraune"
       personality_group = 
        case self.class_color
        when "—Î" ; [1, "ã•i", "ã•i", "ŠÃ‚¦«"]
        when "Â" ; [1, "ˆÓ’nˆ«", "ˆÓ’nˆ«", "ˆÓ’nˆ«"]
        end
     # -----------------------------------------------------------------------
-    when "Matango "
+    when "Matango"
       personality_group = 
        case self.class_color
        when "Ô" ; [1, "“à‹C", "ã•i", "ã•i"]
@@ -182,18 +182,18 @@ class Game_Enemy < Game_Battler
        when "“" ; [1, "DF", "ˆÓ’nˆ«", "ˆÓ’nˆ«"]
        end
     # -----------------------------------------------------------------------
-    when "Unique Succubus ","Unique Tycoon ","Unique Witch"
+    when "Unique Succubus","Unique Tycoon","Unique Witch"
       case self.class_color
       when "Neijorange"
         personality_group = [1, "’¨‹C", "’¨‹C", "’¨‹C"]
         ability_group += ["‹¹‚ª«Š´‘Ñ/100"]
-      when "Rejeo "
+      when "Rejeo"
         personality_group = [1, "‹Cä", "‹Cä", "‹Cä"]
         ability_group += ["Œû‚ª«Š´‘Ñ/100"]
-      when "Fulbeua "
+      when "Fulbeua"
         personality_group = [1, "“Æ‘P", "“Æ‘P", "“Æ‘P"]
         ability_group += ["‰AŠj‚ª«Š´‘Ñ/100"]
-      when "Gilgoon "
+      when "Gilgoon"
         personality_group = [1, "‘¸‘å", "‘¸‘å", "‘¸‘å"]
         ability_group += ["‹¹‚ª«Š´‘Ñ/100"]
       when "Yuganaught"

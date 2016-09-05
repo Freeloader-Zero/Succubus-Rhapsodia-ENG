@@ -142,7 +142,7 @@ class BattlePop_Hold
       case @battler.class_name
       when "Succubus"
         @x_basepoint += 15
-      when "Little Witch "
+      when "Little Witch"
         @y_basepoint += 30
       when "SliÇçe"
         @x_basepoint += 15

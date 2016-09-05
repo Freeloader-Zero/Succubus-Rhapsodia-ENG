@@ -119,14 +119,14 @@ class Game_Battler
       if damage > 0
         if user.is_a?(Game_Actor)
           text = "Dealt #{damage.to_s} pleasure to #{myname}!"
-          text = "#{myname} ‚—rithes in pleasure!" if self.weaken? and not self.dead?
-          text = "#{myname}'s body spas‚s from intense pleasure!" if self.sp_down_flag == true
+          text = "#{myname} writhes in pleasure!" if self.weaken? and not self.dead?
+          text = "#{myname}'s body spasms from intense pleasure!" if self.sp_down_flag == true
         else
           text = "#{myname} received #{damage.to_s} pleasure!"
           text = "#{myname} ‚—rithes in pleasure!" if self.weaken?
-          text = "#{myname}'s body spas‚s from intense pleasure!" if self.sp_down_flag == true
+          text = "#{myname}'s body spasms from intense pleasure!" if self.sp_down_flag == true
           text = "#{myname}'s vitality has been cut...!" if self.weaken? and self == $game_actors[101]
-          text = "#{myname}'s body has been pushed to its li‚it!" if self.sp_down_flag == true and self == $game_actors[101]
+          text = "#{myname}'s body has been pushed to its limit!" if self.sp_down_flag == true and self == $game_actors[101]
         end
       elsif damage == 0# and damage < 1
         if user.is_a?(Game_Actor)
@@ -219,7 +219,7 @@ class Game_Battler
     # EP‚Ì‚İ‰ñ•œ‚Ìê‡
     elsif (item.recover_hp_rate > 0 or item.recover_hp > 0)
       text = "#{myname} recovered #{(damage.abs).to_s}‚d‚o!"
-      text = "‚go‚—ever it seems to be ineffective!" if self.state?("Šã")
+      text = "‚gowever it seems to be ineffective!" if self.state?("Šã")
     # VP‚Ì‚İ‰ñ•œ‚Ìê‡
     elsif (item.recover_sp_rate > 0 or item.recover_sp > 0)
       text = "#{myname} recovered #{(recover_sp).to_s}‚u‚o!"
@@ -245,28 +245,28 @@ class Game_Battler
     case self.personality
     #------------------------------------------------------------------------
     when "DF","‚–","“Æ‘P"
-      text = "#{myname} s‚iles suggestively...!"
+      text = "#{myname} smiles suggestively...!"
     #------------------------------------------------------------------------
     when "—z‹C","“V‘R","ŠÃ‚¦«","’¨‹C"
-      text = "#{myname} is s‚iling happily...I"
+      text = "#{myname} is smiling happily...I"
     #------------------------------------------------------------------------
     when "DF","ã•i","_˜a","]‡","‚‹M"
-      text = "#{myname} has a sub‚issively pleased look on her face...!"
+      text = "#{myname} has a submissively pleased look on her face...!"
     #------------------------------------------------------------------------
     when "Ÿ‚¿‹C","ˆÓ’nˆ«","‹Cä","‘¸‘å"
-      text = "#{myname} looks a‚—ay to shado‚— her e‚barrass‚ent...!"
+      text = "#{myname} looks away to shadow her embarrassment...!"
     #------------------------------------------------------------------------
     when "’W”‘","•sv‹c","“|ö","‰A‹C"
-      text = "#{myname} see‚s so‚e‚—hat pleased...!"
+      text = "#{myname} seems so‚ewhat pleased...!"
     #------------------------------------------------------------------------
     when "“à‹C","‹•¨","Œ‰•È"
       text = "#{myname}'s face is blushing red ‚—ith e‚barrass‚ent...!"
     #------------------------------------------------------------------------
     when "˜Iˆ«‹¶"
-      text = "#{myname} appears a‚used,\n\ sneering and laughing at #{user}...!"
+      text = "#{myname} appears amused,\n\ sneering and laughing at #{user}...!"
     #------------------------------------------------------------------------
     else
-      text = "#{myname} see‚s to be pleased...!"
+      text = "#{myname} seems pleased...!"
     end
     # •Ô‚·
     return text

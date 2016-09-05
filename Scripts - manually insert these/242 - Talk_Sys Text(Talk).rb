@@ -26,16 +26,16 @@ class Talk_Sys
     when "•s¬—§"
       case $msg.at_type
       when "–²–‚ƒNƒ‰ƒCƒVƒX"
-        m = "#{speaker} is i‚‚ersed in pleasure...!\\n It's i‚possible to talk right no‚—...!"
+        m = "#{speaker} is immersed in pleasure...!\\n It's impossible to talk right no‚—...!"
       when "ålŒöƒNƒ‰ƒCƒVƒX"
         m = "#{master} stares off vacantly...!\\n can't focus right no‚—!"
       when "–²–‚â’¸’†"
-        m = "#{speaker} is cli‚axing....! \\n She incapable of talking right no‚—!"
+        m = "#{speaker} is climaxing....! \\n She incapable of talking right no‚—!"
       when "s‰ß‘½"
-        m = "For so‚e reason, #{speaker} doesn't see‚\n\ to ‚—ant to talk any‚ore...."
+        m = "For some reason, #{speaker} doesn't seem\n\ to ‚—ant to talk anymore...."
       when "–²–‚œ’›’†"
         m = "#{speaker} bears blissful expression....! \\n She incapable of talking right no‚—!"
-        m = "#{speaker} has a transfixed look on her face....!\\n She see‚s unable to talk right no‚—...!" if $msg.t_enemy.holding?
+        m = "#{speaker} has a transfixed look on her face....!\\n She seems unable to talk right no‚—...!" if $msg.t_enemy.holding?
       when "–²–‚–\‘–’†"
         m = "#{speaker} is violently aroused....!\\n She can't talk right no‚—!"
       end
@@ -57,7 +57,7 @@ class Talk_Sys
       when 2 #’‡ŠÔ‚Ì’Eˆß‚ğó‚¯“ü‚ê‚½ê‡
         m = "#{master} does as #{speaker} says,\\n stripping #{servant} of her clothes!"
       when 77 #’‡ŠÔ‚Ì’Eˆß‚ğ‹‘”Û‚µ‚½ê‡
-        m = "#{master} refused her de‚ands!"
+        m = "#{master} refused her demands!"
       end
     #==============================================================================
     # œ–²–‚’Eˆß
@@ -67,9 +67,9 @@ class Talk_Sys
       when 2 #’Eˆß‚ğŒ©‘±‚¯‚½ê‡
         m = "#{master} does as she says, ‚—atching as\\n #{speaker} continued to undresses herself!"
         m = "#{master} unintentionally kept ‚—atching as \\n#{speaker} she undressed herself!" if $data_SDB[$msg.t_enemy.class_id].name == "ƒLƒƒƒXƒg"
-        m = "#{master} ‚—atches hungrily, as #{speaker}\\n continued undressing herself!" if $game_actors[101].state?(35)
+        m = "#{master} watches hungrily, as #{speaker}\\n continued undressing herself!" if $game_actors[101].state?(35)
       when 77 #’Eˆß‚ğŒ©‚È‚©‚Á‚½ê‡
-        m = "#{master} struggled to pull a‚—ay,\\n averting his eyes fro‚ #{speaker}!"
+        m = "#{master} struggled to pull a‚—ay,\\n averting his eyes from #{speaker}!"
       end
     #==============================================================================
     # œ‹z¸EŒû
@@ -77,9 +77,9 @@ class Talk_Sys
     when "‹z¸EŒû"
       case $msg.talk_step
       when 2 #‹z¸‚ğó‚¯“ü‚ê‚½ê‡
-        m = "#{speaker} locks lips ‚—ith #{master}!\\n #{master}'s energy is being drained out of his body...!"
+        m = "#{speaker} locks lips with #{master}!\\n #{master}'s energy is being drained out of his body...!"
       when 77 #‹z¸‚ğ‹‘”Û‚µ‚½ê‡
-        m = "#{master} declined her de‚and!"
+        m = "#{master} declined her demand!"
       end
     #==============================================================================
     # œ‹z¸E«Ší
@@ -89,7 +89,7 @@ class Talk_Sys
       when 2 #‹z¸‚ğó‚¯“ü‚ê‚½ê‡
         m = "#{speaker} hungrily sucks on #{master}'s penis!\\n #{master}'s strength is being drained and replaced\\n by pleasure...!"
       when 77 #‹z¸‚ğ‹‘”Û‚µ‚½ê‡
-        m = "#{master} declined her de‚and!"
+        m = "#{master} declined her demand!"
       end
     #==============================================================================
     # œDˆÓ
@@ -102,11 +102,11 @@ class Talk_Sys
     when "‹Š­"
       case $msg.talk_step
       when 77 #‹Š­‚ğÅ‰‚©‚çŒ©‚È‚©‚Á‚½ê‡
-        m = "#{master} resists te‚ptation,\\n averting his eyes fro‚ #{speaker}!"
+        m = "#{master} resists temptation,\\n averting his eyes from #{speaker}!"
       when 78 #‹Š­‚ğ“r’†‚Å’f‚Á‚½ê‡
-        m = "#{master} ‚anages to peel a‚—ay,\\n averting his eyes fro‚ #{speaker}!"
+        m = "#{master} manages to peel a‚—ay,\\n averting his eyes from #{speaker}!"
       when 79 #‹Š­‚µ‚·‚¬‚Ä–\‘–‚µ‚½ê‡
-        m = "#{master} cannot look a‚—ay fro‚ the sight before his eyes,\\n falling to #{speaker}'s te‚ptation!"
+        m = "#{master} cannot look a‚—ay from the sight before his eyes,\\n falling to #{speaker}'s temptation!"
       #Œp‘±‚µ‚Ä‚¢‚éê‡
       else
         m = "#{speaker} seeks to satisfy her desires....!"
@@ -117,7 +117,7 @@ class Talk_Sys
           emotion = " approaches #{master} and" if rand($mood.point) > 50
         when "DF","‚–","—z‹C","_˜a","Ÿ‚¿‹C"
           emotion = " stares at #{master} and le‚—dly"
-          emotion = ", ‚eeting #{master}'s gaze," if rand($mood.point) > 50
+          emotion = ", meeting #{master}'s gaze," if rand($mood.point) > 50
         when "’W”‘","]‡","ŠÃ‚¦«","•sv‹c"
           emotion = ", absorbed in her act,"
           emotion = ", feeling #{master}'s gaze," if rand($mood.point) > 50
@@ -155,7 +155,7 @@ class Talk_Sys
         m = "#{master}‚Í—U˜f‚É•‰‚¯‚¸A\\n#{speaker}‚Ì—v‹‚ğ’f‚Á‚½I"
         m = "#{master}‚ÍŒã‚ë”¯‚ğˆø‚©‚ê‚év‚¢‚ÅA\\n‰½‚Æ‚©#{speaker}‚Ì—v‹‚ğ’f‚Á‚½I" if $game_actors[101].state?(35)
       when 78 #‹Š­‚ğ“r’†‚Å’f‚Á‚½ê‡
-        m = "#{master} ‚anages to peel a‚—ay,\\n#{speaker}‚Ö‚Ì•òd‚Ìè‚ğ~‚ß‚½I"
+        m = "#{master} manages to peel a‚—ay,\\n#{speaker}‚Ö‚Ì•òd‚Ìè‚ğ~‚ß‚½I"
       when 79 #‹Š­‚µ‚·‚¬‚Ä–\‘–‚µ‚½ê‡
         m = "#{master}‚Í”M‚É•‚‚©‚³‚ê‚½‚æ‚¤‚ÉA#{speaker}‚Ö‚Ì•òd‚ğ‘±‚¯‚Ä‚¢‚éccI"
       #Œp‘±‚µ‚Ä‚¢‚éê‡
@@ -203,10 +203,10 @@ class Talk_Sys
     when "ˆ¤•E«Œğ"
       case $msg.talk_step
       when 77 #ˆ¤•‚ğÅ‰‚©‚ç’f‚Á‚½ê‡
-        m = "#{master} resists te‚ptation,\\n and #{speaker}'s proposal!"
+        m = "#{master} resists temptation,\\n and #{speaker}'s proposal!"
         m = "#{master} reluctantly tears a‚—ay,\\n declining #{speaker}'s proposal!" if $game_actors[101].state?(35)
       when 78 #‹Š­‚ğ“r’†‚Å’f‚Á‚½ê‡
-        m = "#{master} ‚anages to peel a‚—ay,\\n stopping #{speaker} ‚id-thrust!"
+        m = "#{master} manages to peel a‚—ay,\\n stopping #{speaker} mid-thrust!"
       #œˆ¤•‚ğó‚¯“ü‚ê‚½ê‡
       else
         case $msg.at_parts
@@ -233,7 +233,7 @@ class Talk_Sys
                 action = "holds #{master} do‚—n"
                 #œ
                 waist = ["boldly fucks","po‚—erfully fucks","intensely fucks"]
-                waist.push("undulatingly fucks","le‚—dly fucks","‚—ildly fucks") if $msg.t_enemy.positive?
+                waist.push("undulatingly fucks","le‚—dly fucks","pounds") if $msg.t_enemy.positive?
                 waist.push("strenuously fucks","devotedly fucks","lazily fucks") if $msg.t_enemy.negative?
               else
                 #œ
@@ -249,20 +249,20 @@ class Talk_Sys
                 #œ
                 action = "gazes at #{master}"
                 #œ
-                waist = ["slo‚—ly fucks","bounces on top of","gyrates on top"]
-                waist.push("teasingly fucks","co‚fortably fucks") if $msg.t_enemy.positive?
-                waist.push("‚odestly fucks","sha‚efully fucks") if $msg.t_enemy.negative?
+                waist = ["slowly fucks","bounces on top of","gyrates on top"]
+                waist.push("teasingly fucks","comfortably fucks") if $msg.t_enemy.positive?
+                waist.push("modestly fucks","shamefully fucks") if $msg.t_enemy.negative?
               else
                 #œ
-                action = "‚atches #{master}'s pace"
+                action = "matches #{master}'s pace"
                 #œ
                 waist = ["slo‚—ly fucks"]
                 waist.push("teasingly fucks") if $msg.t_enemy.positive?
-                waist.push("‚odestly fucks") if $msg.t_enemy.negative?
+                waist.push("modestly fucks") if $msg.t_enemy.negative?
               end
               waist = waist[rand(waist.size)]
             end
-            m = "#{speaker} #{action} as she #{waist} hi‚!"
+            m = "#{speaker} #{action} as she #{waist} him!"
           end
         #¥ƒI[ƒ‰ƒ‹
         #--------------------------------------------------------------------------
@@ -273,9 +273,9 @@ class Talk_Sys
               action = "sucks"
               #œ
               mouth = ["boldly","noisily","intensely"]
-              mouth.push("deeply","le‚—dly","‚—ildly") if $msg.t_enemy.positive?
+              mouth.push("deeply","le‚—dly","slowly") if $msg.t_enemy.positive?
               mouth.push("strenuously","devotedly","lazily") if $msg.t_enemy.negative?
-              mouth.push("a‚orously") if $mood.point > 70
+              mouth.push("amorously") if $mood.point > 70
             else
               #œ
               action = "deepthroats"
@@ -283,7 +283,7 @@ class Talk_Sys
               mouth = ["boldly"]
               mouth.push("le‚—dly") if $msg.t_enemy.positive?
               mouth.push("streneously") if $msg.t_enemy.negative?
-              mouth.push("a‚orously") if $mood.point > 70
+              mouth.push("amorously") if $mood.point > 70
             end
             mouth = mouth[rand(mouth.size)]
           else
@@ -291,17 +291,17 @@ class Talk_Sys
               #œ
               action = "sucks"
               #œ
-              mouth = ["slo‚—ly"]
-              mouth.push("teasingly","co‚fortably") if $msg.t_enemy.positive?
-              mouth.push("ti‚idly","‚odestly","sha‚efully") if $msg.t_enemy.negative?
-              mouth.push("a‚orously") if $mood.point > 70
+              mouth = ["slowly"]
+              mouth.push("teasingly","comfortably") if $msg.t_enemy.positive?
+              mouth.push("timidly","modestly","shamefully") if $msg.t_enemy.negative?
+              mouth.push("amorously") if $mood.point > 70
             else
               #œ
               action = "deepthroats"
               #œ
               mouth = ["slo‚—ly"]
               mouth.push("teasingly","gradually") if $msg.t_enemy.positive?
-              mouth.push("ti‚idly","hesitantly") if $msg.t_enemy.negative?
+              mouth.push("timidly","hesitantly") if $msg.t_enemy.negative?
             end
             mouth = mouth[rand(mouth.size)]
           end
@@ -313,16 +313,16 @@ class Talk_Sys
             action = "fucks"
             #œ
             bust = ["boldly","deliberately"]
-            bust.push("le‚—dly","po‚—erfully") if $msg.t_enemy.positive?
+            bust.push("lewdly","po‚—erfully") if $msg.t_enemy.positive?
             bust.push("strenuously","devotedly","lazily") if $msg.t_enemy.negative?
-            bust.push("a‚orously") if $mood.point > 70
+            bust.push("amorously") if $mood.point > 70
           else
-            action = "sand‚—iches"
+            action = "sandwiches"
             #œ
-            bust = ["slo‚—ly","tightly"]
-            bust.push("teasingly","co‚fortably") if $msg.t_enemy.positive?
-            bust.push("ti‚idly","‚odestly","sha‚efully") if $msg.t_enemy.negative?
-            bust.push("a‚orously") if $mood.point > 70
+            bust = ["slowly","tightly"]
+            bust.push("teasingly","comfortably") if $msg.t_enemy.positive?
+            bust.push("timidly","modestly","shamefully") if $msg.t_enemy.negative?
+            bust.push("amorously") if $mood.point > 70
           end
           bust = bust[rand(bust.size)]
           m = "#{speaker} #{bust} #{action} #{master}'s penis\\n ‚—ith her #{$msg.t_enemy.bustsize}!"
@@ -547,20 +547,20 @@ class Talk_Sys
               if $msg.chain_attack == true
                 m = "#{speaker} continues grinding her hips\\n back and forth on #{master}'s penis!"
               else
-                m = "#{speaker} rubs her pussy on #{master},\\n vigorously inciting response fro‚ his penis!"
+                m = "#{speaker} rubs her pussy on #{master},\\n vigorously inciting response from his penis!"
               end
             end
           else
             case @weakpoints
             when 20,10
               if $msg.chain_attack == true
-                m = "#{speaker} continues bouncing ‚—ildly\\n on #{master}'s penis!"
+                m = "#{speaker} continues bouncing\\n atop #{master}'s penis!"
               else
                 m = "#{speaker} rubs her pussy against\\n #{master}'s penis!"
               end
             else
               if $msg.chain_attack == true
-                m = "#{speaker} continues bouncing ‚—ildly\\n on #{master}'s penis!"
+                m = "#{speaker} continues bouncing\\n atop #{master}'s penis!"
               else
                 m = "#{speaker} rubs her pussy against\\n #{master}'s penis!"
               end
@@ -743,7 +743,7 @@ class Talk_Sys
     #==============================================================================
     when "ålŒö’Eˆß"
       m = "#{speaker} leans on #{master}'s chest,\\n gazing deeply into his eyes...!"
-      m = "#{speaker} leans on #{master}, taking fleeting\\n glances at hi‚ ‚—hile t‚—irling her finger on his chest!" if $msg.t_enemy.negative?
+      m = "#{speaker} leans on #{master}, taking fleeting\\n glances at him ‚—hile t‚—irling her finger on his chest!" if $msg.t_enemy.negative?
     #==============================================================================
     # œ’‡ŠÔ’Eˆß
     #==============================================================================
@@ -756,19 +756,19 @@ class Talk_Sys
     when "–²–‚’Eˆß"
       m = "#{speaker} begins peeling back her clothes,\\n turning to‚—ards #{master} ‚—ith a lustful expression!"
       m = "#{speaker} begins peeling back her clothes,\\n eyeing #{master} ‚—ith suggestive intent!" if $msg.t_enemy.negative?
-      m = "#{speaker} shakes the jiggling sli‚e covering\\n her body in front of #{master}'s eyes....!" if $msg.t_enemy.tribe_slime?
+      m = "#{speaker} shakes the jiggling slime covering\\n her body in front of #{master}'s eyes....!" if $msg.t_enemy.tribe_slime?
     #==============================================================================
     # œ‹z¸EŒû
     #==============================================================================
     when "‹z¸EŒû"
       m = "#{speaker} closes her eyes,\\n bringing her face close to #{master}'s lips...!"
-      m = "#{speaker} s‚iles,\\n bringing her face close to #{master}'s lips...!" if $msg.t_enemy.positive?
+      m = "#{speaker} smiles,\\n bringing her face close to #{master}'s lips...!" if $msg.t_enemy.positive?
     #==============================================================================
     # œ‹z¸E«Ší
     #==============================================================================
     when "‹z¸E«Ší"
       m = "#{speaker} closes her eyes,\\n bringing her face close to #{master}'s crotch...!"
-      m = "#{speaker} s‚iles,\\n bringing her face close to #{master}'s crotch...!" if $msg.t_enemy.positive?
+      m = "#{speaker} smiles,\\n bringing her face close to #{master}'s crotch...!" if $msg.t_enemy.positive?
     #==============================================================================
     # œ‹Š­
     #==============================================================================
@@ -776,9 +776,9 @@ class Talk_Sys
       emotion = ""
       case $msg.t_enemy.personality
       when "DF","‚–"
-        emotion = "s‚iles suggestively"
+        emotion = "smiles suggestively"
       when "—z‹C","_˜a","Ÿ‚¿‹C"
-        emotion = "s‚iles ‚ischievously"
+        emotion = "smiles mischievously"
       when "‹•¨","ŠÃ‚¦«"
         emotion = "coyly glances in and out of eye contact"
       when "“à‹C"
@@ -786,7 +786,7 @@ class Talk_Sys
       when "ˆÓ’nˆ«"
         emotion = "grins provacatively"
       when "•sv‹c","ã•i","“|ö"
-        emotion = "s‚iles mysteriously"
+        emotion = "smiles mysteriously"
       when "’W”‘","]‡"
         emotion = "blushes slightly"
       when "“V‘R"
@@ -817,15 +817,15 @@ class Talk_Sys
         m = "#{speaker} closes her eyes,\\n offering #{master} her lips!"
       #‹¹‚â“ûñ‚É•òd
       when "‘ÎÛF‹¹"
-        m = "#{speaker} clings tightly to #{master},\\n pressing her #{$msg.t_enemy.bustsize} against his ar‚!"
+        m = "#{speaker} clings tightly to #{master},\\n pressing her #{$msg.t_enemy.bustsize} against his arm!"
       #ƒAƒ\ƒR‚É•òd
       when "‘ÎÛFƒAƒ\ƒR","‘ÎÛFƒAƒiƒ‹"
         m = "#{speaker} approaches #{master}\n\ and spreads open her pussy ‚—ith her fingers!"
-        m = "‚—ith her fingers, #{speaker} bashfully spreads\\n open her inti‚ates!" if $msg.t_enemy.negative?
+        m = "‚—ith her fingers, #{speaker} bashfully spreads\\n open her intimates!" if $msg.t_enemy.negative?
       #‰AŠj‚É•òd
       when "‘ÎÛF‰AŠj"
         m = "#{speaker} approaches #{master}\n\ and spreads open her pussy ‚—ith her fingers!"
-        m = "‚—ith her fingers, #{speaker} bashfully spreads\\n open her inti‚ates!" if $msg.t_enemy.negative?
+        m = "‚—ith her fingers, #{speaker} bashfully spreads\\n open her intimates!" if $msg.t_enemy.negative?
       #‚¨K‚É•òd
       when "‘ÎÛFK"
         m = "Face do‚—n, #{speaker} kneels over before #{master},\\n and ‚—aves her butt in front of his face!"
@@ -844,17 +844,17 @@ class Talk_Sys
       when "Ÿ‚¿‹C","‚–","ˆÓ’nˆ«"
         emotion = "licks her lips"
       when "ã•i","_˜a"
-        emotion = "softly s‚iles"
+        emotion = "softly smiles"
       when "’W”‘","‹•¨"
         emotion = "glances fleetingly"
       when "“à‹C","]‡","“|ö"
         emotion = "looks ‚—ith feverish eyes"
       when "•sv‹c","“V‘R"
-        emotion = "bears an ad‚iring look"
+        emotion = "bears an admiring look"
       when "—z‹C","ŠÃ‚¦«"
-        emotion = "s‚iles ‚ischievously"
+        emotion = "smiles mischievously"
       else #DF
-        emotion = "s‚iles suggestively"
+        emotion = "smiles suggestively"
       end
       m = "#{speaker}‚Í#{emotion}A\\n#{master}‚ÌƒyƒjƒX‚ğŒ©‚Â‚ß‚Ä‚¢‚éI"
       #¥•Êƒz[ƒ‹ƒh‚Ìê—p‚ªo—ˆ‚é‚Ü‚Å‚Ìˆê‘[’u(@0830)
@@ -903,17 +903,17 @@ class Talk_Sys
       when "Ÿ‚¿‹C","‚–","ˆÓ’nˆ«"
         emotion = "licks her lips"
       when "ã•i","_˜a"
-        emotion = "softly s‚iles"
+        emotion = "softly smiles"
       when "’W”‘","‹•¨"
         emotion = "looks ‚—ith feverish eyes"
       when "“à‹C","]‡","“|ö"
         emotion = "stares ‚—ith longing eyes"
       when "•sv‹c","“V‘R"
-        emotion = "bears a carefree s‚ile"
+        emotion = "bears a carefree smile"
       when "—z‹C","ŠÃ‚¦«"
-        emotion = "s‚iles ‚ischievously"
+        emotion = "smiles mischievously"
       else #DF
-        emotion = "s‚iles suggestively"
+        emotion = "smiles suggestively"
       end
       action = []
       case $msg.at_parts
@@ -926,9 +926,9 @@ class Talk_Sys
         action.push("looking up at #{master}")
         action.push("toying around ‚—ith #{master}'s penis") if $msg.t_enemy.initiative_level > 0
       when "”w–ÊS‘©"
-        action.push("holding #{master} do‚—n even ‚ore")
+        action.push("holding #{master} do‚—n even more")
       else
-        action.push("holding #{master} do‚—n even ‚ore")
+        action.push("holding #{master} do‚—n even more")
       end
       action = action[rand(action.size)]
       m = "#{speaker} #{emotion},\\n #{action}!"
@@ -938,32 +938,32 @@ class Talk_Sys
     when "Œğ‡"
       case $msg.t_enemy.personality
       when "DF"
-        m = "#{speaker} teases open her pussy,\\n smiling pro‚iscuously as she beckons #{master}!" #‘O
-        m = "#{speaker} cra‚—ls do‚—n on all fours,\\n reaching back to spread her pussy te‚ptingly!" if $game_variables[17] > 50 #Œã
+        m = "#{speaker} teases open her pussy,\\n smiling promiscuously as she beckons #{master}!" #‘O
+        m = "#{speaker} crawls do‚—n on all fours,\\n reaching back to spread her pussy temptingly!" if $game_variables[17] > 50 #Œã
       when "ã•i"
-        m = "As if to te‚pt hi‚, #{speaker}\n\ spreads her legs and beckons #{master} ‚—ith her finger!" #‘O
-        m = "#{speaker} cra‚—ls do‚—n on all fours,\\n seductively gazing into #{master}'s eyes!" if $game_variables[17] > 50 #Œã
+        m = "As if to tempt him, #{speaker}\n\ spreads her legs and beckons #{master} ‚—ith her finger!" #‘O
+        m = "#{speaker} crawls do‚—n on all fours,\\n seductively gazing into #{master}'s eyes!" if $game_variables[17] > 50 #Œã
       when "‚–"
         m = "#{speaker} teases open her pussy,\\n smiling at #{master} ‚—ith a procative gaze!" #‘O
-        m = "#{speaker} thrusts out her ass,\\n thro‚—ing #{master} a daring smile!" if $game_variables[17] > 50 #Œã
+        m = "#{speaker} thrusts out her ass,\\n throwing #{master} a daring smile!" if $game_variables[17] > 50 #Œã
       when "’W”‘"
         m = "#{speaker} blushes shyly,\\n opening up her legs for #{master} to see!" #‘O
-        m = "#{speaker} cra‚—ls do‚—n on all fours,\\n giving #{master} a ‚—elcoming gaze!" if $game_variables[17] > 50 #Œã
+        m = "#{speaker} crawls do‚—n on all fours,\\n giving #{master} a welcoming gaze!" if $game_variables[17] > 50 #Œã
       when "_˜a"
-        m = "As if to te‚pt hi‚, #{speaker}\n\ spreads her legs and beckons #{master} ‚—ith her finger!" #‘O
-        m = "#{speaker} cra‚—ls do‚—n on all fours,\\n reaching back to spread her pussy te‚ptingly!" if $game_variables[17] > 50 #Œã
+        m = "As if to tempt him, #{speaker}\n\ spreads her legs and beckons #{master} ‚—ith her finger!" #‘O
+        m = "#{speaker} crawls do‚—n on all fours,\\n reaching back to spread her pussy temptingly!" if $game_variables[17] > 50 #Œã
       when "Ÿ‚¿‹C"
         m = "#{speaker} boldly spreads her legs apart,\\n casting a provoking gaze at #{master}!" #‘O
-        m = "#{speaker} cra‚—ls do‚—n on all fours,\\n thro‚—ing #{master} a fearless smile!" if $game_variables[17] > 50 #Œã
+        m = "#{speaker} crawls do‚—n on all fours,\\n throwing #{master} a fearless smile!" if $game_variables[17] > 50 #Œã
       when "“à‹C"
         m = "Covering her face ‚—ith her hands,\\n #{speaker} opens her legs for #{master} to see!" #‘O
-        m = "#{speaker} cra‚—ls do‚—n on all fours,\\n sha‚efully turns her butt to‚—ards #{master}!" if $game_variables[17] > 50 #Œã
+        m = "#{speaker} crawls do‚—n on all fours,\\n shamefully turns her butt to‚—ards #{master}!" if $game_variables[17] > 50 #Œã
       when "—z‹C"
         m = "#{speaker} boldly spreads her legs apartA\\n staring at #{master} ‚—ith expectant eyes!" #‘O
         m = "#{speaker} thrusts out her ass,\\n staring at #{master} ‚—ith expectant eyes!" if $game_variables[17] > 50 #Œã
       when "ˆÓ’nˆ«"
-        m = "As if to te‚pt hi‚, #{speaker}\n\ spreads her legs and beckons #{master} ‚—ith her finger!" #‘O
-        m = "#{speaker} cra‚—ls do‚—n on all fours, \\n reaching back to spread her pussy te‚ptingly!" if $game_variables[17] > 50 #Œã
+        m = "As if to tempt him, #{speaker}\n\ spreads her legs and beckons #{master} ‚—ith her finger!" #‘O
+        m = "#{speaker} crawls do‚—n on all fours, \\n reaching back to spread her pussy temptingly!" if $game_variables[17] > 50 #Œã
       when "“V‘R"
         m = "#{speaker} looks expectantly at #{master}\\n as she spreads open her legs!" #‘O
         m = "#{speaker} cra‚—ls do‚—n on all fours,\\n staring at #{master} ‚—ith longing eyes!" if $game_variables[17] > 50 #Œã
@@ -974,17 +974,17 @@ class Talk_Sys
         m = "#{speaker} doggedly spreads open her legs,\\n and shoots a provoking gaze at #{master}!" #‘O
         m = "#{speaker} thrusts out her ass,\\n and looks at #{master} ‚—ith a challenging expression!" if $game_variables[17] > 50 #Œã
       when "“|ö"
-        m = "#{speaker} teases open her pussy,\\n thro‚—ing #{master} a be‚—itching smile!" #‘O
+        m = "#{speaker} teases open her pussy,\\n thro‚—ing #{master} a bewitching smile!" #‘O
         m = "#{speaker} cra‚—ls do‚—n on all foursA\\n staring at #{master} ‚—ith longing eyes!" if $game_variables[17] > 50 #Œã
       when "ŠÃ‚¦«"
         m = "#{speaker} looks expectantly, \\n ‚—atching #{master} as she spreads her legs!" #‘O
         m = "#{speaker} cra‚—ls do‚—n on all fours,\\n staring at #{master} ‚—ith longing eyes!" if $game_variables[17] > 50 #Œã
       when "•sv‹c"
-        m = "#{speaker} slo‚—ly opens up her legs, ‚—atching \\n #{master} as she lifts up her pelvis!" #‘O
+        m = "#{speaker} slowly opens up her legs, ‚—atching \\n #{master} as she lifts up her pelvis!" #‘O
         m = "#{speaker} thrusts out her ass,\\n looking back at #{master}!" if $game_variables[17] > 50 #Œã
       when "“Æ‘P"
-        m = "#{speaker} opens her legs for display,\\n thro‚—ing #{master} a be‚—itching smile!" #‘O
-        m = "#{speaker} cra‚—ls do‚—n on all fours,\\n arching her ass high as if to provoke #{master}!" if $game_variables[17] > 50 #Œã
+        m = "#{speaker} opens her legs for display,\\n throwing #{master} a bewitching smile!" #‘O
+        m = "#{speaker} crawls do‚—n on all fours,\\n arching her ass high as if to provoke #{master}!" if $game_variables[17] > 50 #Œã
       end
     end
    #============================================================================

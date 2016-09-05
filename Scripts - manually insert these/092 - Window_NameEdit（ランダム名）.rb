@@ -33,26 +33,27 @@ class Window_NameEdit < Window_Base
       "Torulte",
       "Chunia",
       "Rufurde",
+      "Ashley",
       "Ashby",
       "Hyusure",
       "Myu",
       "Sophie",
       "Sorunia",
       "Kaloris",
-      "Delｗeiss",
-      "Kalｍiria",
+      "Delweiss",
+      "Kalmiria",
       "Carane",
       "Tau",
       "Buracche",
       "Zateibi",
-      "Eｍily",
+      "Emily",
       "Renenge",
       "Fenichi",
-      "Kaｍira",
+      "Kamira",
       "Mireyu",
       "Krisena",
       "Zarea",
-      "Terapalｍ",
+      "Terapalm",
       "Lure",
       "Snipe",
       "Neuru",
@@ -65,10 +66,10 @@ class Window_NameEdit < Window_Base
       "Luraver",
       "Atoris",
       "Angie",
-      "Feｍibelle",
+      "Femibelle",
       "Hayonehayona",
-      "Equipｍe",
-      "Neｗ",
+      "Equipme",
+      "New",
       "Holy",
       "Marika",
       "Safonse",
@@ -97,7 +98,7 @@ class Window_NameEdit < Window_Base
     #------------------------------------------------------------------------
     # ■■サキュバス種
     #------------------------------------------------------------------------
-    when "Lesser Succubus "
+    when "Lesser Succubus"
       special_name_list = [
       "Reki",
       "Dea",
@@ -106,7 +107,7 @@ class Window_NameEdit < Window_Base
       "Mystoria",
       "Sue",
       "Ravi",
-      "Aｍore",
+      "Amore",
       "Aini",
       "Reeve",
       "Shita",
@@ -120,7 +121,7 @@ class Window_NameEdit < Window_Base
       "Fise",
       "Frau",
       "Elise",
-      "Proｍethe",
+      "Promethe",
       "Luka",
       "Meria",
       "Litoria",
@@ -130,7 +131,7 @@ class Window_NameEdit < Window_Base
       "Carla",
       "Eraste"
       ]
-    when "Succubus Lord "
+    when "Succubus Lord"
       special_name_list = [
       "Estella",
       "Benevian",
@@ -151,16 +152,16 @@ class Window_NameEdit < Window_Base
       special_name_list = [
       "Mini",
       "Murin",
-      "Pluｍ",
+      "Plum",
       "Naughty",
       "Al",
       "Petit",
-      "Meｍe",
+      "Meme",
       "Pickle",
       "Fay",
       "Le Roux"
       ]
-    when "Devil "
+    when "Devil"
       special_name_list = [
       "Ain",
       "Carol",
@@ -168,7 +169,7 @@ class Window_NameEdit < Window_Base
       "Sione",
       "Reiger",
       "Folse",
-      "Aｍy",
+      "Amy",
       "Andrea",
       "Levianne",
       "Laura"
@@ -204,17 +205,17 @@ class Window_NameEdit < Window_Base
       "Little Mouse",
       "Ariel"
       ]
-    when "Witch "
+    when "Witch"
       special_name_list = [
-      "Lefy",
+      "Leffi",
       "Vanessa",
       "Wikka",
       "Eva",
       "Glende",
-      "Benetta",
+      "Benneta",
       "Marie",
       "Pachie",
-      "Margot",
+      "Margott",
       "Deiretta",
       "Cantante",
       "Learese"
@@ -243,12 +244,12 @@ class Window_NameEdit < Window_Base
     #------------------------------------------------------------------------
     # ■■スレイヴ種
     #------------------------------------------------------------------------
-    when "Slave "
+    when "Slave"
       special_name_list = [
       "Kashieu",
       "Ouida",
-      "Santoｍue",
-      "Elｍinae",
+      "Santomue",
+      "Elminae",
       "Tanjea",
       "Sofar",
       "Zera",
@@ -261,13 +262,13 @@ class Window_NameEdit < Window_Base
     when "Nightｍare"
       special_name_list = [
       "Hypnox",
-      "Mesｍerique",
+      "Mesmerique",
       "Isles",
-      "Kasuｍe",
+      "Kasume",
       "Mabelle",
       "Teita",
       "Cthulhu",
-      "Reｍ",
+      "Remme",
       "Mary",
       "Mea",
       "Meniki",
@@ -285,13 +286,13 @@ class Window_NameEdit < Window_Base
       "Lathe",
       "Sue",
       "Panna",
-      "Suｍli",
+      "Sumli",
       "Beth",
       "Bubble",
       "Jiggly",
-      "Liｍe"
+      "Lime"
       ]
-    when "Gold Sliｍe "
+    when "Gold Slime"
       special_name_list = [
       "Aiyu",
       "Rochuon",
@@ -299,7 +300,7 @@ class Window_NameEdit < Window_Base
       "Paqua",
       "Hanaki",
       "Leidei",
-      "Yelloｗ",
+      "Yellow",
       "Tiara",
       "Nanajik",
       "Eoroyo"
@@ -310,14 +311,14 @@ class Window_NameEdit < Window_Base
     when "Familiar"
       special_name_list = [
       "Lotta",
-      "Challis",
+      "Challise",
       "Viola",
-      "Eｍilia",
+      "Emilia",
       "Peria",
-      "Kiｍora",
+      "Kimora",
       "Silk",
-      "Ruｍba",
-      "Faｍi"
+      "Rumba",
+      "Fami"
       ]
     #------------------------------------------------------------------------
     # ■■ワーウルフ種
@@ -337,24 +338,24 @@ class Window_NameEdit < Window_Base
     #------------------------------------------------------------------------
     # ■■ワーキャット種
     #------------------------------------------------------------------------
-    when "Werecat "
+    when "Werecat"
       special_name_list = [
-      "Taｍa",
+      "Tama",
       "Bastetta",
       "Kay",
       "Sekette",
       "Kitei",
       "Shuridan",
       "Butter-bun",
-      "Nyaaｍi",
-      "Naｍeless",
+      "Nyaami",
+      "Nameless",
       ]
     #------------------------------------------------------------------------
     # ■■ゴブリン種
     #------------------------------------------------------------------------
     when "Goblin"
       special_name_list = [
-      "Pirederi",
+      "Pyrderi",
       "Mogfana",
       "Gabrude",
       "Granada",
@@ -365,12 +366,12 @@ class Window_NameEdit < Window_Base
       "Mortara",
       "Diana",
       ]
-    when "Goblin Leader "
+    when "Goblin Leader"
       special_name_list = [
       "Rinri",
       "Chieftain",
       "Akaboosh",
-      "Heartｍen",
+      "Heartmen",
       "Taboo",
       "Bodua",
       "Naoe",
@@ -380,7 +381,7 @@ class Window_NameEdit < Window_Base
     #------------------------------------------------------------------------
     # ■■プリーステス種
     #------------------------------------------------------------------------
-    when "Priestess "
+    when "Priestess"
       special_name_list = [
       "Marielle",
       "Ursula",
@@ -398,19 +399,19 @@ class Window_NameEdit < Window_Base
     when "Cursed Magus"
       special_name_list = [
       "Marefy",
-      "Godel",
+      "Godelle",
       "Asura",
       "Ravena",
-      "Griｍhild",
+      "Grimhild",
       "Warp",
-      "Saleｍ",
+      "Salem",
       "Bellatrix",
       "Tsusuruk",
       ]
     #------------------------------------------------------------------------
     # ■■アルラウネ種
     #------------------------------------------------------------------------
-    when "Alraune "
+    when "Alraune"
       special_name_list = [
       "Namizuki",
       "Dizzy",
@@ -425,19 +426,19 @@ class Window_NameEdit < Window_Base
     #------------------------------------------------------------------------
     # ■■マタンゴ種
     #------------------------------------------------------------------------
-    when "Matango "
+    when "Matango"
       special_name_list = [
-      "Quen",
+      "Quenne",
       "Sasako",
       "Tsukiyo",
       "Dokutsuru",
       "Benny",
-      "Shagｍa",
+      "Shagma",
       "Saura",
       "Warai",
       "Majru",
       "Etori",
-      "Wanape",
+      "Wannape",
       ]
     #------------------------------------------------------------------------
     # ■■エンジェル種
@@ -451,7 +452,7 @@ class Window_NameEdit < Window_Base
       "Masty",
       "Meriku",
       "Fleur",
-      "Shaｍe",
+      "Shame",
       "Shyton",
       "Israph"
       ]
@@ -464,7 +465,7 @@ class Window_NameEdit < Window_Base
       "Deanne",
       "Esu",
       "Pelide",
-      "Aｍuto",
+      "Amuto",
       "Nelly",
       "Konia",
       "Azure"
@@ -480,7 +481,7 @@ class Window_NameEdit < Window_Base
       "Brudan",
       "Kottori",
       "Kofin",
-      "Hanｍakido",
+      "Hanmakido",
       "Dorosera",
       "Nepentus",
       "Fultora"
@@ -496,8 +497,8 @@ class Window_NameEdit < Window_Base
       "Yako",
       "Tsune",
       "Myobu",
-      "Kasaｍa",
-      "Fushiｍi",
+      "Kasama",
+      "Fushimi",
       "Mikuzu",
       "Kuzuno",
       "Shino",

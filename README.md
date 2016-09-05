@@ -9,7 +9,7 @@ English fan translations for the game, "Succubus Rhapsodia"
 - v1.10
 
 ---=:::[ Translation version* ]:::=---
-- v0.163
+- v0.180
 
 *Last publically released version
 *Estimated percentage of translation completion
@@ -61,6 +61,13 @@ For Translators:
 	- if you don't know what the game.rxproj file is and/or don't have it, just make a .txt file, type "RPGXP 1.05" into it (the "1.05" can be replaced with whatever version your RPG Maker XP editor is), then rename the .txt file to "game.rxproj". If your system doesn't yet recognize the file, you can open game.rxproj by right-clicking it, and then selecting "Open with >", "RPG Maker XP".
 
 
+For Photo/Graphic Translators:
+- Recommended fonts:
+	- Adobe Garamond Pro, (Opening font of "Succubus Rhapsodia")
+	- Nyala, for config UI
+	- Times New Roman, for Map Font that you want to look neat and straight
+	
+	
 For testers, freeloaders and other folks:
 - 0) Make sure you've installed/patched your game to the appropriate version that this translation uses.
 - 1) Download and dump into game folder (except for "Scripts - manually download these", you don't need them; the scripts are already included in the "Scripts.rxdata" file inside the "Data" folder).
@@ -74,6 +81,22 @@ For testers, freeloaders and other folks:
 
 
 -------=:::[ Changelogs ]:::=-------
+
+
+v0.180: (09/05/2016)
+- Revised all enemies with spaces at the end of their names (apparently keeping even byte count for enemy names was unnecessary)
+	- Fixed a bug with Ramile probably not acting as she should in battle (had wrong name)
+	- Fixed a bug with the Little Witch in BattlePop_Hold; she had a wrong name as well (extra space at end)
+	- Fixed a probable bug with Gilgoon not acting right either (seems to have had wrong class name, unless my notes were wrong to begin with)
+	- Contracted Succubi with spaces in their names will still have the spaces, unfortunately. You can rename them with the Bonuses menu, with the exception of Bosses, since they unfortunately cannot be renamed.
+- translated the portal choices (CommonEvents.rxdata, #12), and 1 line of text for the portal on Map209.rxdata ("ホーム#/01", "Home")
+- translated and revised some licking skilltext
+- translated graphics/pictures/map_name_home.png, "ホーム" -> "Home"
+- revised the nipples for "youthful breasts" - "pretty nipples" are now "little nipples"; sounds better
+- revised one statetext for accuracy (being willingly stripped naked by enemy)
+- refit the succubi status info in Window_Status (used to slide off the right side when changing equipment/runes)
+- slightly revised the Armors.rxdata descriptions of status effect resistance runes to better clarify that they don't stack with duplicate runes.
+- tweaked a few random names from the random name generator (Window_NameEdit（ランダム名）)
 
 
 v0.165: (09/04/2016)
