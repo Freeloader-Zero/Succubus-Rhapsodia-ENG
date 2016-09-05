@@ -9,7 +9,7 @@ English fan translations for the game, "Succubus Rhapsodia"
 - v1.10
 
 ---=:::[ Translation version* ]:::=---
-- v0.180
+- v0.181
 
 *Last publically released version
 *Estimated percentage of translation completion
@@ -83,7 +83,11 @@ For testers, freeloaders and other folks:
 -------=:::[ Changelogs ]:::=-------
 
 
-v0.180: (09/05/2016)
+
+v0.181: (09/05/2016)
+- Added skill descriptions back in (forgot)
+
+v0.180:
 - Revised all enemies with spaces at the end of their names (apparently keeping even byte count for enemy names was unnecessary)
 	- Fixed a bug with Ramile probably not acting as she should in battle (had wrong name)
 	- Fixed a bug with the Little Witch in BattlePop_Hold; she had a wrong name as well (extra space at end)
